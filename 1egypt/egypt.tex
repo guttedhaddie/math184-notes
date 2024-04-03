@@ -256,13 +256,35 @@ Another common type of problem was how to solve linear equations. Solutions were
 \begin{quote}
 	A heap plus a seventh of a heap is nineteen. What is the heap?
 \end{quote}
-In modern algebra, representing `heap' by $x$, we wish to solve $x+\frac 17x=19$. Here is the Egyptian method.
-\begin{enumerate}
-  \item Guess intelligently: say $x=7$ since this is easy to divide by 7.
-  \item Compute $x+\frac 17 x=8$
-  \item We want 19, not 8, so we multiply our guess (7) by $\frac{19}8=2\ \cl 4\ \cl 8$ to obtain the correct answer $x=16\ \cl 2\ \cl 8$
-\end{enumerate}
+In modern algebra, representing `heap' by $x$, we wish to solve $x+\frac 17x=19$. Here is the Egyptian method.\par
 
+\begin{minipage}[t]{0.69\linewidth}\vspace{0pt}
+	\begin{enumerate}
+  	\item Guess intelligently: $x=14$ is easy to divide by 7 and we obtain $x+\frac 17 x=16$
+  	\item Correct our guess: We want 19, not 16, so we multiply our guess (14) by $\frac{19}{16}=1\ \cl 8\ \cl{16}$ to obtain the correct answer
+  	\[
+  		x=2\ \cl 4\ \cl 8 +4\ \cl 2\ \cl 4+ 9\ \cl 2 =16\ \cl 2\ \cl 8
+  	\]
+	\end{enumerate}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\linewidth}\vspace{0pt}
+	\hfill 
+	\[
+		\begin{array}{r@{\qquad}r@{\qquad}c}
+			1&1\ \cl 8\ \cl{16}\\
+			2&2\ \cl 4\ \cl 8&\checkmark\\
+			4&4\ \cl 2\ \cl 4&\checkmark\\
+			8&9\ \cl 2&\checkmark
+		\end{array}
+	\]
+\end{minipage}\medbreak
+
+Compare this with the `modern' method:
+\[
+	x+\frac 17x=19\implies \frac 87x=19\implies x=\frac{7\cdot 19}8 =\frac{133}8 =\frac{128+5}8= 16\frac 58
+\]
+Are the any benefits to the Egyptian approach?
 
 \begin{minipage}[t]{0.67\linewidth}\vspace{0pt}
 	\boldinline{Geometry}
