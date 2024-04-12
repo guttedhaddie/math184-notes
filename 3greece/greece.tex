@@ -101,24 +101,29 @@ Both the Attic and Ionic systems were fine for record-keeping but terrible for c
 \clearpage
 
 
+
 \subsection{Pre-Euclidean Greek Mathematics}
 
 Euclid's \emph{Elements} (c.\,300\BC) forms a natural break point in Greek mathematics, since much of what came before was subsumed by it. In this section, we consider the contributions of several pre-Euclidean mathematicians. There are very few sources for Greek mathematics \& philosophy before 400\BC{}, so almost everything is inferred from the writings and commentaries of others.\footnote{For instance, most of our knowledge of Socrates comes from the voluminous writings of Plato and Aristotle. The earliest known Greek textbook/compilation (\emph{Elements of Geometry}) was written around 430\BC{} by Hippocrates of Chios; no copy survives, though most of its material probably made it into Book I of Euclid.}\vspace{-5pt}
 
 \boldinline{Thales of Miletus (c.\,624--546\BC)}
 
-Thales was one of the first people known to state abstract general principles. As a trader based in Miletus, a city-state in Anatolia, he travelled widely and was likely exposed to mathematical ideas from all round the Mediterranean. Here are some statements at least partly attributed to Thales:\vspace{-3pt}
+One of the first people known to state abstract general principles, Thales was a trader based in Miletus, a city-state in Anatolia. He travelled widely and was likely exposed to mathematical ideas from all round the Mediterranean. Here are some statements at least partly attributed to Thales:\vspace{-3pt}
 \begin{itemize}\itemsep0pt
   \item The angles at the base of an isosceles triangle are equal.
   \item Any circle is bisected by its diameter.
   \item A triangle inscribed in a semi-circle is right-angled (still known as Thales' Theorem).
 \end{itemize}
+
 \begin{minipage}[t]{0.79\linewidth}\vspace{-10pt}
-The major development here is \emph{generality}: Thales' propositions concern \emph{all} triangles, circles, etc. While the Babylonians and Egyptians observed such results in examples, we have little indication that they believed such should be discernible by pure reason.\par
-Thales' reasoning was almost certainly visual. As an example of typical geometric reasoning of the period, by 425\BC{} Socrates could describe how to halve/double the area of a square by joining the midpoints of edges.
-  \end{minipage}\hfill\begin{minipage}[t]{0.2\linewidth}\vspace{-8pt}
-  \flushright\includegraphics[scale=0.85]{greece-socratessquare}
-  \end{minipage}\vspace{-5pt}
+	Thales' major development is \emph{generality}: his propositions concern \emph{all} triangles, circles, etc. The Babylonians/Egyptians observed such results in examples, but we have little indication that they believed these could be discerned by pure reason. Thales' reasoning was almost certainly visual. As an example of typical geometric reasoning of the period, by 425\BC{} Socrates could describe how to halve/double the area of a square by joining the midpoints of edges.
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.2\linewidth}\vspace{-8pt}
+  \flushright
+  \includegraphics[scale=0.85]{greece-socratessquare}
+\end{minipage}
+\vspace{-5pt}
 
 
 
@@ -136,7 +141,8 @@ The Pythagoreans were particularly interested in musical harmony and the relatio
   \item A \emph{perfect fifth} corresponds to the ratio 3:2.
   \item A \emph{perfect fourth} corresponds to the ratio 4:3.
 \end{itemize}\vspace{-3pt}
-The use of these intervals to tune musical instruments is still known as \emph{Pythagorean tuning.}\smallbreak\goodbreak
+The use of these intervals to tune musical instruments is still known as \emph{Pythagorean tuning.}
+\goodbreak
 
 Theorems 21--34 in Book IX of Euclid's \emph{Elements} are Pythagorean in origin. For instance:
 
@@ -150,7 +156,7 @@ Theorems 21--34 in Book IX of Euclid's \emph{Elements} are Pythagorean in origin
 The Pythagoreans also studied perfect numbers, those which equal the sum of their proper divisors (e.g. $6=1+2+3$), and they seem to have observed the following.
 
 \begin{thm*}{IX.\,36}{}
-If $2^n-1$ is prime then $2^{n-1}(2^n-1)$ is perfect.
+	If $2^n-1$ is prime then $2^{n-1}(2^n-1)$ is perfect.
 \end{thm*}
 
 They moreover considered square and triangular numbers ($\frac 12m(m+1)$) and tried to express geometric shapes as numbers, in service of their belief that all matter could be formed from basic shapes.%Cultish the Pythagoreans may have been, but they discovered many things!
@@ -163,24 +169,20 @@ They moreover considered square and triangular numbers ($\frac 12m(m+1)$) and tr
 As with other ancient cultures, the only numbers in Greek mathematics were \emph{positive integers.} These were used to \emph{compare} lengths/sizes of objects.
 
 \begin{defn*}[lower separated=false, sidebyside, sidebyside align=top seam, sidebyside gap=0pt, righthand width=0.19\linewidth]{}{}
-Lengths are in the ratio $m$\,:\,$n$ if some \textcolor{blue}{sub-length} divides exactly $m$ times into the first and $n$ times into the second.\par
-Lengths are \emph{commensurable} if some sub-length divides exactly into both.
-\tcblower
-\flushright\begin{tabular}{c@{}}
-\includegraphics{similar-ruler}\\
-Ratio 3\,:\,2
-\end{tabular}
+	Lengths are in the ratio $m$\,:\,$n$ if some \textcolor{blue}{sub-length} divides exactly $m$ times into the first and $n$ times into the second.\par
+	Lengths are \emph{commensurable} if some sub-length divides exactly into both.
+	\tcblower
+	\flushright
+	\begin{tabular}{c@{}}
+		\includegraphics{similar-ruler}\\
+		Ratio 3\,:\,2
+	\end{tabular}
 \end{defn*}
 
-% \begin{minipage}[t]{0.8\linewidth}\vspace{0pt}
-% The lengths shown are in the ratio 3\,:\,2; \ observe the \textcolor{blue}{sub-length.}
-% \end{minipage}\hfill
-% \begin{minipage}[t]{0.19\linewidth}\vspace{0pt}
-% \flushright\includegraphics{similar-ruler}
-% \end{minipage}\medbreak
-
-While modern mathematics has no problem with \emph{irrational ratios} (e.g.{} the diagonal of a square to its side is $\sqrt 2$\,:\,1), this conflicted with the core Pythagorean belief that \emph{any two lengths were commmensurable.} Identifying lengths with real numbers, this belief may be restated in modern language:
-\[\forall x,y\in\R^+,\ \exists m,n\in\N,\ \ell\in\R^+\ \text{such that}\ x=m\ell\ \text{and}\ y=n\ell\]
+While modern mathematics has no problem with \emph{irrational ratios} (e.g., the diagonal of a square to its side is $\sqrt 2$\,:\,1), this conflicted with the core Pythagorean belief that \emph{any two lengths were commmensurable.} Identifying lengths with real numbers, this belief may be restated in modern language:
+\[
+	\forall x,y\in\R^+,\ \exists m,n\in\N,\ \ell\in\R^+\ \text{such that}\ x=m\ell\ \text{and}\ y=n\ell
+\]
 This is complete nonsense for it insists that every ratio of real numbers $\frac xy=\frac mn$ is \emph{rational}!\smallbreak
 
 The Pythagorean commensurability supposition stems from their basic tenets: all is number (lengths represented numerically) and that the design of the gods be perfect (numbers are integers). The discovery of incommensurable ratios produced something of a crisis; a possibly apocryphal story states that a disciple named Hippasus (c.\,500\BC) was set adrift at sea as punishment for its revelation.\smallbreak %Nevertheless, it is generally accepted that the Pythagoreans provided the first evidence of the existence of irrational numbers in the form of incommensurable lengths.
@@ -188,34 +190,45 @@ The Pythagorean commensurability supposition stems from their basic tenets: all 
 By 340\BC, however, the Greeks were happy to state that incommensurable lengths exist.
 
 \begin{thm*}{Aristotle}
-If the diagonal and side of a square are commensurable, then odd numbers equal even numbers.
+	If the diagonal and side of a square are commensurable, then odd numbers equal even numbers.
 \end{thm*}
 
 \begin{proof}[Inferred proof]
-In Socrates' doubled-square, suppose that side\,:\,diagonal $=a$\,:\,$b$; \ these are integers!\par
-\begin{minipage}[t]{0.8\linewidth}\vspace{-5pt}
-Assume at least one of $a$ or $b$ is odd, else the common sub-length may be doubled. The larger square is twice the smaller, whence the square numbers have ratio
-\[b^2:a^2=2:1\]
-It follows that $b^2$ is even and thus divisible by 4, whence $a^2$ is also even, and both $a,b$ are even. Whichever of $a,b$ was odd is also even: contradiction!
-\end{minipage}\hfill\begin{minipage}[t]{0.18\linewidth}\vspace{-8pt}
-\flushright\includegraphics[scale=0.8]{greece-socratessquare2}
-\end{minipage}
+	In Socrates' doubled-square, suppose that side\,:\,diagonal $=a$\,:\,$b$; \ these are integers!\par
+	\begin{minipage}[t]{0.8\linewidth}\vspace{-5pt}
+		Assume at least one of $a$ or $b$ is odd, else the common sub-length may be doubled. The larger square is twice the smaller, whence the square numbers have ratio
+		\[
+			b^2:a^2=2:1
+		\]
+		It follows that $b^2$ is even and thus divisible by 4, whence $a^2$ is also even, and both $a,b$ are even. Whichever of $a,b$ was odd is also even: contradiction!
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.18\linewidth}\vspace{-8pt}
+		\flushright
+		\includegraphics[scale=0.8]{greece-socratessquare2}
+	\end{minipage}
 \end{proof}
 Note the similarity of this argument to the modern proof of the irrationality of $\sqrt 2$.\goodbreak
 
 While there is no evidence that the Pythagoreans ever provided a correct proof of their famous Theorem, one argument possibly attributable to them used the idea of commensurability.
 
 \begin{minipage}[t]{0.67\linewidth}\vspace{0pt}
-\begin{proof}[`Proof' of Pythagoras' Theorem]\label{pg:pythwrong}
-Label the right triangle $a,b,c$ where $c$ is the hypotenuse and drop the altitude to the hypotenuse. Let $d$ be the length shown. Similar triangles tell us that
-\[a:d=c:a\implies a^2:ad=cd:ad\implies a^2=cd\]
-Thus the square on $a$ has the same area as the rectangle below the $d$-side of the hypotenuse. Repeat the calculation on the other side to obtain $b^2=c(c-d)$, and sum to complete the proof.
-\end{proof}
+	\begin{proof}[`Proof' of Pythagoras' Theorem]\label{pg:pythwrong}
+		Label the right triangle $a,b,c$ where $c$ is the hypotenuse and drop the altitude to the hypotenuse. Let $d$ be the length shown. Similar triangles tell us that
+		\[
+			a:d=c:a\implies a^2:ad=cd:ad\implies a^2=cd
+		\]
+		Thus the square on $a$ has the same area as the rectangle below the $d$-side of the hypotenuse. Repeat the calculation on the other side to obtain $b^2=c(c-d)$, and sum to complete the proof.
+	\end{proof}
 
-Since the only \emph{numbers} were integers, the symbols $a,b,c,d$ are \emph{integer multiples} of an assumed common sub-length. This restriction completely destroys the generality of the argument.
-\end{minipage}\hfill\begin{minipage}[t]{0.32\linewidth}\vspace{0pt}
-\flushright\includegraphics[scale=0.85]{greece-pthag-false}\label{pthagorig}
-\end{minipage}\smallbreak
+	Since the only \emph{numbers} were integers, the symbols $a,b,c,d$ are \emph{integer multiples} of an assumed common sub-length. This restriction completely destroys the generality of the argument.
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.32\linewidth}\vspace{0pt}
+	\flushright
+	\includegraphics[scale=0.85]{greece-pthag-false}\label{pthagorig}
+\end{minipage}
+\smallbreak
 
 The organization of Book I of the \emph{Elements} make clear that its primary goal was to provide a rigorous proof of Pythagoras' Theorem which did not depend on the flawed notion of commensurability. With our modern understanding of real numbers and continuity, there is nothing wrong with the above.%\vspace{-5pt}
 
@@ -227,11 +240,11 @@ The organization of Book I of the \emph{Elements} make clear that its primary go
 Theaetetus is likely the source for much of the most difficult part (Books VII \& X) of the \emph{Elements.} His essential definition of (in)commensurability comes from applying what is now known as the Euclidean algorithm to line segments. 
 
 \begin{defn*}{}{}
-Let $\ul a>\ul b$ be lengths/segments\footnotemark{} ($\ul a$ is longer than $\ul b$). Repeatedly the division algorithm: 
+	Let $\ul a>\ul b$ be lengths/segments\footnotemark{} ($\ul a$ is longer than $\ul b$). Repeatedly the division algorithm: 
 	\begin{align*}
-	\ul a&=q_1\ul b+\ul r_1\qquad &&\ul r_1<\ul b&&\hspace*{100pt}\tag{$\exists q_1\in\N_0$ and a length $\ul r_1<\ul b$}\\
-	\ul b&=q_2\ul r_1+\ul r_2\qquad &&\ul r_2<\ul r_1\\
-	\ul r_1&=q_3\ul r_2+\ul r_3\qquad &&\ul r_3<\ul r_2
+		\ul a&=q_1\ul b+\ul r_1\qquad &&\ul r_1<\ul b&&\hspace*{100pt}\tag{$\exists q_1\in\N_0$ and a length $\ul r_1<\ul b$}\\
+		\ul b&=q_2\ul r_1+\ul r_2\qquad &&\ul r_2<\ul r_1\\
+		\ul r_1&=q_3\ul r_2+\ul r_3\qquad &&\ul r_3<\ul r_2
 	\end{align*}
 	We say that $\ul a$ and $\ul b$ are \emph{commensurable} if the algorithm terminates: some remainder $\ul r_n$ divides exactly into $\ul r_{n-1}$. Otherwise $\ul a$ and $\ul b$ are \emph{incommensurable.}\smallbreak
 	Ratios are \emph{equal} $\ul a:\ul b=\ul c:\ul d$ precisely when the sequences of quotients in the algorithm are equal.
@@ -253,61 +266,71 @@ $37:13=148:52$ since we obtain the same sequence of quotients $(2,1,5,2)$:
 \goodbreak
 
 \boldinline{Example 2}\phantomsection\label{ex:theaetetus} We sketch a proof that the side $AB$ and diagonal $AC$ of a regular pentagon $ABCDE$ are incommensurable.\par
-	\begin{minipage}[t]{0.65\linewidth}\vspace{-5pt}
+\begin{minipage}[t]{0.65\linewidth}\vspace{-5pt}
 	\begin{enumerate}\itemsep0pt
 	  \item Prove that $\triangle BAG$ is isosceles ($\angle GFK=\frac 35\cdot\ang{180}=\ang{108}$\ldots).
 	  \item Take $a=\nm{AC}$ and $b=\nm{AB}=\nm{AG}$. The first line of the algorithm now reads
-	  \[\nm{AC}=\nm{AG}+\nm{GC}=\nm{AB}+\nm{GC}\]
+	  \[
+	  	\nm{AC}=\nm{AG}+\nm{GC}=\nm{AB}+\nm{GC}
+	  \]
 	  so we write $\underline a=q_1\underline b+\underline r_1$ where $r_1=\nm{GC}$ and $q_1=1$.
 	  \item Since $\nm{GC}=\nm{AF}$, the second line of the algorithm reads
-	  \[\nm{AG}=\nm{AF}+\nm{FG}=\nm{GC}+\nm{FG}\]
+	  \[
+	  	\nm{AG}=\nm{AF}+\nm{FG}=\nm{GC}+\nm{FG}
+	  \]
 	  so that we again have a quotient of $q_2=1$.
 	\end{enumerate}
-	\end{minipage}\begin{minipage}[t]{0.35\textwidth}\vspace{-5pt}
-	\flushright\includegraphics[scale=0.9]{greece-pentagonincomm}
-	\end{minipage}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.34\textwidth}\vspace{-5pt}
+	\flushright
+	\includegraphics[scale=0.9]{greece-pentagonincomm}
+\end{minipage}
 	
-	\begin{enumerate}\setcounter{enumi}{3}
-	  \item Appealing to congruent isosceles triangles $\triangle DCG\cong\triangle EHF$ we see that $\nm{GC}=\nm{FH}$ is the diagonal of the interior regular pentagon. The third line of the algorithm is therefore the same as the first: we are back to considering the ratio of the diagonal to the side of a regular pentagon. The algorithm therefore continues forever with all quotients being 1.
-	\end{enumerate}
 	
-	\goodbreak
-
-
-
-
+\begin{enumerate}\setcounter{enumi}{3}
+	\item Appealing to congruent isosceles triangles $\triangle DCG\cong\triangle EHF$ we see that $\nm{GC}=\nm{FH}$ is the diagonal of the interior regular pentagon. The third line of the algorithm is therefore the same as the first: we are back to considering the ratio of the diagonal to the side of a regular pentagon. The algorithm therefore continues forever with all quotients being 1.
+\end{enumerate}
 	
+\goodbreak
+
+
+
 \boldinline{Eudoxus of Knidos (c.\,390--337\BC)}\phantomsection\label{pg:eudoxus}
 
 Eudoxus was arguably the most prolific of the pre-Euclidean mathematicians. Apart from attending and perhaps teaching at Plato's academy, he is famous for explaining how to calculate with ratios of lengths (segments). For example:
 
 \begin{defn*}{}{}
-$A:B>C:D$ if there exist positive integers $m,n$ such that $mA>nB$ and $mC\le nD$.
+	$A:B>C:D$ if there exist positive integers $m,n$ such that $mA>nB$ and $mC\le nD$.
 \end{defn*}
 
 At first glance it appears as if Eudoxus is telling us how to compare \emph{rational} numbers; if $A,B,C,D$ are integers, we see that
-\[\frac AB>\frac nm\ge \frac CD\]
-which is trivially satisfied by taking $m=D$ and $n=C$.
-However, if $A,B,C,D$ were interpreted as \emph{segments} rather than integers this is much more useful. His mathematics really told the Greeks how to approximate incommensurable ratios with rational numbers.
+\[
+	\frac AB>\frac nm\ge \frac CD
+\]
+which is trivially satisfied by taking $m=D$ and $n=C$. However, if $A,B,C,D$ were interpreted as \emph{segments} rather than integers this is much more useful. His mathematics really told the Greeks how to approximate incommensurable ratios with rational numbers.
 
-{
+
 \boldinline{Examples}
 \exstart To see that $13:3>17:4$, simply choose $m=4$ and $n=17$ to obtain
   \[4\cdot 13=52>51=3\cdot 17\]
-}
+
 \begin{enumerate}\setcounter{enumi}{1}
   \begin{minipage}[t]{0.68\linewidth}\vspace{-10pt}
     \item We show that the side\,:\,diagonal of a square is greater than 1\,:\,2.\par
     See the picture, where the side\,:\,diagonal $=A:B$. Choosing $m=D=2$ and $n=C=1$, we see that
-  \[
-  mA=2A>B=nB \tag{diag $>$ side of large square}
-  \]
-  In modern language, this proves that $\frac 1{\sqrt 2}>\frac 12$.
-  \end{minipage}\hfill
+  	\[
+  		mA=2A>B=nB \tag{diag $>$ side of large square}
+  	\]
+  	In modern language, this proves that $\frac 1{\sqrt 2}>\frac 12$.
+  \end{minipage}
+  \hfill
   \begin{minipage}[t]{0.31\linewidth}\vspace{-10pt}
-  \flushright\includegraphics{greece-eudoxus}
+  	\flushright
+  	\includegraphics{greece-eudoxus}
   \end{minipage}
 \end{enumerate}
+
 
 \boldinline{Zeno of Elea (c.\,450\BC)}\phantomsection\label{pg:zeno}
 
@@ -337,21 +360,25 @@ Theorems were often stated as \emph{problems}: e.g.{} \emph{to bisect a given an
 By the time of Euclid, the Greeks knew how to construct an equilateral triangle, a square and a regular pentagon in a given circle: here is a construction of a pentagon.\footnote{Theorem IV.\,11 of the \emph{Elements} presents a less practical construction. Ours follows from Theorem XIII.\,10: if a regular pentagon, hexagon and decagon are inscribed in a circle, then their sides form a right-triangle.}
 
 \begin{minipage}[t]{0.69\linewidth}\vspace{-8pt}
-\begin{enumerate}\itemsep0pt
-  \item Draw perpendicular diameters $\cl{AB}$ and $\cl{CD}$ and bisect $\cl{OA}$ at $M$.
-  \item Draw an arc centered at $M$ with radius $\nm{CM}$. Let $N$ be the intersection of this arc with $\cl{OB}$.
-  \item Draw an arc centered at $C$ with radius $\nm{CN}$. Let $R$ be the intersection of this arc with the original circle.
-	\item Move $\nm{CR}$ around the circle to create a regular pentagon.
-\end{enumerate}
-\end{minipage}\hfill\begin{minipage}[t]{0.3\linewidth}\vspace{-22pt}
-\flushright\includegraphics[scale=0.9]{greece-pentagon}
-\end{minipage}\smallbreak
+	\begin{enumerate}\itemsep0pt
+	  \item Draw perpendicular diameters $\cl{AB}$ and $\cl{CD}$ and bisect $\cl{OA}$ at $M$.
+	  \item Draw an arc centered at $M$ with radius $\nm{CM}$. Let $N$ be the intersection of this arc with $\cl{OB}$.
+	  \item Draw an arc centered at $C$ with radius $\nm{CN}$. Let $R$ be the intersection of this arc with the original circle.
+		\item Move $\nm{CR}$ around the circle to create a regular pentagon.
+	\end{enumerate}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\linewidth}\vspace{-22pt}
+	\flushright
+	\includegraphics[scale=0.9]{greece-pentagon}
+\end{minipage}
+\smallbreak
 
 
 A purely geometric proof of the validity of this construction is too difficult for us, but you can easily check it using a calculator, Pythagoras' and the cosine rule:  if the circle has radius 2, then
 \begin{align*}
-\nm{CR}^2&=\nm{CN}^2=\nm{ON}^2+\nm{OC}^2=(\sqrt 5-1)^2+2^2=10-2\sqrt 5\\
-&=2^2+2^2-2\cdot 2\cdot 2\cos\ang{72}
+	\nm{CR}^2&=\nm{CN}^2=\nm{ON}^2+\nm{OC}^2=(\sqrt 5-1)^2+2^2=10-2\sqrt 5\\
+	&=2^2+2^2-2\cdot 2\cdot 2\cos\ang{72}
 \end{align*}\goodbreak
 
 % The appearance of $\sqrt 5$ in this discussion relates to the golden ratio $\frac{1+\sqrt 5}2$ which is in fact the ratio of the diagonal to the side of the pentagon: exactly what Theaetetus was calculating on page \pageref{ex:theaetetus}. Pentagons and pentagrams were viewed as mystical by many ancient Greeks.\\
@@ -359,7 +386,7 @@ A purely geometric proof of the validity of this construction is too difficult f
 Construction problems have motivated mathematicians ever since. In 1796, Gauss (then 19) constructed a regular 17-gon. A classification of constructable regular polygons took until 1837.
 
 \begin{thm*}{}{}
-A regular $n$-gon is constructable if and only if $n=2^kF_1\cdots F_r$ where $F_1,\ldots,F_r$ are distinct primes of the form $2^{(2^n)}+1$.
+	A regular $n$-gon is constructable if and only if $n=2^kF_1\cdots F_r$ where $F_1,\ldots,F_r$ are distinct primes of the form $2^{(2^n)}+1$.
 \end{thm*}
 
 After the 17-gon, the next prime-sided constructable $n$-gon has $257=2^{2^3}+1$ sides!\smallbreak
@@ -376,48 +403,49 @@ It wasn't until the advent of field theory in the 1800s that these were indeed p
 
 
 \begin{exercises}{}{}
-\exstart %[2-12]
-Construct five Pythagorean triples using the formula $\bigl(n,\frac{n^2-1}2,\frac{n^2+1}2\bigr)$ where $n$ is odd. Construct five more using the formula $\bigl(m,\leg m2^2-1,\leg m2^2+1\bigr)$ where $m$ is even.%\vspace{-3pt}
-
-\begin{enumerate}\setcounter{enumi}{1}
-  \item If $2^n-1=p$ is prime, list the positive divisors of $2^{n-1}(2^n-1)$ and hence prove Theorem IX.\,36.
-  
-  \item%[2-10]
-  Draw a \emph{picture} with dots to show that eight times any triangular number plus 1 makes a square, and that any odd square diminished by 1 becomes eight times a triangular number. That is:
-  \begin{enumerate}
-    \item[(a)] $8\cdot\frac 12m(m+1)+1$ is a perfect square.
-    \item[(b)] If $n$ is odd, then $n^2-1=8\cdot\frac 12m(m+1)$ for some $m$.
-  \end{enumerate}
-  
-  \item%[3-2]
-  Find a construction to bisect a given angle, and show that it is correct.
- 
-  
-  \item%[3-16]
-  Sketch a construction inscribing a regular hexagon in a circle.\par
-  (\emph{Assume you can construct an equilateral triangle on a given segment---Thm I.\,1 of Euclid, pg.\,\pageref{pg:euclidI1}})
-  
-	\item (A line-doubling paradox) \ One line has twice the length of another and so has more points. However, there is a bijective correspondence between the points on these lines so they have the \emph{same number} of points.\par
-	Explain the second observation. How can you resolve the paradox?
-
-
-	\item The \emph{cycle of fifths} is a musical concept stating that twelve perfect fifths equals seven octaves (pg.\,\pageref{pg:pythagtuning}). State this claim \emph{numerically,} and show that it is a contradiction.%  This is essentially a claim that $2^7=\left(\frac 32\right)^{12}\iff 2^{19}=3^{12}$: palpable nonsense!
-  
-  \item%[3-20]
-	Use Theaetetus' definition of equal ratios to show that $46:6=23:3$.
-  
-  \item%[3-22]
-  (Hard)\lstsp A line of length 1 is divided at $x$ so that $\frac 1x=\frac x{1-x}$. Show that 1 and $x$ are incommensurable. Indeed, show that $1:x$ is \emph{the same} as diagonal\,:\,side of a regular pentagon.\par
-  (\emph{Hint: the first line of the algorithm is $1=x+x^2$\ldots})
-  
-  \item%[3-24]
-  (Hard)\lstsp Let $a>b$ and $c$ be \emph{positive lengths.} Use Eudoxus' definition to \emph{prove} that $c:b>c:a$.\par
-  (\emph{Hint: let $n$ be the least integer such that $n(a-b)\ge c$; its existence is the ``archimedean property''})
-\end{enumerate}
+	\exstart %[2-12]
+	Construct five Pythagorean triples using the formula $\bigl(n,\frac{n^2-1}2,\frac{n^2+1}2\bigr)$ where $n$ is odd. Construct five more using the formula $\bigl(m,\leg m2^2-1,\leg m2^2+1\bigr)$ where $m$ is even.%\vspace{-3pt}
+	
+	\begin{enumerate}\setcounter{enumi}{1}
+	  \item If $2^n-1=p$ is prime, list the positive divisors of $2^{n-1}(2^n-1)$ and hence prove Theorem IX.\,36.
+	  
+	  \item%[2-10]
+	  Draw a \emph{picture} with dots to show that eight times any triangular number plus 1 makes a square, and that any odd square diminished by 1 becomes eight times a triangular number. That is:
+	  \begin{enumerate}
+	    \item[(a)] $8\cdot\frac 12m(m+1)+1$ is a perfect square.
+	    \item[(b)] If $n$ is odd, then $n^2-1=8\cdot\frac 12m(m+1)$ for some $m$.
+	  \end{enumerate}
+	  
+	  \item%[3-2]
+	  Find a construction to bisect a given angle, and show that it is correct.
+	 
+	  \item%[3-16]
+	  Sketch a construction inscribing a regular hexagon in a circle.\par
+	  (\emph{Assume you can construct an equilateral triangle on a given segment---Thm I.\,1 of Euclid, pg.\,\pageref{pg:euclidI1}})
+	  
+		\item (A line-doubling paradox) \ One line has twice the length of another and so has more points. However, there is a bijective correspondence between the points on these lines so they have the \emph{same number} of points.\par
+		Explain the second observation. How can you resolve the paradox?
+	
+	
+		\item The \emph{cycle of fifths} is a musical concept stating that twelve perfect fifths equals seven octaves (pg.\,\pageref{pg:pythagtuning}). State this claim \emph{numerically,} and show that it is a contradiction.%  This is essentially a claim that $2^7=\left(\frac 32\right)^{12}\iff 2^{19}=3^{12}$: palpable nonsense!
+	  
+	  \item%[3-20]
+		Use Theaetetus' definition of equal ratios to show that $46:6=23:3$.
+	  
+	  \item%[3-22]
+	  (Hard)\lstsp A line of length 1 is divided at $x$ so that $\frac 1x=\frac x{1-x}$. Show that 1 and $x$ are incommensurable. Indeed, show that $1:x$ is \emph{the same} as diagonal\,:\,side of a regular pentagon.\par
+	  (\emph{Hint: the first line of the algorithm is $1=x+x^2$\ldots})
+	  
+	  \item%[3-24]
+	  (Hard)\lstsp Let $a>b$ and $c$ be \emph{positive lengths.} Use Eudoxus' definition to \emph{prove} that $c:b>c:a$.\par
+	  (\emph{Hint: let $n$ be the least integer such that $n(a-b)\ge c$; its existence is the ``archimedean property''})
+	\end{enumerate}
 \end{exercises}
 
 
 \clearpage
+
+
 
 \subsection{Euclid and the \emph{Elements}}
 
