@@ -181,9 +181,9 @@ As with other ancient cultures, the only numbers in Greek mathematics were \emph
 
 While modern mathematics has no problem with \emph{irrational ratios} (e.g., the diagonal of a square to its side is $\sqrt 2$\,:\,1), this conflicted with the core Pythagorean belief that \emph{any two lengths were commmensurable.} Identifying lengths with real numbers, this belief may be restated in modern language:
 \[
-	\forall x,y\in\R^+,\ \exists m,n\in\N,\ \ell\in\R^+\ \text{such that}\ x=m\ell\ \text{and}\ y=n\ell
+	\forall \underline{m},\underline n\in\R^+,\ \exists \underline\ell\in\R^+,\ \exists a,b\in\N,\ \text{such that}\ \underline m=a\underline\ell\ \text{and}\ \underline n=b\underline\ell
 \]
-This is complete nonsense for it insists that every ratio of real numbers $\frac xy=\frac mn$ is \emph{rational}!\smallbreak
+This is complete nonsense for it insists that every ratio of real numbers $\frac{\underline m}{\underline n}=\frac ab$ must be \emph{rational}!\smallbreak
 
 The Pythagorean commensurability supposition stems from their basic tenets: all is number (lengths represented numerically) and that the design of the gods be perfect (numbers are integers). The discovery of incommensurable ratios produced something of a crisis; a possibly apocryphal story states that a disciple named Hippasus (c.\,500\BC) was set adrift at sea as punishment for its revelation.\smallbreak %Nevertheless, it is generally accepted that the Pythagoreans provided the first evidence of the existence of irrational numbers in the form of incommensurable lengths.
 
@@ -392,7 +392,7 @@ Construction problems have motivated mathematicians ever since. In 1796, Gauss (
 After the 17-gon, the next prime-sided constructable $n$-gon has $257=2^{2^3}+1$ sides!\smallbreak
 
 By 400\BC, the Greeks were referencing the second and third \emph{impossible constructions of antiquity}:
-\begin{enumerate}\itemsep0pt
+\begin{enumerate}
   \item Trisecting a general angle.
   \item Doubling (the volume of) a given cube.
   \item Squaring a circle (construct a square with the same area as a given circle).\footnotemark
@@ -402,12 +402,35 @@ It wasn't until the advent of field theory in the 1800s that these were indeed p
 \footnotetext{``You can't square that circle'' is now a metaphor for something that can't be done.}
 
 
+
+
+
+\boldsubsubsection{Summary}
+
+Several of the mathematical techniques in this section are difficult, and the results are technical. With practice, all should be accessible. It isn't important to become proficient with all of these ideas! Instead, by playing with them, you should develop an appreciation of two overarching points:
+\begin{enumerate}
+  \item Even before Euclid, the focus of Greek mathematics was very different to other ancient cultures (e.g., the Egyptians, Babylonians \& Chinese). Greek mathematics was more abstract and less practical, in large part due to the influence of wider Greek philosophy and religion.
+  \item By investigating mathematics abstractly, the ancient Greeks were already pondering fundamental mathematical questions and concepts, for instance:
+  \begin{itemize}
+    \item What is the relationship between \emph{number} and \emph{length}?
+    \item What are irrational numbers?
+    \item What is continuity?
+    \item Infinite series and integration.
+    \item Which geometric figures can we construct?
+  \end{itemize}
+  Such ideas have stimulated mathematical research ever since. Indeed these particular issues would not rigorously be resolved until the development of modern analysis and algebra in the 1800s by luminaries such as Gauss, Cauchy and Riemann.
+\end{enumerate}
+
+
+\clearpage
+
+
 \begin{exercises}{}{}
 	\exstart %[2-12]
 	Construct five Pythagorean triples using the formula $\bigl(n,\frac{n^2-1}2,\frac{n^2+1}2\bigr)$ where $n$ is odd. Construct five more using the formula $\bigl(m,\leg m2^2-1,\leg m2^2+1\bigr)$ where $m$ is even.%\vspace{-3pt}
 	
 	\begin{enumerate}\setcounter{enumi}{1}
-	  \item If $2^n-1=p$ is prime, list the positive divisors of $2^{n-1}(2^n-1)$ and hence prove Theorem IX.\,36.
+	  \item Suppose $2^n-1=p$ is prime (its only positive divisors are itself and 1). List the positive divisors of $2^{n-1}(2^n-1)$ and hence prove Theorem IX.\,36.
 	  
 	  \item%[2-10]
 	  Draw a \emph{picture} with dots to show that eight times any triangular number plus 1 makes a square, and that any odd square diminished by 1 becomes eight times a triangular number. That is:
@@ -417,28 +440,32 @@ It wasn't until the advent of field theory in the 1800s that these were indeed p
 	  \end{enumerate}
 	  
 	  \item%[3-2]
-	  Find a construction to bisect a given angle, and show that it is correct.
+	  Find a construction (using the \emph{ruler-and-compass} constructions) to bisect a given angle, and show that it is correct.
 	 
 	  \item%[3-16]
 	  Sketch a construction inscribing a regular hexagon in a circle.\par
 	  (\emph{Assume you can construct an equilateral triangle on a given segment---Thm I.\,1 of Euclid, pg.\,\pageref{pg:euclidI1}})
 	  
-		\item (A line-doubling paradox) \ One line has twice the length of another and so has more points. However, there is a bijective correspondence between the points on these lines so they have the \emph{same number} of points.\par
+		\item (A line-doubling paradox) \ One line has twice the length of another and so has \emph{more} points. However, there is a bijective correspondence between the points on these lines; the two lines therefore have the \emph{same number} of points.\par
 		Explain the second observation. How can you resolve the paradox?
 	
 	
-		\item The \emph{cycle of fifths} is a musical concept stating that twelve perfect fifths equals seven octaves (pg.\,\pageref{pg:pythagtuning}). State this claim \emph{numerically,} and show that it is a contradiction.%  This is essentially a claim that $2^7=\left(\frac 32\right)^{12}\iff 2^{19}=3^{12}$: palpable nonsense!
+		\item The \emph{cycle of fifths} is a musical concept stating that twelve perfect fifths equals seven octaves (pg.\,\pageref{pg:pythagtuning}). State this claim \emph{numerically,} and show that it is a contradiction.\par
+		(\emph{Hint: two strings are seven octaves apart if their lengths are in the ratio $2^7:1$})
+		
 	  
 	  \item%[3-20]
-		Use Theaetetus' definition of equal ratios to show that $46:6=23:3$.
+		Use Theaetetus' definition of equal ratios to prove that $46:6=23:3$.
+	  
 	  
 	  \item%[3-22]
-	  (Hard)\lstsp A line of length 1 is divided at $x$ so that $\frac 1x=\frac x{1-x}$. Show that 1 and $x$ are incommensurable. Indeed, show that $1:x$ is \emph{the same} as diagonal\,:\,side of a regular pentagon.\par
+	  (Hard)\lstsp A line of length 1 is divided at $x$ so that $\frac 1x=\frac x{1-x}$. Prove that 1 and $x$ are incommensurable. Indeed, show that $1:x$ is \emph{the same} as diagonal\,:\,side of a regular pentagon.\par
 	  (\emph{Hint: the first line of the algorithm is $1=x+x^2$\ldots})
+	  
 	  
 	  \item%[3-24]
 	  (Hard)\lstsp Let $a>b$ and $c$ be \emph{positive lengths.} Use Eudoxus' definition to \emph{prove} that $c:b>c:a$.\par
-	  (\emph{Hint: let $n$ be the least integer such that $n(a-b)\ge c$; its existence is the ``archimedean property''})
+	  (\emph{Hint: let $n$ be the smallest integer such that $n(a-b)\ge c$; its existence is the ``archimedean property''})
 	\end{enumerate}
 \end{exercises}
 
@@ -450,14 +477,16 @@ It wasn't until the advent of field theory in the 1800s that these were indeed p
 \subsection{Euclid and the \emph{Elements}}
 
 \begin{minipage}[t]{0.70\linewidth}\vspace{-8pt}
-Euclid worked in the Library of Alexandria, named for the Greek general Alexander the Great who conquered Egypt in 323\BC. The Library was constructed around 320\BC{} as a means of organizing the knowledge of the world and for the demonstration of Greek power. Although it was seriously damaged on several occasions, the Library remained a center of scholarship until around \AD 500. Below is a map of the city around \AD 400: note the size and centrality of the \textcolor{red}{Library}.
-\end{minipage}\hfill
+	Euclid worked in the Library of Alexandria, named for the Greek general Alexander the Great who conquered Egypt in 323\BC. The Library was constructed around 320\BC{} as a means of organizing the knowledge of the world and for the demonstration of Greek power. Although it was seriously damaged on several occasions, the Library remained a center of scholarship until around \AD 500. Below is a map of the city around \AD 400: note the size and centrality of the \textcolor{red}{Library}.
+\end{minipage}
+\hfill
 \begin{minipage}[t]{0.29\linewidth}\vspace{-25pt}
-\flushright\includegraphics[scale=0.4]{geo-08-alex}
+	\flushright
+	\includegraphics[scale=0.4]{geo-08-alex}
 \end{minipage}\par
 
 \begin{center}
-\includegraphics[scale=0.67]{geo-07-alexandria}
+	\includegraphics[scale=0.67]{geo-07-alexandria}
 \end{center}
 
 It is hard to argue against Euclid's \emph{Elements} (c.\,300\BC{}) as the most influential mathematics text ever produced. Likely a compilation of earlier mathematical work rather than a pure original, it was edited and added to over the centuries, eclipsing and subsuming other works. Particular import were the edits of Theon of Alexandria (c.\,\AD 400) and his daughter Hypatia, both prolific scholars in their own right. Due to edits such as these, the precise contents of the original are unknown.\smallbreak
@@ -465,38 +494,43 @@ It is hard to argue against Euclid's \emph{Elements} (c.\,300\BC{}) as the most 
 Extant fragments date to around \AD 100. The earliest (almost) complete copy is from the the 9\th{} century; written in Greek and held at the Vatican, it is missing some of the edits of Theon \& Hypatia, thus demonstrating that multiple versions were in circulation.
 
 \begin{center}
-\begin{minipage}[b]{0.45\linewidth}
-\centering\includegraphics[scale=0.7]{euclid1}\\
-Earliest Fragment c.\,\AD 100
-\end{minipage}
-\begin{minipage}[b]{0.45\linewidth}
-\centering\includegraphics[scale=0.2]{euclid2}\\
-Full copy 9\th\,C
-\end{minipage}
+	\begin{minipage}[b]{0.45\linewidth}
+		\centering\includegraphics[scale=0.7]{euclid1}\\
+		Earliest Fragment c.\,\AD 100
+	\end{minipage}
+	\begin{minipage}[b]{0.45\linewidth}
+		\centering\includegraphics[scale=0.2]{euclid2}\\
+		Full copy 9\th\,C
+	\end{minipage}
 \end{center}
 
 \goodbreak
 
 Until the mid 20\th{} century, some version of the \emph{Elements} would have been used as a high-school textbook in most western and middle-eastern countries. Many editions and variations have been produced, four of which are shown below:
 \begin{center}
-\begin{minipage}[b]{0.683\linewidth}
-\centering\includegraphics[width=0.95\linewidth]{geo-09-euclid}\\
-Latin translation, 1572
-\end{minipage}\begin{minipage}[b]{0.317\linewidth}
-\centering\includegraphics[width=0.95\linewidth]{euclid4}\\
-High School textbook, 1903
-\end{minipage}\smallbreak
-\begin{minipage}[b]{0.67\linewidth}
-\centering\includegraphics[width=0.95\linewidth]{euclid3}\\
-Pop-up edition, 1500s
-\end{minipage}\begin{minipage}[b]{0.33\linewidth}
-\centering\includegraphics[width=0.95\linewidth]{euclid5}\\
-Color edition, 1847
-\end{minipage}
+	\begin{minipage}[b]{0.683\linewidth}\vspace{0pt}
+		\centering
+		\includegraphics[width=0.95\linewidth]{geo-09-euclid}\\
+		Latin translation, 1572
+	\end{minipage}%
+	\begin{minipage}[b]{0.317\linewidth}\vspace{0pt}
+		\centering\includegraphics[width=0.95\linewidth]{euclid4}\\
+		High School textbook, 1903
+	\end{minipage}%
+	\smallbreak
+	\begin{minipage}[b]{0.67\linewidth}\vspace{0pt}
+		\centering\includegraphics[width=0.95\linewidth]{euclid3}\\
+		Pop-up edition, 1500s
+	\end{minipage}%
+	\begin{minipage}[b]{0.33\linewidth}\vspace{0pt}
+		\centering\includegraphics[width=0.95\linewidth]{euclid5}\\
+		Color edition, 1847
+	\end{minipage}
 \end{center}
 
 You can download Byrne's color edition \href{http://math.uci.edu/~ndonalds/Elements-I-VI.pdf}{here} (very large file!). It is notably different from many earlier editions: it contains a much longer list of definitions, inserts many more axioms, and relabels propositions 4 and 5 as axioms (pages xviii--xxiii). The picture on the cover page is Euclid's proof of Pythagoras' Theorem (Book I, Thm.\ 47).
 \goodbreak
+
 
 \boldsubsubsection{A Brief Overview of the \emph{Elements}}
 
@@ -519,7 +553,7 @@ Consists of 48 theorems, culminating with Pythagoras' and its converse. It seems
 
 The fifth postulate is awkwardly phrased. An equivalent modern statement is \emph{Playfair's axiom}:
 \begin{quote}
-There is at most one parallel through a given point not on line.
+	There is at most one parallel through a given point not on line.
 \end{quote}
 For centuries, mathematicians tried to prove that this postulate was a theorem of the others until; it was eventually shown to be necessary with the advent of hyperbolic geometry in the 1800s. Euclid's refusal to use the parallel postulate until Theorem 29 suggests he understood this awkwardness.\smallbreak
 
@@ -527,42 +561,42 @@ For centuries, mathematicians tried to prove that this postulate was a theorem o
 Theorems are generally presented as \emph{problems}: a pictorial construction is provided, then Euclid proves that the construction really solves the problem. Here is Euclid's first theorem.
 
 \begin{thm*}{I.\,1}{}\phantomsection\label{pg:euclidI1}
-Problem: To construct an equilateral triangle on a given segment.
+	Problem: To construct an equilateral triangle on a given segment.
 \end{thm*}
 
 \begin{proof}
-Given \includegraphics{euclid-I1a} construct two circles (P3)\quad\raisebox{-16pt}{\includegraphics{euclid-I1b}}\par\vspace{-23pt}
-Join one of the circle intersections to the endpoints of the original segment (P1)\quad \raisebox{-28pt}{\includegraphics{euclid-I1c}}\par\vspace{-11pt}
-The result is an equilateral triangle; indeed the three sides are congruent, for\par \raisebox{-10pt}{\includegraphics{euclid-I1d}} are radii of a common circle,
-as are \raisebox{-10pt}{\includegraphics{euclid-I1e}}
+	Given \includegraphics{euclid-I1a} construct two circles (P3)\quad\raisebox{-16pt}{\includegraphics{euclid-I1b}}\par\vspace{-23pt}
+	Join one of the circle intersections to the endpoints of the original segment (P1)\quad \raisebox{-28pt}{\includegraphics{euclid-I1c}}\par\vspace{-11pt}
+	The result is an equilateral triangle; indeed the three sides are congruent, for\par \raisebox{-10pt}{\includegraphics{euclid-I1d}} are radii of a common circle,
+	as are \raisebox{-10pt}{\includegraphics{euclid-I1e}}
 \end{proof}
 
 \goodbreak
 
-After this Euclid proceeds to establish several well-known results. Since this isn't a geometry class, we'll omit most of the details. You can find these \href{http://math.uci.edu/~ndonalds/math161/euclid.pdf}{here,} in \href{http://math.uci.edu/~ndonalds/Elements-I-VI.pdf}{Byrne,} or elsewhere.
+After this Euclid proceeds to establish several well-known results. Since this isn't a geometry class, we'll omit most of the details. You can find more of these \href{http://math.uci.edu/~ndonalds/math161/euclid.pdf}{here,} in \href{http://math.uci.edu/~ndonalds/Elements-I-VI.pdf}{Byrne,} or elsewhere.
 
 \begin{description}
   \item[\normalfont Thm\ I.\,4] Side angle side: if triangles have two pairs of congruent sides and the angles between them are also congruent, then the remaining sides and angles are congruent.
   \item[\normalfont Thm\ I.\,15] Vertical angles: if two lines meet, then the opposite angles made are congruent.
   \item[\normalfont Thms\ I.\,27 \& 29] Angles and parallels: if a line falls on two other lines, then the two lines are parallel if and only if the alternate angles are congruent ($\alpha\cong \beta$ in the picture).
   \begin{center}
-  \begin{tabular}{@{}c@{\qquad}c@{\quad}c@{\quad}c@{}}
-  \includegraphics{euclid-I15}
-  &
-  \includegraphics{euclid-I29}
-  &
-  \includegraphics{euclid-I32}
-  &
-  \includegraphics{euclid-I41}
-  \\
-  Thm I.\,15
-  &
-  Thms I.\,27/29
-  &
-  Thm I.\,32
-  &
-  Thm I.\,41
-  \end{tabular}
+	  \begin{tabular}{@{}c@{\qquad}c@{\quad}c@{\quad}c@{}}
+		  \includegraphics{euclid-I15}
+		  &
+		  \includegraphics{euclid-I29}
+		  &
+		  \includegraphics{euclid-I32}
+		  &
+		  \includegraphics{euclid-I41}
+		  \\
+		  Thm I.\,15
+		  &
+		  Thms I.\,27/29
+		  &
+		  Thm I.\,32
+		  &
+		  Thm I.\,41
+	  \end{tabular}
   \end{center}
   \item[\normalfont Thm\ I.\,32] Angle sums in a triangle: if one side of a triangle is protruded, the exterior angle equals the sum of the opposite interior angles.\par
   In the picture $\alpha+\beta=\delta$; in modern language $\alpha+\beta+\gamma=\ang{180}$.
@@ -572,139 +606,162 @@ After this Euclid proceeds to establish several well-known results. Since this i
 The last two results of Book I are Pythagoras and its converse.
 
 \begin{thm*}{I.\,47}{}
-The square on the hypotenuse of a right-triangle has area equal to the sum of the areas of the squares on the remaining sides.
+	The square on the hypotenuse of a right-triangle has area equal to the sum of the areas of the squares on the remaining sides.
 \end{thm*}
 
 \begin{proof}
-Given a right-angle at $A$, drop the perpendicular from $A$ across $\nm{BC}$ to $L$.\par
-\begin{minipage}[t]{0.6\linewidth}\vspace{-5pt}
-$\triangle FBC$ and $\square ABFG$ share the same base $\cl{BF}$ and height $\cl{AB}$. By Thm I.\,41,
-\[\operatorname{area}(\square ABFG)=2\operatorname{area}(\triangle BCF)\]
-Similarly (base $\cl{BD}$, height $\cl{BO}$)
-\[\operatorname{area}(\square BOLD)=2\operatorname{area}(\triangle ABD)\]
-Side-Angle-Side (Thm I.\,4) $\implies\triangle ABD\cong\triangle FBC$; the triangles have the same area, and so
-\[\operatorname{area}(\textcolor{red}{\square ABFG})=\operatorname{area}(\textcolor{red}{\square BOLD})\]
-Similarly $\operatorname{area}(\textcolor{Green}{\square ACKH})=\operatorname{area}(\textcolor{Green}{\square OCEL})$.
-\end{minipage}\hfill
-\begin{minipage}[t]{0.39\linewidth}\vspace{-12pt}
-\includegraphics{euclid-I47}
-\end{minipage}
+	Given a right-angle at $A$, drop the perpendicular from $A$ across $\nm{BC}$ to $L$.\par
+	\begin{minipage}[t]{0.6\linewidth}\vspace{-5pt}
+		$\triangle FBC$ and $\square ABFG$ share the same base $\cl{BF}$ and height $\cl{AB}$. By Thm I.\,41,
+		\[
+			\operatorname{area}(\square ABFG)=2\operatorname{area}(\triangle BCF)
+		\]
+		Similarly (base $\cl{BD}$, height $\cl{BO}$)
+		\[
+			\operatorname{area}(\square BOLD)=2\operatorname{area}(\triangle ABD)
+		\]
+		Side-Angle-Side (Thm I.\,4) $\implies\triangle ABD\cong\triangle FBC$; the triangles have the same area, and so
+		\[
+			\operatorname{area}(\textcolor{red}{\square ABFG})=\operatorname{area}(\textcolor{red}{\square BOLD})
+		\]
+		Similarly $\operatorname{area}(\textcolor{Green}{\square ACKH})=\operatorname{area}(\textcolor{Green}{\square OCEL})$.
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.39\linewidth}\vspace{-12pt}
+		\includegraphics{euclid-I47}
+	\end{minipage}
 \end{proof}
 
 The converse (Thm I.\,48) is Exercise \ref{exs:pythagconv}.
 
-\goodbreak\clearpage
 
-\begin{description}\item[Book II]\lstsp
-	Geometric solutions to problems that would now be treated using algebra. Much of this is attributable to the Pythagoreans.\par
+\goodbreak%\clearpage
+
+
+\begin{description}
+	\item[Book II]\lstsp Geometric solutions to problems that would now be treated using algebra. Much of this is attributable to the Pythagoreans.\par
 	(Thm II.\,11)\lstsp A segment may be divided so that the rectangle contained by the whole and one of the sub-segments is equal to the square on the remaining sub-segment.\par
-	We rephrase in modern language. Suppose the given segment $\cl{AB}$ has length $a$, our goal is to find $H$ on $\cl{AB}$ such that $\nm{AH}=x$ and $\textcolor{Green}{x^2}=\textcolor{blue}{a(a-x)}$. Euclid is providing a \emph{geometric solution} to a quadratic equation!\par
-\begin{minipage}[t]{0.69\linewidth}\vspace{-8pt}
-\begin{enumerate}\itemsep2pt
-  \item Construct $\square ABDC$ on $\cl{AB}$
-	\item Let $E$ be the midpoint of $\cl{AC}$ and connect $\cl{EB}$
-	\item Extend $\cl{AC}$ and lay off $\cl{EF}\cong\cl{EB}$ on $\cl{AC}$ extended
-	\item Construct $\square AFGH$ and drop the perpendicular to $I$
-	\item To finish: prove that $\operatorname{area}(\textcolor{Green}{\square AFGH}) =\operatorname{area}(\textcolor{blue}{\square BDIH})$
-\end{enumerate}
-The solution $x=\nm{AH}=\frac{\sqrt 5-1}2a$ \, means that $\cl{AH}:\cl{HB}$ is the \emph{golden ratio.}
-\end{minipage}\hfill\begin{minipage}[t]{0.3\linewidth}\vspace{-10pt}
-\flushright\includegraphics[scale=0.95]{euclid-II11}
-\end{minipage}\medbreak
+	We rephrase this in modern language. Suppose the given segment $\cl{AB}$ has length $a$, our goal is to find $H$ on $\cl{AB}$ such that $\nm{AH}=x$ and $\textcolor{Green}{x^2}=\textcolor{blue}{a(a-x)}$. Euclid is providing a \emph{geometric solution} to a quadratic equation!\par
+	\begin{minipage}[t]{0.69\linewidth}\vspace{-8pt}
+		\begin{enumerate}\itemsep2pt
+		  \item Construct $\square ABDC$ on $\cl{AB}$
+			\item Let $E$ be the midpoint of $\cl{AC}$ and connect $\cl{EB}$
+			\item Extend $\cl{AC}$ and lay off $\cl{EF}\cong\cl{EB}$ on $\cl{AC}$ extended
+			\item Construct $\square AFGH$ and drop the perpendicular to $I$
+			\item To finish: prove that $\operatorname{area}(\textcolor{Green}{\square AFGH}) =\operatorname{area}(\textcolor{blue}{\square BDIH})$
+		\end{enumerate}
+		The solution $x=\nm{AH}=\frac{\sqrt 5-1}2a$ \, means that $\cl{AH}:\cl{HB}$ is the \emph{golden ratio.}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.3\linewidth}\vspace{-10pt}
+		\flushright
+		\includegraphics[scale=0.95]{euclid-II11}
+	\end{minipage}
+	\medbreak
 
 
 
-\begin{minipage}[t]{0.74\linewidth}\vspace{0pt}
-\item[Book III]\lstsp Theorems regarding circles and tangency. Most of this material likely came from Hippocrates.\phantomsection\label{pg:thalesthm}\par
-  (Thm III.\,31)\lstsp Thales' Thm: a triangle in a semi-circle is right-angled.  
-\end{minipage}\hfill\begin{minipage}[t]{0.25\linewidth}\vspace{0pt}
-\flushright\includegraphics[scale=0.9]{euclid-III31}
-\end{minipage}
+	\begin{minipage}[t]{0.74\linewidth}\vspace{0pt}
+		\item[Book III]\lstsp Theorems regarding circles and tangency. Most of this material likely came from Hippocrates.\phantomsection\label{pg:thalesthm}\par
+		  (Thm III.\,31)\lstsp Thales' Thm: a triangle in a semi-circle is right-angled.  
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.25\linewidth}\vspace{0pt}
+		\flushright
+		\includegraphics[scale=0.9]{euclid-III31}
+	\end{minipage}
 
 
-\item[Book IV]\lstsp Construction of regular 3, 4, 5, 6 and 15-sided polygons inscribing and exscribing a circle. Also likely the work of Hippocrates.
-
-\item[Book V]\lstsp Ratios and magnitudes à la Eudoxus.\par
-	(Thm V.\,11)\lstsp If $a:b=c:d$ and $c:d=e:f$ then $a:b=e:f$
-
-
-\item[Book VI]\lstsp Ratios of magnitudes applied to geometry (similarity results).\smallbreak
-  (Thm VI.\,4)\lstsp Triangles with equal angles have corresponding sides proportional.\smallbreak
-  (Thm VI.\,8)\lstsp The altitude from the right angle of a right triangle divides it into two triangles similar to each other and the the original.\par
-  (Thm VI.\,31)\lstsp Corrected Pythagorean proof (pg.\,\pageref{pthagorig}) of Pythagoras' using Eudoxus' proportions and Thm VI.\,8.
-  
-
-\item[Book VII]\lstsp Divisibility and the Euclidean algorithm. Probably due to the Pythagoreans and Theaetetus.
-
-
-\item[Book VIII]\lstsp Number progressions, geometric sequences. Possibly due to studies in music by Archytas (a Pythagorean who taught Plato mathematics).
-
-
-\item[Book IX]\lstsp Number Theory: even/odd + perfect numbers.\par
-(Thm IX.\,20)\lstsp There are infinitely many primes.
-
-
-\item[Book X]\lstsp Discussion of commensurable and incommensurable ratios. Long and difficult, possibly derived from Theaetetus.
-
-
-\item[Book XI]\lstsp Solid geometry (lines/planes in 3D).\par
-	(Thm XI.\,28)\lstsp A parallelepiped is bisected by its diagonal plane.
+	\item[Book IV]\lstsp Construction of regular 3, 4, 5, 6 and 15-sided polygons inscribing and exscribing a circle. Also likely the work of Hippocrates.
+	
+	\item[Book V]\lstsp Ratios and magnitudes à la Eudoxus.\par
+		(Thm V.\,11)\lstsp If $a:b=c:d$ and $c:d=e:f$ then $a:b=e:f$
 	
 	
-\item[Book XII]\lstsp Ratios of areas and volumes (Eudoxus).\par
-	(Thm XII.\,2) The areas of circles are in the same ratio as the squares on their diameters.
-
-
-\item[Book XIII]\lstsp Construction of regular polyhedra inside a sphere and their classification.\par
-	(Thm XIII.\,10)\lstsp If a regular pentagon, hexagon and decagon are inscribed in the same circle, then their sides form a right-triangle.
+	\item[Book VI]\lstsp Ratios of magnitudes applied to geometry (similarity results).\smallbreak
+	  (Thm VI.\,4)\lstsp Triangles with equal angles have corresponding sides proportional.\smallbreak
+	  (Thm VI.\,8)\lstsp The altitude from the right angle of a right triangle divides it into two triangles similar to each other and the the original.\par
+	  (Thm VI.\,31)\lstsp Corrected Pythagorean proof (pg.\,\pageref{pthagorig}) of Pythagoras' using Eudoxus' proportions and Thm VI.\,8.
+	  
+	
+	\item[Book VII]\lstsp Divisibility and the Euclidean algorithm. Probably due to the Pythagoreans and Theaetetus.
+	
+	
+	\item[Book VIII]\lstsp Number progressions, geometric sequences. Possibly due to studies in music by Archytas (a Pythagorean who taught Plato mathematics).
+	
+	
+	\item[Book IX]\lstsp Number Theory: even/odd + perfect numbers.\par
+	(Thm IX.\,20)\lstsp There are infinitely many primes.
+	
+	
+	\item[Book X]\lstsp Discussion of commensurable and incommensurable ratios. Long and difficult, possibly derived from Theaetetus.
+	
+	
+	\item[Book XI]\lstsp Solid geometry (lines/planes in 3D).\par
+		(Thm XI.\,28)\lstsp A parallelepiped is bisected by its diagonal plane.
+		
+		
+	\item[Book XII]\lstsp Ratios of areas and volumes (Eudoxus).\par
+		(Thm XII.\,2) The areas of circles are in the same ratio as the squares on their diameters.
+	
+	
+	\item[Book XIII]\lstsp Construction of regular polyhedra inside a sphere and their classification.\par
+		(Thm XIII.\,10)\lstsp If a regular pentagon, hexagon and decagon are inscribed in the same circle, then their sides form a right-triangle.
 \end{description}
 
-One could study the \emph{Elements} and its influence for a lifetime and not be done! At the least, hopefully this brief overview convinces you why the book had such a profound impact on mathematics.
+One could study the \emph{Elements} and its influence for a lifetime and not be done! Hopefully this very brief overview convinces you why the book had such a profound impact on mathematics.
+
 
 \begin{exercises}
-\exstart Prove Thales' Theorem (III.\,31) (pg.\,\pageref{pg:thalesthm}).\vspace{-5pt}
-
-\begin{enumerate}\setcounter{enumi}{1}
-  \item[](\emph{Hint: start by joining the center of the circle to the apex of the triangle\ldots})
-  
-  \begin{minipage}[t]{0.7\linewidth}\vspace{0pt}
-  \item%[3-6]
-  %   Prove Thm I.\,32: the sum of the three interior angles of a triangle is equal to two right angles. Show that the proof depends on Thm I.\,29, and therefore on the parallel postulate.
-  Use the picture to provide a proof of Thm I.\,32: the sum of the three interior angles of a triangle is equal to two right angles.\par
-  Show that the proof depends on Thm I.\,29, and therefore on the parallel postulate.\par
-  (\emph{This isn't quite the same as Euclid's argument})
-  \end{minipage}\hfill\begin{minipage}[t]{0.29\linewidth}\vspace{0pt}
-  \flushright\includegraphics{euclid-I32proof}
-  \end{minipage}
-  
-  \begin{minipage}[t]{0.7\linewidth}\vspace{0pt}
-  \item\label{exs:pythagconv} Suppose that the square on side $\cl{BC}$ of $\triangle ABC$ has the same area as the sum of the squares on the other sides $\cl{AB}$, $\cl{AC}$. As in the picture, draw a perpendicular $\cl{AD}\cong \cl{AB}$.
-  \begin{enumerate}
-    \item Explain why $\cl{DC}\cong\cl{BC}$.
-    \item Hence conclude that $\triangle ABC$ is right-angled at $A$.
-  \end{enumerate}
-  \end{minipage}\hfill\begin{minipage}[t]{0.29\linewidth}\vspace{0pt}
-  \flushright\includegraphics{euclid-I48}
-  \end{minipage}
-
-
-  \item%[3-12]
-  Prove Thm III.\,3:\lstsp A diameter of a circle bisects a chord if and only if it is perpendicular to the chord.
-  
-  
-  \item Verify that Euclid's construction for Thm II.\,11 really does solve the given problem.\par
-  (\emph{You can use modern algebra!})
-  
-    
-  \item%[3-28]
-  Draw a semi-circle with diameter $9+5=14$. Solve the equation $\frac 9x=\frac x5$ \emph{geometrically,} by constructing a vertical line whose length is $x$.
-  
-  
-  
-  \item%[2-14]
-  Show that areas of similar segments of circles are proportional to the squares of the length of their chords.\par
-  (\emph{You may assume that areas of circles are proportional to the squares on their diameters and can use modern algebra/trigonometry if you wish})
-\end{enumerate}
+	\exstart Prove Thales' Theorem (III.\,31) (pg.\,\pageref{pg:thalesthm}).\vspace{-5pt}
+	
+	\begin{enumerate}\setcounter{enumi}{1}
+	  \item[](\emph{Hint: start by joining the center of the circle to the apex of the triangle\ldots})
+	  
+	  \begin{minipage}[t]{0.7\linewidth}\vspace{0pt}
+		  \item%[3-6]
+		  %   Prove Thm I.\,32: the sum of the three interior angles of a triangle is equal to two right angles. Show that the proof depends on Thm I.\,29, and therefore on the parallel postulate.
+		  Use the picture to provide a proof of Thm I.\,32: the sum of the three interior angles of a triangle is equal to two right angles.\par
+		  Show that the proof depends on Thm I.\,29, and therefore on the parallel postulate.\par
+		  (\emph{This isn't quite the same as Euclid's argument})
+	  \end{minipage}
+	  \hfill
+	  \begin{minipage}[t]{0.29\linewidth}\vspace{0pt}
+	  	\flushright
+	  	\includegraphics{euclid-I32proof}
+	  \end{minipage}
+	  
+	  \begin{minipage}[t]{0.7\linewidth}\vspace{0pt}
+		  \item\label{exs:pythagconv} Suppose that the square on side $\cl{BC}$ of $\triangle ABC$ has the same area as the sum of the squares on the other sides $\cl{AB}$, $\cl{AC}$. As in the picture, draw a perpendicular $\cl{AD}\cong \cl{AB}$.
+		  \begin{enumerate}
+		    \item Explain why $\cl{DC}\cong\cl{BC}$.
+		    \item Hence conclude that $\triangle ABC$ is right-angled at $A$.
+		  \end{enumerate}
+	  \end{minipage}
+	  \hfill
+	  \begin{minipage}[t]{0.29\linewidth}\vspace{0pt}
+	  	\flushright
+	  	\includegraphics{euclid-I48}
+	  \end{minipage}
+	
+	
+	  \item%[3-12]
+	  Prove Thm III.\,3:\lstsp A diameter of a circle bisects a chord if and only if it is perpendicular to the chord.
+	  
+	  
+	  \item Verify that Euclid's construction for Thm II.\,11 really does solve the given problem.\par
+	  (\emph{You can use modern algebra!})
+	  
+	    
+	  \item%[3-28]
+	  Draw a semi-circle with diameter $9+5=14$. Solve the equation $\frac 9x=\frac x5$ \emph{geometrically,} by constructing a vertical line whose length is $x$.
+	  
+	  
+	  
+	  \item%[2-14]
+	  Show that areas of similar segments of circles are proportional to the squares of the length of their chords.\par
+	  (\emph{You may assume that areas of circles are proportional to the squares on their diameters and can use modern algebra/trigonometry if you wish})
+	\end{enumerate}
 
 \end{exercises}
 
@@ -718,13 +775,19 @@ Archimedes (287--212\BC) is arguably the greatest ancient mathematician. Syracus
 Archimedes' genius was practical not just mathematical. Beyond his anti-Roman catapults, he is credited with a large number of inventions and technical innovations, including \href{https://en.wikipedia.org/wiki/Archimedes'_screw}{\emph{Archimedes' screw,}} still used in modern irrigation systems to elevate water. He is acknowledged as the founder of \emph{hydrostatics,} where \emph{Archimedes' principle} states that an object immersed in water loses weight equal to that of the displaced water. A famous story recounts Archimedes using this to detect whether a smith had used all the gold he had been given in the manufacture of a crown.\smallbreak
 
 \begin{minipage}[t]{0.69\linewidth}\vspace{0pt}
-\boldinline{Example}
-A cube with side length 20\,cm floats such that the water-line is halfway up the cube. By Archimedes' principle, the weight of the cube is the same as that of the volume of displaced water:
-\[20\times 20\times 10=4000\,\text{cm}^3\]
-which has a weight (mass) of roughly 4\,kg.
-\end{minipage}\begin{minipage}[t]{0.3\linewidth}\vspace{0pt}
-\flushright\includegraphics{archimedes-cube}
+	\boldinline{Example}
+	A cube with side length 20\,cm floats such that the water-line is halfway up the cube. By Archimedes' principle, the weight of the cube is the same as that of the volume of displaced water:
+	\[
+		20\times 20\times 10=4000\,\text{cm}^3
+	\]
+	which has a weight (mass) of roughly 4\,kg.
 \end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\linewidth}\vspace{0pt}
+	\flushright
+	\includegraphics{archimedes-cube}
+\end{minipage}
+
 
 
 \boldinline{Levers}
@@ -732,7 +795,7 @@ which has a weight (mass) of roughly 4\,kg.
 Archimedes made great study of levers, both for practical purposes and as a method of calculation.
 
 \begin{center}
-\includegraphics{archimedes-lever}
+	\includegraphics{archimedes-lever}
 \end{center}
 
 Given masses $M_1$, $M_2$ located distances $r_1$, $r_2$ from a pivot, Archimedes states:
@@ -743,45 +806,58 @@ Given masses $M_1$, $M_2$ located distances $r_1$, $r_2$ from a pivot, Archimede
 \end{itemize}
 In modern terms we'd compare the \emph{torques} $\tau_1=M_1r_1$ and $\tau_2=M_2r_2$. Since torque requires the multiplication of non-numerical quantities, Archimedes would instead have considered this using Eudoxus' theory of proportions.\par
 For example, to find the mass $M_2$ required to balance a lever given $M_1=12$\,lb, $r_1=4$\,ft and $r_2=3$\,ft, Archimedes would have observed that
-\[M_2:M_1=4:3\implies M_2=16\,\text{lb}\]
+\[
+	M_2:M_1=4:3\implies M_2=16\,\text{lb}
+\]
 \goodbreak
+
 
 \boldinline{\emph{The Method}: is Archimedes the founder of calculus?}
 
 A previously unknown work of Archimedes was discovered in 1899. As an amazing application of the lever principle, Archimedes makes an argument that looks remarkably like modern calculus; he could be claimed to be its earliest practitioner by 1800 years! The method was outlined in a letter to Eratosthenes and includes part of an argument for proving Archimedes' favorite theorem, a picture of this result was engraved on his tomb.
 
 \begin{thm*}{}{}
-A cone, hemisphere and cylinder with the same base and height have volumes in the ratio $1:2:3$
+	A cone, hemisphere and cylinder with the same base and height have volumes in the ratio $1:2:3$
 \end{thm*}
 \phantomsection\label{pg:archmethod}
 
 \begin{minipage}[t]{0.67\linewidth}\vspace{0pt}
-Here is a modernized version of half the result.\smallbreak
-Suppose the `base' is a disk with unit radius. Remove the hemisphere from the cylinder and place the cone beneath. We compare the \textcolor{red}{cross-sections} the same distance $y$ from the apex of the cone.
-\begin{itemize}\itemsep0pt
-  \item The circular cross-section of the cone has radius $y$ whence its area is proportional to the square on the radius: $\pi y^2$.
-	\item The upper annular cross-section has area proportional to the difference of the squares on the radius of the cylinder and on the distance $x$. By Pythagoras' the cross-sectional area is
-	\[\pi(1^2-x^2)=\pi(1-(1-y^2))=\pi y^2\]
-\end{itemize}
-\end{minipage}\hfill\begin{minipage}[t]{0.32\linewidth}\vspace{0pt}
-\flushright\includegraphics{archimedes-spherecone}
+	Here is a modernized version of half the result.\smallbreak
+	Suppose the `base' is a disk with unit radius. Remove the hemisphere from the cylinder and place the cone beneath. We compare the \textcolor{red}{cross-sections} the same distance $y$ from the apex of the cone.
+	\begin{itemize}\itemsep0pt
+	  \item The circular cross-section of the cone has radius $y$ whence its area is proportional to the square on the radius: $\pi y^2$.
+		\item The upper annular cross-section has area proportional to the difference of the squares on the radius of the cylinder and on the distance $x$. By Pythagoras' the cross-sectional area is
+		\[
+			\pi(1^2-x^2)=\pi(1-(1-y^2))=\pi y^2
+		\]
+	\end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.32\linewidth}\vspace{0pt}
+	\flushright
+	\includegraphics{archimedes-spherecone}
 \end{minipage}
 The cross-sections are therefore in balance with respect to a vertical lever whose pivot lies at the center of the picture. Archimedes concludes that the cone and the upper-figure are in balance: that is
-\[V_\text{cone}=V_\text{cylinder}-V_\text{hemisphere}\]
-in line with the desired ratios.\bigbreak
+\[
+	V_\text{cone}=V_\text{cylinder}-V_\text{hemisphere}
+\]
+in line with the desired ratios.
+\bigbreak
 
-Here is another argument of Archimedes' with a suggestion of calculus. A disk comprises infinitely many concentric circles, the circumference of each being proportional to its radius. `Unwind' these circles to obtain a triangle; one side is the radius of the disk, the other its circumference. The area of a circle is therefore that of a triangle with sides the radius and circumference of the circle: $A=\frac 12r\cdot c$.
+
+Here is another argument of Archimedes' with a suggestion of calculus. A disk comprises infinitely many concentric circles, the circumference of each being proportional to its radius. `Unwind' these circles to obtain a triangle; one side is the radius of the disk, the other its circumference. The area of a circle is therefore that of a triangle with sides the radius and circumference of the circle: $A=\frac 12rc$.
 \begin{center}
-\includegraphics{archimedes-circle}
+	\includegraphics{archimedes-circle}
 \end{center}
 
 \emph{The Method} includes several of these calculus-like discussions. While efficient, Archimedes felt that his approach didn't constitute a proof and provided alternative arguments elsewhere in his writings. The essential problem is this;
 \begin{quote}
   Can we really say that an area \emph{equals} its cross-sectional lines? Or that a volume \emph{equals} its cross-sectional areas? Lines have no width so if we add them up we have no area. If they have width, then infinitely many of them have infinite area.
 \end{quote}
-These are really variations of Zeno's paradoxes (pg.\,\pageref{pg:zeno}) regarding infinitesimals and indivisibles!\goodbreak
+These are really variations of Zeno's paradoxes (pg.\,\pageref{pg:zeno}) regarding infinitesimals and indivisibles!
+\goodbreak
 
-Archimedes' arguments would be resurrected in the early 1600s by Cavalieri and Galileo as the development of calculus gathered pace. The same duality of presentation characterised this later development: Newton and others found the infinitesimal approach efficient, but felt the need to present \emph{geometric} proofs to convince readers that the results weren't mere trickery.\smallbreak
+Archimedes' arguments would be resurrected in the early 1600s by Cavalieri and Galileo as the development of calculus gathered pace. The same duality of presentation characterised this later development: Newton and others found the infinitesimal approach efficient, but felt the need to present \emph{geometric} proofs to convince readers that their results weren't mere trickery.\smallbreak
 It is tempting to imagine what might have happened if Archimedes' \emph{method} had been accepted and preserved as part of the Greek canon; if calculus had been developed 1800 years earlier, how might this have affected technological development? Would the space-race have happened in \AD 500?! %It is a romantic notion certainly, but also a simplistic one. There were other factors at play in the 1600s that made the development of calculus more likely. Still, history is full of fun \emph{what-if}'s to ponder\ldots\par
 
 
@@ -796,34 +872,38 @@ It is tempting to imagine what might have happened if Archimedes' \emph{method} 
 \end{enumerate}
 
 \begin{minipage}[t]{0.64\linewidth}\vspace{-5pt}
-Archimedes' halving process relied on an induction step, an approximation of which we mimic here. Suppose we have an isosceles triangle with equal legs 1, altitude $\textcolor{blue}{d_n}$, and chord $2\textcolor{red}{h_n}$. We halve the angle to find the new altitude $\textcolor{Green}{d_{n+1}}$ and chord $2\textcolor{orange}{h_{n+1}}$. Everything follows from three applications of Pythagoras':
-\begin{gather*}
-1=\textcolor{blue}{d}^2_{\textcolor{blue}{n}} +\textcolor{red}{h}^2_{\textcolor{red}{n}}\\
-(2\textcolor{orange}{h_{n+1}})^2=\textcolor{red}{h_n}\!\!\!\!\!{\phantom{h}}^2 +(\textcolor{Brown}{1-d_n})^2\\ 
-1=\textcolor{Green}{d}^2_{\textcolor{Green}{n+1}} +\textcolor{orange}{h}^2_{\textcolor{orange}{n+1}}
-\end{gather*}
-Expanding and cancelling, we obtain
-\[\textcolor{Green}{d}^2_{\textcolor{Green}{n+1}}=\frac 12(1+\textcolor{blue}{d}_{\textcolor{blue}{n}}),\qquad \textcolor{orange}{h}^2_{\textcolor{orange}{n+1}}=1-\textcolor{Green}{d}^2_{\textcolor{Green}{n+1}} =\frac 12(1-\textcolor{blue}{d}_{\textcolor{blue}{n}})\]
-\end{minipage}\hfill\begin{minipage}[t]{0.35\linewidth}\vspace{0pt}
-\flushright\includegraphics[scale=0.9]{archimedes-hex}
-\end{minipage}\medbreak
+	Archimedes' halving process relied on an induction step, an approximation of which we mimic here. Suppose we have an isosceles triangle with equal legs 1, altitude $\textcolor{blue}{d_n}$, and chord $2\textcolor{red}{h_n}$. We halve the angle to find the new altitude $\textcolor{Green}{d_{n+1}}$ and chord $2\textcolor{orange}{h_{n+1}}$. Everything follows from three applications of Pythagoras':
+	\begin{gather*}
+		1=\textcolor{blue}{d}^2_{\textcolor{blue}{n}} +\textcolor{red}{h}^2_{\textcolor{red}{n}}\\
+		(2\textcolor{orange}{h_{n+1}})^2=\textcolor{red}{h_n}\!\!\!\!\!{\phantom{h}}^2 +(\textcolor{Brown}{1-d_n})^2\\ 
+		1=\textcolor{Green}{d}^2_{\textcolor{Green}{n+1}} +\textcolor{orange}{h}^2_{\textcolor{orange}{n+1}}
+	\end{gather*}
+	Expanding and cancelling, we obtain
+	\[
+		\textcolor{Green}{d}^2_{\textcolor{Green}{n+1}} =\frac 12(1+\textcolor{blue}{d}_{\textcolor{blue}{n}}),\qquad \textcolor{orange}{h}^2_{\textcolor{orange}{n+1}} =1-\textcolor{Green}{d}^2_{\textcolor{Green}{n+1}} =\frac 12(1-\textcolor{blue}{d}_{\textcolor{blue}{n}})
+	\]
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.35\linewidth}\vspace{0pt}
+	\flushright
+	\includegraphics[scale=0.9]{archimedes-hex}
+\end{minipage}
+\medbreak
 Since $d_0=\frac{\sqrt 3}2$ and $h_0=\frac 12$, we may compute the entirety of both sequences:
 \begin{gather*}
-d_1=\frac 12\sqrt{2+\sqrt 3},\quad d_2=\frac 12\sqrt{2+\sqrt{2+\sqrt 3}},\quad\ldots\quad d_n=\frac 12\sqrt{2+\sqrt{2+\cdots+\sqrt{2+\sqrt 3}}}\\
-h_1=\frac 12\sqrt{2-\sqrt 3},\quad h_2=\frac 12\sqrt{2-\sqrt{2+\sqrt 3}},\quad\ldots\quad h_n=\frac 12\sqrt{2-\sqrt{2+\cdots+\sqrt{2+\sqrt 3}}}
+	d_1=\frac 12\sqrt{2+\sqrt 3},\quad d_2=\frac 12\sqrt{2+\sqrt{2+\sqrt 3}},\quad\ldots\quad d_n=\frac 12\sqrt{2+\sqrt{2+\cdots+\sqrt{2+\sqrt 3}}}\\
+	h_1=\frac 12\sqrt{2-\sqrt 3},\quad h_2=\frac 12\sqrt{2-\sqrt{2+\sqrt 3}},\quad\ldots\quad h_n=\frac 12\sqrt{2-\sqrt{2+\cdots+\sqrt{2+\sqrt 3}}}
 \end{gather*}
 where the $n\th$ term in each case contains $n$ copies of the digit 2 under the square-root. The circumference and area of the $6\cdot 2^n$-sided polygon inscribed in the circle are therefore
-\[C_n=12\cdot 2^nh_n,\qquad A_n=6\cdot 2^nd_nh_n=6\cdot 2^{n-1}h_{n-1}=\frac 12C_{n-1}\]
+\[
+	C_n=12\cdot 2^nh_n,\qquad A_n=6\cdot 2^nd_nh_n=6\cdot 2^{n-1}h_{n-1}=\frac 12C_{n-1}
+\]
 These sequences increase to $2\pi$ and $\pi$ respectively. For a 96-sided polygon, Archimedes would have had to approximate
-\[C_4=12\cdot 2^4h_4=96\sqrt{2-\sqrt{2+\sqrt{2+\sqrt{2+\sqrt 3}}}}> 6.282\implies \pi>3.141>3\frac{10}{71}\]
+\[
+	C_4=12\cdot 2^4h_4=96\sqrt{2-\sqrt{2+\sqrt{2+\sqrt{2+\sqrt 3}}}}> 6.282\implies \pi>3.141>3\frac{10}{71}
+\]
 
-% Similarly computed the area under a parabola. Trick was to keep drawing triangles so that the area of each new part was $1/4$ of total of all triangles at previous step. For example on the parabola $y=1-x^2$, the area of one sub-triangle is 1. Now, essentially, he was able to show that any triangle with corners on the parabola with $x$-values in an arithmetic sequence $p-\varepsilon,p,p+\varepsilon$ has an area $\varepsilon^3$. (more generally for a parabola $y=a+bx-cx^2$ the area is $c\varepsilon^3$). Taking $\varepsilon=2^{-n}$ we obtain $A_n=8^{-n}$. Since, at each step there are twice as many triangles being added as at the previous step, we get the geometric series $A_0\sum (1/4)^n=\frac 43A_0$.\\
-% 
-% \begin{itemize}
-%   \item Approximated area under parabola similarly, using series to compute
-%   \[A=\frac 43T=T+2\left(\frac T8\right)+4\left(\frac T{64}\right)+\cdots\]
-%   where $T$ is area of original triangle under parabola
-% \end{itemize}
+
 
 
 \boldsubsubsection{Other Highlights of the later Greek Period: 300\BC--\AD 500}\phantomsection\label{pg:eratosthenes}
@@ -841,66 +921,86 @@ We'll consider ancient astronomy, including Greek contributions, in the next cha
   \end{itemize}
 
   \item Apollonius (225\BC) writes an eight-volume book on conic sections building on earlier work of Menaechmusus (350\BC).
+  
   \item By 146\BC{} the Greek empire had fallen under Roman rule. Alexandria remained important. Educated Greeks still spoke and wrote in Greek rather than (Roman) Latin. For context, Julius Caesar ruled Rome around this time (died 44\BC).
   %\item Hipparchus (140\BC) computed chords (essentially sine tables, although the word was not used) for Astronomical purposes.
+  
   \item Heron (\AD 75) proves the formula $\sqrt{s(s-a)(s-b)(s-c)}$ for the area of triangle, where $s=\frac 12(a+b+c)$ is the semi-perimeter. This was likely known to Archimedes; Heron's work was a compilation of earlier mathematics.
+  
   \item Around \AD 100 the Neopythagorean's worked in Alexandria, studying music, philosophy, and number, with the intent of reviving the teachings of Pythagoras.
   %\item Ptolemy (\AD 150) extended the work of Hipparchus on trigonometry and wrote the astronomical masterwork \emph{Almagest.} We shall study this in the next section.
+  
   \item Around \AD 400, Theon and Hypatia produce the most widely-read edition of Euclid's \emph{Elements} as well as improving upon several earlier mathematical topics.
+  
   \item In \AD 395 the Roman empire split into eastern and western parts centered on Rome and Byzantium/Constantinople. The western empire rapidly declined under the pressures of corruption and barbarian attacks, collapsing completely by \AD 500. Alexandria experienced riots and a bloody power-struggle (Hypatia was murdered by a mob in 415) and the library of Alexandria was severely damaged and possibly destroyed at this time. In 642, Alexandria was captured by the new Islamic caliphate. Much of the material in the library survived by being copied and transported to various places of learning; particularly Constantinople and Baghdad. For the next 600 years, the knowledge of Alexandria was largely a mystery to (western) Europe.
 \end{itemize}
+
 
 \goodbreak
 
 
 \begin{exercises}
-\exstart %[4-2]
-If a weight of 8\,kg is placed 10\,m from the pivot of a lever and a weight of 12\,kg is placed 8\,m from the pivot in the opposite direction, toward which weight will the lever incline? Answer using Archimedes' language.
-
-\begin{enumerate}\setcounter{enumi}{1}
-  \item Use Eratosthenes' Sieve to find all the primes $<100$.
-  
-  
-  \item\begin{enumerate}
-    \item Prove Heron's formula as follows.
- 	\begin{enumerate}
- 	\begin{minipage}[t]{0.68\linewidth}\vspace{-5pt}
-    	\item Let $h$ be the altitude and $x$ the base of the left-hand right-triangle. Apply Pythagoras to the two right-triangles to show that
-    	\[x=\frac{a^2+b^2-c^2}{2a}\]
- 	\end{minipage}\hfill\begin{minipage}[t]{0.31\linewidth}\vspace{-15pt}
- 		\flushright\includegraphics{archimedes-heron}
- 	\end{minipage}
-    	\item Substitute in $h^2=b^2-x^2$ to find $h$ in terms of $a,b,c$ and thus deduce Heron's formula.
-  	\end{enumerate}
-  	\item Find the area of a triangle with sides 4, 7 and 10.
-  \end{enumerate}
-
-  
-  \item Suppose $C_n$ is the circumference of a $6\cdot 2^n$-sided inscribed polygon in a unit circle. Show that the circumference of the corresponding \emph{circumscribed} polygon is $C^{\text{ex}}_n=\frac 1{d_n}C_n$.
-  
-  \item Use the modern formula $A=\frac 12ab\sin C$ to prove that, for any $k\in\N$
-  \[\frac 12k\sin\frac{2\pi}k<\pi<k\tan\frac\pi k\]
-  Moreover, explain why both sides converge to $\pi$.
-  
-  \item%[4-4]
-  Instead of modern algebra, Archimedes used several geometric lemmas to help find the areas of polygons inscribed in and circumscribing circles. Here is one; prove it!\par
-  Let $\cl{OA}$ be the radius of a circle and $\cl{AC}$ be tangent to the circle at $A$. Let $D$ lie on $\cl{AC}$ such that $\cl{OD}$ bisects $\angle COA$. Then
-  \[\frac{\nm{DA}}{\nm{OA}}=\frac{\nm{CA}}{\nm{CO}+\nm{OA}}\quad\text{and}\quad \nm{DO}^2=\nm{OA}^2+\nm{DA}^2\]
-  (\emph{Hint: draw a picture and let $T$ be the intersection of the circle and $\cl{OC}$})
- % If you want a challenge, try proving the second lemma mentioned in the book\ldots
- 
- 	\item (Hard)\lstsp Archimedes used a geometric series approach to evaluate the area inside a parabola. Use modern algebra for this question.\par
- 	\begin{minipage}[t]{0.6\linewidth}\vspace{-5pt}
- 	 	\begin{enumerate}
-  	\item Suppose $y=a+bx+cx^2$ is the equation of a \textcolor{blue}{parabola}. If $P,Q,R$ have $x$ co-ordinates in an arithmetic sequence $x-\epsilon,x,x+\epsilon$, show that the area of $\triangle PQR$ is $A=\nm c\!\epsilon^3$; \emph{independent of $x$}!
-  	\item With reference to the picture, if $A$ is the area of the \textcolor{Green}{large triangle}, explain why the smaller triangle has area $A_1=\frac 18A$.
-  	\item Use a geometric series to prove that the area inside the parabola bounded by $\cl{PR}$ is $\frac 43A$
- 	\end{enumerate}
- 	\end{minipage}\hfill\begin{minipage}[t]{0.39\linewidth}\vspace{-5pt}
- 	\flushright\includegraphics{archimedes-parabola}
- 	\end{minipage}
-
-\end{enumerate}
+	\exstart %[4-2]
+	If a weight of 8\,kg is placed 10\,m from the pivot of a lever and a weight of 12\,kg is placed 8\,m from the pivot in the opposite direction, toward which weight will the lever incline? Answer using Archimedes' language.
+	
+	
+	\begin{enumerate}\setcounter{enumi}{1}
+	  \item Use Eratosthenes' Sieve to find all the primes $<100$.
+	  
+	  
+	  \item\begin{enumerate}
+	    \item Prove Heron's formula as follows.
+		 	\begin{enumerate}
+			 	\begin{minipage}[t]{0.68\linewidth}\vspace{-5pt}
+			    \item Let $h$ be the altitude and $x$ the base of the left-hand right-triangle. Apply Pythagoras' to the two right-triangles to show that
+			    \[
+			    	x=\frac{a^2+b^2-c^2}{2a}
+			    \]
+			 	\end{minipage}
+			 	\hfill
+			 	\begin{minipage}[t]{0.31\linewidth}\vspace{-15pt}
+			 		\flushright
+			 		\includegraphics{archimedes-heron}
+			 	\end{minipage}
+			  \item Substitute in $h^2=b^2-x^2$ to find $h$ in terms of $a,b,c$ and thus deduce Heron's formula.
+		  \end{enumerate}
+	  
+	  	\item Find the area of a triangle with sides 4, 7 and 10.
+	  \end{enumerate}
+	
+	  
+	  \item Suppose $C_n$ is the circumference of a $6\cdot 2^n$-sided inscribed polygon in a unit circle. Show that the circumference of the corresponding \emph{circumscribed} polygon is $C^{\text{ex}}_n=\frac 1{d_n}C_n$.
+	  
+	  \item Use the modern formula $A=\frac 12ab\sin C$ to prove that, for any $k\in\N$
+	  \[
+	  	\frac 12k\sin\frac{2\pi}k<\pi<k\tan\frac\pi k
+	  \]
+	  Moreover, explain why both sides converge to $\pi$.
+	  
+	  \item%[4-4]
+	  Instead of modern algebra, Archimedes used several geometric lemmas to help find the areas of polygons inscribed in and circumscribing circles. Here is one; prove it!\par
+	  Let $\cl{OA}$ be the radius of a circle and $\cl{AC}$ be tangent to the circle at $A$. Let $D$ lie on $\cl{AC}$ such that $\cl{OD}$ bisects $\angle COA$. Then
+	  \[
+	  	\frac{\nm{DA}}{\nm{OA}}=\frac{\nm{CA}}{\nm{CO}+\nm{OA}}\quad\text{and}\quad \nm{DO}^2=\nm{OA}^2+\nm{DA}^2
+	  \]
+	  (\emph{Hint: draw a picture and let $T$ be the intersection of the circle and $\cl{OC}$})
+	 % If you want a challenge, try proving the second lemma mentioned in the book\ldots
+	 
+	 	\item (Hard)\lstsp Archimedes used a geometric series approach to evaluate the area inside a parabola. Use modern algebra for this question.\par
+	 	\begin{minipage}[t]{0.6\linewidth}\vspace{-5pt}
+	 	 	\begin{enumerate}
+	  		\item Suppose $y=a+bx+cx^2$ is the equation of a \textcolor{blue}{parabola}. If $P,Q,R$ have $x$ co-ordinates in an arithmetic sequence $x-\epsilon,x,x+\epsilon$, show that the area of $\triangle PQR$ is $A=\nm c\!\epsilon^3$; \emph{independent of $x$}!
+	  		\item With reference to the picture, if $A$ is the area of the \textcolor{Green}{large triangle}, explain why the smaller triangle has area $A_1=\frac 18A$.
+	  		\item Use a geometric series to prove that the area inside the parabola bounded by $\cl{PR}$ is $\frac 43A$
+	 		\end{enumerate}
+	 	\end{minipage}
+	 	\hfill
+	 	\begin{minipage}[t]{0.39\linewidth}\vspace{-5pt}
+	 		\flushright
+	 		\includegraphics{archimedes-parabola}
+	 	\end{minipage}
+	
+	\end{enumerate}
 \end{exercises}
 
 
