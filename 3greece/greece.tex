@@ -8,7 +8,7 @@ Greek civilization dates from around 800\BC, centered between the Adriatic sea t
 
 Philip of Macedon `unified' the Greek peninsula just before his death in 336\BC. His son, Alexander the Great, led a massive campaign conquering Persia, Egypt, Babylon, and western India before his own death in Babylon in 323\BC. Alexander left provincial governors to manage captured territories; some of these structures endured for centuries (e.g., Egypt's Ptolemaic dynasty), while others were overthrown after only a few years (e.g., parts of India). While Alexander's conquests did not produce a long-lasting centralized Greek empire, they were effective at expanding the reach of Greek cultural practices and philosophy and brought external ideas into the Greek tradition.\medbreak
 
-The core part of Greek territory (map below) was absorbed by the Roman empire around 146\BC{}. In line with typical Roman practice, local culture was left largely intact and scholarship continued under Roman rule.\footnote{As long as a conquered people accepted Roman governors and paid taxes, they were accepted as Roman citizens. Of course, if there was resistance\ldots} Greek culture and learning was central to the later Byzantine (eastern Roman) empire (centered on Byzantium/Constantinople/Istanbul). Constantinople was eventually captured by the Islamic Ottomans in 1453. While Islamic scholarship was itself significantly influenced by the ancient Greeks, one result of the fall of Constantinople was the exodus of several scholars to Rome, thus helping to fuel the European Renaissance. 
+The core part of Greek territory (map below) was absorbed by the Roman empire around 146\BC{}. In line with typical Roman practice, local culture was left largely intact and scholarship continued under Roman rule.\footnote{As long as a conquered people accepted Roman governors and paid taxes, they were accepted as Roman citizens. Of course, if there was resistance\ldots} Greek culture and learning was central to the later Byzantine (eastern Roman) empire (centered on Byzantium/Constantinople/Istanbul). Constantinople was eventually captured by the Islamic Ottomans in 1453. While Islamic scholarship was itself significantly influenced by the ancient Greeks, one result of the fall of Constantinople was the exodus of several scholars to Rome, helping to fuel the European Renaissance. 
 \begin{center}
 	\includegraphics[scale=0.85]{greece500bc.jpg}\par
 	Greek Territory c.\,500\BC{}% from \href{http://www.timemaps.com}{timemaps.com}
@@ -291,8 +291,22 @@ $37:13=148:52$ since we obtain the same sequence of quotients $(2,1,5,2)$:
 \begin{enumerate}\setcounter{enumi}{3}
 	\item Appealing to congruent isosceles triangles $\triangle DCG\cong\triangle EHF$ we see that $\nm{GC}=\nm{FH}$ is the diagonal of the interior regular pentagon. The third line of the algorithm is therefore the same as the first: we are back to considering the ratio of the diagonal to the side of a regular pentagon. The algorithm therefore continues forever with all quotients being 1.
 \end{enumerate}
+
+
+\boldinline{Example 3}
+
+In modern language, the diagonal to the side of a square is the incommensurable ratio $\sqrt 2:1$. We apply Theaetetus' algorithm:
+\begin{gather*}
+	\underline{\sqrt 2}=1\cdot \underline 1+(\underline{\sqrt 2-1})\\
+	\underline 1=2\cdot(\underline{\sqrt 2-1})+(\underline{3-2\sqrt 2})
+\end{gather*}
+Observe that $3-2\sqrt 2=(\sqrt 2-1)^2$, whence the second line reads $1=2x+x^2$. The following lines in the algorithm may therefore be obtained by repeatedly multiplying by $x$:
+\[
+	x=2x^2+x^3,\quad x^2=2x^3+x^4,\text{etc.,}
+\]
+resulting in a never-ending sequence\footnote{If you're interested in number theory, investigate the relationship of Theaetetus' algorithm to continued fractions\ldots} of quotients: $1,2,2,2,2,2,\ldots$
 	
-\goodbreak
+% \goodbreak
 
 
 
@@ -308,7 +322,7 @@ At first glance it appears as if Eudoxus is telling us how to compare \emph{rati
 \[
 	\frac AB>\frac nm\ge \frac CD
 \]
-which is trivially satisfied by taking $m=D$ and $n=C$. However, if $A,B,C,D$ were interpreted as \emph{segments} rather than integers this is much more useful. His mathematics really told the Greeks how to approximate incommensurable ratios with rational numbers.
+which is trivially satisfied by taking $m=D$ and $n=C$. However, if $A,B,C,D$ were interpreted as \emph{segments} rather than integers this is much more useful. Building on the work of Theaetetus, his mathematics told the Greeks how to approximate incommensurable ratios with rational numbers.
 
 
 \boldinline{Examples}
@@ -317,12 +331,12 @@ which is trivially satisfied by taking $m=D$ and $n=C$. However, if $A,B,C,D$ we
 
 \begin{enumerate}\setcounter{enumi}{1}
   \begin{minipage}[t]{0.68\linewidth}\vspace{-10pt}
-    \item We show that the side\,:\,diagonal of a square is greater than 1\,:\,2.\par
+    \item We show that the side\,:\,diagonal of a square is greater than 1\,:\,2; equivalently, the diagonal is less than twice the side.\par
     See the picture, where the side\,:\,diagonal $=A:B$. Choosing $m=D=2$ and $n=C=1$, we see that
   	\[
   		mA=2A>B=nB \tag{diag $>$ side of large square}
   	\]
-  	In modern language, this proves that $\frac 1{\sqrt 2}>\frac 12$.
+  	In modern language, this is merely $\frac 1{\sqrt 2}>\frac 12$.
   \end{minipage}
   \hfill
   \begin{minipage}[t]{0.31\linewidth}\vspace{-10pt}
@@ -334,28 +348,26 @@ which is trivially satisfied by taking $m=D$ and $n=C$. However, if $A,B,C,D$ we
 
 \boldinline{Zeno of Elea (c.\,450\BC)}\phantomsection\label{pg:zeno}
 
-No discussion of pre-Euclidean mathematics would be complete without Zeno. While not strictly a mathematician, his arguments and paradoxes have become essential parts of the discussion of the infinite and the infinitesimal. Here are perhaps the two most famous:
+%No discussion of pre-Euclidean mathematics would be complete without Zeno. 
+While not strictly a mathematician, Zeno's arguments have become essential parts of the discussion of the infinite and the infinitesimal. These provided fodder for philosophers for thousands of years and lie at the heart of the controversy surrounding the development of calculus. Here are two of the most famous:
 \begin{description}\itemsep0pt
-  \item[\normalfont\emph{Achilles and Tortoise}] Achilles chases a Tortoise. After time $t_1$, Achilles reaches the Tortoise's starting position, but the Tortoise has moved on. After another time $t_2$, Achilles reaches the Tortoise's second position; again the Tortoise has moved. In this manner Achilles spends $t_1+t_2+t_3+\cdots$ in the chase. Zeno's paradoxical conclusion is that Achilles never catches the Tortoise.\par
+  \item[\normalfont\emph{Achilles and Tortoise}] Achilles chases a Tortoise. After time $t_0$, Achilles reaches the Tortoise's starting position, but the Tortoise has moved on. After another time $t_1$, Achilles reaches the Tortoise's second position; again the Tortoise has moved. In this manner Achilles spends $t_0+t_1+t_2+\cdots$ in the chase. Zeno's paradoxical conclusion is that Achilles never catches the Tortoise.\par
   The resolution is that the total duration can be finite, even though it be split into infinitely many subintervals of time; this idea is at the heart of the modern notion of \emph{infinite series.}
   %\item If any two lengths are commensurable, then there must be a smallest unit of space? Everything made up of elements, so can't be infinitely small?????? FIX PHRASING
   \item[\normalfont\emph{Arrow paradox}] An arrow is shot from a bow. At any given instant the arrow doesn't move. If time is made up of instants, then the arrow never moves.\par
   This time Zeno debates the the idea that a finite time period can be considered as a sum of infinitesimal instants. The modern resolution involves the \emph{integral.}
-  %\item Sublength equal to whole: draw two lines and, using projection, show that there is a bijective correspondence between the points on both lines. E.g. $x\mapsto 2x$ is a bijection from a line of length 1 to length 2. Therefore the two lines contain the same number of points. But one should have twice the number of the other. PICTURE
 \end{description}
-
-Zeno's paradoxes have provided fodder for philosophers for thousands of years. As we'll see later, they are at the heart of the controversy surrounding the development of calculus.%\vspace{-5pt}
 
 
 \boldinline{Constructions and Geometry}\phantomsection\label{pg:construction}
 
-By the middle of the 5\th{} century \!\BC, Greek mathematicians were solving geometric problems using \emph{ruler-and-compass} (peg-and-cord) constructions. This approach perhaps came to Greece from India, or could have arisen organically. Constructions were based on three rules, which became the first three postulates (axioms) of Book I of the \emph{Elements.}\vspace{-1pt}
+By the middle of the 5\th{} century \!\BC, Greek mathematicians were solving geometric problems using \emph{ruler-and-compass} (peg-and-cord) constructions. This approach perhaps came to Greece from India, or could have arisen organically. Constructions were based on three rules, which became the first three postulates (axioms) of Book I of Euclid's \emph{Elements.}\vspace{-1pt}
 \begin{enumerate}\itemsep0pt
   \item One may join two given points by with straight line segment.
   \item Any segment may be extended indefinitely.
   \item Given a center and radius, one may draw a circle.
 \end{enumerate}\vspace{-1pt}
-Theorems were often stated as \emph{problems}: e.g.{} \emph{to bisect a given angle.} A proof provided first a \emph{construction,} and then an argument justifying that the construction really had solved the problem.\smallbreak 
+Theorems were often stated as \emph{problems}: e.g., \emph{to bisect a given angle.} A proof provided first a \emph{construction,} then an argument justifying that the construction really had solved the problem.\smallbreak 
 
 By the time of Euclid, the Greeks knew how to construct an equilateral triangle, a square and a regular pentagon in a given circle: here is a construction of a pentagon.\footnote{Theorem IV.\,11 of the \emph{Elements} presents a less practical construction. Ours follows from Theorem XIII.\,10: if a regular pentagon, hexagon and decagon are inscribed in a circle, then their sides form a right-triangle.}
 
@@ -370,15 +382,14 @@ By the time of Euclid, the Greeks knew how to construct an equilateral triangle,
 \hfill
 \begin{minipage}[t]{0.3\linewidth}\vspace{-22pt}
 	\flushright
-	\includegraphics[scale=0.9]{greece-pentagon}
+	\includegraphics[scale=0.8]{greece-pentagon}
 \end{minipage}
 \smallbreak
 
 
 A purely geometric proof of the validity of this construction is too difficult for us, but you can easily check it using a calculator, Pythagoras' and the cosine rule:  if the circle has radius 2, then
 \begin{align*}
-	\nm{CR}^2&=\nm{CN}^2=\nm{ON}^2+\nm{OC}^2=(\sqrt 5-1)^2+2^2=10-2\sqrt 5\\
-	&=2^2+2^2-2\cdot 2\cdot 2\cos\ang{72}
+	\nm{CR}^2&=\nm{CN}^2=\nm{ON}^2+\nm{OC}^2=(\sqrt 5-1)^2+2^2=10-2\sqrt 5 =2^2+2^2-2\cdot 2\cdot 2\cos\ang{72}
 \end{align*}\goodbreak
 
 % The appearance of $\sqrt 5$ in this discussion relates to the golden ratio $\frac{1+\sqrt 5}2$ which is in fact the ratio of the diagonal to the side of the pentagon: exactly what Theaetetus was calculating on page \pageref{ex:theaetetus}. Pentagons and pentagrams were viewed as mystical by many ancient Greeks.\\
@@ -392,7 +403,7 @@ Construction problems have motivated mathematicians ever since. In 1796, Gauss (
 After the 17-gon, the next prime-sided constructable $n$-gon has $257=2^{2^3}+1$ sides!\smallbreak
 
 By 400\BC, the Greeks were referencing the second and third \emph{impossible constructions of antiquity}:
-\begin{enumerate}
+\begin{enumerate}\itemsep0pt
   \item Trisecting a general angle.
   \item Doubling (the volume of) a given cube.
   \item Squaring a circle (construct a square with the same area as a given circle).\footnotemark
@@ -409,15 +420,15 @@ It wasn't until the advent of field theory in the 1800s that these were indeed p
 
 Several of the mathematical techniques in this section are difficult, and the results are technical. With practice, all should be accessible. It isn't important to become proficient with all of these ideas! Instead, by playing with them, you should develop an appreciation of two overarching points:
 \begin{enumerate}
-  \item Even before Euclid, the focus of Greek mathematics was very different to other ancient cultures (e.g., the Egyptians, Babylonians \& Chinese). Greek mathematics was more abstract and less practical, in large part due to the influence of wider Greek philosophy and religion.
-  \item By investigating mathematics abstractly, the ancient Greeks were already pondering fundamental mathematical questions and concepts, for instance:
-  \begin{itemize}
-    \item What is the relationship between \emph{number} and \emph{length}?
-    \item What are irrational numbers?
-    \item What is continuity?
-    \item Infinite series and integration.
-    \item Which geometric figures can we construct?
-  \end{itemize}
+  \item Even before Euclid, the focus of Greek mathematics was more abstract and less practical than other ancient cultures (e.g., the Egyptians, Babylonians \& Chinese), in large part due to the influence of wider Greek philosophy and religion. The modern liberal arts ideal of learning for its own sake---to celebrate the beauty of knowledge and to expand the mind---is, to a large extent, a Greek inheritance. 
+  \item By investigating mathematics abstractly, the ancient Greeks were already pondering fundamental mathematical questions and concepts, for instance: the relationship between \emph{number} and \emph{length}, continuity, irrationality, infinitesimals \& constructability.
+%   \begin{itemize}
+%     \item What is the relationship between \emph{number} and \emph{length}?
+%     \item What are irrational numbers?
+%     \item What is continuity?
+%     \item Infinite series and integration.
+%     \item Which geometric figures can we construct?
+%   \end{itemize}
   Such ideas have stimulated mathematical research ever since. Indeed these particular issues would not rigorously be resolved until the development of modern analysis and algebra in the 1800s by luminaries such as Gauss, Cauchy and Riemann.
 \end{enumerate}
 
@@ -452,6 +463,14 @@ Several of the mathematical techniques in this section are difficult, and the re
 	
 		\item The \emph{cycle of fifths} is a musical concept stating that twelve perfect fifths equals seven octaves (pg.\,\pageref{pg:pythagtuning}). State this claim \emph{numerically,} and show that it is a contradiction.\par
 		(\emph{Hint: two strings are seven octaves apart if their lengths are in the ratio $2^7:1$})
+		
+		
+		\item We use modern language to resolve Zeno's paradox of Achilles and the Tortoise. Suppose Achilles travels at speed $v_A$, the tortoise at speed $v_B<v_A$, and that the tortoise starts a distance $d$ ahead of Achilles.
+		\begin{enumerate}
+		  \item Prove that $t_n=\frac d{v_A}\left(\frac{v_T}{v_A}\right)^{n}$ for each positive integer $n$.
+		  \item Compute $\sum_{n=0}^\infty t_n$ using the geometric series formula from calculus.
+		  \item Verify the time-value computed in (b) as would a modern Physicist; by considering the motion of Achilles relative to the tortoise.
+		\end{enumerate} 
 		
 	  
 	  \item%[3-20]
