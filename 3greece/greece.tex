@@ -836,13 +836,12 @@ For example, to find the mass $M_2$ required to balance a lever given $M_1=12$\,
 A previously unknown work of Archimedes was discovered in 1899. As an amazing application of the lever principle, Archimedes makes an argument that looks remarkably like modern calculus; he could be claimed to be its earliest practitioner by 1800 years! The method was outlined in a letter to Eratosthenes and includes part of an argument for proving Archimedes' favorite theorem, a picture of this result was engraved on his tomb.
 
 \begin{thm*}{}{}
-	A cone, hemisphere and cylinder with the same base and height have volumes in the ratio $1:2:3$
+	A cone, hemisphere and cylinder with the same base and height have volumes in the ratio $1:2:3$. Using modern formulæ, if the height is $r$, then the volumes are $\frac 13\pi r^3:\frac 23\pi r^3:\pi r^3$.
 \end{thm*}
 \phantomsection\label{pg:archmethod}
 
-\begin{minipage}[t]{0.67\linewidth}\vspace{0pt}
-	Here is a modernized version of half the result.\smallbreak
-	Suppose the `base' is a disk with unit radius. Remove the hemisphere from the cylinder and place the cone beneath. We compare the \textcolor{red}{cross-sections} the same distance $y$ from the apex of the cone.
+\begin{minipage}[t]{0.67\linewidth}\vspace{-3pt}
+	Here is a modernized version of half the result. Suppose the `base' is a disk with radius 1. Archimedes removes the hemisphere from the cylinder and places the cone beneath. Compare the \textcolor{red}{cross-sections} the same distance $y$ from the apex of the cone.
 	\begin{itemize}\itemsep0pt
 	  \item The circular cross-section of the cone has radius $y$ whence its area is proportional to the square on the radius: $\pi y^2$.
 		\item The upper annular cross-section has area proportional to the difference of the squares on the radius of the cylinder and on the distance $x$. By Pythagoras' the cross-sectional area is
@@ -852,10 +851,11 @@ A previously unknown work of Archimedes was discovered in 1899. As an amazing ap
 	\end{itemize}
 \end{minipage}
 \hfill
-\begin{minipage}[t]{0.32\linewidth}\vspace{0pt}
+\begin{minipage}[t]{0.32\linewidth}\vspace{-3pt}
 	\flushright
 	\includegraphics{archimedes-spherecone}
 \end{minipage}
+\bigbreak
 The cross-sections are therefore in balance with respect to a vertical lever whose pivot lies at the center of the picture. Archimedes concludes that the cone and the upper-figure are in balance: that is
 \[
 	V_\text{cone}=V_\text{cylinder}-V_\text{hemisphere}
@@ -913,7 +913,7 @@ Since $d_0=\frac{\sqrt 3}2$ and $h_0=\frac 12$, we may compute the entirety of b
 	d_1=\frac 12\sqrt{2+\sqrt 3},\quad d_2=\frac 12\sqrt{2+\sqrt{2+\sqrt 3}},\quad\ldots\quad d_n=\frac 12\sqrt{2+\sqrt{2+\cdots+\sqrt{2+\sqrt 3}}}\\
 	h_1=\frac 12\sqrt{2-\sqrt 3},\quad h_2=\frac 12\sqrt{2-\sqrt{2+\sqrt 3}},\quad\ldots\quad h_n=\frac 12\sqrt{2-\sqrt{2+\cdots+\sqrt{2+\sqrt 3}}}
 \end{gather*}
-where the $n\th$ term in each case contains $n$ copies of the digit 2 under the square-root. The circumference and area of the $6\cdot 2^n$-sided polygon inscribed in the circle are therefore
+where the $n\th$ terms have $n$ copies of the digit 2 under the square-root. The circumference and area of the $6\cdot 2^n$-sided polygon inscribed in the circle are therefore
 \[
 	C_n=12\cdot 2^nh_n,\qquad A_n=6\cdot 2^nd_nh_n=6\cdot 2^{n-1}h_{n-1}=\frac 12C_{n-1}
 \]
