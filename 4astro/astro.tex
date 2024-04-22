@@ -2,35 +2,32 @@
 
 \section{Ancient Astronomy \& Trigonometry}
 
-Astronomy is one of the most important drivers of mathematical development; \emph{trigonometry} (literally \emph{triangle-measure}) was in large part developed to facilitate astronomical computations.
-
-There are many \emph{practical} benefits to astronomical observation, for instance:
+Astronomy is one of the most important drivers of mathematical development; early \emph{trigonometry} (literally \emph{triangle-measure}) was largely developed in order to facilitate astronomical computations, for which there are many practical benefits.
 \begin{description}\itemsep0pt
 	\item[\normalfont\emph{Calendars}] The phases of the moon (whence \emph{month}), the seasons, and the solar year are paramount. Without accurate calendars, food production, gathering and hunting are more difficult: \emph{When} will the rains come? \emph{When} should we plant/harvest? \emph{When} will the buffalo return? 
-	\item[\normalfont\emph{Navigation}] The most basic navigational observation in the northern hemisphere is that the stars appear to orbit \emph{Polaris} (the pole star), thus providing a fixed reference point/direction at night. As humans travelled further, accurate computations became increasingly important.
+	\item[\normalfont\emph{Navigation}] The simplest navigational observation in the northern hemisphere is that the stars appear to orbit \emph{Polaris} (the pole star), thus providing a fixed reference point/direction in the night sky. As humans travelled further, accurate computations became increasingly important.
 \end{description}
 
 \boldinline{Religion and Astrology}
 
-In modern times, we distinguish \emph{astronomy} (the science) from \emph{astrology} (how the heavens influence our lives), but for most of human history the two were inseparable.  In our light-polluted modern world, it is hard to imagine the significance the night sky held for our ancestors, even those of only 100--200 years ago. Imbuing the heavens with meaning is central to almost all religions, and without the religious/astrological imperative, mathematical and technological development would have been far slower.
-Here are just a few examples of the the relationship between astronomy, astrology and culture.
+In modern times, we distinguish \emph{astronomy} (the science) from \emph{astrology} (how the heavens influence our lives), but for most of human history the two were inseparable.  In our light-polluted urban world, it is hard to imagine the significance the night sky held for our ancestors, even 100--200 years ago. Almost all religions imbue the heavens with meaning, which historically provided a huge religious/astrological imperative for mathematical and technological development. Here are just a few examples of the relationship between astronomy, astrology and culture.
 \begin{itemize}\itemsep0pt
-	\item The concept of \emph{heaven} as the domain of the gods, whether explicitly in the sky or simply atop a high mountain (e.g.{} Olympus in Greek mythology).
-	\item Many ancient structures were constructed in alignment with heavenly objects: e.g.
+	\item The concept of \emph{heaven} as the domain of the gods, whether explicitly in the sky or simply atop a high mountain (e.g., Olympus in Greek mythology, Moses ascending Mt.\ Sinai, etc.).
+	\item Many ancient structures were constructed in alignment with heavenly objects:
 	\begin{itemize}
 	  \item Ancient Egyptians viewed the region around Polaris as their heaven; pyramids included shafts emanating from the burial chamber so that the deceased could `ascend to the stars.' 
 		\item Several Mayan temples and observatories appear to be oriented to the solstices (see below). Such alignments can be found elsewhere in the Americas and throughout the world.
 		\item Venus and Sirius, respectively the brightest planet and star in the night sky, were also important objects of alignment.
 	\end{itemize}
-	\item The modern `western' zodiac comes from Babylon, dating to before 1000\BC. A tablet dated to 686\BC{} describes 60--70 constellations and stars with some aspects that are familiar to modern astrologers, including Taurus, Leo, Scorpio and Capricorn. During the same time-period Chinese and Indian astronomers developed different systems of constellations.\footnote{Chinese astronomy has 28 constellations (or \emph{mansions}). As a point of comparison, Taurus corresponds roughly to the Chinese `White Tiger of the West' (\emph{Baihu,} and similar terms in various East-Asian languages).}
+	\item The modern (western) zodiac comes from Babylon, dating to before 1000\BC. A tablet dated to 686\BC{} describes 60--70 constellations and stars with aspects that are familiar to modern astrologers, including Taurus, Leo, Scorpio and Capricorn. During the same time-period Chinese and Indian astronomers developed different systems of constellations.\footnote{Chinese astronomy has 28 constellations (or \emph{mansions}). As a point of comparison, Taurus corresponds roughly to the Chinese `White Tiger of the West' (\emph{Baihu,} and similar terms in various East-Asian languages).}
 	\item Calendars mark religious festivals, practices and even the age of the world.
 	\begin{itemize}
 	  \item The traditional Hebrew calendar dates the beginning of the world to 3760\BC.
 	  \item The Mayan long count calendar dates the creation of the world to 3114\BC.
 	  \item The modern Gregorian calendar arose to facilitate an accurate determination of Easter.
 	\end{itemize}
-	\item The \emph{star in the east} associated to the birth of Jesus in Christianity.
-	\item In Islam, one must orient oneself towards Mecca when at prayer; we'll see how this direction (the \emph{qibla}) may be computed later, but the required data is astronomical.
+	\item The \emph{star in the east} is associated to the birth of Jesus in Christianity.
+	\item Muslims orient themselves towards Mecca when at prayer; we'll see later how this direction (the \emph{qibla}) may be computed, but the required data is astronomical.
 \end{itemize}
 \goodbreak
 
@@ -38,12 +35,12 @@ Here are just a few examples of the the relationship between astronomy, astrolog
 
 \subsection{Astronomical Terminology and Early Measurement}\label{ssec:astro1}
 
-Seasonal variation exists because Earth's axis is tilted approximately \ang{23.5} with respect to the \emph{ecliptic} (sun-earth orbital plane). Summer, in a given hemisphere, is when the earth's axis is tilted towards the sun, resulting in more sunlight and longer days. Astronomically, the seasons are determined by four dates:
+Seasonal variation exists because the earth's axis is tilted approximately \ang{23.5} with respect to the \emph{ecliptic} (sun-earth orbital plane). Summer, in a given hemisphere, is when the earth's axis is tilted towards the sun, resulting in more sunlight and longer days. Astronomically, the seasons are determined by four dates:
 \begin{description}
-	\item[\normalfont\emph{Summer/Winter Solstice}] (c.\,21\st{} June/December) The north pole is maximally tilted towards/away from the sun. \emph{Solstice} comes from a Latin (Roman) term meaning `sun stationary.' The location of the rising/setting sun changes throughout the year, with the extremes occurring on the solstices. Similarly, if one measures the maximum elevation of the sun each day (the timing is the local definition of \emph{noon}), then the summer solstice represents the date on which the sun is highest in the sky.
-	\item[\normalfont\emph{Vernal/Autumnal Equinox}] (c.\,21\st{} March/September) Earth's axis is perpendicular to the sun-earth radius. \emph{Equinox} means \emph{equal night}: day and night both last approximately 12 hours everywhere since Earth's axis passes through the day-night boundary.
+	\item[\normalfont\emph{Summer/Winter Solstice}] (c.\,21\st{} June/December) The north pole is maximally tilted towards/away from the sun. \emph{Solstice} comes from Latin (Roman) meaning `sun stationary.' The location of the rising/setting sun and its maximal (noon) elevation changes throughout the year, with extremes on the solstices: the summer solstice being when the setting sun is most northerly and (north of the tropics) the noon sun is highest in the sky. Indeed the tropics (of Cancer/Capricorn) are the lines of latitude where the sun is directly overhead at noon on one solstice.
+	\item[\normalfont\emph{Vernal/Autumnal Equinox}] (c.\,21\st{} March/September) Earth's axis is perpendicular to the sun-earth orbital radius. \emph{Equinox} means \emph{equal night}: day and night both last approximately 12 hours everywhere since Earth's axis passes through the day-night boundary.
 \end{description}
-The picture shows the orientation of the ecliptic, \textcolor{red}{Earth's axis} and the \textcolor{orange}{day-night boundary.}
+The picture shows the orientation of the ecliptic, the \textcolor{red}{earth's axis} and the \textcolor{orange}{day-night boundary.}
 
 \begin{center}
 	\href{http://www.math.uci.edu/~ndonalds/math184/ecliptic.html}{\includegraphics[scale=0.95]{ecliptic}}
@@ -52,36 +49,39 @@ The picture shows the orientation of the ecliptic, \textcolor{red}{Earth's axis}
 Measurements can now be conducted relative to this set-up.
 
 \begin{description}\itemsep0pt
-  \item[\normalfont\emph{Fixed stars}] These form the background with respect to which everything else is measured. The \emph{ecliptic} is viewed as the sun's apparent path over the year set against the fixed stars. Planets (\emph{wandering stars}) are seen to move against this background.
-  \item[\normalfont\emph{Celestial longitude}] Measured from zero to \ang{360} around the ecliptic with \ang 0 at the vernal equinox. One degree thus corresponds approximately to the sun's apparent daily motion. The ecliptic is divided into twelve equal segments: Aries is 0--\ang{30} (March to April 21\st), Taurus is 30--\ang{60}, etc.
+  \item[\normalfont\emph{Fixed stars}] These form the background with respect to which everything else is measured. The \emph{ecliptic} is the sun's apparent path over the year set against the fixed stars. Planets (\emph{wandering stars}) are also seen to move relative to this background.
+  \item[\normalfont\emph{Celestial longitude}] Measured from zero to \ang{360} around the ecliptic with \ang 0 at the vernal equinox. One degree corresponds approximately to the sun's apparent daily motion. The ecliptic is divided into twelve equal segments: Aries is 0--\ang{30} (March to April 21\st); Taurus is 30--\ang{60}, etc.
   \item[\normalfont\emph{Celestial latitude}] Measured in degrees north or south of the ecliptic; the sun has latitude zero.
 \end{description}
 
-This formulation was largely co-opted by the Greeks after Alexander's conquest of Babylon. The Greeks kept the Babylonian base-60 degrees-minutes-seconds system, which, with some variations, persists to this day.\footnote{In modern times latitude and longitude (declination/right-ascension) are measured with respect to Earth's equatorial plane rather than the ecliptic. Such \emph{equatorial co-ordinates} are first known to have been introduced by Hipparchus of Nicaea (below). Right-ascension is typically measured in \emph{hours-minutes-seconds} with 24 hours $=\ang{360}$. It is also common to use decimals rather than sexagesimal minutes/seconds.}
+This formulation was largely co-opted by the Greeks from Babylon. The Greeks kept the Babylonian base-60 degrees-minutes-seconds system, which, with minor modifications, persists to this day.\footnote{In modern times latitude and longitude (declination/right-ascension) are measured with respect to the earth's equatorial plane rather than the ecliptic. Such \emph{equatorial co-ordinates} are first known to have been introduced by Hipparchus of Nicaea (below). Right-ascension is measured in \emph{hours-minutes-seconds} rather than degrees, with 24 hours $=\ang{360}$, though modern scientific practice is to use decimals rather than the sexagesimal minutes and seconds.}
 
 \goodbreak
 
 \boldsubsubsection{The Circumference of the Earth}\phantomsection\label{pg:syene}
 
-Eratosthenes of Cyrene (pg.\,\pageref{pg:eratosthenes}) performed one of the earliest accurate estimations of the circumference of the earth. His idea was to measure the sun's rays at noon in two different places.\par
+Eratosthenes of Cyrene (c.\,200\BC, pg.\,\pageref{pg:eratosthenes}) performed one of the earliest accurate estimations of the circumference of the earth. His idea was to measure the sun's rays at noon in two different places.\par
 \begin{minipage}[t]{0.6\linewidth}\vspace{-5pt}
 	\begin{itemize}\itemsep0pt
 	  \item Syene (modern-day Aswan, Egypt) is approximately 5,000 \emph{stadia} south of Alexandria.
 		\item When the sun is directly overhead at Syene, it is inclined $\ang 712'=\frac 1{50}\cdot \ang{360}$ at Alexandria.
 		\item Earth's circumference is therefore approximately $50\cdot 5,000=250,000$ stadia.
 	\end{itemize}
-\end{minipage}\hfill\begin{minipage}[t]{0.39\linewidth}\vspace{-5pt}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.39\linewidth}\vspace{-5pt}
 	\flushright\includegraphics[scale=0.95]{geo-18-circearth}
 \end{minipage}
 \bigbreak
 
-Eratosthenes' original calculation is lost, though it was more complicated than the above. From other (shorter) distances, historians have inferred that Eratosthenes' \emph{stadion} was $\approx 172$ yards, making his approximation for the circumference of the earth $\approx 24,500$ miles, astonishingly accurate when compared to the modern value of $\approx 25,000$ miles. Later mathematicians provided other estimates based on alternative locations, but the basic method was the same.
+Eratosthenes' original calculation is lost, though it was a little more complicated than the above. From other (shorter) distances, historians have inferred that Eratosthenes' \emph{stadion} was $\approx 172$ yards, making his approximation for the circumference of the earth $\approx 24,500$ miles, astonishingly accurate in comparison to the modern value of $\approx 25,000$ miles. Later mathematicians provided other estimates based on other locations, but the basic method was the same.
+
 
 \boldsubsubsection{Modelling the Heavens}
 
 Early Greek analysis reflects several assumptions.
 \begin{itemize}
-  \item Spheres and circles are perfect, matching the `perfect design' of the universe. The earth is a sphere and the fixed stars (constellations) lie on a larger `celestial sphere.' Models should therefore rely on spheres and circles rotating at a constant rate.
+  \item Spheres and circles are perfect, matching the `perfect design' of the universe. The earth is a sphere and the fixed stars (constellations) lie on a larger `celestial sphere.' Models relied on spheres and circles rotating at constant rates.
   \item The earth is stationary, so the celestial sphere rotates around it once per day.
   \item The planets lie on concentric spherical shells also centered on the earth.
 \end{itemize}
@@ -92,10 +92,9 @@ When such assumptions are tested by observation, two major contradictions are im
   \item[\normalfont\emph{Retrograde motion}] Planets mostly follow the east-west motion of the heavens, though are sometimes seen to slow down and \href{http://math.uci.edu/~ndonalds/math184/retrograde.html}{reverse course.}
 \end{description}
 
-If planets are moving at constant speed around circles centered on the earth, then how can these above be explained? The attempt to produce accurate models while `saving the phenomena' of spherical/circular motion led to the development of new mathematics.\smallbreak
+If planets are moving at constant speed around circles centered on the earth, then how can these phenomena be explained? The attempt to produce accurate models while `saving the phenomena' of spherical/circular motion led to the development of new mathematics.\medbreak
 
-One of the earliest known models is due to Eudoxus of Knidos (c.\,370\BC, pg.\,\pageref{pg:eudoxus}). Eudoxus developed a concentric-sphere model where each planet and the sun is attached to a separate sphere and where the poles of one are attached to the sphere outside it; the outermost sphere is that of the fixed stars.
-The motion generated by \href{http://web.calstatela.edu/faculty/hmendel/Ancient Mathematics/Eudoxus/Astronomy/EudoxusHomocentricSpheres.htm}{such a model}\footnote{The link is to a very nice flash animation of Eudoxus' model that would have been far beyond Eudoxus' ability to visualize and measure.} is highly complex. Eudoxus' approach is capable of producing retrograde motion, but not the variable brightness of stars and planets.
+One of the earliest known models is due to Eudoxus of Knidos (c.\,370\BC, pg.\,\pageref{pg:eudoxus}). Eudoxus developed a concentric-sphere model where planets and the sun are attached to separate spheres, each of which has its poles attached to the sphere outside it; the outermost sphere is that of the fixed stars. The motion generated by \href{http://web.calstatela.edu/faculty/hmendel/Ancient Mathematics/Eudoxus/Astronomy/EudoxusHomocentricSpheres.htm}{such a model}\footnote{The link is to a very nice flash animation of Eudoxus' model that would have been far beyond Eudoxus' ability to visualize and measure.} is highly complex. Eudoxus' approach is capable of producing retrograde motion, but not the variable brightness of stars and planets.
 \goodbreak
 
 
@@ -104,7 +103,8 @@ The motion generated by \href{http://web.calstatela.edu/faculty/hmendel/Ancient 
 	\boldinline{Epicycles \& Eccentric Orbits} Apollonius of Perga (2\nd/3\rd{}\,C.\BC) is most famous for his study of conic sections, but is relevant in this section for developing two models for solar/planetary motion.\smallbreak
 	
 	In his \emph{eccenter} model, a planetary/solar orbit is a circle (the deferent) whose center is \emph{not} the earth. This straightforwardly addresses the problem of variable brightness since the planet is not a fixed distance from the earth.\smallbreak
-	    The obvious criticism is \emph{why?} What philosophical justification could there be for the eccenter? Eudoxus' model may have been complex and essentially impossible to compute with, but was more in line with the assumptions of spherical/circular motion.
+	
+	The obvious criticism is \emph{why?} What philosophical justification could there be for the eccenter? Eudoxus' model may have been complex and essentially impossible to compute with, but was more in line with the assumptions of spherical/circular motion.
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.25\linewidth}\vspace{0pt}
@@ -114,11 +114,11 @@ The motion generated by \href{http://web.calstatela.edu/faculty/hmendel/Ancient 
   
 
 \begin{minipage}[t]{0.68\linewidth}\vspace{0pt}
-	Apollonius' \href{http://brunelleschi.imss.fi.it/galileopalazzostrozzi/multimedia/ApolloniusEpicycles.html}{second approach} used \emph{epicycles}: small circles attached to the larger deferent circle; you'll be familiar with the resulting curves if you've played with the toy \emph{Spirograph.} An observer at the center sees the apparent brightness change, and potentially observes retrograde motion. In modern language, the motion is parametrized by the vector-valued function
+	Apollonius' \href{http://brunelleschi.imss.fi.it/galileopalazzostrozzi/multimedia/ApolloniusEpicycles.html}{second approach} used \emph{epicycles}: small circles attached to a larger circle---you'll be familiar with epicycles if you've played with the toy \emph{Spirograph.} An observer at the center sees the apparent brightness change, and potentially observes retrograde motion. In modern language, the motion is parametrized by the vector-valued function
 	\[
 		\vx(t)=R\twovec{\cos \omega t}{\sin \omega t}+r\twovec{\cos \psi t}{\sin \psi t}
 	\]
-	where $R,r,\omega,\psi$ are the radii and circular frequencies (rad/s).
+	where $R,r,\omega,\psi$ are the radii and frequencies (rad/s) of the circles.
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.31\linewidth}\vspace{0pt}
@@ -126,13 +126,13 @@ The motion generated by \href{http://web.calstatela.edu/faculty/hmendel/Ancient 
 \end{minipage}
 \medbreak
   
-Combining these models allowed Apollonius to describe quite complex motion. Calculation was difficult however, requiring finding lengths of chords of various circles from a given angle, and vice versa. It is from this requirement that some of the earliest notions of trigonometry arise.\smallbreak
+Combining these models allowed Apollonius to describe very complex motion. Calculation was difficult however, requiring finding lengths of chords of various circles from a given angle, and vice versa. It is from this requirement that some of the earliest notions of trigonometry arise.\medbreak
  
 One might ask why the Greeks didn't make the `obvious' fix and place the sun at the center of the cosmos. In fact Aristarchus of Samos (c.\,310--230\BC) did precisely this, suggesting that the fixed stars were really just other suns at exceptional distance! However, the great thinkers of the time (Plato, Aristotle, etc.) had a very strong objection to Aristarchus' approach: \emph{parallax.}
 \begin{center}
 	\includegraphics{trig-parallax}
 \end{center}
-If Earth moves around the sun, and the fixed stars are really independent objects, then the position of a nearer star should appear to change throughout the year. The angle $\theta$ in the picture is the \emph{parallax} of the nearer star. Unfortunately for Aristarchus, the Greeks were incapable of observing any parallax.\footnote{The astronomical unit of one \emph{parsec} is the distance of a star exhibiting one arc-second ($\ang{\frac 1{3600}}$) of parallax, roughly 3.3 light-years or $3\times 10^{13}$\,km, an unimaginable distance to anyone before the scientific revolution. The nearest star to the sun is \emph{Proxima Centauri} at 4.2 light years $=0.77$ parsecs: is it any wonder the Greeks rejected the hypothesis?!}
+If the earth moves around the sun and the fixed stars are really independent objects, then the position of a nearer star should appear to change throughout the year. The angle $\theta$ in the picture is the \emph{parallax} of the nearer star. Unfortunately for Aristarchus, the Greeks were incapable of observing any parallax.\footnote{The astronomical unit of one \emph{parsec} is the distance of a star exhibiting one arc-second ($\ang{\frac 1{3600}}$) of parallax, roughly 3.3 light-years or $3\times 10^{13}$\,km, an unimaginable distance to anyone before the scientific revolution. The nearest star to the sun is \emph{Proxima Centauri} at 4.2 light years $=0.77$ parsecs: is it any wonder the Greeks rejected the hypothesis?!}
 It took 2000 years before the work of Copernicus and Kepler in the 15-1600s forced astronomers to take \emph{heliocentric} models seriously (\emph{Helios} is the Greek sun-god).
 \goodbreak
 
@@ -172,7 +172,7 @@ Pythagoras was again used to halve and double angles in an approach analogous to
 	\flushright\includegraphics[scale=0.95]{trig-double}
 \end{minipage}
 \begin{align*}
-	\left(\crd\alpha\right)^2&=\left(\frac 12\crd 2\alpha\right)^2+\left(r-\frac 12\crd(180-2\alpha)\right)^2 \tag{$\nm{CD}^2=\nm{DM}^2+\nm{CM}^2$}\\
+	\left(\crd\alpha\right)^2&=\left(\frac 12\crd 2\alpha\right)^2+\left(r-\frac 12\crd(\ang{180}-2\alpha)\right)^2 \tag{$\nm{CD}^2=\nm{DM}^2+\nm{CM}^2$}\\
 	&=\frac 14(\crd 2\alpha)^2+r^2-r\crd(\ang{180}-2\alpha)+\frac 14\crd(\ang{180}-2\alpha)^2\\
 	&=\frac 14(\crd 2\alpha)^2+r^2-r\crd(\ang{180}-2\alpha)+\frac 14(4r^2-(\crd 2\alpha)^2)\\
 	&=2r^2-r\crd(\ang{180}-2\alpha)
@@ -199,15 +199,13 @@ Continuing this process, we obtain $\crd \ang{150}=\sqrt{2+\sqrt 3}\,r$, whence
 \]
 Again translating: $\sin\ang{7.5}=\frac 12\sqrt{2-\sqrt{2+\sqrt 3}}$.\smallbreak
 
-By applying this approach, Hipparchus computed the chord of each of the angles $\ang{7.5}$, $\ang{15},\ldots,\ang{172.5}$, in steps of $\ang{7.5}$. Of course everything was an estimate since he had to rely on approximations for square-roots.\smallbreak
-
-All Hipparchus' original work is now lost. We primarily know of his work by reference. In particular, the above method of chords is probably due to Hipparchus, although we see it first in the work of\ldots
+By applying this approach, Hipparchus computed the chord of each of the angles $\ang{7.5}$, $\ang{15},\ldots,\ang{172.5}$, in steps of $\ang{7.5}$. Of course everything was an estimate since he had to rely on approximations for square-roots. All Hipparchus' original work is now lost. We primarily know of his work by reference. In particular, the above method of chords is probably due to Hipparchus, although we see it first in the work of Ptolemy, as we'll consider next.
 
 
 
 \begin{exercises}{}{}
 	\exstart %[5-2]
-	  Calculate $\crd\ang{150}$, $\crd\ang{165}$, and $\crd\ang{172\tfrac 12}$ using the method of Hipparchus.\vspace{-5pt}
+	Calculate $\crd\ang{150}$, $\crd\ang{165}$, and $\crd\ang{172\tfrac 12}$ using the method of Hipparchus.\vspace{-5pt}
 	\begin{enumerate}\setcounter{enumi}{1}
 	  \item[](\emph{Leave your answers as a multiple of $r=\crd\ang{60}$})
 	  
@@ -231,7 +229,7 @@ All Hipparchus' original work is now lost. We primarily know of his work by refe
 	\end{enumerate}
 \end{exercises}
 
-\footnotetext{Syene (pg.\,\pageref{pg:syene}) is almost exactly on the tropic of cancer.}
+\footnotetext{Syene (pg.\,\pageref{pg:syene}) is almost exactly on the Tropic of Cancer.}
 
 \clearpage
 
@@ -240,7 +238,7 @@ All Hipparchus' original work is now lost. We primarily know of his work by refe
 
 Born in Egypt and living much of his life in Alexandria, Claudius Ptolemy (c.\,\AD 100--170) was a Greek/Egyptian/Roman\footnote{Ptolemy (Ptolemaeus) is a Greek name, while Claudius is Roman, reflecting the changing cultural situation in Egypt.} astronomer and mathematician. Around \AD 150, he produced the \emph{Mathematica Syntaxis,} better known as the \emph{Almagest}; the latter term is derived from the Arabic \emph{al-mageisti} (great work), reflecting its importance to later Islamic learning.\par
  
-The \emph{Almagest} is essentially a textbook on geocentric cosmology. It shows how to compute the motions of the moon, sun and planets, describing lunar parallax, eclipses, the constellations, and elementary spherical trigonometry, probably courtesy of Menelaus (c.\,\AD 100). It contains our best evidence as to the accomplishments of Hipparchus and describes his calculations. The text formed the basis of Western/Islamic astronomical theory through to the 1600s.\par
+The \emph{Almagest} is essentially a textbook on geocentric cosmology. It shows how to compute the motions of the moon, sun and planets, describing lunar parallax, eclipses, the constellations, and elementary spherical trigonometry, probably courtesy of Menelaus (c.\,\AD 100). It contains our best evidence as to the accomplishments of Hipparchus and describes his calculations. The text formed the basis of Western/Islamic astronomical theory through the 1600s.
 
 
 \boldinline{Ptolemy's Calculations}
@@ -266,16 +264,16 @@ Ptolemy used several innovations to compute more chords and at a far greater acc
 	  \crd\ang{30}=\sqrt{60(120-\crd \ang{120})}=\sqrt{60\left(120-60\sqrt 3\right)}=60\sqrt{2-\sqrt 3}\approx 31;3,30
 	\]
 	\item[\normalfont\emph{Multiple-Angle Formula}] Ptolemy computed $\crd\ang{12}=\crd(\ang{72}-\ang{60})$, then halved this for angles of \ang 6, \ang 3, \ang{1.5}, and \ang{0.75}. Chords for all integer multiples of \ang{1.5} were computed using addition formula.
-	\item[\normalfont\emph{Interpolation}] The observation that %\footnote{In modern language $x<y\implies\frac{\sin y}y<\frac{\sin x}x$ so that $\frac{\sin x}x$ increases to 1 as $x\to 0^+$.}
-	$\alpha<\beta\implies \frac{\crd\beta}{\crd\alpha}<\frac\beta\alpha$ allowed Ptolemy to compute chords for every half-degree to the incredible accuracy of two sexagesimal places. For approximating between half-degrees, his table indicated how much should be added for each arc-minute ($\ang{\frac 1{60}}$). For example, the second line of Ptolemy's table reads
+	\item[\normalfont\emph{Interpolation}] The observation %\footnote{In modern language $x<y\implies\frac{\sin y}y<\frac{\sin x}x$ so that $\frac{\sin x}x$ increases to 1 as $x\to 0^+$.}
+	$\alpha<\beta\Longrightarrow \frac{\crd\beta}{\crd\alpha}<\frac\beta\alpha$ allowed Ptolemy to compute chords for every half-degree to the incredible accuracy of two sexagesimal places. For approximating between half-degrees, his table indicated how much should be added for each arc-minute ($\ang{\frac 1{60}}$). For example, the second line of Ptolemy's table reads
 	\[
 		\ang 1\qquad 1;2,50\qquad ;1,2,50
 	\]
-Firstly $\crd\ang 1= 1;2,50$ to two sexagesimal places.\footnote{This is $1+\frac 2{60}+\frac{50}{60^2}=1.0472222\ldots=120\sin\ang{\frac{1.00003625\ldots}2}$, an already phenomenal level of accuracy.} The third entry says, for example that
+	The first two columns state that $\crd\ang 1= 1;2,50$ to two sexagesimal places.\footnote{This is $1+\frac 2{60}+\frac{50}{60^2}=1.0472222\ldots=120\sin\ang{\frac{1.00003625\ldots}2}$, an already phenomenal level of accuracy.} The third entry says, for example, that
 	\[
 		\crd \ang{1}5'\approx 1;2,50+5(;1,2,50)=1;8,4,10\approx 1;8;4
 	\]
-	To obtain his arc-minute approximations, it is believed that Ptolemy computed his half-angle chords to an accuracy of \emph{five sexagesimal places} (1 part in over 750 million!).
+	To obtain these arc-minute approximations, it is believed Ptolemy computed half-angle chords to an accuracy of \emph{five sexagesimal places} (1 part in over 750 million!).
 \end{description} 
 
 \goodbreak
@@ -289,7 +287,7 @@ Everything necessary is in the \emph{Elements.}
 \begin{thm*}{}{}
 	\exstart (Thm XIII.\,9)\lstsp In a circle, the sides of a regular inscribed hexagon and decagon are in the golden ratio (this ratio is\ $60:\crd \ang{36}$ in Ptolemy).
 	\begin{enumerate}\setcounter{enumi}{1}
-	  \item (Thm XIII.\,10)\lstsp In any circle, the square on an inscribed pentagon equals the sum of the squares on the inscribed hexagon and decagon.
+	  \item (Thm XIII.\,10)\lstsp In a circle, the square on an inscribed pentagon equals the sum of the squares on an inscribed hexagon and decagon.
 	\end{enumerate}
 \end{thm*}
 
@@ -347,21 +345,25 @@ Computation of $\crd(\alpha\pm\beta)$ was facilitated by versions of the multipl
 	Suppose a quadrilateral is inscribed in a circle. Then the product of the diagonals equals the sum of the products of the opposite sides.\footnotemark
 \end{thm*}\phantomsection\label{pg:ptolemythm}
 
-\footnotetext{There is some debate as to whether this result is in the \emph{Elements.} Book VI traditionally contains 33 propositions, however some editions append four corollaries, of which Ptolemy's Theorem is the last (Thm VI.\,D). It is generally considered that the result itself predates Ptolemy.}
+\footnotetext{It is generally considered that this result predates Ptolemy, though there is some debate as to whether it belongs in the \emph{Elements.} Book VI traditionally contains 33 propositions, however some editions append four corollaries, of which Ptolemy's Theorem is the last (Thm VI.\,D).}
 
 \begin{proof}
-Choose $E$ on $\cl{AC}$ such that $\angle ABE\cong\angle DBC$. Then $\angle ABD\cong\angle EBC$. Since $\angle BAE\cong\angle BDC$ are inscribed angles of the same arc $\cl{BC}$, we obtain two pairs of similar triangles:
-\begin{center}
-	\begin{tabular}{c@{\qquad\qquad}c}
-		\includegraphics[scale=1]{ptolemy1}&\includegraphics[scale=1]{ptolemy2}
-		\\
-		$\triangle ABE\sim\triangle DBC$&$\triangle ABD\sim\triangle EBC$
-	\end{tabular}
-\end{center}
-The proof follows immediately: since $\frac{\nm{AE}}{\nm{CD}}=\frac{\nm{AB}}{\nm{BD}}$ and $\frac{\nm{CE}}{\nm{AD}}=\frac{\nm{BC}}{\nm{BD}}$, we have
-\[
-	\nm{AC}\nm{BD}=(\nm{AE}+\nm{CE})\nm{BD}=\nm{AB}\nm{CD}+\nm{AD}\nm{BC} \tag*{\qedhere}
-\]
+	Choose $E$ on $\cl{AC}$ such that $\angle ABE\cong\angle DBC$. Then $\angle ABD\cong\angle EBC$. Since $\angle BAE\cong\angle BDC$ are inscribed angles of the same arc $\cl{BC}$, we obtain two pairs of similar triangles:
+	\begin{center}
+		\begin{tabular}{c@{\qquad\qquad}c}
+			\includegraphics[scale=1]{ptolemy1}
+			&
+			\includegraphics[scale=1]{ptolemy2}
+			\\
+			$\triangle ABE\sim\triangle DBC$
+			&
+			$\triangle ABD\sim\triangle EBC$
+		\end{tabular}
+	\end{center}
+	The proof follows immediately: since $\frac{\nm{AE}}{\nm{CD}}=\frac{\nm{AB}}{\nm{BD}}$ and $\frac{\nm{CE}}{\nm{AD}}=\frac{\nm{BC}}{\nm{BD}}$, we have
+	\[
+		\nm{AC}\nm{BD}=(\nm{AE}+\nm{CE})\nm{BD}=\nm{AB}\nm{CD}+\nm{AD}\nm{BC} \tag*{\qedhere}
+	\]
 \end{proof}
 
 
@@ -405,25 +407,25 @@ Similar expressions for $\crd(\alpha+\beta)$ and $\crd(\ang{180}-(\alpha\pm\beta
 		\crd \ang{42}&=\frac 1{120}\left(30\sqrt{10-2\sqrt 5}\cdot 60\sqrt{2+\sqrt 3} -60\sqrt{2-\sqrt 3} \cdot 30\sqrt{6+2\sqrt 5}\right)\\
 		&=15\left(\sqrt{10-2\sqrt 5}\cdot \sqrt{2+\sqrt 3} -\sqrt{2-\sqrt 3} \cdot \sqrt{6+2\sqrt 5}\right) \approx 43;0,15\approx 43.0042
 	\end{align*}
-	Note all the square-roots which had to be approximated: the construction of the chord-table was truly a gargantuan task, one for which Ptolemy almost certainly had assistance.
+	Note all the square-roots which had to be approximated. The construction of the chord-table was truly a gargantuan task, one for which Ptolemy almost certainly had assistance.
 	
 	\begin{enumerate}\setcounter{enumi}{1}
 	  \item The \emph{Almagest} also contained many practical examples. Here is one such.\par
 		\begin{minipage}[t]{0.65\linewidth}\vspace{-10pt}
-		A stick of length 1 is placed in the ground. The angle of elevation of the sun is \ang{72}. What is the length of its shadow?\smallbreak
-	
-		Ptolemy instructs the reader to draw a picture. The lower isosceles triangle has \textcolor{blue}{base angles} \ang{72}, and the length of the shadow $\ell$ is marked. Even though the circle does not have radius 60, the ratio of the chords may be computed:
-		\begin{align*}
-			&1:\ell=\crd \textcolor{orange}{\ang{144}}:\crd \textcolor{Green}{\ang{36}}\\
-			\implies &\ell=\frac{\crd \ang{36}}{\crd \ang{144}}=\frac{30(\sqrt 5-1)}{30\sqrt{10+2\sqrt 5}}\approx 0.32491
-		\end{align*}
-		This is precisely $\cot \ang{72}$, though Ptolemy had no such notion.
-	\end{minipage}
-	\hfill
-	\begin{minipage}[t]{0.34\linewidth}\vspace{-5pt}
-		\flushright\includegraphics[scale=0.9]{trig-anglesun}
-	\end{minipage}
-\end{enumerate}
+			A stick of length 1 is placed in the ground. The angle of elevation of the sun is \ang{72}. What is the length of its shadow?\smallbreak
+		
+			Ptolemy instructs the reader to draw a picture. The lower isosceles triangle has \textcolor{blue}{base angles} \ang{72}, and the length of the shadow $\ell$ is marked. Even though the circle does not have radius 60, the ratio of the chords may be computed:
+			\begin{align*}
+				&1:\ell=\crd \textcolor{orange}{\ang{144}}:\crd \textcolor{Green}{\ang{36}}\\
+				\implies &\ell=\frac{\crd \ang{36}}{\crd \ang{144}}=\frac{30(\sqrt 5-1)}{30\sqrt{10+2\sqrt 5}}\approx 0.32491
+			\end{align*}
+			This is precisely $\cot \ang{72}$, though Ptolemy had no such notion.
+		\end{minipage}
+		\hfill
+		\begin{minipage}[t]{0.34\linewidth}\vspace{-5pt}
+			\flushright\includegraphics[scale=0.9]{trig-anglesun}
+		\end{minipage}
+	\end{enumerate}
 
 
 
