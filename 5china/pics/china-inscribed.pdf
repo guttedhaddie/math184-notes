@@ -1,7 +1,7 @@
 %PDF-1.4
 %«Ïè¢
 %%Invocation: path/gswin64c.exe -dDisplayFormat=198788 -dDisplayResolution=96 -q -dNOPAUSE -dBATCH -P -dSAFER -dALLOWPSTRANSPARENCY -sDEVICE=pdfwrite -dEPSCrop -dSubsetFonts=true -dEmbedAllFonts=true -dMaxSubsetPct=100 -dEncodeColorImages=true
-%%+ -dEncodeGrayImages=true -dCompatibilityLevel=1.4 -dAutoRotatePages=/None -g612x792 -dDEVICEWIDTHPOINTS=140 -dDEVICEHEIGHTPOINTS=58.4239 -sOutputFile=? ? ? -f ?
+%%+ -dEncodeGrayImages=true -dCompatibilityLevel=1.4 -dTransferFunctionInfo=/Apply -dAutoRotatePages=/None -g612x792 -dDEVICEWIDTHPOINTS=140 -dDEVICEHEIGHTPOINTS=58.4239 -sOutputFile=? ? ? -f ?
 5 0 obj
 <</Length 6 0 R/Filter /FlateDecode>>
 stream
@@ -37,10 +37,10 @@ endobj
 <x:xmpmeta xmlns:x='adobe:ns:meta/' x:xmptk='XMP toolkit 2.9.1-13, framework 1.6'>
 <rdf:RDF xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' xmlns:iX='http://ns.adobe.com/iX/1.0/'>
 <rdf:Description rdf:about="" xmlns:pdf='http://ns.adobe.com/pdf/1.3/' pdf:Producer='GPL Ghostscript 10.00.0'/>
-<rdf:Description rdf:about="" xmlns:xmp='http://ns.adobe.com/xap/1.0/'><xmp:ModifyDate>2023-04-25T10:03:14-07:00</xmp:ModifyDate>
-<xmp:CreateDate>2023-04-25T10:03:14-07:00</xmp:CreateDate>
-<xmp:CreatorTool>Asymptote 2.852.85</xmp:CreatorTool></rdf:Description>
-<rdf:Description rdf:about="" xmlns:xapMM='http://ns.adobe.com/xap/1.0/mm/' xapMM:DocumentID='uuid:90d807e5-e5e6-11ed-0000-2498de8fee30'/>
+<rdf:Description rdf:about="" xmlns:xmp='http://ns.adobe.com/xap/1.0/'><xmp:ModifyDate>2024-04-25T12:01:11-07:00</xmp:ModifyDate>
+<xmp:CreateDate>2024-04-25T12:01:11-07:00</xmp:CreateDate>
+<xmp:CreatorTool>Asymptote 2.862.86</xmp:CreatorTool></rdf:Description>
+<rdf:Description rdf:about="" xmlns:xapMM='http://ns.adobe.com/xap/1.0/mm/' xapMM:DocumentID='uuid:ae45dbec-0591-11ef-0000-a862c1422b87'/>
 <rdf:Description rdf:about="" xmlns:dc='http://purl.org/dc/elements/1.1/' dc:format='application/pdf'><dc:title><rdf:Alt><rdf:li xml:lang='x-default'>Untitled</rdf:li></rdf:Alt></dc:title></rdf:Description>
 </rdf:RDF>
 </x:xmpmeta>
@@ -51,23 +51,23 @@ endstream
 endobj
 2 0 obj
 <</Producer(GPL Ghostscript 10.00.0)
-/CreationDate(D:20230425100314-07'00')
-/ModDate(D:20230425100314-07'00')
-/Creator(Asymptote 2.852.85)>>endobj
+/CreationDate(D:20240425120111-07'00')
+/ModDate(D:20240425120111-07'00')
+/Creator(Asymptote 2.862.86)>>endobj
 xref
 0 8
 0000000000 65535 f 
-0000000900 00000 n 
-0000002223 00000 n 
-0000000841 00000 n 
-0000000725 00000 n 
-0000000423 00000 n 
-0000000706 00000 n 
-0000000964 00000 n 
+0000000930 00000 n 
+0000002253 00000 n 
+0000000871 00000 n 
+0000000755 00000 n 
+0000000453 00000 n 
+0000000736 00000 n 
+0000000994 00000 n 
 trailer
 << /Size 8 /Root 1 0 R /Info 2 0 R
-/ID [<8BEA7494C4E90C0CC566105F7795F081><8BEA7494C4E90C0CC566105F7795F081>]
+/ID [<355C2E8A6D358F1194F0CA5D53B0BED3><355C2E8A6D358F1194F0CA5D53B0BED3>]
 >>
 startxref
-2378
+2408
 %%EOF
