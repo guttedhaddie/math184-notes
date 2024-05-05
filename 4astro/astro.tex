@@ -273,7 +273,7 @@ Ptolemy used several innovations to compute more chords and at a far greater acc
 	\[
 		\crd \ang{1}5'\approx 1;2,50+5(;1,2,50)=1;8,4,10\approx 1;8;4
 	\]
-	To obtain these arc-minute approximations, it is believed Ptolemy computed half-angle chords to an accuracy of \emph{five sexagesimal places} (1 part in over 750 million!).
+	To obtain these arc-minute approximations, it is believed Ptolemy computed half-angle chords to an accuracy of \emph{five sexagesimal places} (1 part in over 750 million!).  The construction of the chord-table was truly a gargantuan task, one for which Ptolemy almost certainly had assistance.
 \end{description} 
 
 \goodbreak
@@ -407,14 +407,14 @@ Similar expressions for $\crd(\alpha+\beta)$ and $\crd(\ang{180}-(\alpha\pm\beta
 		\crd \ang{42}&=\frac 1{120}\left(30\sqrt{10-2\sqrt 5}\cdot 60\sqrt{2+\sqrt 3} -60\sqrt{2-\sqrt 3} \cdot 30\sqrt{6+2\sqrt 5}\right)\\
 		&=15\left(\sqrt{10-2\sqrt 5}\cdot \sqrt{2+\sqrt 3} -\sqrt{2-\sqrt 3} \cdot \sqrt{6+2\sqrt 5}\right) \approx 43;0,15\approx 43.0042
 	\end{align*}
-	Note all the square-roots which had to be approximated. The construction of the chord-table was truly a gargantuan task, one for which Ptolemy almost certainly had assistance.
+	Note all the square-roots which had to be approximated!
 	
 	\begin{enumerate}\setcounter{enumi}{1}
 	  \item The \emph{Almagest} also contained many practical examples. Here is one such.\par
 		\begin{minipage}[t]{0.65\linewidth}\vspace{-10pt}
 			A stick of length 1 is placed in the ground. The angle of elevation of the sun is \ang{72}. What is the length of its shadow?\smallbreak
 		
-			Ptolemy instructs the reader to draw a picture. The lower isosceles triangle has \textcolor{blue}{base angles} \ang{72}, and the length of the shadow $\ell$ is marked. Even though the circle does not have radius 60, the ratio of the chords may be computed:
+			Ptolemy says to draw a picture. The lower isosceles triangle has \textcolor{blue}{base angles} \ang{72}, and the length of the shadow is $\ell$. The ratio of the chords is then computed:
 			\begin{align*}
 				&1:\ell=\crd \textcolor{orange}{\ang{144}}:\crd \textcolor{Green}{\ang{36}}\\
 				\implies &\ell=\frac{\crd \ang{36}}{\crd \ang{144}}=\frac{30(\sqrt 5-1)}{30\sqrt{10+2\sqrt 5}}\approx 0.32491
@@ -423,7 +423,7 @@ Similar expressions for $\crd(\alpha+\beta)$ and $\crd(\ang{180}-(\alpha\pm\beta
 		\end{minipage}
 		\hfill
 		\begin{minipage}[t]{0.34\linewidth}\vspace{-5pt}
-			\flushright\includegraphics[scale=0.9]{trig-anglesun}
+			\flushright\includegraphics[scale=0.85]{trig-anglesun}
 		\end{minipage}
 	\end{enumerate}
 
@@ -440,7 +440,7 @@ Similar expressions for $\crd(\alpha+\beta)$ and $\crd(\ang{180}-(\alpha\pm\beta
 	
 	\begin{enumerate}\setcounter{enumi}{1}
 	  \item\begin{enumerate}
-	    \item Rewrite Ptolemy's interpolation formula $\alpha<\beta\Longrightarrow \frac{\crd\beta}{\crd\alpha}<\frac\beta\alpha$ in terms of the sine function. What facts about $\frac{\sin x}x$ does this reflect?
+	    \item Restate the interpolation formula $\alpha<\beta\Longrightarrow \frac{\crd\beta}{\crd\alpha}<\frac\beta\alpha$ in terms of the sine function. What facts about $\frac{\sin x}x$ does this reflect?
 	    \item Find $\crd 57'$ (arc-minutes!) to two sexagesimal places.
 	  \end{enumerate} 
 	  
@@ -451,6 +451,9 @@ Similar expressions for $\crd(\alpha+\beta)$ and $\crd(\ang{180}-(\alpha\pm\beta
 	  \[
 	  	120\crd\bigl(\ang{180}-(\alpha+\beta)\bigr) =\crd(\ang{180}-\alpha)\crd(\ang{180}-\beta)-\crd\alpha\crd\beta
 	  \]
+	  
+	  \item Use Ptolemy's Theorem to establish a version of the double-angle formula: $\sin \alpha=2\sin\frac\alpha 2\cos\frac\alpha 2$.\par
+	  (\emph{Hint: draw a symmetric quadrilateral one of whose diagonals is a diameter})
 	  
 	  
 	  \item%[5-8]
