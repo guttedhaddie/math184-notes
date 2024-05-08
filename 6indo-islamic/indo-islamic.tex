@@ -244,7 +244,7 @@ roots, negative signs&\\
 
 \clearpage
 
-\subsection{Islamic Mathematics and Algebra}\label{sec:islamalgebra}
+\subsection{Islamic Mathematics I: Algebra}\label{sec:islamalgebra}
 
 Muhammad ibn Abdullah was born in Mecca (modern Saudi Arabia) in 570. Around 610 he began preaching \emph{Islam} (\emph{submission to the will of God})---the third of the major Abrahamic religions, (chronologically) following Judaism and Christianity. After several years of exile, he returned with an army, conquering Mecca a few years before his death in 632.\smallbreak
 
@@ -255,7 +255,7 @@ Through military conquest, Muhammad's successors expanded the caliphate (empire)
 
 As with the Romans, early Muslims permitted conquered peoples---including Jews and Christians (\emph{people of the book})---to maintain their culture, provided they acknowledged their overlords and paid taxes. Those who converted to Islam were welcomed as full citizens, though deconversion (apostasy) was not tolerated. Many of the great Islamic thinkers were born on the periphery and travelled to the great centers of learning, particularly Baghdad during the Islamic golden age (8\th--13\th centuries). Knowledge was also absorbed from Alexandria and western India (Pakistan). In the mid-700s paper-making came from China, greatly facilitating the dissemination and consolidation of knowledge. Schools (\emph{madrassas}) reflected a strong cultural and religious focus on learning.\smallbreak
 
-The Islamic golden age overlapped the European \emph{dark ages} (c.\,500--1200) following the fall of Rome, during which European philosophical development stagnated. By 1200, the crusades\footnote{A series of religious--military campaigns 1096--1291 with the goal of wresting control of the Holy Land, particularly Jerusalem, from Islam.} were well underway and Islam had come to be seen as the enemy of Christian Europe. Ironically, the infusion of knowledge that came to Europe from Islam around this time helped spur the European renaissance \& later scientific revolution. Among European scholars almost to the present day, it was fashionable to credit Islam merely with the \emph{preservation} of ancient `European' knowledge; a claim both fanciful and chauvinistic, but plainly stemming from medieval animosity.
+The Islamic golden age overlapped the European \emph{dark ages} (c.\,500--1200) following the fall of Rome, during which European philosophical development stagnated. By 1200, the crusades\footnote{A series of religious--military campaigns 1096--1291 with the goal of wresting control of the Holy Land, particularly Jerusalem, from Islam.} were well underway and Islam had come to be seen as the enemy of Christian Europe. The infusion of knowledge that came to Europe from Islam around this time helped spur the European renaissance \& later scientific revolution. Among European scholars almost to the present day, it was fashionable to credit Islam merely with the \emph{preservation} of ancient `European' knowledge; a claim both fanciful and chauvinistic, but plainly stemming from medieval animosity.
 
 \goodbreak
 
@@ -268,7 +268,7 @@ The second most obvious legacy of Islamic mathematics is encountered daily in ev
 \begin{quote}
 	\begin{tabular}{l@{\quad}l}
 		\emph{Al-ğabr}:&$x^2+7x=4-2x^2\implies 5x^2+7x=4$\\[4pt]
-		\emph{Al-muqabala}:&$x^2+7x=4+5x\implies x^2+2x=4$
+		\emph{Al-muqābala}:&$x^2+7x=4+5x\implies x^2+2x=4$
 	\end{tabular}
 \end{quote}
 Islamic scholars did not use symbols or equations in a modern sense; statements were instead written out in sentences.
@@ -276,7 +276,8 @@ Islamic scholars did not use symbols or equations in a modern sense; statements 
 
 \boldinline{Muhammad ibn Mūsā al-Khwārizmī (780--850)}
 	
-Born near the Aral Sea in modern Uzbekistan, al-Khwārizmī eventually became chief librarian at the great school of learning, the \emph{House of Wisdom,} in Baghdad. His \emph{Compendious book on the calculation by restoring and balancing}\footnote{\emph{Al-kitāb al-mukhtasar fī hisāb al-ğabr wa’l-muqābala.}} (820) is a synthesis of Babylonian methods with the Euclidean axiomatic approach; an algorithm demonstrated a solution, followed by a geometric proof. After being translated into Latin in the 1100s it became a standard textbook of European mathematics, displacing Euclid in places due to its greater emphasis on practical calculation. The word \emph{algorithm} reflects its importance: the Latin \emph{dixit algorismi} literally means \emph{al-Kwārizmī says.} Here is his approach to the quadratic equation $x^2+4x=60$, or, more properly:
+Born near the Aral Sea in modern Uzbekistan, al-Khwārizmī eventually became chief librarian at the great school of learning, the \emph{House of Wisdom,} in Baghdad. His \emph{Compendious book on the calculation by restoring and balancing}\footnote{\emph{Al-kitāb al-mukhtasar fī hisāb al-ğabr wa’l-muqābala.}} (820) is a synthesis of Babylonian methods and Euclidean axiomatics; an algorithm demonstrated a solution, followed by a geometric proof. After being translated into Latin in the 1100s it became a standard textbook of European mathematics, displacing Euclid in places due to its greater emphasis on practical calculation. The word \emph{algorithm} reflects its importance: the Latin \emph{dixit algorismi} literally means \emph{al-Kwārizmī says.}\medbreak
+Here is al-Khwārizmī's approach to the quadratic equation $x^2+4x=60$, or, more properly:
 \begin{quote}
 	What must be the square which, when increased by four of its roots, amounts to sixty?
 \end{quote}
@@ -298,19 +299,18 @@ Born near the Aral Sea in modern Uzbekistan, al-Khwārizmī eventually became ch
 	\includegraphics[scale=1]{islam-quad}
 \end{minipage}
 \smallbreak
-Al-Kwārizmī essentially constructs the quadratic formula $=\frac{-a+\sqrt{a^2+4b}}2$, while the pictorial justification is Euclid's (\emph{Elements}, Thm II.\,4). Hopefully the geometry is obvious: the square has been increased by four of its roots and the algorithm is simply `completing the square.'
+Al-Kwārizmī essentially constructs the quadratic formula $=\frac{-a+\sqrt{a^2+4b}}2$, while the pictorial justification is Euclid's (\emph{Elements}, Thm II.\,4). The geometry should be obvious: the square has been increased by four of its roots and the algorithm is simply `completing the square.'\smallbreak
+Other algorithms were supplied to solve every type of quadratic.
 \goodbreak
 
-%Other algorithms were given in order to solve every type of quadratic.\smallbreak
+It is hard to notice from our example, but the crucial development from a math-history point of view is the abstraction, in a modern sense the \emph{algebra}; al-Khwārizmī's approach applies equally to numbers as it does to geometric objects, a very different approach to the geometry-focused Greeks.\medbreak
 
-
-Other mathematicians went far further. For instance, Abū Kāmil (Egypt 850--930) generalized Euclid's Book II geometric-algebra arguments to permit substitution, provided the resulting equation was quadratic; for instance
-\begin{gather*}
-	\text{If }y=\frac{1+x}{3+x}\ \text{ and }\ y^2+y=1\implies y=\frac{\sqrt 5 -1}2\text{, then}\\[2pt]
-	\left(\frac{1+x}{3+x}\right)^2+\frac{1+x}{3+x}=1\implies x=\sqrt 5
-\end{gather*}
-In practice, he combined several algorithms of al-Khwārizmī, each of which was based on geometry, but when combined could no-longer be straightforwardly be justified geometrically. This method of substitution was an early step towards establishing the modern primacy of algebra and number over geometry and length.\smallbreak
-The most famous Islamic mathematician of the next several centuries was almost certainly Omar Khayyam (1048--1131), who produced ground-breaking work on the solution of cubic equations, astronomy, the binomial theorem, and irrational numbers. %He did early work which laid the foundations for non-Euclidean geometry and the theory of irrational numbers.
+As an example of the power of this idea, consider how Abū Kāmil (Egypt 850--930) generalized Euclid's Book II geometric-algebra arguments to permit substitution, provided the resulting equation was quadratic.
+\[
+	\text{If }y=\frac{1+x}{3+x}\ \text{ and }\ y^2+y=1\ \text{then }x=\sqrt 5
+\]
+Abū Kāmil essentially substitutes $y=\frac{1+x}{3+x}$ into the quadratic (with solution $y=\frac{\sqrt 5-1}2$). While al-Khwārizmī's methods were geometrically justified, when combined in this fashion the entire process no-longer admits a straightforward geometric interpretation. This method of substitution was an early step towards establishing the modern primacy of algebra and number over geometry and length.\smallbreak
+Over the following centuries, this algebraic approach was further refined. In particular, Omar Khayyam (1048--1131) produced ground-breaking work on cubic equations, astronomy, the binomial theorem, and irrational numbers.
 
 
 \begin{exercises}{}{}
@@ -329,7 +329,7 @@ The most famous Islamic mathematician of the next several centuries was almost c
 	    \item Extract the square root.
 	    \item Add this to half the roots.
 	  \end{itemize}
-	  Translate this into a formula. Give a geometric argument for the validity of the approach using the picture: $HC$ has length $b$ where $G$ is the midpoint, rectangle $ABRH$ has area $c$, $KHGT$ and $AMLG$ are squares, while the large square $ABDC$ has side length $x$.
+	  Translate this into a formula. Give a geometric argument for the validity of the approach using the picture: $HC$ has length $b$ where $G$ is the midpoint; rectangle $ABRH$ has area $c$; $KHGT$ and $AMLG$ are squares; and the large square $ABDC$ has side-length $x$.
 	  \end{minipage}
 	  \hfill
 	  \begin{minipage}[t]{0.39\linewidth}\vspace{0pt}
@@ -351,7 +351,7 @@ The most famous Islamic mathematician of the next several centuries was almost c
 
 
 
-\subsection{Spherical Trigonometry and the \emph{Qibla}}
+\subsection{Islamic Mathematics II: Spherical Trigonometry and the \emph{Qibla}}
 
 Late 8\th{} century Indian work on trigonometry, linking back to Hipparchus, was known in Baghdad, as was the work of Ptolemy. Islamic scholars were interested in trigonometry for reasons beyond astronomy. A primary requirement in Islam is to face the Ka'aba in the Great Mosque at Mecca when at prayer: this is the \emph{qibla} (\emph{direction} in Arabic). A mosque is typically built so that one wall faces Mecca for convenience. In Muhammad's time (when Muslims faced Jerusalem not Mecca), determining the \emph{qibla} was relatively easy, though as Islam spread the curvature of the earth made determination more difficult. The resolution of this problem motivated Islamic mathematics for centuries.
 
