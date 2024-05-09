@@ -310,7 +310,7 @@ As an example of the power of this idea, consider how Abū Kāmil (Egypt 850--93
 	\text{If }y=\frac{1+x}{3+x}\ \text{ and }\ y^2+y=1\ \text{then }x=\sqrt 5
 \]
 Abū Kāmil essentially substitutes $y=\frac{1+x}{3+x}$ into the quadratic (with solution $y=\frac{\sqrt 5-1}2$). While al-Khwārizmī's methods were geometrically justified, when combined in this fashion the entire process no-longer admits a straightforward geometric interpretation. This method of substitution was an early step towards establishing the modern primacy of algebra and number over geometry and length.\smallbreak
-Over the following centuries, this algebraic approach was further refined. In particular, Omar Khayyam (1048--1131) produced ground-breaking work on cubic equations, astronomy, the binomial theorem, and irrational numbers.
+Over the following centuries, this algebraic approach was further improved. In particular, Omar Khayyam (1048--1131) produced ground-breaking work on cubic equations, astronomy, the binomial theorem, and irrational numbers.
 
 
 \begin{exercises}{}{}
@@ -384,20 +384,20 @@ In what follows we observe several conventions:
   \item A single letter $A$ refers to a \emph{point} or to the \emph{angle measure} in a triangle with vertex $A$.
   \item $AB$ means the \emph{segment} of the great-circle joining points $A,B$ or its \emph{arc-length.} A \emph{spherical triangle} $\triangle ABC$ comprises three points on a sphere joined by segments of great-circles.
   \item $\cl{AB}$ means the \emph{straight line} joining $A,B$ with \emph{length} $\nm{AB}$.
-  \item All results are modernized and applied to a unit sphere. The arc-length along a great-circle therefore equals the central angle subtended by that arc in radians: $AB=\measuredangle AOB$. To help visualize things, 3D movable versions of all pictures can be found by clicking on them\ldots 
+  \item All results are modernized and applied to a unit sphere (center $O$). The arc-length along a great-circle therefore equals the central angle subtended by that arc in radians: $AB=\measuredangle AOB$. To help visualize things, 3D movable versions of all pictures can be found by clicking on them\ldots 
 \end{itemize}
 
 \begin{minipage}[t]{0.75\linewidth}\vspace{-5pt}
 	Ptolemy and the Indians had already done some relevant work, though Ptolemy's approach relies heavily on Menelaus' Theorem (c.\,100\AD).
 	
 	\begin{thm*}{Menelaus}{}
-	For the pictured configuration of spherical triangles on a sphere of radius 1,
-	\[
-		\frac{\sin CE}{\sin AE}=\frac{\sin CF}{\sin DF}\cdot\frac{\sin BD}{\sin AB}
-	\]
+		For the pictured configuration of spherical triangles on a sphere of radius 1,
+		\[
+			\frac{\sin CE}{\sin AE}=\frac{\sin CF}{\sin DF}\cdot\frac{\sin BD}{\sin AB}
+		\]
 	\end{thm*}
 	
-	Computations are difficult with Menelaus' Theorem, since one needs to create several new spherical triangles. Al-Wafā simplified things considerably with an alternative result.
+	Applying Menelaus' Theorem is difficult since one typically needs to create many new spherical triangles. Al-Wafā simplified things considerably with an alternative result.
 	\end{minipage}
 	\hfill
 	\begin{minipage}[t]{0.24\linewidth}\vspace{-5pt}
@@ -423,10 +423,10 @@ In fact these ratios equal $\sin\alpha$ where $\alpha$ is the acute angle, thoug
 	\begin{minipage}[t]{0.55\linewidth}\vspace{-5pt}
 		Consider the right-angled \textcolor{red}{planar triangle $CKL$.} Since $\alpha$ is the angle between two planes, we have $\textcolor{red}{\alpha=\measuredangle CLK}$. Moreover
 		\begin{gather*}
-		\nm{CK}=\sin\measuredangle COK=\sin\measuredangle COB=\sin BC\\
-		\nm{CL}=\sin\measuredangle COL=\sin\measuredangle COA=\sin AC
+			\nm{CK}=\sin\measuredangle COK=\sin\measuredangle COB=\sin BC\\
+			\nm{CL}=\sin\measuredangle COL=\sin\measuredangle COA=\sin AC
 		\end{gather*}
-		The usual sine formula says
+		The usual sine formula for plane triangles says
 		\[
 			\sin\textcolor{red}{\alpha}=\frac{\nm{CK}}{\nm{CL}}=\frac{\sin BC}{\sin AC}
 		\]
@@ -464,7 +464,7 @@ Solving triangles essentially means the sine and cosine rules, both of which fol
 \medbreak
 
 \begin{minipage}[t]{0.65\linewidth}\vspace{0pt}
-	Al-Wafā's proof was similar, though a little more complicated. He extended $AB$ and $BC$ to quarter circles resulting in a spherical triangle with right angles at $D$ and $E$. Since $DE$ is an arc with central angle $B$, we have $DE=\sin B$. Al-Wafā's theorem implies
+	Al-Wafā's proof was similar, though a little more complicated. He extended $AB$ and $BC$ to quarter circles resulting in a spherical triangle with right angles at $D$ and $E$. Since $DE$ is an arc with central angle $B$, we have $DE=B$. Since $BD=\ang{90}$, Al-Wafā's theorem implies
 	\[
 		\frac{\sin h}{\sin a}=\frac{\sin B}{\sin \ang{90}}\implies \sin h=\sin a\sin B
 	\]
@@ -538,7 +538,7 @@ The great circle arc-lengths on the sphere are related to straight distances via
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.29\linewidth}\vspace{-10pt}
-	\flushright
+	\flushright\phantomsection\label{pg:qiblacosinerule}
 	\href{http://math.uci.edu/~ndonalds/math184/islam-cosine2.html}{\includegraphics{islam-cosine2}}
 \end{minipage}
 \bigbreak
@@ -620,6 +620,15 @@ Note that as $r\to\infty$, we have $\sin(a/r)\approx \frac ar$ and $\cos(a/r)\ap
 			\ang 0<\alpha-\beta<\alpha+\beta<\ang{90}\implies\sin(\alpha+\beta)-\sin\alpha<\sin\alpha-\sin(\alpha-\beta)
 		\]
 		is the downwards concavity of the sine function.
+		
+		\item Suppose we have a spherical triangle (sphere radius 1) as on page \pageref{pg:qiblacosinerule} with data
+		\[
+			c=\ang{30},\quad b=\ang{60},\quad \alpha=\ang{60}
+		\]
+		\begin{enumerate}
+		  \item Use the cosine rule to find $a$.
+		  \item Compute the remaining angles in the triangle. What do you observe about the sum of the angles $\alpha+\beta+\gamma$?
+		\end{enumerate}
 	
 	  \item%[9-34*]
 		Determine the \emph{qibla} for Rome (latitude \ang{41}53'\,N, longitude \ang{12}30'\,E).

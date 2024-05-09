@@ -10,8 +10,8 @@ settings.tex="pdflatex";
 settings.outformat="html";
 
 //PDF
-//if(!settings.multipleView) settings.batchView=false;
-//settings.render=4;settings.outformat="pdf";
+if(!settings.multipleView) settings.batchView=false;
+settings.render=4;settings.outformat="pdf";
 
 texpreamble("\usepackage{amsmath}
 \usepackage{amsthm,amssymb}
@@ -51,7 +51,7 @@ label("$D$",D,-Z);
 label("$E$",E,Z);
 draw(arc(O,C,E),dashed);
 draw(arc(O,A,D),dashed);
-draw("$\sin B$",arc(O,E,D),dashed);
+draw("$B$",arc(O,E,D),dashed);
 
 draw(H+0.04Z--H+0.04Z+0.04dir(90,-90)--H+0.04dir(90,-90));
 draw(D+0.04Z--D+0.04Z+0.04dir(90,-l)--D+0.04dir(90,-l));
