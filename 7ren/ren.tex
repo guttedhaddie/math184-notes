@@ -27,7 +27,7 @@ Scientific and philosophical progress was spurred by the translation of works fr
 
 Fibonacci\footnote{The name was given to Leonardo by French scholars of the 1800s: \emph{filius Bonacci} means \emph{son of Bonacci.}} likely first encountered the Hindu--Arabic numerals while trading with his father in North Africa. He was impressed by the ease of calculation they afforded and is the first European known to use them (contemporary Europeans used Roman numerals and Egyptian fractions). Fibonacci's 1202 text \emph{Liber Abaci} was written to instruct traders in their use. The first page below explains how to compute with decimal fractions, with the two columns at the bottom of the page showing how to repeatedly multiply 100 (and then 10) by the fraction $\frac 9{10}$. Thus:
 \[
-	100,\quad 90,\quad 81,\quad \frac 9{10}\, 72\ (=72.9),\quad \frac 1{10}\,\frac 6{10}\,65\ (=65.61),\quad\frac 9{10}\,\frac 4{10}\,\frac 0{10}\,59\ (=59.049),\quad\text{etc.}
+	100,\quad 90,\quad 81,\quad \frac 9{10}72\ (=72.9),\quad \frac 1{10}\!\frac 6{10}65\ (=65.61),\quad\frac 9{10}\!\frac 4{10}\!\frac 0{10}59\ (=59.049),\quad\text{etc.}
 \]
 \begin{center}
 	\includegraphics[height=250pt]{liberabaci3}
@@ -76,7 +76,9 @@ To a modern reader, the most obvious mathematical development of the renaissance
 	In Oughtred's notation, colons were parentheses.
 	
 	\item[Thomas Harriot, England 1560--1621.] Made several steps towards modern notation including juxtaposition for multiplication and a modern \emph{encompassing} root-sign. For example, 
-	\[\sqrt[4]{cccc+27aa\sqrt[3]{2+b}}\quad\text{meant}\quad \sqrt[4]{c^4+27a^2\sqrt[3]{2+b}}\]
+	\[
+		\sqrt[4]{cccc+27aa\sqrt[3]{2+b}}\quad\text{meant}\quad \sqrt[4]{c^4+27a^2\sqrt[3]{2+b}}
+	\]
 	
 	\item[René Descartes, France/Holland 1596--1650.] Used exponents for powers ($a^2$, $a^3$) and solidified the convention of using letters at the end of the alphabet ($x,y,z$) for unknowns and those at the beginning ($a,b,c$) for constants.
 \end{description}
@@ -87,10 +89,17 @@ It is also worth mentioning in this context Gutenberg's 1439 invention of the pr
 
 
 \begin{exercises}{}{}
-	\exstart %[12-20]
-		I am owed 3240 \emph{florins.} The debtor pays me 1 \emph{florin} the first day, 2 the second day, 3 the third say, etc. How many days does it take to pay off the debt?
+	\exstart Repeatedly divide 10 by 5 a total of five times (to $\frac{10}{5^5}$), expressing the results using Fibonacci's notation.
 		
 	\begin{enumerate}\setcounter{enumi}{1}
+	  \item What would Nicolas Chuquet have meant by the expression $4\cl pR^3\underline{7\,\cl mR5}$?
+	  
+	  \item How would William Oughtred have expressed the solution to the quadratic equation $A_q=BA+C$? What about Thomas Harriot?
+	  
+	  \item%[12-20]
+		I am owed 3240 \emph{florins.} The debtor pays me 1 \emph{florin} the first day, 2 the second day, 3 the third say, etc. How many days does it take to pay off the debt?
+	  
+	  
 		\item%[12-8*]
 		(A problem of Antonio de Mazzinghi)\lstsp Find two numbers such that multiplying one by the other makes 8 and the sum of their squares is 27.\par
 		(\emph{Hint: let the numbers be $x\pm\sqrt y$})
