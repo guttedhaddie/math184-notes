@@ -23,7 +23,7 @@ Between 900 and 1300, the population of Europe roughly tripled to around 100 mil
 Scientific and philosophical progress was spurred by the translation of works from Arabic and ancient Greek into Latin, with the first universities being formed to teach this canon: Bologna 1088, Paris 1150, and Oxford 1167. The typical student was a young man of wealth who had been privately tutored in grammar, logic \& rhetoric (the \emph{trivium}). At university he would study the Greek-influenced \emph{quadrivium} (geometry, astronomy, arithmetic \& music). While Islamic improvements were incorporated, scholars gave pre-eminence to the Greeks: Euclid for geometry, Aristotle for logic/physics, Hippocrates/Galen for medicine, Ptolemy for astronomy. Early universities were often funded by the Church and `research' was more likely to involve the justification of biblical passages using Aristotle than the conduct of experiments.
 
 
-\boldinline{Leonardo of Pisa (Fibonacci c.\,1175--1250)}
+\boldinline{Leonardo da Pisa (Fibonacci c.\,1175--1250)}
 
 Fibonacci\footnote{The name was given to Leonardo by French scholars of the 1800s: \emph{filius Bonacci} means \emph{son of Bonacci.}} likely first encountered the Hindu--Arabic numerals while trading with his father in North Africa. He was impressed by the ease of calculation they afforded and is the first European known to use them (contemporary Europeans used Roman numerals and Egyptian fractions). Fibonacci's 1202 text \emph{Liber Abaci} was written to instruct traders in their use. The first page below explains how to compute with decimal fractions, with the two columns at the bottom of the page showing how to repeatedly multiply 100 (and then 10) by the fraction $\frac 9{10}$. Thus:
 \[
@@ -34,7 +34,7 @@ Fibonacci\footnote{The name was given to Leonardo by French scholars of the 1800
 	\quad
 	\includegraphics[height=250pt]{liberabaci1}
 \end{center}
-Note how the fractional part is written backwards on the left, using a bar to separate numerator and denominator; the Indians wrote fractions without a bar and it is thought Islamic scholars inserted it for clarity in the 1100s. The second picture is of Fibonacci's famous sequence: read top-to-bottom 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377. Amongst other inheritances from the Hindu--Arabic tradition, Fibonacci is the first known European to work with negative numbers, provided these represented deficiencies or debts in accounting. %Over the following centuries, Hindu--Arabic numerals and decimal/fraction notation slowly came to replace Roman numerals and Egyptian fractions.
+Note how the fractional part is written backwards on the left, using a bar to separate numerator and denominator; the Indians wrote fractions without a bar and it is thought Islamic scholars inserted it for clarity in the 1100s. The second picture is of Fibonacci's famous sequence: read top-to-bottom 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377. Amongst other inheritances from the Hindu--Arabic tradition, Fibonacci is the first known European to work with negative numbers, provided these represented deficiencies or debts in accounting.
 
 
 
@@ -116,14 +116,14 @@ It is also worth mentioning in this context Gutenberg's 1439 invention of the pr
 As an example of contemporary algebraic notation, we consider Girolamo Cardano's 1545 \href{http://math.uci.edu/~ndonalds/math184/cardano.pdf}{\emph{Ars Magna}} (\emph{Great Art or the Rules of Algebra}), in which he describes how to solve quadratic and cubic equations.\par
 
 \begin{minipage}[t]{0.65\linewidth}\vspace{0pt}
-	The example on the right (start of \emph{Caput V,} page 9 of the linked pdf), is the beginning of Cardano's description of how to solve $x^2+6x=91$, \emph{quadratum \& 6 res aequalie 91} (square and 6 things equals 91), by completing the square. He employs several single-letter abbreviations but still writes in sentences and provides a pictorial justification. In modern algebra, the argument is essentially,
+	The example on the right (start of \emph{Caput V,} page 9 of the linked pdf), is the beginning of Cardano's description of how to solve $x^2+6x=91$, \emph{quadratum \& 6 res aequalie 91} (square and 6 things equals 91), by completing the square. He employs several single-letter abbreviations but still writes in sentences and provides a pictorial justification. In modern algebra, the argument is nothing more than completing the square:
 	\begin{align*}
 		x^2+6x=91&\implies x^2+2\cdot 3x+3^2=91+3^2\\
 		&\implies (x+3)^2=100\\
 		&\implies x+3=10\\
 		&\implies x=7
 	\end{align*}
-	where the picture  essentially justifies $7^2+2\cdot 21+3^2=10^2$.
+	where the picture justifies $7^2+2\cdot 21+3^2=10^2$.
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.32\linewidth}\vspace{-2pt}
@@ -133,8 +133,8 @@ As an example of contemporary algebraic notation, we consider Girolamo Cardano's
 
 
 \begin{minipage}[t]{0.65\linewidth}\vspace{0pt}
-	The quadratic algorithms were well-established by this time; on the following page of his text, we find a picture from the work of al-Khwārizmī (Exercise \ref*{sec:islamalgebra}.\ref{exs:alkalgebra}), after which comes more obvious mathematical notation. Even though Rudolff's $x$, $\pm$ and $\sqrt{}$ were in use, Cardano wrote almost everything in words augmented by fractional notation and Pacioli's $\cl p$ and $\cl m$.\smallbreak
-	As was typical for the time, Cardano describes negative solutions to equations as fictitious, though he even writes the square root of $-15$ in one `solution,' if only to mention its absurdity. He also follows the Islamic approach of solving a concrete problem of each type, rather than proceeding abstractly.\medbreak
+	The quadratic algorithms were well-established by this time; on the following page of his text, we find a picture from the work of al-Khwārizmī (Exercise \ref*{sec:islamalgebra}.\ref{exs:alkalgebra}), after which comes more obvious mathematical notation. Even though Rudolff's $\pm$ and $\sqrt{}$ were in use, Cardano wrote almost everything in words augmented with fractional notation and Pacioli's $\cl p$ and $\cl m$.\smallbreak
+	As was typical for the time, Cardano describes negative solutions as fictitious; he even writes the square root of $-15$ at one point, though only to mention its absurdity. He also follows the Islamic approach of solving a concrete problem of each type rather than proceeding abstractly, though observe the \emph{gratia exempli} (``for the sake of an example'') as acknowledgement that the general problem $x^2+ax=b$ may be solved identically.\medbreak
 	It is for the solution of cubic (and quartic) equations that Cardano is most famous. Below we describe, in modern notation, Cardano's method for solving the cubic equation $x^3+bx=c$ where $b,c>0$, though we stress (again) that Cardano only gave \emph{examples} not a general formula.
 \end{minipage}
 \hfill
@@ -169,27 +169,56 @@ As an example of contemporary algebraic notation, we consider Girolamo Cardano's
 		\\
 		\implies x=u-v
 		=\sqrt[3]{
-			\frac c2+\sqrt{\left(\frac c2\right)^2+\left(\frac{b}{3}\right)^3}
+			\sqrt{\left(\frac c2\right)^2+\left(\frac{b}{3}\right)^3} +\frac c2
 		}
-		+\sqrt[3]{
-			\frac c2-\sqrt{\left(\frac c2\right)^2+\left(\frac{b}{3}\right)^3}
+		-\sqrt[3]{
+			\sqrt{\left(\frac c2\right)^2+\left(\frac{b}{3}\right)^3} -\frac c2
 		}
 	\end{gather*}
 \end{quote}
 
-\boldinline{Example}
+\boldinline{Examples}
+\exstart We apply Cardano's method to $x^3+6x=7$, which has the obvious solution $x=1$.
+	\begin{align*}
+		\begin{cases}
+			u^3-v^3=7\\
+			uv=\frac 63=2
+		\end{cases}\ 
+		&\implies (u^3+v^3)^2=7^2+4\cdot 2^3=81 \implies u^3+v^3=9\\[-5pt]
+		&\implies u^3=\frac 12(9+7)=8,\qquad v^3=\frac 12(9-7)=1\\
+		&\implies x=u-v=\sqrt[3]{8}-\sqrt[3]{1} =2-1=1
+	\end{align*}
 
-We apply Cardano's method to $x^3+3x=14$.
-\begin{align*}
-	\begin{cases}
-		u^3-v^3=14\\
-		uv=\frac 33=1
-	\end{cases}\ 
-	&\implies (u^3+v^3)^2=14^2+4\cdot 1^3=200 \implies u^3+v^3=10\sqrt 2\\
-	&\implies u^3=\frac 12(10\sqrt 2+14)=5\sqrt 2+7,\qquad v^3=5\sqrt 2-7\\
-	&\implies x=u-v=\sqrt[3]{7+5\sqrt 2}+\sqrt[3]{7-5\sqrt 2} =(1+\sqrt 2)+(1-\sqrt 2)=2
-\end{align*}
-As the last step shows, Cardano's formula might produce an ugly expression for a simple answer!
+\begin{enumerate}\setcounter{enumi}{1}
+  \item This time we solve $x^3+3x=14$.
+	\begin{align*}
+		\begin{cases}
+			u^3-v^3=14\\
+			uv=\frac 33=1
+		\end{cases}\ 
+		&\implies (u^3+v^3)^2=14^2+4\cdot 1^3=200 \implies u^3+v^3=10\sqrt 2\\[-6pt]
+		&\implies
+		\begin{cases}
+			u^3=\frac 12(10\sqrt 2+14)=5\sqrt 2+7 =(\sqrt 2+1)^3\\
+			v^3=5\sqrt 2-7=(\sqrt 2-1)^3
+		\end{cases}\\
+		&\implies x=u-v=(\sqrt 2+1)-(\sqrt 2-1)=2
+	\end{align*}
+	As this shows, Cardano's formula might produce an ugly expression for a simple answer. And, of course, the cube root of $5\sqrt 2\pm 7$ is something that's on the tip of everyone's tongue!
+	
+	\item The equation $x^3+3x=10$ may be solved using Cardano's method, though in this case the answer is just ugly.
+	\begin{align*}
+		\begin{cases}
+			u^3-v^3=10\\
+			uv=\frac 33=1
+		\end{cases}\ 
+		&\implies (u^3+v^3)^2=10^2+4\cdot 1^3=104 \implies u^3+v^3=2\sqrt{26}\\[-3pt]
+		&\implies u^3=\sqrt{26}+5,\qquad v^3=\sqrt{26}-5\\
+		&\implies x=u-v=\sqrt[3]{\sqrt{26}+5}-\sqrt[3]{\sqrt{26}-5} \approx 1.6989
+	\end{align*}
+\end{enumerate}
+
+
 \bigbreak
 
 
@@ -199,9 +228,11 @@ Being unable or unwilling to work directly with negative numbers, Cardano modifi
 \]
 Cardano's student, Lodovico Ferrari, extended the method to solve quartic equations in terms of the solution of a resultant cubic.
 
+\goodbreak
+
 \boldsubsubsection{Negative Solutions and Complex Numbers}
 
-By the late 1500s, mathematicians were mentioning negative solutions to equations---these were usually described as \emph{fictitious,} or \emph{false roots,} but this didn't stop them from being investigated. Rafael Bombelli (1526--1572, Rome) introduced a notation for complex numbers, described their algebra, and showed how they could be used to find solutions to any quadratic or cubic equation. For instance, he wrote $4+3i$ and $4-3i$ as follows:
+By the late 1500s, mathematicians were mentioning negative solutions to equations---these were usually described as \emph{fictitious,} or \emph{false roots,} but this didn't stop them from being investigated. Rafael Bombelli (1526--1572, Rome) even introduced a notation for complex numbers, described their algebra, and showed how they could be used to find solutions to any quadratic or cubic equation. For instance, he wrote $4+3i$ and $4-3i$ as follows:
 \begin{quote}
 	$4\ p\ di\ m\ 3$, \ read `\emph{quattro piu di meno tre}' (four plus of minus three), and,\\
 	$4\ m\ di\ m\ 3$, \ `\emph{quattro meno di meno tre.}'
@@ -219,7 +250,7 @@ where $\zeta=e^{2\pi i/3} =\frac{-1+\sqrt 3i}2$ is a primitive cube root of unit
 
 \boldinline{Examples}
 
-\exstart Returning to our previous example, if $x^3+3x=14$, then $u=\sqrt 2+1$ and $v=\sqrt 2-1$, from which the three solutions are
+\exstart Returning to one of our previous examples, if $x^3+3x=14$, then $u=\sqrt 2+1$ and $v=\sqrt 2-1$, from which the three solutions are
 \begin{gather*}
 	u-v=2\\
 	\zeta u-\zeta^2v=(\sqrt 2+1)\frac{-1+\sqrt 3i}2-(\sqrt 2-1)\frac{-1-\sqrt 3i}2 =-1+\sqrt 6i\\
@@ -236,24 +267,27 @@ where $\zeta=e^{2\pi i/3} =\frac{-1+\sqrt 3i}2$ is a primitive cube root of unit
 			uv=-\frac 33=-1
 		\end{cases}
 		\implies (u^3+v^3)^2=1^2+4(-1)^3=-3\\
-		&\implies u^3+v^3=\sqrt 3i \implies u^3=\frac 12(1+\sqrt 3i),\quad v^3=\frac 12(1-\sqrt 3i)\\
-		&\implies x=u-v-1=\sqrt[3]{\frac{1+\sqrt 3i}2}+\sqrt[3]{\frac{1-\sqrt 3i}2}-1 
+		&\implies u^3+v^3=\sqrt 3i \implies u^3=\frac 12(\sqrt 3i+1),\quad v^3=\frac 12(\sqrt 3i-1)\\
+		&\implies x=u-v-1=\sqrt[3]{\frac{\sqrt 3i+1}2}-\sqrt[3]{\frac{\sqrt 3i-1}2}-1 
 	\end{align*}
-	This is ugly, but is in fact a real number, being the sum of complex conjugates. If you know Euler's formula, you can check that $x=2\cos\ang{20}-1\approx 0.8794$.
+	This is ugly! If you know Euler's formula and you choose a compatible pair of cube roots (you need $uv=-1$), this will evaluate to one of three real numbers: the positive solution is in fact $x=2\cos\ang{20}-1\approx 0.8794$.
 \end{enumerate}
+
+\goodbreak
+
 
 \boldsubsubsection{Factorization \& the Fundamental Theorem of Algebra}
 
-By the late 1500s, Viète's abstraction allowed him to improve and generalize Cardano's methods. He also investigated the relationship between the coefficients of a polynomial and its roots. For Viète the roots had to be positive, but later improvements by Thomas Harriot and Albert Girard (1629) applied this to all polynomials. For instance, if $ax^2+bx+c=0$ has roots $r_1,r_2$, then
+By the late 1500s, Viète's abstraction allowed him to streamline Cardano's methods. He also investigated the relationship between the coefficients of a polynomial and its roots. For Viète the roots had to be positive, but later improvements by Thomas Harriot and Albert Girard (1629) applied this to all polynomials with any roots. For instance, if $ax^2+bx+c=0$ has roots $r_1,r_2$, then
 \[
 	(r_1-r_2)\bigl(a(r_1+r_2)+b\bigr) =a(r_1^2-r_2^2)+b(r_1-r_2)= \bigl(ar_1^2+br_1+c\bigr)-\bigl(ar_2^2+br_2+c\bigr) =0
 \]
-Provided the roots are distinct, we conclude that
+Provided the roots are distinct,\footnote{In fact the formulas hold even when $r_1=r_2$.} we conclude that
 \[
 	\frac ba=-(r_1+r_2),\quad
-	\frac ca=-\bigl(r_1^2-(r_1+r_2)r_1\bigr)=r_1r_2
+	\frac ca=-r_1^2-\frac bar_1=-r_1^2+(r_1+r_2)r_1=r_1r_2
 \]
-These are the simplest version of what are known as Viète's formulas. Their use amounts to an early form of factorization.
+These are the quadratic version of what are known as Viète's formulas; other versions exist for every degree. Their use amounts to an early form of factorization.
 
 
 \boldinline{Example}
@@ -266,34 +300,37 @@ To solve $3x^2-2x-1=0$, first spot that $r_1=1$ is a root. By Viète's formulas,
 \]
 Think about the relationship between this approach and factorization!\medbreak
 
-A nice side-effect is a way to obtain the quadratic formula analogous to Cardano's cubic approach.
+A nice side-effect is a method for obtaining the quadratic formula by solving a pair of simultaneous equations analogous to Cardano's cubic approach:
 \[
 	\begin{cases}
 		r_1+r_2=-\frac ba\\
-		r_1-r_2=\sqrt{(r_1-r_2)^2}=\sqrt{\left(\frac ba\right)^2-4\frac ca}
+		r_1-r_2=\sqrt{(r_1+r_2)^2-4r_1r_2}=\sqrt{\left(\frac ba\right)^2-4\frac ca}
 	\end{cases}
 	\implies r_1,r_2=-\frac b{2a}\pm\frac 12\sqrt{\left(\frac ba\right)^2-4\frac ca}
 \]
-Viète's formulas were understood for polynomials of arbitrary degree. These relationships were central to the later development of Galois Theory (1830) and the Abel--Ruffini theorem regarding the insolubility of quintic and higher-degree polynomials.\medskip
+Viète's formulas were central to the later development of Galois Theory (1830) and the Abel--Ruffini theorem regarding the insolubility of quintic and higher-degree polynomials.\medbreak
 
 The remaining key results regarding solutions of polynomials also appeared around this time:
 \begin{description}\phantomsection\label{pg:factorthm}
-	\item[Fundamental Theorem of Algebra] Up to multiplicity, a degree $n$ polynomial has $n$ complex roots. Girard offered the first version in 1629, though a complete proof wasn't given until the work of Argand, Cauchy and Gauss in the early 1800s.
-	\item[Factor Theorem] In 1637, Descartes proved that $p(r)=0\iff p(x)$ is divisible by $x-r$.\par
+	\item[Fundamental Theorem of Algebra] Including multiplicity, a degree $n$ polynomial has $n$ complex roots. Girard offered the first version in 1629, though a complete proof didn't appear until the work of Argand, Cauchy and Gauss in the early 1800s.
+	\item[Factor Theorem] In 1637, Descartes proved that $p(r)=0\Longleftrightarrow p(x)$ is divisible by $x-r$.\par
 For instance, to find the roots of $p(x)=x^3+2x^2-13x+10$, Descartes would observe:
-\begin{itemize}
-  \item $p(1)=0\implies x-1$ is a factor; divide to get $p(x)=(x-1)(x^2+3x-10)$.
-  \item $q(x)=x^2+3x-10$ has $q(2)=0$; divide to get $q(x)=(x-2)(x+5)$.
-  \item The roots of $p(x)$ are therefore 1, 2 and $-5$ (Descartes called this last a \emph{false root}).
-\end{itemize}
+	\begin{itemize}
+	  \item $p(1)=0\Longrightarrow x-1$ is a factor; use long-division to obtain $p(x)=(x-1)(x^2+3x-10)$.
+	  \item $q(x)=x^2+3x-10$ has $q(2)=0$; divide to get $q(x)=(x-2)(x+5)$.
+	  \item The roots of $p(x)$ are therefore 1, 2 and $-5$ (Descartes called this last a \emph{false root}).
+	\end{itemize}
 \end{description}
+
+\goodbreak
 
 
 \begin{exercises}{}{}
-	\exstart Find Viète's formulas for the polynomial $p(x)=x^3+ax^2+bx+c$ with roots $x_1,x_2,x_3$; that is, find the coefficients $a,b,c$ in terms of the roots.\vspace{-10pt}
+	\exstart Find Viète's formulas for the polynomial $p(x)=x^3+ax^2+bx+c$ with roots $r_1,r_2,r_3$; that is, find the coefficients $a,b,c$ in terms of the roots.\vspace{-10pt}
 	
 	\begin{enumerate}\setcounter{enumi}{1}
-	  \item[](\emph{Hint: the simplest way is to multiply out; pretend you know how to factorize!})
+	  \item[](\emph{Hint: By Descartes' factor theorem, $p(x)=(x-r_1)(x-r_2)(x-r_3)$, now multiply out\ldots})
+	  
 		\item%[14-6]*
 	  Solve $x^3-6x^2+9x-4=0$ using Girard's method: first, determine one solution by inspection, then use Viète's formulas to investigate the relationship between the remaining roots.
 			
@@ -316,6 +353,9 @@ For instance, to find the roots of $p(x)=x^3+2x^2-13x+10$, Descartes would obser
 		\item%[14-4]*
 		Consider the cubic equation $aaa-3raa+ppa=2xxx$ (as written by Harriot). Show that the substitution $a=e+r$ reduces this to an equation without a square term.\par
 		As an example, reduce the equation $aaa-18aa+87a=110$ to a cubic in $e$ without a square term. Find all three solutions in $e$ and therefore find the solutions to the original equation in $a$.
+		
+		
+		\item Find all roots of the cubic $p(x)=2x^2-3x^2-3x+2$ using Descartes' factor theorem.
 	  
 		
 		\item (If you are very comfortable with complex numbers)\lstsp Use Euler's formula to verify that the equation $x^3+3x^2=3$ has the positive solution $x=2\cos\ang{20}-1$. It also has two negative real solutions: find them! 
