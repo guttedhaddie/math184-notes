@@ -326,13 +326,18 @@ For instance, to find the roots of $p(x)=x^3+2x^2-13x+10$, Descartes would obser
 
 
 \begin{exercises}{}{}
-	\exstart Find Viète's formulas for the polynomial $p(x)=x^3+ax^2+bx+c$ with roots $r_1,r_2,r_3$; that is, find the coefficients $a,b,c$ in terms of the roots.\vspace{-10pt}
+	\hangindent\doubleind
+	\textup{1.}\hspace{\labelsep} (a)\lstsp Find Viète's formulas for the polynomial $p(x)=x^3+ax^2+bx+c$ with roots $r_1,r_2,r_3$; that is, find the coefficients $a,b,c$ in terms of the roots.\vspace{-10pt}
 	
 	\begin{enumerate}\setcounter{enumi}{1}
-	  \item[](\emph{Hint: By Descartes' factor theorem, $p(x)=(x-r_1)(x-r_2)(x-r_3)$, now multiply out\ldots})
+	  \item[]\begin{enumerate}\setcounter{enumii}{1}
+	    \item[](\emph{Hint: Multiply out $p(x)=(x-r_1)(x-r_2)(x-r_3)$\ldots})
+	    
+	    \item%[14-6]*
+	  Solve $x^3-6x^2+9x-4=0$ using Girard's method: first, determine one solution by inspection, then use Viète's formulas for the cubic to investigate the relationship between the remaining roots.
+	  \end{enumerate}
 	  
-		\item%[14-6]*
-	  Solve $x^3-6x^2+9x-4=0$ using Girard's method: first, determine one solution by inspection, then use Viète's formulas to investigate the relationship between the remaining roots.
+		
 			
 		\item\begin{enumerate}
 		  \item Apply Cardano's method to the equation $x^3+6x=20$.\par
@@ -356,6 +361,14 @@ For instance, to find the roots of $p(x)=x^3+2x^2-13x+10$, Descartes would obser
 		
 		
 		\item Find all roots of the cubic $p(x)=2x^2-3x^2-3x+2$ using Descartes' factor theorem.
+		
+		
+		\item Use Cardano's method (with Tschirnhaus substitution and complex numbers!) to find the solutions to the equation
+		\[
+			x^3+4=3x^2
+		\]
+		Verify that you get the same solutions using Descartes' factor theorem.\par
+		(\emph{Hint: all solutions are integers!})
 	  
 		
 		\item (If you are very comfortable with complex numbers)\lstsp Use Euler's formula to verify that the equation $x^3+3x^2=3$ has the positive solution $x=2\cos\ang{20}-1$. It also has two negative real solutions: find them! 
