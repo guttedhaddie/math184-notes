@@ -3,51 +3,62 @@
 
 \subsection{Axes and Co-ordinates}
 
-Modern mathematics is almost entirely \emph{algebraic}: we trust equations and the rules of algebra more than pictures. For example, modern mathematics considers the expression $(x+y)^2=x^2+2xy+y^2$ to follows from the laws (axioms) of algebra:
+Modern mathematics is almost entirely \emph{algebraic}: we trust equations and the rules of algebra more than pictures. For example, modern mathematics considers the expression $(x+y)^2=x^2+2xy+y^2$ to follow from the laws (axioms) of algebra:
 \begin{align*}
-(x+y)^2&=(x+y)(x+y)\tag*{(definition of `square')}\\
-&=x(x+y)+y(x+y)\tag*{(distributive law)}\\
-&=x^2+xy+yx+y^2\tag*{(distributive law twice more)}\\
-&=x^2+2xy+y^2\tag*{(commutativity)}
+	(x+y)^2&=(x+y)(x+y)\tag*{(definition of `square')}\\
+	&=x(x+y)+y(x+y)\tag*{(distributive law)}\\
+	&=x^2+xy+yx+y^2\tag*{(distributive law twice more)}\\
+	&=x^2+2xy+y^2\tag*{(commutativity)}
 \end{align*}
 \begin{minipage}[t]{0.72\linewidth}\vspace{0pt}
 	For most of mathematical history, this result would have been viewed \emph{geometrically} as in Euclid's \emph{Elements} (Thm II.\,4):
 	\begin{quote}
-	The square on two parts equals the squares on each part plus twice the rectangle on the parts.
+		The square on two parts equals the squares on each part plus twice the rectangle on the parts.
 	\end{quote}
 	The proof was a simple picture.
-\end{minipage}\hfill\begin{minipage}[t]{0.25\linewidth}\vspace{0pt}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.25\linewidth}\vspace{0pt}
 	\flushright\includegraphics{analytic-euclid}
-\end{minipage}\smallbreak
+\end{minipage}
+\smallbreak
 
-We've seen how algebra and algebraic notation were slowly adopted in renaissance Europe. While its utility for efficient calculation was noted, algebra was not initially considered acceptable for \emph{proofs}: calculations would be justified via geometry. From our modern viewpoint this seems backwards: if a modern student were asked to prove Euclid's result, they'd likely label the `parts' $x$ and $y$, before using the algebraic formula at the top of the page! Of course each of the lines in the algebraic proof has a geometric basis:
+We've seen how algebra and algebraic notation were slowly adopted in renaissance Europe. While its utility for efficient calculation was noted, algebra was not initially considered acceptable for \emph{proof} and calculations would be justified geometrically. From our modern viewpoint this seems backwards: if a student today were asked to prove Euclid's result, they'd likely label the `parts' $x$ and $y$, before using the algebraic formula at the top of the page to justify the result! Of course each line in the algebraic proof has a geometric basis:
 \begin{itemize}
   \item Distributivity says that the rectangle on a side and two parts equals the sum of the rectangles on the side and each of the parts respectively.
   \item Commutativity says that a rectangle has the same area if rotated \ang{90}.
 \end{itemize}
 Modern mathematics has converted geometric rules into algebra and largely forgotten their geometric origin! This slow movement from geometry to algebra is one of the great revolutions of mathematical history, completely changing the way mathematicians \emph{think.} More practically, the conversion to algebra allows easier generalization: how would one geometrically justify an expression such as
-\[(x+y)^4=x^4+4x^3y+6x^2y^2+4xy^3+y^4\text{ ?}\]
-Euclidean Geometry is \emph{synthetic:} based on purely geometric axioms without formulæ or co-ordinates. The revolution of \emph{analytic geometry} was to marry algebra and geometry using \emph{axes} and \emph{co-ordinates.} Modern geometry is primarily analytic and it is now rare to find a modern mathematician working solely in synthetic geometry; algebra's domination of Euclidean geometry is total! The critical step in this revolution was made almost simultaneously by Descartes and Fermat.
+\[
+	(x+y)^4=x^4+4x^3y+6x^2y^2+4xy^3+y^4\text{ ?}
+\]
+Euclidean Geometry is \emph{synthetic:} based on purely geometric axioms without formulæ or co-ordinates. The revolution of \emph{analytic geometry} was to marry algebra and geometry using \emph{axes} and \emph{co-ordinates.} Modern geometry is primarily analytic and it is now rare to find a mathematician working solely in synthetic geometry---algebra's domination of Euclidean geometry is total! The critical step in this revolution was made almost simultaneously by two Frenchmen\ldots
 \goodbreak
 
-\boldinline{Pierre de Fermat (1601--1665)} Mathematics was Fermat's pastime, not his profession, though that didn't prevent him making great strides in several areas such as probability, analytic geometry, early calculus, number theory and  optics.\footnote{Fermat was wealthy but not aristocratic, attending the University of Orléans for three years where he trained as a lawyer. Undergraduates typically encounter his name in the context of two famous results in number theory: 
-\begin{description}
-\item[\normalfont\emph{Fermat's Little Theorem}] $p$ prime $\implies x^{p}\equiv x\pmod p$.
-\item[\normalfont\emph{Fermat's Last Theorem}] If $n\in\N_{\ge 3}$, then $x^n+y^n=z^n$ has no integer solutions with $xyz\neq 0$. He is not believed to have proved this beyond a special case ($n=4$); a complete proof did not appear until the 1990s. 
-\end{description}} Some of Fermat's fame comes from his enigma; most of what we know of his work comes from letters to friends in which he rarely offers proofs. He would regularly challenge friends to prove results, and it is often unknown whether he had proofs himself, or merely suspected a general statement. Being outside the mainstream, his ideas were often ignored or downplayed. When he died, his notes and letters contained many unproven claims. Leonhard Euler (1707--1783) in particular expended much effort proving several of these.\smallbreak
+
+\boldinline{Pierre de Fermat (1601--1665)} Mathematics was Fermat's pastime rather than his profession, though this didn't prevent him making great strides in several areas such as probability, analytic geometry, early calculus, number theory and optics.\footnote{%
+	Fermat was wealthy but not aristocratic, attending the University of Orléans for three years where he trained as a lawyer. You've likely encountered his name in relation to two famous results in number theory: 
+	\begin{description}
+		\item[\normalfont\emph{Fermat's Little Theorem}] $p$ prime $\Longrightarrow x^p\equiv x\pmod p$ for all integers $x$.
+		\item[\normalfont\emph{Fermat's Last Theorem}] If $n\in\N_{\ge 3}$, then $x^n+y^n=z^n$ has no integer solutions with $xy z\neq 0$. Fermat is not believed to have proved this beyond a special case ($n=4$), with a complete proof not appearing until the 1990s. 
+	\end{description}
+} Some of Fermat's fame comes from his enigma, with most of what we know of his work coming in letters to friends in which he rarely offers proofs. He would regularly challenge friends to prove results, and it is often unknown whether he had proofs himself or merely suspected a general statement. Being outside the mainstream, his ideas were often ignored or downplayed. When he died, his notes and letters contained many unproven claims. Leonhard Euler (1707--1783) in particular expended much effort proving several of these.\smallbreak
 Fermat's approach to analytic geometry was not dissimilar to that of Descartes which we shall describe below: he introduced a single axis which allowed the conversion of curves into algebraic equations. We'll return to Fermat when we discuss the beginnings of calculus in the next section.
 
-\boldinline{René Descartes (1596--1650)} In his approach to mathematics, Descartes is the chalk to Fermat's cheese, rigorously recording everything. His defining work is 1637's \emph{Discours de la méthode\ldots}\footnote{\ldots \emph{of rightly conducting one's reason and of seeking truth in the sciences.} The primary part of this work is philosophical and contains his famous phrase \emph{cogito egro sum} (\emph{I think therefore I am}).} While enormously influential in philosophy, \emph{Discours} was intended to lay the groundwork for investigation within mathematics and the sciences; indeed Descartes finishes \emph{Discours} by commenting on the necessity of experimentation in science and on his reluctance to publish due to the environment of hostility surrounding Galileo's prosecution.\footnote{At this time, France was still Catholic. Descartes had moved thence to Holland in part to pursue his work more freely. In 1649 Descartes moved to Sweden where he died the following year.} The copious appendices to \emph{Discours} contain Descartes' scientific work. It is in one of these, \emph{La Géométrie,} that Descartes introduces axes and co-ordinates.
+
+\boldinline{René Descartes (1596--1650)} In his approach to mathematics, Descartes is the chalk to Fermat's cheese, rigorously recording everything. His defining work is 1637's \emph{Discours de la méthode\ldots}\footnote{\ldots \emph{of rightly conducting one's reason and of seeking truth in the sciences.} The primary part of this work is philosophical and contains his famous phrase \emph{cogito egro sum} (\emph{I think therefore I am}).} While enormously influential in philosophy, \emph{Discours} was intended to lay the groundwork for investigation within mathematics and the sciences---Descartes finishes \emph{Discours} by commenting on the necessity of experimentation in science and on his reluctance to publish due to the environment of hostility surrounding Galileo's prosecution.\footnote{At this time, France was still Catholic. Descartes had moved thence to Holland in part to pursue his work more freely. In 1649 Descartes moved to Sweden where he died the following year.} The copious appendices to \emph{Discours} contain Descartes' scientific work. It is in one of these, \emph{La Géométrie,} that Descartes introduces axes and co-ordinates.
 \par
 
 
 \begin{minipage}[t]{0.64\linewidth}\vspace{0pt}
-We now think of Cartesian axes and co-ordinates as \emph{plural,} but both Fermat and Descartes used only one axis. Here is a sketch of their approach.
-\smallbreak
-Draw a straight line (the \textcolor{red}{axis}) containing two fixed points labelled 0 (the \emph{origin}) and 1. All points on the axis are identified with numbers $x$.
-\par
-A \textcolor{blue}{curve} is described via an algebraic relationship between \textcolor{red}{$x$} and the \textcolor{Green}{distance $y$} from the axis to the curve measured using a family of \textcolor{Green}{parallel lines} intersecting both. 
-\end{minipage}\hfill\begin{minipage}[t]{0.35\linewidth}\vspace{0pt}
+	We now think of Cartesian axes and co-ordinates as \emph{plural,} but both Fermat and Descartes used only one axis. Here is a sketch of their approach.
+	\smallbreak
+	Draw a straight line (the \textcolor{red}{axis}) containing two fixed points labelled 0 (the \emph{origin}) and 1. All points on the axis are identified with numbers $x$ (originally only positive).
+	\smallbreak
+	A \textcolor{blue}{curve} is described as an algebraic relationship between \textcolor{red}{$x$} and the \textcolor{Green}{distance $y$} from the axis to the curve measured using a family of \textcolor{Green}{parallel lines} intersecting both. 
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.35\linewidth}\vspace{0pt}
 	\flushright\includegraphics{analytic-parab}
 \end{minipage}
 \medbreak
@@ -55,34 +66,44 @@ A \textcolor{blue}{curve} is described via an algebraic relationship between \te
 Neither Descartes nor Fermat had a second axes, though their approach implicitly imagines one, the \textcolor{Green}{measuring line} through the origin. It therefore makes sense for us to speak of the \emph{co-ordinates} $(x,y)$; the modern terms \emph{abscissa} ($x$) and \emph{ordinate} ($y$) date from shortly after the time of Descartes. It wasn't long before a second axis orthogonal to the first was instituted (Frans van Schooten, 1649), an approach that quickly became standard.
 \goodbreak
 
-\boldinline{Example 1} The previous picture shows some of the flexibility of approach. The curve $y=x^2+1$ is drawn, where the `$y$-axis' is inclined \ang{60} to the horizontal. To recognize the curve in a more standard fashion, we can perform a change of co-ordinates. Suppose $P=(x,y)$ with respect to the slanted axes and $(X,Y)$ with respect to the usual orthogonal Cartesian axes.
+
+\boldinline{Example 1} The previous picture shows some of the flexibility in Descartes' approach. The curve $y=x^2+1$ is drawn, where the `$y$-axis' is inclined \ang{60} to the horizontal. To recognize the curve in a more standard fashion, we can perform a change of co-ordinates. Suppose $P=(x,y)$ with respect to the slanted axes and $(X,Y)$ with respect to the usual orthogonal axes.
 \begin{center}
-\includegraphics{analytic-parab}
-\qquad\qquad
-\includegraphics{analytic-parab2}
+	\includegraphics{analytic-parab}
+	\qquad\qquad
+	\includegraphics{analytic-parab2}
 \end{center}
 The second picture shows that
-\[\begin{cases}
-X=x+y\cos \ang{60}=x+\frac 12y \\
-Y=y\sin \ang{60}=\frac{\sqrt 3}2y
-\end{cases}\]
+\[
+	\begin{cases}
+		X=x+y\cos \ang{60}=x+\frac 12y \\
+		Y=y\sin \ang{60}=\frac{\sqrt 3}2y
+	\end{cases}
+\]
 For any point on the curve,
 \begin{align*}
-\sqrt 3X-Y=\sqrt 3x&\implies (\sqrt 3X-Y)^2=3x^2=3(y-1)=3\left(\frac 2{\sqrt 3}Y-1\right)\\
-&\implies 3X^2-2\sqrt 3 XY+Y^2-2\sqrt 3Y+3=0
+	\sqrt 3X-Y=\sqrt 3x&\implies (\sqrt 3X-Y)^2=3x^2=3(y-1)=3\left(\frac 2{\sqrt 3}Y-1\right)\\
+	&\implies 3X^2-2\sqrt 3 XY+Y^2-2\sqrt 3Y+3=0
 \end{align*}
-which is an implicit equation for a parabola.\footnote{This really is a parabola, just rotated! This is easily confirmed by computing the \emph{discriminant}: a non-degenerate quadratic curve $aX^2+bXY+cY^2+\text{linear terms}$ is a parabola if and only if $b^2-4ac=0$.}
+which is an implicit equation for a parabola.\footnote{%
+	This really is a parabola, just rotated! This may be confirmed by computing its \emph{discriminant}: a non-degenerate quadratic curve $aX^2+bXY+cY^2+\text{linear terms}$ is a parabola if and only if $b^2-4ac=0$.
+}
+
 
 \boldinline{Example 2} Analytic geometry affords easy proofs of many results that are significantly harder in Euclidean geometry. For instance, here is the famous \emph{centroid theorem.}
 \par
 \begin{minipage}[t]{0.68\linewidth}\vspace{-5pt}
-	Choose axes pointing along two sides of a triangle with with the origin at one vertex.
+	Choose axes pointing along two sides of a triangle with the origin at one vertex.
 	\par
 	If the two axes-side lengths are $a$ and $b$, then the third side has equation $bx+ay=ab$ or $y=b-\frac bax$ and the midpoints of the sides have co-ordinates as in the picture. Now compute the point 1/3 of the way along each median: for instance
-	\[\frac 23\left(\frac a2,0\right)+\frac 13(0,b)=\frac 13(a,b)\]
+	\[
+		\frac 23\left(\frac a2,0\right)+\frac 13(0,b)=\frac 13(a,b)
+	\]
 	One obtains the same result with the other medians, whence \emph{all three meet at a common point} $G$, the \emph{centroid} of the triangle.
-\end{minipage}\hfill\begin{minipage}[t]{0.3\linewidth}\vspace{-15pt}
-	\flushright\includegraphics[scale=1]{analytic-centroid}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\linewidth}\vspace{-15pt}
+	\flushright\includegraphics{analytic-centroid}
 \end{minipage}
 \medbreak
 
@@ -91,44 +112,58 @@ This ability to \emph{choose axes to fit the problem} is a critical advantage of
 
 \smallbreak
 
-Descartes used his method to solve many other problems that had proved more difficult synthetically, such as finding complicated intersections of curves. As we'll see in the next section, such arguments would often rely on his Factor Theorem (pg.\,\pageref{pg:factorthm}). Given the novelty of his approach, Descartes typically gave geometric proofs of all assertions to back up his algebraic work. However, he also saw the future, stating that once several examples were done it was no longer necessary to draw physical lines and provide a geometric argument, \emph{the algebra was the proof.}
+Descartes used his method to solve problems that had proved more difficult synthetically, such as finding complicated intersections of curves. As we'll see in the next section, such arguments would often rely on his Factor Theorem (pg.\,\pageref{pg:factorthm}). Given the novelty of his approach, Descartes typically gave geometric proofs of all assertions to back up his algebraic work. However he also saw the future, stating that once several examples were done it was no longer necessary to draw physical lines and provide a geometric argument, \emph{the algebra was the proof.}
 
 
 
 
 \begin{exercises}{}{}
-\exstart %[14]
-Assume that $xy=c$ represents a hyperbola with asymptotes the $x$- and $y$-axes. Show that $xy+c=rx+sy$ also represents a hyperbola, and find its asymptotes.
-\begin{enumerate}\setcounter{enumi}{1}
-  \item%[14-10] 
-  Determine the locus of the equation $b^2-2x^2=2xy+y^2$.\par
-  (\emph{Add $x^2$ to both sides and remember that `axes' do not have to be orthogonal\ldots})
-  
-  \item%[14-14]*
-  Descartes was able to construct the product and quotient of two quantities using similar triangles. Let $\ray{BC}$ and $\ray{BD}$ be two rays forming an acute angle at $B$. Suppose $\nm{AB}=1$, where $A$ lies on $\ray{BD}$. We want to multiply $\nm{BD}$ by $\nm{BC}$.\par
-  Join $\cl{AC}$ and draw $\cl{DE}$ parallel to $\cl{AC}$. Show that $\nm{BE}$ is the product of $\nm{BD}$ and $\nm{BC}$.\par
-  Similarly, given two lengths $\nm{BE}$ and $\nm{BD}$, construct a quotient length.
-  
-  \item Here is a geometric justification of Descartes for the solution of the equation $x^2=ax+b^2$, where $a,b>0$.
-  \par
-	\begin{minipage}[t]{0.6\linewidth}\vspace{-5pt}
-	\begin{itemize}\itemsep0pt
-	  \item Let $\cl{OQ}$ and $\cl{PQ}$ be perpendicular with lengths $\frac a2$ and $b$ respectively.
-	  \item Draw the circle centered at $O$ with radius $\frac a2$.
-	  \item Draw and extend the line $\lin{OP}$.
-	  \item The solution is $x=\nm{NP}$.
-	\end{itemize}
-	\end{minipage}\hfill\begin{minipage}[t]{0.35\linewidth}\vspace{-10pt}
-	\includegraphics{descartes-quad}
-	\end{minipage}\par
-	\begin{enumerate}
-	  \item Prove that Descartes' construction indeed recovers a solution.
-  
-	  \item Show that the other solution to the equation $x^2=ax+b^2$ is negative (\emph{false} to Descartes). How is it visible in the picture?
-  	
-	  \item Explain how the same picture could be used to solve the equation $x^2+ax=b^2$.
+	\exstart %[14]
+	Assume that $xy=c$ represents a hyperbola with asymptotes the $x$- and $y$-axes. Show that $xy+c=rx+sy$ also represents a hyperbola, and find its asymptotes.
+	\begin{enumerate}\setcounter{enumi}{1}
+	  \item%[14-10] 
+	  Determine the locus of the equation $b^2-2x^2=2xy+y^2$.\par
+	  (\emph{Hint: add $x^2$ to both sides and remember that `axes' do not have to be orthogonal\ldots})
+	  
+	  \item%[14-14]*
+	  We describe a method whereby Descartes constructed the product of two lengths.\par
+	  \begin{minipage}[t]{0.68\linewidth}\vspace{-5pt}
+		  \begin{quote}
+		  	Let $\ray{BC}$ and $\ray{BD}$ be rays forming an acute angle at $B$. Our goal is to multiply $\nm{BD}$ by $\nm{BC}$.\par
+		  	Suppose $\nm{AB}=1$, where $A$ lies on $\ray{BD}$. \par
+		  	Join $\cl{AC}$ and draw $\cl{DE}$ parallel to $\cl{AC}$ so that $E\in\ray{BC}$.
+		  \end{quote}
+		  Prove that $\nm{BE}$ is the product of $\nm{BD}$ and $\nm{BC}$.
+	  \end{minipage}
+	  \hfill
+	  \begin{minipage}[t]{0.31\linewidth}\vspace{-10pt}
+	  	\flushright\includegraphics{descartes-product}
+	  \end{minipage}
+	  \smallbreak
+	  Similarly, given lengths $\nm{BE}$ and $\nm{BD}$, construct a segment whose length is the quotient $\frac{\nm{BE}}{\nm{BD}}$.
+	  
+	  \item Here is a geometric justification of Descartes for the solution of the equation $x^2=ax+b^2$, where $a,b>0$.
+	  \par
+		\begin{minipage}[t]{0.6\linewidth}\vspace{-5pt}
+			\begin{itemize}\itemsep0pt
+			  \item Let $\cl{OQ}$ and $\cl{PQ}$ be perpendicular with lengths $\frac a2$ and $b$ respectively.
+			  \item Draw the circle centered at $O$ with radius $\frac a2$.
+			  \item Draw and extend the line $\lin{OP}$.
+			  \item The solution is $x=\nm{NP}$.
+			\end{itemize}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[t]{0.35\linewidth}\vspace{-10pt}
+			\includegraphics{descartes-quad}
+		\end{minipage}\par
+		\begin{enumerate}
+		  \item Prove that Descartes' construction indeed recovers a solution.
+	  
+		  \item Show that the other solution to the equation $x^2=ax+b^2$ is negative (\emph{false} to Descartes). How is it visible in the picture?
+	  	
+		  \item Explain how the same picture could be used to solve the equation $x^2+ax=b^2$.
+		\end{enumerate}
 	\end{enumerate}
-\end{enumerate}
 \end{exercises}
 
 \clearpage
