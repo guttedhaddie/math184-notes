@@ -177,17 +177,17 @@ At the heart of calculus is the relationship between \emph{velocity, displacemen
   \item The \emph{instantaneous velocity} of a particle is the \emph{rate of change} of its \emph{displacement.}
   \item The \emph{displacement} of a particle is the \emph{net area} under its \emph{velocity-time} graph.
 \end{itemize}
-To state such principles essentially requires graphs and some form of analytic geometry (\emph{rate of change} means \emph{slope}\ldots). Once these appeared in the early 1600s, the rapid development of calculus was arguably inevitable. However, many of the basic ideas were in place prior to Descartes and Fermat.\smallbreak
-In the context of the above, the \emph{Fundamental Theorem of Calculus} is intuitive: complete knowledge of displacement (from a starting point) is equivalent to complete knowledge of velocity. The modern statement is far more daunting:
+To state these principles requires graphs. Analytic geometry makes computation much easier (\emph{rate of change} means \emph{slope}). Once it appeared in the early 1600s, the rapid development of calculus was arguably inevitable. However, many of the basic ideas long predate Descartes and Fermat.\smallbreak
+In the context of the above principles, the \emph{Fundamental Theorem of Calculus} is intuitive: complete knowledge of displacement (from some starting point) is equivalent to complete knowledge of velocity. The modern statement is more daunting, though familiar:
 
 \begin{thm*}{}{}
-\exstart If $f$ is continuous on $[a,b]$, then $F(x):=\int_a^xf(x)\dx$ is continuous on $[a,b]$, differentiable on $(a,b)$, and $F'(x)=f(x)$.
-\begin{enumerate}\setcounter{enumi}{1}
-  \item If $F$ is continuous on $[a,b]$ with integrable derivative on $(a,b)$, then $\int_a^bF'(x)\,\dx=F(b)-F(a)$.
-\end{enumerate}
+	\exstart If $f$ is continuous on $[a,b]$, then $F(x):=\int_a^xf(u)\,\du$ is continuous on $[a,b]$, differentiable on $(a,b)$, and $F'(x)=f(x)$.
+	\begin{enumerate}\setcounter{enumi}{1}
+	  \item If $F$ is continuous on $[a,b]$ with integrable derivative on $(a,b)$, then $\int_a^bF'(x)\,\dx=F(b)-F(a)$.
+	\end{enumerate}
 \end{thm*}
 
-The triumph of the modern version is its abstraction and wide applicability: we've gone way beyond considerations of velocity and displacement. The challenge of \emph{teaching}\footnote{Calculus students can easily be taught the mechanics of calculus (the power law, chain rule, etc.) without having any idea of its meaning; witness both the power and the curse of analytic geometry and algebra!} and \emph{proving} the Fundamental Theorem comes from developing and understanding the notions of \emph{continuous, differentiable} and \emph{integrable.} The quest for good definitions of these concepts is the story of analysis in the 17 and 1800s. We begin with some older considerations of the velocity and area problems.
+The triumph of the modern version is its abstraction and wide applicability: we've gone way beyond considerations of velocity ($f$) and displacement ($F$). The challenge of \emph{teaching}\footnote{Calculus students can easily be taught the mechanics of calculus (the power law, chain rule, etc.) without having any idea of its meaning; witness the power and curse of analytic geometry and algebra!} and \emph{proving} the Fundamental Theorem lies in developing and understanding what is meant by \emph{continuous, differentiable} and \emph{integrable.} The quest for good definitions of these concepts is the story of analysis in the 17-1800s. We begin with some older considerations of the velocity and area problems.
 
 
 \boldsubsubsection{The Velocity Problem pre-1600}
@@ -219,8 +219,10 @@ In the 1350's, Nicolas Oresme (Paris) considered velocity geometrically by (esse
 \smallbreak
 
 
-A proper definition of \emph{instantaneous velocity} is difficult because it requires \emph{limits,} measuring average velocity over smaller and smaller intervals. You are in good company if you find this challenging: Zeno's arrow paradox is essentially an objection to the very idea of instantaneous velocity! Even if one accepts the concept, its direct measurement, even in modern times, is essentially impossible.\footnote{For instance, radar Doppler-shift (as used to catch speeding motorists) requires measuring the wavelength of a radar beam, which essentially compute the average velocity over a very small time interval. %Indeed quantum mechanics suggests that instantaneous velocity and precise location are possibly meaningless concepts. Thankfully mathematicians can choose to deal with idealized models of the universe rather than the real thing!
-}\smallbreak
+A proper definition of \emph{instantaneous velocity} is difficult because it requires \emph{limits,} measuring average velocity over smaller and smaller intervals. You are in good company if you find this challenging: Zeno's arrow paradox is essentially an objection to the very idea of instantaneous velocity! Even if one accepts the concept, its direct measurement, even in modern times, is essentially impossible.\footnote{%
+	For instance, radar Doppler-shift (as used to catch speeding motorists) requires measuring the wavelength of a radar beam, which essentially compute the average velocity over a very small time interval. %Indeed quantum mechanics suggests that instantaneous velocity and precise location are possibly meaningless concepts. Thankfully mathematicians can choose to deal with idealized models of the universe rather than the real thing!
+}
+
 
 \boldsubsubsection{The Area Problem pre-1600}
 
@@ -232,17 +234,22 @@ We've previously seen two situations in which calculus-like methods were used to
 
 The modern notion of Riemann sums is just a special case of approximating an area using small rectangles: the philosophical challenge is again the notion of \emph{limits} and infinitesimals.\par
 \begin{minipage}[t]{0.58\linewidth}\vspace{-3pt}
-In an early antecedent, Oresme describes how to compute the distance travelled by a particle whose speed is constant on a sequence of intervals. For example:\smallbreak
-Over the time interval $\left[\tfrac 1{2^{n+1}},\tfrac 1{2^n}\right)$ a particle travels at speed $1+3n$. How far does it travel in 1 second?\smallbreak
-Oresme drew boxes to compute areas and obtain
-\[d=\sum_{n=0}^\infty(1+3n)2^{-n-1}=4\]
-Similar to Archimedes, the infinite sum was evaluated by spotting two patterns:
-\end{minipage}\hfill\begin{minipage}[t]{0.4\linewidth}\vspace{-3pt}
-\flushright\includegraphics{analytic-oresme}
+	In an early antecedent, Oresme describes how to compute the distance travelled by a particle whose speed is constant on a sequence of intervals. For example:\smallbreak
+	Over the time interval $\left[\tfrac 1{2^{n+1}},\tfrac 1{2^n}\right)$ a particle travels at speed $1+3n$. How far does it travel in 1 second?\smallbreak
+	Oresme drew boxes to compute areas and obtain
+	\[
+		d=\sum_{n=0}^\infty(1+3n)\left(\frac 1{2^n}-\frac 1{2^{n+1}}\right) =\sum_{n=0}^\infty \frac{1+3n}{2^{n+1}}=4
+	\]
+	Similar to Archimedes, the infinite sum was evaluated by spotting two patterns:
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.4\linewidth}\vspace{-3pt}
+	\flushright\includegraphics{analytic-oresme}
 \end{minipage}\par
 \begin{gather*}
-\frac 12+\frac 1{2^2}+\frac 1{2^3}\cdots+\frac 1{2^{n+1}}=1-\frac 1{2^{n+1}}\qquad\qquad
-\frac 02+\frac 1{2^2}+\frac 2{2^3}+\frac 3{2^4}+\cdots+\frac n{2^{n+1}}=1-\frac{n+2}{2^{n+1}}
+	\frac 12+\frac 1{2^2}+\frac 1{2^3}\cdots+\frac 1{2^{n+1}}=1-\frac 1{2^{n+1}}
+	\qquad\qquad
+	\frac 02+\frac 1{2^2}+\frac 2{2^3}+\frac 3{2^4}+\cdots+\frac n{2^{n+1}}=1-\frac{n+2}{2^{n+1}}
 \end{gather*}
 Oresme had neither our notation nor our (limit-dependent) concept of an infinite series! He also worked with similar problems for uniform accelerations over intervals. These are not true Riemann sums, nor are they physical, for a particle cannot suddenly change speed!
 \goodbreak
@@ -258,29 +265,36 @@ The advent of analytic geometry allowed Fermat and Descartes to turn the computa
 	Consider the function $p(x)=x^3-12x+19$; the goal is to find the minimum, which we know to be located at the $x$-value $m=2$.\par
 	Fermat argues that if $x_1,x_2$ are located near $m$ such that $p(x_1)=p(x_2)$, then the polynomial $p(x_2)-p(x_1)$ (which equals zero!) is divisible by $x_2-x_1$. Indeed
 	\begin{align*}
-	0&=\frac{p(x_2)-p(x_1)}{x_2-x_1}\\
-	&=\frac{x_2^3-12x_2+19-x_1^3+12x_1-19}{x_2-x_1}\\
-	&=\frac{(x_2-x_1)(x_2^2+x_1x_2+x_1^2-12)}{x_2-x_1}\\
-	&=x_2^2+x_1x_2+x_1^2-12
+		0&=\frac{p(x_2)-p(x_1)}{x_2-x_1}\\
+		&=\frac{x_2^3-12x_2+19-x_1^3+12x_1-19}{x_2-x_1}\\
+		&=\frac{(x_2-x_1)(x_2^2+x_1x_2+x_1^2-12)}{x_2-x_1}\\
+		&=x_2^2+x_1x_2+x_1^2-12
 	\end{align*}
-\end{minipage}\hfill\begin{minipage}[t]{0.35\linewidth}\vspace{0pt}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.35\linewidth}\vspace{0pt}
 	\flushright\includegraphics{analytic-adequation}
 \end{minipage}\medbreak
 
 Since this holds for any $x_1,x_2$ with $p(x_1)=p(x_2)$, Fermat claims it also holds when $x_1=x_2=m$ (note the assumption of continuity!), and he concludes
-\[3m^2-12=0\implies m=2\]
+\[
+	3m^2-12=0\implies m=2
+\]
 By considering values of $x$ near $m$, it is clear that Fermat really has found a local minimum. We recognize the idea that the slope of the tangent line is zero at local extrema.
 \smallbreak
 
-This approach dates from the 1620s and is similar to earlier work of Viète. Fermat later alters him method slightly, by considering values $p(x)$ and $p(x+e)$ for small $e$ ($x$ is `adequated by $e$'). The difference $p(x+e)-p(x)$ is more easily divided by $e$ without factorizing. Compared with the above, we obtain
+This approach dates from the 1620s and is similar to earlier work of Viète. Fermat later alters his method by considering values $p(x)$ and $p(x+e)$ for small $e$ ($x$ is `adequated by $e$'). The difference $p(x+e)-p(x)$ is more easily divided by $e$ without factorizing. Compared with the above, we obtain
 \begin{align*}
-0&=\frac{p(x+e)-p(x)}{e} =\frac{x^3+3x^2e+3xe^2+e^3-12x-12e+19-x^3+12x-19}{e}\\
-&=\frac{3x^2e+3xe^2+e^3-12e}{e} =3x^2-12 +3xe+e^2
+	0&=\frac{p(x+e)-p(x)}{e} =\frac{x^3+3x^2e+3xe^2+e^3-12x-12e+19-x^3+12x-19}{e}\\
+	&=\frac{3x^2e+3xe^2+e^3-12e}{e} =3x^2-12 +3xe+e^2
 \end{align*}
-Fermat finished by setting $e$ to zero and solving for $x$ as before. Observe the derivative $p'(x)=3x^2-12$ and how $e$ plays the ole of $h$ in the modern expression
-\[p'(x)=\lim_{h\to 0}\frac{p(x+h)-p(x)}h\]
-Fermat's method is guaranteed to work for any polynomial: the limit definition of derivative requires no more for polynomials than simple evaluation at $h=0$. Fermat also extended his method to cover implicit curves and their tangents.
+Fermat finished by setting $e$ to zero and solving for $x$ as before. Observe the derivative $p'(x)=3x^2-12$ and how $e$ plays the role of $h$ in the modern expression
+\[
+	p'(x)=\lim_{h\to 0}\frac{p(x+h)-p(x)}h
+\]
+Fermat's method works for any polynomial, where the limit definition of derivative requires no more than simple evaluation at $h=0$. Fermat also extended his method to cover implicit curves and their tangents.
 \goodbreak
+
 
 \boldinline{Descartes' method of normals}\phantomsection\label{pg:descartesnormal}
 
@@ -288,103 +302,140 @@ Descartes and Fermat are known to have corresponded regarding their methods. Des
 
 In this example, we compute the slope of the curve \textcolor{blue}{$y=\frac 14(10x-x^2)$} at the point $P=(4,6)$.
 \begin{center}
-\includegraphics[scale=0.9]{analytic-desnormal}
+	\includegraphics[scale=0.9]{analytic-desnormal}
 \end{center}
-Let $N=(4+\nu,0)$ be where the \textcolor{Green}{normal} to the curve intersects the $x$-axis.\footnote{At the time, $\nu$ was known as the \emph{subnormal} and $t$ the \emph{tangent.}} Draw a \textcolor{red}{circular arc} radius $r$ centered at $N$.
+Let $N=(4+\nu,0)$ be where the \textcolor{Green}{normal} to the curve intersects the $x$-axis.\footnote{%
+	At the time, $\nu$ was known as the \emph{subnormal} and $t$ the \emph{tangent.}
+}
+Draw a \textcolor{red}{circular arc} radius $r$ centered at $N$.
 If $r$ is close to $n$, the circle intersects the curve in two points $Q,R$ near to $P$. The line $\lin{QR}$ plainly approximates the tangent at $P$.
 \smallbreak
 The co-ordinates of $Q,R$ may be found by solving algebraic equations: substituting $y=\frac 14(10x-x^2)$ into the equation for the circle results in an equation with two known roots, namely the $x$-values of $Q$ and $R$. By the factor theorem,
-\[\begin{cases}
-\bigl(x-(4+\nu)\bigr)^2+y^2=r^2\\
-y=\frac 14(10x-x^2)
-\end{cases} \implies (x-Q_x)(x-R_x)f(x)=0\]
+\[
+	\begin{cases}
+		\bigl(x-(4+\nu)\bigr)^2+y^2=r^2\\
+		y=\frac 14(10x-x^2)
+	\end{cases}
+	\implies (x-Q_x)(x-R_x)f(x)=0
+\]
 where $f(x)$ is some polynomial (in this case quadratic). Rather than doing this explicitly, Descartes observes that if the radius $r$ is adjusted until it \emph{equals} $n$, then $Q$ and $R$ coincide with $P$ and the above equation has a \emph{double-root}:
-\[\begin{cases}
-\bigl(x-(4+\nu)\bigr)^2+y^2=n^2\\
-y=\frac 14(10x-x^2)
-\end{cases} \implies (x-P_x)^2f(x)=(x-4)^2f(x)=0\]
+\[
+	\begin{cases}
+		\bigl(x-(4+\nu)\bigr)^2+y^2=n^2\\
+		y=\frac 14(10x-x^2)
+	\end{cases}
+	\implies (x-P_x)^2f(x)=(x-4)^2f(x)=0
+\]
 Factorization can be done by hand using long-division (note that $\nu$ and $n$ are currently unknown!): substituting as above, we obtain
 \begin{align*}
-0&=x^4-20x^3+116x^2-32(4+\nu)x+16(4+\nu)^2-16n^2\\
-&=(x-4)^2(x^2-12x+4)+32(3-\nu)x+16(12+8\nu+\nu^2-n^2)
+	0&=x^4-20x^3+116x^2-32(4+\nu)x+16(4+\nu)^2-16n^2\\
+	&=(x-4)^2(x^2-12x+4)+32(3-\nu)x+16(12+8\nu+\nu^2-n^2)
 \end{align*}
 Since the remainder $32(3-\nu)x+16(12+8\nu+\nu^2-n^2)$ must be the zero polynomial, we conclude that $\nu=3$.
 %\[,\quad n=\sqrt{y^2+\nu^2}=\sqrt{45},\quad t=\frac{yn}\nu=2\sqrt{45}\]
 By similar triangles, the slope of the curve at $P$ is therefore
-\[\frac y{\sqrt{t^2-y^2}}=\frac\nu y=\frac 12\]
+\[
+	\frac y{\sqrt{t^2-y^2}}=\frac\nu y=\frac 12
+\]
 \goodbreak
+
+
 
 \boldinline{Fermat and Area}
 
-The previous methods essentially allow \emph{differentiation,} albeit inefficiently. Fermat also approached the area problem similarly to Oresme. Here is an example where we find the area under the curve $y=x^3$ between $x=0$ and $x=a$.
+The previous methods permit \emph{differentiation,} albeit inefficiently. Fermat also approached the area problem, in a manner similar to Oresme. Here is an example where we find the area under the curve $y=x^3$ between $x=0$ and $x=a$.
 
 \begin{minipage}[t]{0.59\linewidth}\vspace{0pt}
-Let $0<r<1$ be constant. The rectangle on the interval $[ar^{n+1},ar^n]$ touching the curve at its upper right-corner has area
-\[A_n=(ar^n-ar^{n+1})\cdot (ar^n)^3=a^4(1-r)r^{4n}\]
-The sum of the areas is therefore
-\begin{align*}
-\sum_{n=0}^\infty A_n&=a^4(1-r)\sum_{n=0}^\infty r^{4n}=\frac{a^4(1-r)}{1-r^4}\\
-&=\frac{a^4}{1+r+r^2+r^3}
-\end{align*}
-Setting $r=1$ recovers the area under the curve: $\frac 14a^4$.
-\end{minipage}\hfill\begin{minipage}[t]{0.4\linewidth}\vspace{0pt}
-\flushright\includegraphics{analytic-fermat-area}
+	Let $0<r<1$ be constant. The rectangle on the interval $[ar^{n+1},ar^n]$ touching the curve at its upper right-corner has area
+	\[
+		A_n=(ar^n-ar^{n+1})\cdot (ar^n)^3=a^4(1-r)r^{4n}
+	\]
+	The sum of the areas is therefore
+	\begin{align*}
+		\sum_{n=0}^\infty A_n&=a^4(1-r)\sum_{n=0}^\infty r^{4n}=\frac{a^4(1-r)}{1-r^4}\\
+		&=\frac{a^4}{1+r+r^2+r^3}
+	\end{align*}
+	Setting $r=1$ recovers the area under the curve: $\frac 14a^4$.
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.4\linewidth}\vspace{0pt}
+	\flushright\includegraphics{analytic-fermat-area}
 \end{minipage}
 \medbreak
 
-This is non-rigorous by modern standards and again implicitly invokes limits\footnote{For Fermat, $r=\frac nm$ would have been rational, and he'd have set $m=n$ at the end as in his adequation method.} by setting $r=1$. Regardless, Fermat is able to establish the power law $\int_0^a x^n\,\dx=\frac 1{n+1}a^{n+1}$ for any positive integer $n$.
+This is non-rigorous by modern standards and again implicitly invokes limits\footnote{%
+	For Fermat, $r=\frac nm$ would have been rational, and he'd have set $m=n$ at the end as in his adequation method
+}
+by setting $r=1$. Regardless, Fermat is able to establish the power law $\int_0^a x^n\,\dx=\frac 1{n+1}a^{n+1}$ for any positive integer $n$.
 
 
 \boldsubsubsection{Italian Calculus in the 17\th{} Century: the Area and Volume Problems}
 
 In contrast to the work of Fermat and Descartes, contemporary Italian scholars were more focused on integration problems. Here is Galileo's classic `soup bowl' problem, where he compares the volume between a hemisphere and a cylinder to that of a cone.
 \begin{center}
-\includegraphics{analytic-soupbowl}\qquad\qquad
-\includegraphics{analytic-soupbowl2}
+	\includegraphics{analytic-soupbowl}
+	\qquad\qquad
+	\includegraphics{analytic-soupbowl2}
 \end{center}
 
-Galileo observed\footnote{As did Archimedes 1900 years earlier (pg.\,\pageref{pg:archmethod}), though Galileo was unaware of it.} that the \textcolor{Green}{cross-sectional areas} on both sides are equal (to $\pi y^2$). Since all cross-sections are equal, so must be the volumes. Unfortunately for Galileo, he couldn't sufficiently address two philosophical objections:
+Galileo observed\footnote{%
+	As did Archimedes 1900 years earlier (pg.\,\pageref{pg:archmethod}), though Galileo was unaware of it.
+}
+that the \textcolor{Green}{cross-sectional areas} on both sides are equal (to $\pi y^2$). Since all cross-sections are equal, so must be the volumes. Unfortunately for Galileo, he couldn't sufficiently address two philosophical objections:
 \begin{description}\itemsep0pt
   \item[\normalfont\emph{The zero-measure problem}] If cross-sections are `equal,' then the top cross-sections state that a circle `equals' a point.
   \item[\normalfont\emph{Infinitesimals sum to the whole?}] Can we claim that equal cross-sections imply equal volumes?
 \end{description}
 It was Galileo's advocacy on these points that first gained him notoriety with the Church. His later evangelism for the Copernican theory merely rekindled old animosities.
 
+
 \boldinline{Bonaventura Cavalieri (1598--1647)}
 
 Cavalieri, a student of Galileo and a Jesuat scholar, gave a more thorough discussion of indivisibles in 1635. He is particularly remembered for \emph{Cavalieri's principle}:\vspace{-5pt}
 
 \begin{quote}
-If geometric figures have proportional cross-sectional measure at every point relative to a line, then the figures have measure in the same proportion.
+	If geometric figures have proportional cross-sectional measure at every point relative to a line, then the figures have measure in the same proportion.
 \end{quote}
 
 \begin{minipage}[t]{0.62\linewidth}\vspace{-10pt}
-Galileo's soup bowl is an example of this reasoning, where the `line' is any vertical.\smallbreak
-Another classic example involves sliding a stack of coins or a deck of cards; the volume of the slanted coin stack equals that of the cylinder.
-\end{minipage}\hfill\begin{minipage}[t]{0.37\linewidth}\vspace{-10pt}
-\flushright\includegraphics{analytic-cylinder}
+	Galileo's soup bowl is an example of this reasoning, where the `line' is any vertical.\smallbreak
+	Another classic example involves sliding a stack of coins or a deck of cards; the volume of the slanted coin stack equals that of the cylinder.
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.37\linewidth}\vspace{-10pt}
+	\flushright\includegraphics{analytic-cylinder}
 \end{minipage}\medbreak
 %In pure geometry, we could imagine a square having the same area as a parallelogram with the same height.\\
 
 Extending his principle, Cavalieri inferred the power law $\int_0^ax^n\dx=\frac 1{n+1}a^{n+1}$, giving reasonable arguments for $n=1$ and 2. Here is a sketch of his approach for $n=2$.\par
 \begin{minipage}[t]{0.68\linewidth}\vspace{0pt}
-Draw a cube of side $x$ inside a cube of side $a$. This consists of three congruent pyramids with base $a^2$ and eight $a$.\smallbreak
-Consider the pyramid apex $O$ and whose base is the square face nearest the viewer. The \textcolor{Green}{cross-section} of this pyramid at position $x$ has area $x^2$. In Cavalieri's language, the pyramid is `all the squares;' in modern language
-\[\int_0^ax^2\,\dx=\frac 13a^3\]
-\end{minipage}\hfill\begin{minipage}[t]{0.3\linewidth}\vspace{-10pt}
-\flushright
+	Draw a cube of side $x$ inside a cube of side $a$. This consists of three congruent pyramids with base $a^2$ and eight $a$.\smallbreak
+	Consider the pyramid apex $O$ and whose base is the square face nearest the viewer. The \textcolor{Green}{cross-section} of this pyramid at position $x$ has area $x^2$. In Cavalieri's language, the pyramid is `all the squares;' in modern language
+	\[
+		\int_0^ax^2\,\dx=\frac 13a^3
+	\]
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\linewidth}\vspace{-10pt}
+	\flushright
 \href{http://www.math.uci.edu/~ndonalds/math184/analytic-cavalieri.html}{\includegraphics[scale=0.9]{analytic-cavalieri}}
 \end{minipage}\medbreak
 
 \phantomsection\label{pg:cavspiral}
 Cavalieri also used his method (Book IV, Prop 19 of \emph{Geometria Indivisibilis}) to calculate the area enclosed in an \textcolor{red}{Archimedean spiral.} Suppose $B$ moves at constant speed along a line $\cl{OA}$ rotating at constant speed about $O$. In polar co-ordinates $B$ traces a curve $r=k\theta$ for $0\le\theta\le 2\pi$ (we take $k=1$).\par
 \begin{minipage}[t]{0.73\textwidth}\vspace{-5pt}
-If $\nm{OB}=r$, then the \textcolor{blue}{arc} \emph{inside} the spiral has length
-\[\ell(r)=2\pi r\cdot\frac{2\pi-\theta}{2\pi}=r(2\pi-r)\]
-Imagine the \textcolor{blue}{arc} as a noodle which, when cut at $B$ and allowed to fall, forms the \textcolor{Green}{line} $\cl{CD}$. The area in the spiral therefore equals that within the parabola which (thanks to Archimedes and Cavalieri himself) is  $\frac 43$ that of the largest triangle that can fit inside, namely
-\[\frac 43\cdot \frac 12(2\pi)\ell(\pi)=\frac 43\pi^3\]
-\end{minipage}\hfill\begin{minipage}[t]{0.25\textwidth}\vspace{-5pt}
-\flushright\includegraphics[scale=0.9]{cavalieri1}
+	If $\nm{OB}=r$, then the \textcolor{blue}{arc} \emph{inside} the spiral has length
+	\[
+		\ell(r)=2\pi r\cdot\frac{2\pi-\theta}{2\pi}=r(2\pi-r)
+	\]
+	Imagine the \textcolor{blue}{arc} as a noodle which, when cut at $B$ and allowed to fall, forms the \textcolor{Green}{line} $\cl{CD}$. The area in the spiral therefore equals that within the parabola which (thanks to Archimedes and Cavalieri himself) is  $\frac 43$ that of the largest triangle that can fit inside, namely
+	\[
+		\frac 43\cdot \frac 12(2\pi)\ell(\pi)=\frac 43\pi^3
+	\]
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.25\textwidth}\vspace{-5pt}
+	\flushright\includegraphics[scale=0.9]{cavalieri1}
 \end{minipage}\medbreak
 
 Cavalieri did this slightly differently, his parabola being drawn in a rectangle and the difference subtracted from a triangle, but the above is easier to visualize.\medbreak %(see \emph{Infinitessimal, pg 100})
@@ -393,12 +444,14 @@ Cavalieri did not court controversy like Galileo, being well-aware of the conten
 
 \goodbreak
 
-\boldinline{Evangalista Torricelli (1608--1647)} A contemporary of Galileo and Cavalieri, Torricelli made several applications of Cavalieri's principle and advocated for its careful use.
+\boldinline{Evangelista Torricelli (1608--1647)} A contemporary of Galileo and Cavalieri, Torricelli made several applications of Cavalieri's principle and advocated for its careful use.
 
 \begin{minipage}[t]{0.7\linewidth}\vspace{0pt}
-If the sides of a rectangle are in the ratio 2\,:\,1, so also are indicated red and blue segments. In Cavalieri's language, `all the lines' of the red triangle are twice `all the lines' of the blue triangle! Torricelli observes that the red triangle cannot have twice the area of the blue, since they are congruent and points out that Cavalieri's principle has been misapplied: the cross-sections were not measured with reference to a common line.
-\end{minipage}\hfill\begin{minipage}[t]{0.29\linewidth}\vspace{0pt}
-\flushright\includegraphics{analytic-torri1}
+	If the sides of a rectangle are in the ratio 2\,:\,1, so also are indicated red and blue segments. In Cavalieri's language, `all the lines' of the red triangle are twice `all the lines' of the blue triangle! Torricelli observes that the red triangle cannot have twice the area of the blue, since they are congruent and points out that Cavalieri's principle has been misapplied: the cross-sections were not measured with reference to a common line.
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.29\linewidth}\vspace{0pt}
+	\flushright\includegraphics{analytic-torri1}
 \end{minipage}\medbreak
 
 In modern language, $\int_0^2\frac 12x\,\dx=\int_0^12y\,\dy$ are equal via the substitution $x=2y$. The point is that the infinitesimals are also in the \emph{same ratio} $\dx:\dy=2:1$.\bigbreak
@@ -407,76 +460,95 @@ In modern language, $\int_0^2\frac 12x\,\dx=\int_0^12y\,\dy$ are equal via the s
 Another of Torricelli's examples offers a seeming paradox.
 
 \begin{minipage}[t]{0.58\linewidth}\vspace{-5pt}
-The hyperbola with equation $z=\frac 1x$ is rotated around the $z$-axis. A \textcolor{Green}{cylinder} centered on the $z$-axis with radius $x$ lying under the surface has surface area
-\[A=\text{circumference}\cdot\text{height}=2\pi xz=2\pi\]
-Underneath the graph at $x$, Torricelli draws a \textcolor{Green}{circular disk} with area $2\pi$. Since the area of this disk is independent of $x$, he argues that the volume under the original \textcolor{blue}{surface} out to radius $a$ equals the volume of the solid \textcolor{orange}{cylinder}:
-\[V=2\pi a\]
-Torricelli argues that this is a correct use of Cavalieri's principle since the cylindrical `cross-sections' and the circular cross-sections are both measured with respect to the same line (the $x$-axis).\smallbreak
-This is precisely the method of volume by cylindrical shells that we learn in modern calculus:
-\[V=\int_0^a 2\pi x\cdot\frac 1x\,\dx=2\pi a\]
-The conundrum is that the surface is \emph{infinitely tall}! How can we justify the idea that it lies above a \emph{finite} volume?
-\end{minipage}\hfill\begin{minipage}[t]{0.41\linewidth}\vspace{-10pt}
-\flushright
-\href{http://www.math.uci.edu/~ndonalds/math184/analytic-torri2.html}{
-\includegraphics{analytic-torri2}
-}
+	The hyperbola with equation $z=\frac 1x$ is rotated around the $z$-axis. A \textcolor{Green}{cylinder} centered on the $z$-axis with radius $x$ lying under the surface has surface area
+	\[
+		A=\text{circumference}\cdot\text{height}=2\pi xz=2\pi
+	\]
+	Underneath the graph at $x$, Torricelli draws a \textcolor{Green}{circular disk} with area $2\pi$. Since the area of this disk is independent of $x$, he argues that the volume under the original \textcolor{blue}{surface} out to radius $a$ equals the volume of the solid \textcolor{orange}{cylinder}:
+	\[
+		V=2\pi a
+	\]
+	Torricelli argues that this is a correct use of Cavalieri's principle since the cylindrical `cross-sections' and the circular cross-sections are both measured with respect to the same line (the $x$-axis).\smallbreak
+	This is precisely the method of volume by cylindrical shells that we learn in modern calculus:
+	\[
+		V=\int_0^a 2\pi x\cdot\frac 1x\,\dx=2\pi a
+	\]
+	The conundrum is that the surface is \emph{infinitely tall}! How can we justify the idea that it lies above a \emph{finite} volume?
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.41\linewidth}\vspace{-10pt}
+	\flushright
+	\href{http://www.math.uci.edu/~ndonalds/math184/analytic-torri2.html}{
+		\includegraphics{analytic-torri2}
+	}
 \end{minipage}
 \bigbreak
 
-Galileo, Cavalieri and Torricelli mark the end of 400 years of Italian dominance of in science and mathematics dating back to Fibonacci. Their ideas were too controversial to thrive so close to the center of Church power. The center of European science and philosophy therefore moved northward. The English and French (protestant) reformations of the 1500s together with developing ideas of reformed government\footnote{For instance Hobbes' \emph{Leviathan} written during the English Civil War (1642--1651) was a plea for the constraint of absolute monarchical power. The War itself indeed proved decapitatingly effective at reining in a King\ldots} meant that Northern Europe provided more fertile ground for new ideas.
+Galileo, Cavalieri and Torricelli mark the end of 400 years of Italian dominance of in science and mathematics dating back to Fibonacci. Their ideas were too controversial to thrive so close to the center of Church power. The center of European science and philosophy therefore moved northward. The English and French (protestant) reformations of the 1500s together with developing ideas of reformed government\footnote{%
+	For instance Hobbes' \emph{Leviathan} written during the English Civil War (1642--1651) was a plea for the constraint of absolute monarchical power. The War itself indeed proved decapitatingly effective at reining in a King\ldots%
+}
+meant that Northern Europe provided more fertile ground for new ideas.
 \goodbreak
 
 
 \begin{exercises}{}{}
-\exstart Find the maximum of $p(x)=5+x-2x^2$ using Fermat's first method.
-
-\begin{enumerate}\setcounter{enumi}{1}
-	\item%[15-4]* 
-	Use Fermat's second method (``$+e$'') to find the maximum of $bx-x^3$. How might Fermat decide which of the two solutions to choose as his maximum?
-  
-	\item%[15-5]*
-	Justify Fermat's first method of determining maxima and minima by showing that if $M$ is a maximum of $p(x)$, then the polynomial $p(x)-M$ always has a factor $(x-a)^2$, where $a$ is the value of $x$ giving the maximum.
+	\exstart Find the maximum of $p(x)=5+x-2x^2$ using Fermat's first method.
 	
-	
-	\item Use Descartes' method of normals to compute the slope of the curve $y=x^2$ at $(a,a^2)$.
-
-	\item Suppose the surface of a sphere of radius $r$ is subdivided into infinitesimal regions of equal area. Following Kepler, use the formula for the volume of a cone ($\frac 13$base$\cdot$height)	to find the relationship between the volume $V$ of the sphere and its surface area $A$.
-		
- 	\item%[15-2]* 
- 	(A problem of Kepler)\lstsp Show that the largest circular cylinder that can be inscribed in a sphere is one in which the ratio of diameter to altitude is $\sqrt 2:1$.\par
- 	(\emph{Hint: Relate the problem to finding the maximum of the function $f(x)=x-\frac 14x^3$, for which you can use modern calculus})
-	
-	
-% 	\item%[15-22]*
-% 	Determine the area under the curve $y=px^k$ from $x=0$ to $x=x_0$ by dividing the interval $[0,x_0]$ into an infinite set of subintervals, beginning from the right with the points $a_0=x_0,\ a_1=\frac nmx_0,\ a_2=\left(\frac nm\right)^2x_0,\ldots$ where $n<m$, and proceeding as in Fermat's derivation of the area under the hyperbola.
-
-
-	\item We consider a version of Gregory St.\,Vincent's 1647 approach to the area under the hyperbola $xy=1$.
-	\begin{enumerate}
-	  \begin{minipage}[t]{0.6\linewidth}\vspace{-3pt}
-	  \item If $1<a<b$ and $r>0$ as in the picture, explain why the areas $A$ and $B$ under the curve satisfy the same inequalities
-	  \[\frac{b-a}b<A,B<\frac{b-a}a\]
-	  (\emph{Since $[a,b]$ may be subdivided into arbitrarily many subintervals, the areas $A_1$ and $A_2$ are therefore equal}) 
-	  \end{minipage}\hfill\begin{minipage}[t]{0.39\linewidth}\vspace{-15pt}
-	  	\flushright\includegraphics{analytic-stv-area}
-	  \end{minipage}\par
+	\begin{enumerate}\setcounter{enumi}{1}
+		\item%[15-4]* 
+		Use Fermat's second method (``$+e$'') to find the maximum of $bx-x^3$. How might Fermat decide which of the two solutions to choose as his maximum?
 	  
-	  \item If $A(x)$ is the area under the hyperbola between 1 and $x$, explain why $A$ satisfies the \emph{logarithmic} identity
-	  \[A(x_1x_2)=A(x_1)+A(x_2)\]
-	  Why are you not surprised by this?\par
-	  (\emph{For simplicity, assume $1<x_1<x_1x_2$})
+		\item%[15-5]*
+		Justify Fermat's first method of determining maxima and minima by showing that if $M$ is a maximum of $p(x)$, then the polynomial $p(x)-M$ always has a factor $(x-a)^2$, where $a$ is the value of $x$ giving the maximum.
+		
+		
+		\item Use Descartes' method of normals to compute the slope of the curve $y=x^2$ at $(a,a^2)$.
+	
+		\item Suppose the surface of a sphere of radius $r$ is subdivided into infinitesimal regions of equal area. Following Kepler, use the formula for the volume of a cone ($\frac 13$base$\cdot$height)	to find the relationship between the volume $V$ of the sphere and its surface area $A$.
+			
+	 	\item%[15-2]* 
+	 	(A problem of Kepler)\lstsp Show that the largest circular cylinder that can be inscribed in a sphere is one in which the ratio of diameter to altitude is $\sqrt 2:1$.\par
+	 	(\emph{Hint: Relate the problem to finding the maximum of the function $f(x)=x-\frac 14x^3$, for which you can use modern calculus})
+		
+		
+	% 	\item%[15-22]*
+	% 	Determine the area under the curve $y=px^k$ from $x=0$ to $x=x_0$ by dividing the interval $[0,x_0]$ into an infinite set of subintervals, beginning from the right with the points $a_0=x_0,\ a_1=\frac nmx_0,\ a_2=\left(\frac nm\right)^2x_0,\ldots$ where $n<m$, and proceeding as in Fermat's derivation of the area under the hyperbola.
+	
+	
+		\item We consider a version of Gregory St.\,Vincent's 1647 approach to the area under the hyperbola $xy=1$.
+		\begin{enumerate}
+		  \begin{minipage}[t]{0.6\linewidth}\vspace{-3pt}
+		  \item If $1<a<b$ and $r>0$ as in the picture, explain why the areas $A$ and $B$ under the curve satisfy the same inequalities
+		  \[
+		  	\frac{b-a}b<A,B<\frac{b-a}a
+		  \]
+		  (\emph{Since $[a,b]$ may be subdivided into arbitrarily many subintervals, the areas $A_1$ and $A_2$ are therefore equal}) 
+		  \end{minipage}
+		  \hfill
+		  \begin{minipage}[t]{0.39\linewidth}\vspace{-15pt}
+		  	\flushright\includegraphics{analytic-stv-area}
+		  \end{minipage}\par
+		  
+		  \item If $A(x)$ is the area under the hyperbola between 1 and $x$, explain why $A$ satisfies the \emph{logarithmic} identity
+		  \[
+		  	A(x_1x_2)=A(x_1)+A(x_2)
+		  \]
+		  Why are you not surprised by this?\par
+		  (\emph{For simplicity, assume $1<x_1<x_1x_2$})
+		\end{enumerate}
+		
+		\begin{minipage}[t]{0.6\linewidth}\vspace{0pt}
+			\item Consider two copies of triangle with sides $a,b$ arranged into a rectangle. Argue that `all the lines' of the rectangle are twice `all the lines' of the triangle.\par
+			(\emph{In modern language, $\int_0^ab\,\dy=2\int_0^a\frac bay\,\dy$}) 
+		\end{minipage}
+		\hfill
+		\begin{minipage}[t]{0.39\linewidth}\vspace{0pt}
+			\flushright\includegraphics{analytic-torri3}
+		\end{minipage}\par
+		
+		\item Repeat Cavalieri's analysis of the spiral (pg.\,\pageref{pg:cavspiral}) to find the area inside one revolution of the curve $r=k\theta$ for any $k>0$.
+		
 	\end{enumerate}
-	
-	\begin{minipage}[t]{0.6\linewidth}\vspace{0pt}
-	\item Consider two copies of triangle with sides $a,b$ arranged into a rectangle. Argue that `all the lines' of the rectangle are twice `all the lines' of the triangle.\par
-(\emph{In modern language, $\int_0^ab\,\dy=2\int_0^a\frac bay\,\dy$}) 
-	\end{minipage}\hfill\begin{minipage}[t]{0.39\linewidth}\vspace{0pt}
-	\flushright\includegraphics{analytic-torri3}
-	\end{minipage}\par
-	
-	\item Repeat Cavalieri's analysis of the spiral (pg.\,\pageref{pg:cavspiral}) to find the area inside one revolution of the curve $r=k\theta$ for any $k>0$.
-	
-\end{enumerate}
 \end{exercises}
 
 
