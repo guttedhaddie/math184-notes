@@ -572,88 +572,113 @@ meant that Northern Europe provided more fertile ground for new ideas.
 
 \subsection{Calculus in the late 1600s}
 
-By the second half of the 17\th{} century, the mathematical center of Europe had moved northwards, to France, Germany, Holland and Britain. In this section, we present some of this work, culminating with the efforts of Newton and Leibniz.\par
+By the second half of the 17\th{} century, the mathematical center of Europe had moved northwards, to France, Germany, Holland and Britain. In this section we present some of this work, culminating with the efforts of Newton and Leibniz.\par
 
 \begin{minipage}[t]{0.64\linewidth}\vspace{0pt}
-\boldinline{Hendrick van Heuraet (1634--1660)} Working in Holland, van Heuraet studied Descartes' and argued that the arc-length of a curve described by a function $y$ equals the area under the curve $z=\frac ny$ where $n$ is the `normal' curve. His method appeared in Frans van Schooten's 1659 version of Descartes' \emph{La Geometrie.} To see why this should make sense, recall Descartes' method of normals and observe that the ratio $n:y$ equals that of $\ds:\dx$ in a differential triangle.\smallbreak
-His most famous example involved calculating the arc-length of the curve $y^2=x^3$. By Descartes' method,
-\begin{gather*}
-\qquad\begin{cases}
-(x-a-\nu)^2+y^2=n^2\\
-y^2=x^3
-\end{cases}\\
-\begin{aligned}
-\implies 0&= x^3+x^2-2(x+\nu)x+(a+\nu)^2-n^2\\
-&=(x-a)^2(x+2a+1)+(3a^2-2\nu)x\\
-&\qquad\qquad +\nu^2+2a\nu-2a^3-n^2
-\end{aligned}
-\end{gather*}
-\end{minipage}\hfill\begin{minipage}[t]{0.35\linewidth}\vspace{-4pt}
-\flushright\includegraphics{calc-gregory}
+	\boldinline{Hendrick van Heuraet (1634--1660)} Working in Holland, van Heuraet studied Descartes' and argued that the arc-length of a curve described by a function $y$ equals the area under the curve $z=\frac ny$ where $n$ is the `normal' curve. His method appeared in Frans van Schooten's 1659 version of Descartes' \emph{La Geometrie.} To see why this should make sense, recall Descartes' method of normals and observe that the ratio $n:y$ equals that of $\ds:\dx$ in a differential triangle.\smallbreak
+	His most famous example involved calculating the arc-length of the curve $y^2=x^3$. By Descartes' method,
+	\begin{gather*}
+		\qquad
+		\begin{cases}
+			(x-a-\nu)^2+y^2=n^2\\
+			y^2=x^3
+		\end{cases}\\
+		\begin{aligned}
+			\implies 0&= x^3+x^2-2(x+\nu)x+(a+\nu)^2-n^2\\
+			&=(x-a)^2(x+2a+1)+(3a^2-2\nu)x\\
+			&\qquad\qquad +\nu^2+2a\nu-2a^3-n^2
+		\end{aligned}
+	\end{gather*}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.35\linewidth}\vspace{-4pt}
+	\flushright\includegraphics{calc-gregory}
 \end{minipage}\medbreak
 
 Since the remainder must be zero, we conclude that $\nu=\frac 32a^2$, from which
-\[n=\sqrt{\nu^2+y^2}=\sqrt{\frac 94a^4+a^3}\implies z=\frac ny=\sqrt{\frac 94a+1}\]
+\[
+	n=\sqrt{\nu^2+y^2}=\sqrt{\frac 94a^4+a^3}\implies z=\frac ny=\sqrt{\frac 94a+1}
+\]
 The \textcolor{blue}{arc-length} from $x=0$ to $a$ is therefore the \textcolor{orange}{area under the parabola} $z^2=\frac 94x+1$ between the same limits. By the usual Archimedean $\frac 43$-triangle approach, we see that
-\[\text{\textcolor{blue}{Arc-length}}=\frac 43\left[\frac 12\cdot\left(\frac 49+a\right)z(a)-\frac 12\cdot \frac 49\cdot 1\right] =\left[a+\frac 49\right]^{3/2}-\frac 8{27}\]
+\[
+	\text{\textcolor{blue}{Arc-length}}=\frac 43\left[\frac 12\cdot\left(\frac 49+a\right)z(a)-\frac 12\cdot \frac 49\cdot 1\right] =\left[a+\frac 49\right]^{3/2}-\frac 8{27}
+\]
 
 \boldinline{James Gregory (1638--1675)} Hailing from Aberdeen, Scotland, Gregory studied in Italy with Stefano Angeli, a pupil of Torricelli, before returning to Scotland where he became chair of mathematics at St.\,Andrews, and then Edinburgh.\smallbreak
 Gregory repeats van Heuraet's work relating the length of a curve to the area under another, before considering whether the process can be reversed: given a curve $z(x)$, can we find a curve $y(x)$ such that the arc-length of $y$ is given by the area under $z$? In modern language, given $z$, find $y$ such that
-\[\int_0^a\sqrt{1+y'^2}\,\dx=\int_0^az\,\dx\]
+\[
+	\int_0^a\sqrt{1+y'^2}\,\dx=\int_0^az\,\dx
+\]
 which we'd view as solving the ODE $\diff[y]{x}=\sqrt{z^2-1}$. Gregory's solution was to \emph{define} $y$ to be the area under the curve $\sqrt{z^2-1}$ from $0$ to $a$. This is essentially part 1 of the fundamental theorem of calculus: if you want something whose slope (derivative) is given, define it to be the area under the curve!
 
 \goodbreak
 
-\boldinline{Isaac Barrow (1630--1677)} Like Gregory, Barrow also studied mathematics in Italy (and France), before returning to England to become the inaugural Lucasian Professor of Mathematics\footnote{Now one of the most prestigious world-wide positions in \emph{theoretical Physics,} in large part due to the fame of its second incumbent: Issac Newton. Many famous physicists, including Paul Dirac and Stephen Hawking later held the same chair.} at Trinity College Cambridge. Like van Heuraet and Gregory, Barrow's work was predominantly geometric, stating and proving geometric versions of both parts of the fundamental theorem. In a precursor of Newton's work, he also modified Fermat's algorithm for differentiation. For example, here is how Barrow would have found the slope of the curve $x^2+2xy^2=c$ at a point $(x,y)$:
+\boldinline{Isaac Barrow (1630--1677)} Like Gregory, Barrow also studied mathematics in Italy (and France), before returning to England to become the inaugural Lucasian Professor of Mathematics\footnote{%
+	One of the most prestigious world-wide academic positions in \emph{theoretical Physics,} in large part due to the fame of its second incumbent: Issac Newton. Later chairs include Paul Dirac and Stephen Hawking.%
+}
+at Trinity College Cambridge. Barrow's work remained predominantly geometric; he stated proving geometric versions of both parts of the fundamental theorem, though credited Gregory with part of the argument. In a precursor of Newton's work, he also modified Fermat's algorithm for differentiation. For example, here is how Barrow would have found the slope of the curve $x^2+2xy^2=c$ at a point $(x,y)$:
 \begin{itemize}\itemsep0pt
   \item Replace $x$ and $y$ with $x+e$ and $y+a$ respectively and expand:
-  \[x^2+2ex+e^2+2xy^2+4axy+2a^2x+2ey^2+4eay+2ea^2=c\]
+  \[
+  	x^2+2ex+e^2+2xy^2+4axy+2a^2x+2ey^2+4eay+2ea^2=c
+  \]
   \item Delete everything from the original equation $x^2+2xy^2=c$ and every expression containing two or more of the terms $e,a$:
-  \[2ex+4axy+2ey^2=0\]
+  \[
+  	2ex+4axy+2ey^2=0
+  \]
   \item Rearrange: the slope is the ratio $a:e=-x-y^2:2xy$
 \end{itemize}
-In essence this is implicit differentiation, where $\dx=e$ and $\dy=a$. Note again the essential difficulty with these \emph{algorithmic} approaches to calculus: the infinitesimal quantities $e,a$ are necessary for the calculation, but most of them are thrown away as part of the calculation! Can we really calculate with objects that must simultaneously exist and be zero?\footnote{This is at the heart of Bishop George Berkeley's (after whom the Californian city and university are named) famous 1734 objection to calculus; that infinitesimals are merely the ``ghosts of departed quantities.''}
+This is implicit differentiation, where $\dx=e$ and $\dy=a$. Note again the essential difficulty with these \emph{algorithmic} approaches to calculus: the infinitesimal quantities $e,a$ are necessary for the calculation, but most of them are discarded when no longer useful! Can we really calculate with objects that must simultaneously exist and be zero?\footnote{This is at the heart of Bishop George Berkeley's (after whom the Californian city and university are named) famous 1734 objection to calculus; that infinitesimals are merely the ``ghosts of departed quantities.''}
 
 
 % 
 % The idea is essentially the modern one. Suppose $y=f(x)$ is an increasing function and draw the differential triangle. The new area under the curve is then approximately $\Delta A\approx f(x)\dx$. That is $\diff[A]{x}=f(x)$ and the essential link between area and slope is established.\\
 
 
-\boldinline{Isaac Newton (1642--1727)} An enormous amount has been written about Newton, his life and discoveries and of their importance to the modern world. The caricature is of a genius; obsessive and difficult to get along with, but with a phenomenal ability to concentrate on problems. One potentially apocryphal story describes him lecturing to an empty room; no-one had turned up!\par
+
+
+\boldsubsubsection{Isaac Newton (1642--1727)} 
+
+Newton's caricature is of an obsessive genius---difficult to get along with, but with a phenomenal ability to concentrate on problems. One possibly apocryphal story describes how he lectured to an empty room after no-one had turned up!\par
 
 
 \begin{minipage}[t]{0.53\linewidth}\vspace{-4pt}
-We are mostly interested in Newton's mathematics, though his fame really comes from its applications, particularly to gravitation. In 1686's \emph{Philosophiæ Naturalis Principia Mathematica,} Newton applied his three laws of motion\footnotemark{} together with the machinery of calculus to prove the relationship between Kepler's laws of planetary motion (pg.\,\pageref{pg:keplerslaws}) and an inverse-square gravitational force. The \emph{Principia} is Newton's first published work involving calculus, though many of the results and his method appear to have been worked out 20 years previously while Cambridge was closed due to the 1665--6 plague epidemic, just after completing his undergraduate studies.
-\end{minipage}\hfill
+	We are mostly interested in Newton's mathematics, though his wider fame comes from its applications, particularly to gravitation. In \emph{Philosophiæ Naturalis Principia Mathematica} (1686), Newton applied his three laws of motion\footnotemark{} and the machinery of calculus to prove the relationship between Kepler's laws of planetary motion (pg.\,\pageref{pg:keplerslaws}) and an inverse-square gravitational force. The \emph{Principia} is Newton's first published work involving calculus, though many of the results and his method appear to have been worked out 20 years previously, just after completing his undergraduate studies and while Cambridge was closed due to the 1665--6 plague epidemic.
+\end{minipage}
+\hfill
 \begin{minipage}[t]{0.44\linewidth}\vspace{-5pt}
 	\flushright
 	\begin{tabular}{@{}c@{}}
-	\includegraphics[width=\textwidth]{newton5.jpg}\\
-	Kepler's 1st law $\implies$ inverse-square force
+		\includegraphics[width=\textwidth]{newton5.jpg}\\
+		Kepler's 1st law $\implies$ inverse-square force
 	\end{tabular}
 \end{minipage}\smallbreak
 
 \footnotetext{I.\,Inertial motion; \ II.\,$F=ma$; \ III.\,Equal-and-opposite forces. Consider these as axioms of Newtonian mechanics.}
+
+\goodbreak
  
-Newton's geometric presentation was typical for the time, and deliberate. He comments on how calculations are more efficiently completed using indivisible methods, but that the `hypothesis of indivisibles seems somewhat harsh,' by which he likely means that he wants to counter the impression that his method truly rests on philosophically shaky ground. The geometric approach makes it hard for modern readers to extract calculus algorithms; indeed \emph{Principia} is not a calculus textbook and it is not really possible to `learn' calculus directly from it. Nevertheless, it contains rudimentary motions of limits/continuity,\footnote{For instance, Book I, Lemma I:\lstsp ``Quantities, \ldots which in any finite time converge continually to equality, and before the end of that time approach nearer to each other than by any given difference, become ultimately equal.''\par
-One can see modern ideas appearing ($a\neq b\implies \nm{a-b}=\epsilon>0\ldots$), though there is a long way to go!} and arguments in support of the basic rules of calculus such as the product rule and the power law. In the pages shown, Newton essentially argues for the product rule by augmenting the sides of a rectangle.
+Newton's geometric presentation was typical for the time, and deliberate. He comments on how calculations are more efficiently completed using indivisible methods, but that the `hypothesis of indivisibles seems somewhat harsh,' by which he likely means that he wants to counter the impression that his method truly rests on philosophically shaky ground. The geometric approach makes it hard for modern readers to extract calculus algorithms; indeed \emph{Principia} is not a calculus textbook and it is not really possible to learn calculus directly from it. Nevertheless, it contains rudimentary motions of limits/continuity,\footnote{For instance, Book I, Lemma I:\lstsp ``Quantities, \ldots which in any finite time converge continually to equality, and before the end of that time approach nearer to each other than by any given difference, become ultimately equal.''\par
+One can see modern ideas appearing ($a\neq b\implies \nm{a-b}=\epsilon>0\ldots$), though there is a long way to go!} and arguments in support of the basic rules of calculus such as the product rule and the power law. In the pages below, Newton argues for the product rule by augmenting the sides of a rectangle.
 
 
 \begin{center}
-\begin{tabular}{ccc}
-\includegraphics{newton-prodrule}
-&
-\includegraphics[height=140pt]{newton8.jpg}
-&
-\includegraphics[height=140pt]{newton9.jpg}
-\end{tabular}
+	\begin{tabular}{ccc}
+		\includegraphics{newton-prodrule}
+		&
+		\includegraphics[height=140pt]{newton8.jpg}
+		&
+		\includegraphics[height=140pt]{newton9.jpg}
+	\end{tabular}
 \end{center}
 
 If $a,b$ are infinitesimal changes in the sides of a rectangle of area $AB$, then the \emph{moment of mutation} (infinitesimal change) \emph{of the generated rectangle $AB$} is the quantity $aB+bA$. In more familiar language,
-\[(A+a)(B+b)-AB\approx aB+bA\]
-where Newton essentially ignores the double-infinitesimal quantity $ab$, exactly as did Barrow and others before him. Newton asserts the general power law for rational exponents 
+\[
+	(A+a)(B+b)-AB\approx aB+bA
+\]
+where Newton essentially ignores the double-infinitesimal quantity $ab$, exactly as Barrow and others before him. Newton asserts the general power law for rational exponents 
 \begin{quote}
-\ldots the moment of any power $\displaystyle A^{\frac nn}$ will be $\displaystyle\frac nmaA^{\frac{n-m}m}$.
+	\ldots the moment of any power $\displaystyle A^{\frac nn}$ will be $\displaystyle\frac nmaA^{\frac{n-m}m}$.
 \end{quote}
 in what seems partly an appeal to induction based on the product rule. In reality, Newton established these expressions using infinitesimal arguments and is merely asserting them here without rigorous proof. In contrast to the mostly synthetic presentation in the \emph{Principia,} Newton made great use of algebra in his private calculations and correspondence with friends. Some of these private works were published many years later, some after his death. We discuss a few of his methods.
 
@@ -662,7 +687,7 @@ in what seems partly an appeal to induction based on the product rule. In realit
 % Book I, Lemma I:\lstsp Quantities \ldots which in any finite time converge continually to equality, and before the end of that time approach nearer to each other than by any given difference, become ultimately equal.
 % \end{quote}
 % 
-% This is somewhat cyclical, but one can see the idea of $\forall\epsilon>0,\ \nm{a-b}<\epsilon\implies a=b$ appearing. The familiar coe
+% This is somewhat cyclical, but one can see the idea of $\forall\epsilon>0,\ \nm{a-b}<\epsilon\implies a=b$ appearing.
 
 
 
