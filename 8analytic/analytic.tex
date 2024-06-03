@@ -639,11 +639,10 @@ This is implicit differentiation, where $\dx=e$ and $\dy=a$. Note again the esse
 
 \boldsubsubsection{Isaac Newton (1642--1727)} 
 
-Newton's caricature is of an obsessive genius---difficult to get along with, but with a phenomenal ability to concentrate on problems. One possibly apocryphal story describes how he lectured to an empty room after no-one had turned up!\par
-
+Newton's caricature is of an obsessive genius---difficult to get along with, but with a phenomenal ability to concentrate on problems. One possibly apocryphal story describes how he continued lecturing to an empty room even after no-one had turned up!\par
 
 \begin{minipage}[t]{0.53\linewidth}\vspace{-4pt}
-	We are mostly interested in Newton's mathematics, though his wider fame comes from its applications, particularly to gravitation. In \emph{Philosophiæ Naturalis Principia Mathematica} (1686), Newton applied his three laws of motion\footnotemark{} and the machinery of calculus to prove the relationship between Kepler's laws of planetary motion (pg.\,\pageref{pg:keplerslaws}) and an inverse-square gravitational force. The \emph{Principia} is Newton's first published work involving calculus, though many of the results and his method appear to have been worked out 20 years previously, just after completing his undergraduate studies and while Cambridge was closed due to the 1665--6 plague epidemic.
+	We are mostly interested in Newton's mathematics, though his wider fame comes from its wide application, particularly to gravitation. In \emph{Philosophiæ Naturalis Principia Mathematica} (1686), Newton applied his three laws of motion\footnotemark{} and the machinery of calculus to prove the relationship between Kepler's laws of planetary motion (pg.\,\pageref{pg:keplerslaws}) and an inverse-square gravitational force. The \emph{Principia} is Newton's first published work involving calculus, though many of its results and his method appear to have been worked out 20 years previously, just after completing his undergraduate studies and while Cambridge was closed due to the 1665--6 plague epidemic.
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.44\linewidth}\vspace{-5pt}
@@ -654,129 +653,137 @@ Newton's caricature is of an obsessive genius---difficult to get along with, but
 	\end{tabular}
 \end{minipage}\smallbreak
 
-\footnotetext{I.\,Inertial motion; \ II.\,$F=ma$; \ III.\,Equal-and-opposite forces. Consider these as axioms of Newtonian mechanics.}
+\footnotetext{I.\,Inertial motion; \ II.\,$F=ma$; \ III.\,Equal-and-opposite forces. Consider these as the \emph{axioms} of Newtonian mechanics.}
 
 \goodbreak
  
-Newton's geometric presentation was typical for the time, and deliberate. He comments on how calculations are more efficiently completed using indivisible methods, but that the `hypothesis of indivisibles seems somewhat harsh,' by which he likely means that he wants to counter the impression that his method truly rests on philosophically shaky ground. The geometric approach makes it hard for modern readers to extract calculus algorithms; indeed \emph{Principia} is not a calculus textbook and it is not really possible to learn calculus directly from it. Nevertheless, it contains rudimentary motions of limits/continuity,\footnote{For instance, Book I, Lemma I:\lstsp ``Quantities, \ldots which in any finite time converge continually to equality, and before the end of that time approach nearer to each other than by any given difference, become ultimately equal.''\par
-One can see modern ideas appearing ($a\neq b\implies \nm{a-b}=\epsilon>0\ldots$), though there is a long way to go!} and arguments in support of the basic rules of calculus such as the product rule and the power law. In the pages below, Newton argues for the product rule by augmenting the sides of a rectangle.
+Newton's geometric presentation was typical for the time. He comments on how calculations are more efficient using indivisible methods, but that the `hypothesis of indivisibles seems somewhat harsh' (he likely wants to counter the impression that his method is philosophically shaky). Newton's approach makes it hard for modern readers to extract calculus algorithms; indeed the \emph{Principia} is not a calculus textbook and it is not really possible to learn calculus directly from it. Nevertheless, it contains notions of many standard concepts, for instance:
+\begin{description}
+	\item[Limits/continuity] Book I, Lemma I:\lstsp ``Quantities, \ldots which in any finite time converge continually to equality, and before the end of that time approach nearer to each other than by any given difference, become ultimately equal.''\par
+One can see modern ideas appearing (e.g., $\forall \epsilon>0, \nm{a-b}<\epsilon\implies a=b$) though there is a long way to go! What, for instance does \emph{approach} mean?
+	\item[Product Rule] In the following pages, Newton argues for the product rule by augmenting the sides of a rectangle.
+	\begin{center}
+		\begin{tabular}{ccc}
+			\includegraphics{newton-prodrule}
+			&
+			\includegraphics[height=140pt]{newton8.jpg}
+			&
+			\includegraphics[height=140pt]{newton9.jpg}
+		\end{tabular}
+	\end{center}
+	If $a,b$ are infinitesimal changes in the sides of a rectangle with sides $A,B$, then the \emph{moment of mutation} (infinitesimal change) of the generated rectangle $AB$ is the quantity $aB+bA$. In more familiar language,
+	\[
+		(A+a)(B+b)-AB\approx aB+bA
+	\]
+	where Newton ignores the double-infinitesimal quantity $ab$, exactly as did Barrow and others before him.
+	\item[Power Law] In the same pages, Newton asserts the general power law for rational exponents 
+	\begin{quote}
+		\ldots the moment of any power $\displaystyle A^{\frac nn}$ will be $\displaystyle\frac nmaA^{\frac{n-m}m}$.
+	\end{quote}
+	in what seems like a non-rigorous appeal to induction based on the product rule. In reality, Newton established this using infinitesimal arguments; we'll see one of his methods for this shortly. 
+\end{description}
+
+In contrast to the mostly synthetic presentation in the \emph{Principia,} Newton made great use of algebra in his private calculations and correspondence with friends. Some of these private works were published many years later. We discuss some of his methods in what follows.
 
 
-\begin{center}
-	\begin{tabular}{ccc}
-		\includegraphics{newton-prodrule}
-		&
-		\includegraphics[height=140pt]{newton8.jpg}
-		&
-		\includegraphics[height=140pt]{newton9.jpg}
-	\end{tabular}
-\end{center}
-
-If $a,b$ are infinitesimal changes in the sides of a rectangle of area $AB$, then the \emph{moment of mutation} (infinitesimal change) \emph{of the generated rectangle $AB$} is the quantity $aB+bA$. In more familiar language,
-\[
-	(A+a)(B+b)-AB\approx aB+bA
-\]
-where Newton essentially ignores the double-infinitesimal quantity $ab$, exactly as Barrow and others before him. Newton asserts the general power law for rational exponents 
-\begin{quote}
-	\ldots the moment of any power $\displaystyle A^{\frac nn}$ will be $\displaystyle\frac nmaA^{\frac{n-m}m}$.
-\end{quote}
-in what seems partly an appeal to induction based on the product rule. In reality, Newton established these expressions using infinitesimal arguments and is merely asserting them here without rigorous proof. In contrast to the mostly synthetic presentation in the \emph{Principia,} Newton made great use of algebra in his private calculations and correspondence with friends. Some of these private works were published many years later, some after his death. We discuss a few of his methods.
-
-% Nevertheless, he supplied proofs of the basic rules of calculus such as the power law, as well as offering rudimentary notions of \emph{limit} and \emph{continuity}:
-% \begin{quote}
-% Book I, Lemma I:\lstsp Quantities \ldots which in any finite time converge continually to equality, and before the end of that time approach nearer to each other than by any given difference, become ultimately equal.
-% \end{quote}
-% 
-% This is somewhat cyclical, but one can see the idea of $\forall\epsilon>0,\ \nm{a-b}<\epsilon\implies a=b$ appearing.
+\goodbreak
 
 
-
-
-
-\boldinline{Fluxions and Fluents} In Newton's main language for calculus (he had several), he referred to time-dependent quantities $x,y$ as \emph{fluents} and their derivatives as \emph{fluxions,} denoted using dots $\dot x,\dot y$;\footnote{A fluent is a `flowing' quantity. To be in \emph{flux} is to be changing, hence `rate of change.' Newton's dot-notation (`pricked letters') persists in modern \emph{dynamics.} For instance
-\[\ddot{\vr}=-\frac{GM}{r^3}\vr\]
-is the differential equation arising from Newton's second law together with the inverse-square law for gravitation. Note the double dot for the second derivative.} the modern notation $y'$ comes from this. Anti-derivatives were denoted by placing an accent directly over a quantity: $\acute{x}$ is a \emph{fluent of which $x$ is the fluxion.} Newton had several algorithms for computing fluxions, often variants of those of previous mathematicians.
-
-\boldinline{Example} To find the relationship between the fluxions of fluents $x,y$ satisfying $x^2+3xy^3+y=5$.
+\boldinline{Fluxions and Fluents} Newton's main language for calculus (he had several!) referred to time-dependent quantities $x,y$ as \emph{fluents} and their derivatives as \emph{fluxions,} denoted using dots $\dot x,\dot y$; the modern notation $y'$ comes from this.\footnote{%
+	A fluent is a `flowing' quantity: to us, a \emph{smooth function,} though this was not formally defined. To be in \emph{flux} is to be changing, hence `rate of change.' Newton's dot-notation (`pricked letters') persists in modern \emph{dynamics}: for instance
+	\[
+		\ddot{\vr}=-\frac{GM}{r^3}\vr
+	\]
+	is the differential equation arising from Newton's second law together with the inverse-square law for gravitation. Note the double dot for the second derivative.
+}
+Anti-derivatives were denoted by placing an accent directly over a quantity: $\acute{x}$ is a \emph{fluent of which $x$ is the fluxion.} Newton had several algorithms for computing fluxions, often variants of those of previous mathematicians: for instance, here he finds the relationship between the fluxions of fluents $x,y$ satisfying $x^2+3xy^3+y=5$.
 \begin{itemize}\itemsep0pt
   \item Rearrange as a polynomial in $x$: thus $x^2+(3y^3)x+(y-5)=0$.
   \item Multiply terms by a decreasing arithmetic sequence (e.g.{} $2,1,0$) and the entire expression by $\frac{\dot x}x$:
-  \[(2x+3y^3)\dot x\] 
-  \item Repeat for $y$, using the \emph{same arithmetic sequence}; in our case 2 corresponded to $x^2$, so we start with 3 for $y^3$:
-  \[(3x)y^3+0y^2+y+(x^2-5)=0\rightsquigarrow (9xy^2+y)\dot y\]
+  \[
+  	(2x+3y^3)\dot x
+  \] 
+  \item Repeat for $y$, using the \emph{same arithmetic sequence}; in this example, 2 corresponds to $x^2$, so we start with 3 for $y^3$:
+  \[
+  	(3x)y^3+0y^2+y+(x^2-5)=0\rightsquigarrow (9xy^2+y)\dot y
+  \]
   \item Sum these expressions, set equal to zero and rearrange for the required ratio:
-  \[(2x+3y^2)\dot x+(9xy^2+y)\dot y=0 \implies \dot y:\dot x = -(2x+3y^2):(9xy^2+y)\]
+  \[
+  	(2x+3y^2)\dot x+(9xy^2+y)\dot y=0 \implies \dot y:\dot x = -(2x+3y^2):(9xy^2+y)
+  \]
 \end{itemize}
-The arithmetic sequence is encoding the power law for derivatives, and the result is exactly what you'd expect from modern implicit differentiation.
+The arithmetic sequence encodes the power law for derivatives, and the result is exactly what you'd expect from modern implicit differentiation.
 
 
 \boldinline{The Binomial Series}
 
 Also discovered during the plague years, but first appearing in a private letter of 1676, is Newton's discovery of the binomial series
-\[(1+x)^\alpha=1+\sum_{k=1}^\infty\frac{\alpha(\alpha-1)(\alpha-2)\cdots(\alpha-k+1)}{k!}x^k\]
+\[
+	(1+x)^\alpha=1+\sum_{k=1}^\infty\frac{\alpha(\alpha-1)(\alpha-2)\cdots(\alpha-k+1)}{k!}x^k
+\]
 which allowed Newton to expand expressions such as
+\[
+	(1+x)^{1/2} = 1+\frac 12x-\frac{1}{8}x^2 +\frac{1}{16}x^3 -\frac{5}{128}x^4 +\cdots
+\]
+Newton's version was only for fractional exponents and is more difficult to read:
+\[
+	P+PQ\ \frac mn=P\frac mn+\frac mnAQ+\frac{m-n}{2n}BQ+\frac{m-2n}{3n}CQ+\frac{m-3n}{4n}DQ+\cdots \tag{$\ast$}
+\]
+Newton wrote exponents using juxtaposition, and $A,B,C,D,\ldots$, meant `the previous term': thus $P\frac mn=P^{m/n}$, $A=P^{m/n}$ and $B=\frac mnAQ=\frac mnP^{m/n}Q$. In more modern language, ($\ast$) reads
+\[
+	(P+PQ)^{m/n}=P^{m/n}+\frac mn P^{m/n}Q +\frac{m(m-n)}{2n^2}P^{m/n}Q^2 +\frac{m(m-n)(m-2n)}{6n^3}P^{m/n}Q^3+\cdots
+\]
+
+\goodbreak
+
+Newton also used power series for trigonometric functions, following the work of Gregory and others. By combining his approach with the power law, he was able to efficiently integrate and differentiate an enormous variety of functions.\medbreak
+
+Newton's `proof' wouldn't pass modern muster. His discoveries were the result of some involved pattern-spotting! Several examples were explicitly verified by multiplying out or using long-division. For instance the series for $\sqrt{1+x}$ may be obtained
 \begin{align*}
-(1+x)^{1/2} = 1+\frac 12x-\frac{1}{8}x^2 +\frac{1}{16}x^3 -\frac{5}{128}x^4 +\cdots
+	&1+x=(1+ax+bx^2+cx^3+\cdots)^2=1+2ax+(a^2+2b)x^2+(2c+2ab)x^3+\cdots\\
+	\implies &a=\frac 12,\quad b=-\frac 12a^2=-\frac 18,\quad c=-ab=\frac 1{16},\quad\text{etc.}\\
+	\implies &\sqrt{1+x}=1+\frac 12x-\frac 18x^2+\frac 1{16}x^3+\cdots
 \end{align*}
-Newton's version was for fractional exponents only and is a little difficult to follow:
-\[P+PQ\ \frac mn=P\frac mn+\frac mnAQ+\frac{m-n}{2n}BQ+\frac{m-2n}{3n}CQ+\frac{m-3n}{4n}DQ+\cdots\]
-by which he meant, roughly\footnote{Note how Newton wrote exponents using juxtaposition. The terms $A,B,C,D$, etc., meant `the previous term': thus $A=P^{m/n}$ and $B=\frac mnAQ=\frac mnP^{m/n}Q$.}
-\[(P+PQ)^{m/n}=P^{m/n}+\frac mn P^{m/n}Q +\frac{m(m-n)}{2n^2}P^{m/n}Q^2 +\frac{m(m-n)(m-2n)}{6n^3}P^{m/n}Q^3+\cdots\]
-Newton didn't prove this result in a modern sense, rather it was the result of some involved pattern-spotting! Several examples were explicitly  verified by multiplying out, for instance
-\[\left(1+\frac 12x-\frac{1}{8}x^2 +\frac{1}{16}x^3 +\cdots\right)^2 =1+x+\left(-\frac 28+\frac 14\right)x^2+\left(\frac 2{16}-\frac 2{16}\right)x^3 +\cdots =1+x\]
-Newton did not work through the complexities of infinite series:\footnote{See any undergraduate analysis course. For instance, $\sqrt{1+x}$ is well-defined for $x\ge -1$, yet the series doesn't converge when $x>1$. Moreover, is it legitimate to differentiate and integrate power series term-by-term as if they are polynomials? Answer: (mostly) yes, though it was 150 years before Cauchy, Weierstraß and others could rigorously confirm this.}
-In the same way that his calculus helped mathematicians embrace infinitesimals, the usefulness of Newton's infinite series approach helped encourage mathematicians to reject objections to the use of infinity that had persisted since the time of Zeno and the ancient Greeks. \medbreak
+Newton did not work through the full theory of infinite series as you would encounter in a typical undergraduate analysis course. For instance:
+\begin{itemize}
+  \item $\sqrt{1+x}$ is well-defined for $x\ge -1$, yet the resulting series only converges when $-1\le x\le 1$. What happens in general: must a series converge to the original/generating function?
+  \item Is it legitimate to differentiate and integrate power series term-by-term as if they are polynomials? Answer: (mostly) yes, though it was 150 years before Cauchy, Weierstraß and others could rigorously confirm this.
+\end{itemize}
+
+
 
 \boldinline{The Power Law}
 
-Newton's ability to expand expressions as infinite series was essential  to his arguments. Here, for instance, is how he proves the power law for integration.
+Newton's ability to expand expressions as infinite series was essential to his arguments. Here is one of his arguments to prove the power law for integration.
 \begin{enumerate}
   \item Assume that the area under a curve $y$ is given by a function
-  \[z=\frac{x^{\frac mn+1}}{\frac mn+1}=\frac n{m+n}x^{\frac{m+n}n}\]
+  \[
+  	z=\frac{x^{\frac mn+1}}{\frac mn+1}=\frac n{m+n}x^{\frac{m+n}n}
+  \]
   \item If $x$ is increased by an infinitesimal amount $o$, then the new area under the curve will be
   \begin{align*}
-  z+oy&=\frac n{m+n}(x+o)^{\frac{m+n}n} =\frac n{m+n}x^{\frac{m+n}n}\left(1+\frac ox\right)^{\frac{m+n}n}\\
-  &=\frac n{m+n}x^{\frac{m+n}n}\left(1+\frac{m+n}n\cdot\frac ox+\frac{(m+n)m}{2n^2}\cdot\frac{o^2}{x^2}+\cdots\right)
+  	z+oy&=\frac n{m+n}(x+o)^{\frac{m+n}n} =\frac n{m+n}x^{\frac{m+n}n}\left(1+\frac ox\right)^{\frac{m+n}n}\\
+  	&=\frac n{m+n}x^{\frac{m+n}n}\left(1+\frac{m+n}n\cdot\frac ox+\frac{(m+n)m}{2n^2}\cdot\frac{o^2}{x^2}+\cdots\right)
   \end{align*}
   where the binomial series is used to expand the right side.
-  \item Following Barrow, Newton cancels the terms in the original equation, divides by $o$ and throws out all remaining $o$-terms. The result is
-  \[y=\frac n{m+n}x^{\frac{m+n}n}\frac{m+n}n\cdot\frac 1x=x^{m/n}\]
+  \item Following Barrow, Newton cancels the terms in the original equation, divides by $o$, and throws out all remaining $o$-terms. The result is
+  \[
+  	y=\frac n{m+n}x^{\frac{m+n}n}\frac{m+n}n\cdot\frac 1x=x^{m/n}
+  \]
 \end{enumerate}\vspace{-5pt}
 
 \begin{minipage}[t]{0.68\linewidth}\vspace{0pt}
-Newton's argument essentially invokes the fundamental theorem ($\diff[z]{x}=\diff x\int_0^xy(t)\,\dt=y(x)$), which is intuitively obvious when $y$ is a `flowing' quantity.
-\end{minipage}\hfill\begin{minipage}[t]{0.29\linewidth}\vspace{-45pt}
-\flushright\includegraphics{ftcold}
-\end{minipage}\par
-
-\boldinline{Newton's Method (for approximating roots)}
-
-Using calculus, Newton was able to extend older methods of approximation.\par
-\begin{minipage}[t]{0.7\linewidth}\vspace{-5pt}
-\begin{enumerate}\itemsep0pt
-  \item $f(c)=0$ and that $a_0$ is an initial approximation to $c$.
-  \item The tangent line at $\bigl(a_0,f(a_0)\bigr)$ has equation
-  \[y=f(a_0)+f'(a_0)(x-a_0)\]
-  which intersects the $x$-axis at $a_1:=a_0-\frac{f(a_0)}{f'(a_0)}$.
-  \item Iterate to obtain a sequence $(a_n)$ that (typically) converges to $c$:
-  \[a_{n+1}=a_n-\frac{f(a_n)}{f'(a_n)}\]
-\end{enumerate}
+	Newton's argument essentially invokes the fundamental theorem ($oy=\dz=y\,\dx =y\cdot o \leftrightsquigarrow\diff[z]{x}=\diff x\int_0^xy(t)\,\dt=y(x)$), which is intuitively obvious when $y$ is a `flowing' (continuous) quantity.
 \end{minipage}
 \hfill
-\begin{minipage}[t]{0.29\linewidth}\vspace{-5pt}
-\flushright\includegraphics{newtonsmethod}
-\end{minipage}\medbreak
+\begin{minipage}[t]{0.29\linewidth}\vspace{-45pt}
+	\flushright\includegraphics{ftcold}
+\end{minipage}\par
 
-If $f(x)=x^2-c$, this is the ancient Babylonian method of the mean:
-\[a_{n+1}=a_n-\frac{a_n^2-c}{2a_n}=\frac{a_n^2+c}{2a_n} =\frac 12\left(a_n+\frac c{a_n}\right)\xrightarrow[n\to\infty]{} \sqrt c\]
-The advantage of Newton's method is that it can be used to approximate roots for a much larger class of functions. For example, if $f(x)=x^3+2x-1$, then $f'(x)=3x^2+2$: if $a_0=1$, then
-\[a_{n+1}=a_n-\frac{a_n^3+2a_n-1}{3a_n^2+2} =\frac{2a_n^3+1}{3a_n^2+2} \implies (a_n)=(1,\tfrac 35,\tfrac{179}{385},\ldots)\]
 \goodbreak
 
-%\boldsubsubsection{Gottfried Wilhelm Leibniz (1646--1716)}
-
-(Unfortunately we ran out of time to properly cover the other major contributor to calculus, Gottfried Wilhelm Leibniz (1646--1716) --- hopefully next year!)
-
+\boldsubsubsection{Gottfried Wilhelm Leibniz (1646--1716)}
+ kjhfjhf
 
 \begin{exercises}{}{}
 \exstart%[15-26]
@@ -788,8 +795,43 @@ The advantage of Newton's method is that it can be used to approximate roots for
 	\item%[16-2]
 	Calculate a power series for $\frac 1{1-x^2}$ by using long-division.
 	
-	\item%[16-4]
-	Use Newton's method to solve the equation $x^2-2=0$ to a result accurate to eight decimal places. How many steps does this take? Compare this to the Chinese square-root algorithm.
+	
+	\item Using his calculus, Newton was able to extend older methods of approximation.\par
+	\begin{minipage}[t]{0.72\linewidth}\vspace{-5pt}
+		\begin{itemize}\itemsep0pt
+		  \item Suppose $f(c)=0$ and that $a_0$ is an initial approximation to $c$.
+		  \item The tangent line at $\bigl(a_0,f(a_0)\bigr)$ has equation
+		  \[
+		  	y=f(a_0)+f'(a_0)(x-a_0)
+		  \]
+		  which intersects the $x$-axis at $a_1:=a_0-\frac{f(a_0)}{f'(a_0)}$.
+		  \item Iterate to obtain a sequence $(a_n)$ that (typically) converges to $c$:
+		  \[
+		  	a_{n+1}=a_n-\frac{f(a_n)}{f'(a_n)}\quad \lim_{n\to\infty}a_n=c
+		  \]
+		\end{itemize}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.27\linewidth}\vspace{-5pt}
+		\flushright\includegraphics{newtonsmethod}
+	\end{minipage}\par
+	\begin{enumerate}
+	  \item If $f(x)=x^2-c$, show that Newton's method is the ancient Babylonian method of the mean.
+% If $f(x)=x^2-c$, this is the ancient Babylonian method of the mean:
+% \[
+% 	a_{n+1}=a_n-\frac{a_n^2-c}{2a_n}=\frac{a_n^2+c}{2a_n} =\frac 12\left(a_n+\frac c{a_n}\right)\xrightarrow[n\to\infty]{} \sqrt c
+% \]
+% The advantage of Newton's method is that it can be used to approximate roots for a much larger class of functions. For example, if $f(x)=x^3+2x-1$, then $f'(x)=3x^2+2$: if $a_0=1$, then
+% \[
+% 	a_{n+1}=a_n-\frac{a_n^3+2a_n-1}{3a_n^2+2} =\frac{2a_n^3+1}{3a_n^2+2} \implies (a_n)=(1,\tfrac 35,\tfrac{179}{385},\ldots)
+% \]
+		\item%[16-4]
+		Use Newton's method to solve the equation $x^2-2=0$ to a result accurate to eight decimal places. How many steps does this take?
+		%\item Compare this to the Chinese square-root algorithm.
+	\end{enumerate}
+
+	
+
 	
 % 	\item[16-6] Let $\frac 15y^5-\frac 14y^4+\frac 13y^3-\frac 12y^2+y-z=0$ and try $y=z$ as a first approximation. Then
 % 	\[\frac 15z^5-\frac 14z^4+\frac 13z^3-\frac 12z^2=0\tag*{($\ast$)}\]
@@ -819,3 +861,6 @@ The advantage of Newton's method is that it can be used to approximate roots for
 \end{exercises}
 
 
+%BIG ideas: 1) algebra kills geometry. 2) expansion of the idea of number from $\N$ to $\R$
+
+%Etymology: Calculus (single pebble) is the origin of `calculation.' Prior to N/L used for any mathematical algorithmic technique (algebraic calculus). Heirs to N/L referred to their methods as `infinitesimal calculus,' from which the first term was eventually dropped. 
