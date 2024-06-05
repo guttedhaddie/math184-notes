@@ -810,12 +810,16 @@ Two relationships between sums and differences are immediate:
 		\sum\bigl(\delta z_i\bigr)=(z_1-z_0)+(z_2-z_1)+\cdots +(z_n-z_{n-1}) =z_n-z_0
 	\]
 \end{enumerate}
-Leibniz's notation arises from viewing a curve as an \emph{infinite sequence} of points: he writes $\dz$ for the infinitesimal \emph{differences} and $\int$ for the \emph{sum} of infinitely many infinitesimal objects. Observation 2 becomes $\int \dz=z$: the sum of the infinitesimal changes in $z$ is the net change in $z$.\par
-By assuming that $z(x)$ describes the \emph{area}\footnote{Notation is chosen to match Newton's discussion of the power law (page \pageref{pg:newtonpowerlaw}).} under a curve $y(x)$, Leibniz used the fact that $\dz=y\,\dx$ to write the area in the modern form $z=\int y\,\dx$. Our observations are now the two parts of the fundamental theorem of calculus!
-\begin{enumerate}
-  \item $\D\int y\,\dx=y$: the infinitesimal change in the area under the curve $y(x)$ equals the ordinate $y$.
-  \item $\int y\,\dx=z$: the area under the curve is the sum of its infinitesimal increments.
-\end{enumerate}
+Leibniz's notation arises from viewing a curve as an \emph{infinite sequence} of points: he writes $\dz$ for the infinitesimal \emph{differences} and $\int$ for the \emph{sum} of infinitely many infinitesimal objects. Observation 2 becomes $\int \dz=z(x_n)-z(x_0)$: the sum of the infinitesimal changes in $z$ is its net change. Indeed, if we assume that $z(x)$ describes the \emph{area}\footnote{Notation is chosen to match Newton's discussion of the power law (page \pageref{pg:newtonpowerlaw}).} under a curve $y(x)$, the fact that $\dz=y\,\dx$ recovers part 2 of the fundamental theorem of calculus:
+\begin{quote}
+	2.\lstsp $\int y\,\dx=z$: the area under the curve is the sum of its infinitesimal increments.
+\end{quote}
+Observation 1 makes sense once we apply it to a `sequence' of infinitesimals $z_i\rightsquigarrow y\,\dx$, whence it becomes part 1 of the fundamental theorem:
+\begin{quote}
+	1.\lstsp $\D\bigl(\int y\,\dx\bigr)=y\,\dx$, or alternatively, $\diff{x}\bigl(\int y\,\dx\bigr)=y$: the rate of change of the area function is the ordinate.
+\end{quote}
+
+\goodbreak
 While we are happy to refer to infinitesimals and infinite sums, Leibniz was more cagey in his publications out of fear of criticism. He referred to each $\dx$ as an arbitrary (if small) \emph{finite} line segment, and therefore---like every other contemporary practitioner of calculus---fails to get to grips with the essential paradoxes involved. Regardless, he and his followers became adept at manipulating differential expressions. For instance, if $y=z^3+2z$, Leibniz might compute
 \begin{align*}
 	\dy&=(z+\dz)^3+2(z+\dz) -z^3-2z = 3z^2\,\dz+3z(\dz)^2 +(\dz)^3+2\,\dz\\
