@@ -8,7 +8,7 @@
   \item Recorded civilization in Nile valley from c.\,3150\BC.
   \item Conquered 322\BC{} by Alexander the Great (Greece/Macedonia).
   \item Became a Roman province in 30\BC{} under Cleopatra. 
-  \item Egyptology began with discovery of Rosetta Stone (\AD 1799), containing Greek, hieroglyphic and demotic (later, post hieratic, more cursive) Egyptian script. Allowed translation of ancient Egyptian writing.
+  \item Discovery of the Rosetta Stone (\AD 1799) containing Greek, hieroglyphic and demotic (post hieratic, cursive) Egyptian script, allowed translation of ancient Egyptian writing.
   \item Primary mathematical sources: Rhind/Ahmes (A'h-mose) papyrus c.\,1650\BC{} and the Moscow papyrus c.\,1700\BC.\footnote{Rhind was a Scottish egyptologist. Ahmes was the name of the scribe who wrote/copied the papyrus. The Moscow papyrus is named because it was sold to the Moscow Museum of Fine Art; its author is unknown.} Part of the Rhind papyrus is shown below. It contained two tables: unit fraction representations of all $\frac 2n$ for $n<100$ (ish) and expressions for $\frac 3{10},\frac 4{10},\ldots,\frac 9{10}$ in terms of unit fractions. Also included were around 100 worked problems. Scribes would learn the method by copying previous problems and changing the numbers.\par
   The Moscow papyrus is shorter and more focused on geometric problems.
   \begin{center}
@@ -92,14 +92,15 @@ In hieratic notation, a dot was placed above to denote the reciprocal: e.g., $\d
 	The only non-reciprocal fractions with special symbols were $\frac 23$ and $\frac 34$, and these only appeared late in Egyptian civilization.\footnotemark{} %If necessary, we can write $\cl{\cl 3}=\frac 23$ in modern notation. 
 \end{minipage}
 \hfill
-\begin{minipage}[t]{0.48\linewidth}\vspace{0pt}
-	\flushright\begin{tabular}{c|@{}c|c}
-		Fraction&Hieroglyph&Modern\\\hline
+\begin{minipage}[t]{0.46\linewidth}\vspace{0pt}
+	\flushright\def\arraystretch{0.9}
+	\begin{tabular}{c|c|c@{}}
+		Fraction&Hieroglyph&Modern\,\,\\\hline
 		\raisebox{3pt}{$\frac 13$}&\egfrac{\egone{3}}&$\cl 3$\\
 		\raisebox{3pt}{$\frac 1{41}$}&\egfrac{\egyptify{0}{0}{0}{0}{0}{4}{1}}&$\cl{41}$\\
 		\raisebox{3pt}{$\frac 1{103204}$}&\egfrac{\egyptify{0}{1}{0}{3}{2}{0}{4}}&$\cl{103204}$\\
-		\raisebox{3pt}{$31+\frac 12+\frac 1{25}$}&\egfrac{\egone{5}\egten{2}}\egfrac{\egone{2}}\egone{1}\egten{3}
-		&$\cl{25}\ \cl 2\ 31$
+		\raisebox{3pt}{$31+\frac 12+\frac 1{25}$}&\egfrac{\egone{5}\egten{2}} \ \egfrac{\egone{2}}\ \ \egone{1}\egten{3}
+		&$\cl{25}\ \ \cl 2\ \ 31$
 	\end{tabular}
 \end{minipage}
 \bigbreak
@@ -110,9 +111,9 @@ In hieratic notation, a dot was placed above to denote the reciprocal: e.g., $\d
 
 
 \begin{minipage}[t]{0.7\linewidth}\vspace{0pt}
-	The Rhind papyrus contains a table, of which we reproduce part, showing how to express $\frac 2n$ as Egyptian fractions for all odd integers $n<100$. The first column denotes $n$, and the remaining columns the Egyptian fraction representation. For instance, the first row states that
+	The Rhind papyrus contains a table, of which we reproduce part, showing how to express $\frac 2n$ as Egyptian fractions for all odd integers $n<100$. The first column denotes $n$, and the remaining columns the Egyptian fraction representation. For instance, the first row states
 	\[
-		\frac 25=\frac 13+\frac 1{15}\hfill(\negthickspace\negthickspace\text{\egfrac{\egone{3}}\negthickspace\egfrac{\egten{1}}}\qquad\cl 3\,\,\cl{15})
+		\frac 25=\frac 13+\frac 1{15}\hfill(\text{\egfrac{\egone{3}} \egfrac{\egone{5}\egten{1}}}\qquad\cl 3\ \cl{15})
 	\] 
 \end{minipage}
 \hfill
@@ -300,13 +301,16 @@ Are the any benefits to the Egyptian approach?
 \end{minipage}\medbreak
 
 
-No explanation is given as to what inspired these methods, nor whether the scribes understood that these were only approximations.\smallbreak
-\begin{minipage}[t]{0.67\linewidth}\vspace{0pt}
-	Other problems involved computing/approximating areas and volumes of triangles, quadrilaterals, boxes, cylinders, and truncated pyramids. As with other problems, these were typically worked examples without general formulæ. They even had a notion of cotangent which they called the \emph{seked,} useful for describing and calculating slopes.
+No explanation is given as to what inspired these methods, nor whether the scribes understood that these were only approximations.
+
+\goodbreak
+
+\begin{minipage}[t]{0.69\linewidth}\vspace{0pt}
+	Other problems computed/approximated areas and volumes of triangles, quadrilaterals, boxes, cylinders, and truncated pyramids. Again, these were worked examples without general formulæ. The Egyptians even had a notion of cotangent which they called the \emph{seked,} useful for describing and calculating slopes.
 \end{minipage}
 \hfill
-\begin{minipage}[t]{0.32\linewidth}\vspace{0pt}
-	\flushright\includegraphics{geo-01-seked}
+\begin{minipage}[t]{0.3\linewidth}\vspace{0pt}
+	\flushright\includegraphics[scale=0.95]{geo-01-seked}
 \end{minipage}
 
 
@@ -328,33 +332,59 @@ No explanation is given as to what inspired these methods, nor whether the scrib
 	  	2\div 11=\cl6+\cl{66},\qquad 2\div 13=\cl 8+\cl{52}+\cl{104},\qquad 2\div 23=\cl{12}+\cl{276}
 	  \]
 	  The calculation of $2\div 13$ is given below, where the right hand side is a modern rendering, and the terminal `2' indicates that the last entry in the right-hand column is indeed 2:
-	  \begin{center}
-		  \begin{tabular}{l@{\qquad}l@{\qquad\qquad\qquad}l@{\qquad}l}
-			  \ \egone{1}&\egone{3}\egten{1}&1&13\\
-				\egfrac{\egone{2}}&\egone{6}\,\egfrac{\egone{2}}& $\cl 2$&$6\,\cl{2}$\\
-				\egfrac{\egone{4}}&\egone{3}\,\egfrac{\egone{4}}&$\cl 4$&$3\,\cl 4$\\
-			  \egfrac{\egone{8}}&\egone{1}\,\egfrac{\egone{2}}\,\egfrac{\egone{8}} & $\cl 8$&$1\,\cl 2\,\cl 8$\\
-			  \egfrac{\egone{2}\egten{5}}&\egfrac{\egone{4}}&$\cl{52}$&$\cl 4$\\
-			  \egfrac{\egone{4}\eghun{1}}&\egfrac{\egone{8}}&$\cl{104}$&$\cl 8$\\
-			 \egfrac{\egone{8}}\,\egfrac{\egone{2}\egten{5}}\,\egfrac{\egone{4}\eghun{1}}&\egone{1}\,\egfrac{\egone{2}}\,\egfrac{\egone{4}}\,\egfrac{\egone{8}}\,\egfrac{\egone{8}}&$\cl 8\,\cl{52}\,\cl{104}$&$1\,\cl 2\,\cl 4\,\cl 8\,\cl 8$\\
-			  &\egone{2} & &2
+	  \begin{quote}
+	  	\def\arraystretch{0.8}
+		  \begin{tabular}{@{}l@{\qquad\quad}l@{\qquad\qquad\qquad}l@{\qquad}l}
+			  \egone{1}
+			  	&\egone{3}\egten{1}
+			  	&1
+			  	&13\\
+				\egfrac{\egone{2}}
+					&\egone{6}\ \egfrac{\egone{2}}
+					&$\cl 2$
+					&$6\ \cl{2}$\\
+				\egfrac{\egone{4}}
+					&\egone{3}\ \egfrac{\egone{4}}
+					&$\cl 4$
+					&$3\ \cl 4$\\
+			  \egfrac{\egone{8}}
+			  	&\egone{1}\  \egfrac{\egone{2}}\ \egfrac{\egone{8}}
+			  	&$\cl 8$
+			  	&$1\ \cl 2\ \cl 8$\\
+			  \egfrac{\egone{2}\egten{5}}
+			  	&\egfrac{\egone{4}}
+			  	&$\cl{52}$&$\cl 4$\\
+			  \egfrac{\egone{4}\eghun{1}}
+			  	&\egfrac{\egone{8}}
+			  	&$\cl{104}$&$\cl 8$\\
+			 	\egfrac{\egone{8}}\ \egfrac{\egone{2}\egten{5}}\ \egfrac{\egone{4}\eghun{1}}
+			 		&\egone{1}\ \egfrac{\egone{2}}\ \egfrac{\egone{4}}\,\egfrac{\egone{8}}\ \egfrac{\egone{8}}
+			 		&$\cl 8\ \cl{52}\ \cl{104}$
+			 		&$1\ \cl 2\ \cl 4\ \cl 8\ \cl 8$\\
+			  &\egone{2} 
+			  	& 
+			  	&2
 	  	\end{tabular}
-	  \end{center}
+	  \end{quote}
 	  
 	  Perform similar calculations for $2\div 11$ and $2\div 23$.\par
-	  (\emph{If you want the exact results from the papyrus, you'll need to work with $\frac 23$: denote this by $\cl{\cl 3}$. Egyptian notation is not required!})
+	  (\emph{If you want the exact results from the papyrus, you'll need to work with $\frac 23$: denote this by $\cl{\cl 3}$})
 	  
 	  \item Draw a picture of 5 loaves to help describe how the Egyptians might have divided them between seven people.
 	  
-	  \item%[1-10] 
+	  \item%[1-10]
 	  Use the method of false position to solve problem 28 of the Rhind papyrus:
 	  \begin{quote}
 	  	A quantity and its $2/3$ are added together, and from the sum $1/3$ of the sum is subtracted, and 10 remains. What is the quantity?
 	  \end{quote}
-	  
+
 	  \item %[1-12]
-	  Calculate a quantity such that if it is taken two times along with the quantity itself, the sum comes to 9.\par
-	  (\emph{Problem 25 of the Moscow papyrus})
+	  Calculate a quantity such that if it is taken two times along with the quantity itself, the sum comes to 9  (problem 25 of the Moscow papyrus).
+
+		\item\begin{enumerate}
+		  \item Find all ways in which $\frac 2{13}=\frac 1a+\frac 1b$ can be written as a sum of reciprocals ($a\le b\in\N$).
+		  \item Repeat your calculation for $\frac 2p$ whenever $p$ is an odd prime.
+		\end{enumerate}
 	\end{enumerate}
 \end{exercises*}
 

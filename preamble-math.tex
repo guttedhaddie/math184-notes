@@ -1,4 +1,5 @@
 %lengths/commands
+\parindent0pt
 \def\lstsp{\hspace{\labelsep}}
 \renewcommand{\qedsymbol}{\rule[-8pt]{0.5em}{0.5em}}
 \def\marks#1{\hfill{\scriptsize{(#1)}}\par}
@@ -191,3 +192,121 @@
 \def\sgn{\mathrm{sgn}}
 \def\diag{\operatorname{diag}}
 \def\notimplies{\mathrel{{\ooalign{\hidewidth$\not\phantom{=}$\hidewidth\cr$\implies$}}}}
+
+
+
+%History stuff
+
+\def\crd{\operatorname{crd}}
+
+\def\bone{\vee}
+\def\bten{\sphericalangle}
+
+\def\tgrk#1{{\fontfamily{cmr}\selectfont #1}}
+
+\usepackage{multido}
+
+\def\egsp{\hspace{0.9pt}}
+
+\newcommand{\egmil}[1]{%
+	\multido{\i=1+1}{#1}{%
+		\egsp\includegraphics[scale=.1,trim=1pt 10pt 1pt 0pt]{egypt_person}\egsp%
+	}
+}
+
+\newcommand{\eghuntho}[1]{%
+	\multido{\i=1+1}{#1}{%
+		\egsp\includegraphics[scale=.1,trim=1pt 8pt 1pt 0pt]{egypt_fish}\egsp%
+	}
+}
+
+\newcommand{\egtentho}[1]{%
+	\multido{\i=1+1}{#1}{%
+		\egsp\includegraphics[scale=.1,trim=1pt 8pt 1pt 0pt]{egypt_finger}\egsp%
+	}
+}
+
+\newcommand{\egtho}[1]{%
+	\multido{\i=1+1}{#1}{%
+		\egsp\includegraphics[scale=.1,trim=0pt 8pt 1pt 0pt]{egypt_lotus}\egsp%
+	}
+}
+
+\newcommand{\eghun}[1]{%
+	\multido{\i=1+1}{#1}{%
+		\egsp\includegraphics[scale=.1,trim=1pt 8pt 1pt 0pt]{egypt_scroll}\egsp%
+	}
+}
+	
+\newcommand{\egten}[1]{%
+	\multido{\i=1+1}{#1}{%
+		\egsp\includegraphics[scale=.1,trim=1pt 8pt 1pt 0pt]{egypt_heel}\egsp%
+	}
+}
+
+\newcommand{\egone}[1]{%
+	\multido{\i=1+1}{#1}{%
+		\egsp\includegraphics[scale=.1,trim=8pt 8pt 1pt 0pt]{egypt_stroke}\egsp%
+	}
+}
+
+\newcommand{\egyptify}[7]{%
+	\egone{#7}
+	\egten{#6}
+	\eghun{#5}
+	\egtho{#4}
+	\egtentho{#3}
+	\eghuntho{#2}
+	\egmil{#1}
+	%\multido{\i=1+1}{#7}{\egsp\includegraphics[scale=.1,trim=1pt 8pt 1pt 0pt]{egypt_stroke}\egsp}
+ 	%\multido{\i=1+1}{#6}{\egsp\includegraphics[scale=.1,trim=1pt 8pt 1pt 0pt]{egypt_heel}\egsp}
+ 	%\multido{\i=1+1}{#5}{\egsp\includegraphics[scale=.1,trim=1pt 8pt 1pt 0pt]{egypt_scroll}\egsp}
+ 	%\multido{\i=1+1}{#4}{\egsp\includegraphics[scale=.1,trim=0pt 8pt 1pt 0pt]{egypt_lotus}\egsp}
+ 	%\multido{\i=1+1}{#3}{\egsp\includegraphics[scale=.1,trim=1pt 8pt 1pt 0pt]{egypt_finger}\egsp}
+ 	%\multido{\i=1+1}{#2}{\egsp\includegraphics[scale=.1,trim=1pt 8pt 1pt 0pt]{egypt_fish}\egsp}
+ 	%\multido{\i=1+1}{#1}{\egsp\includegraphics[scale=.1,trim=1pt 8pt 1pt 0pt]{egypt_person}\egsp}
+}
+
+
+\newsavebox{\myb}
+\newcommand{\egfrac}[1]{%
+	\sbox{\myb}{#1}%
+	\def\ellipse{%
+				\resizebox{0.85\wd\myb}{3pt}{\includegraphics{egfrac}}%
+	}%
+	%$\overset{\centering\ellipse}{#1}$
+	%\mbox{
+	\begin{tabular}[b]{@{}c@{}}
+		\ellipse\\[-3pt]
+		#1
+	\end{tabular}
+	%}
+}
+
+
+% \newsavebox{\myb}
+% \sbox{\myb}{$\egten{3}$}
+% \def\ellipse{\resizebox{\wd\myb}{3pt}{$\circ$}}
+% \def\bobeye{\overset{\ellipse}{\egten{3}}}
+
+\newcommand{\IndiaBone}{\includegraphics[scale=0.6]{B1}}
+\newcommand{\IndiaBtwo}{\includegraphics[scale=0.6]{B2}}
+\newcommand{\IndiaBthree}{\includegraphics[scale=0.6]{B3}}
+\newcommand{\IndiaBfour}{\includegraphics[scale=0.6]{B4}}
+\newcommand{\IndiaBfive}{\includegraphics[scale=0.6]{B5}}
+\newcommand{\IndiaBsix}{\includegraphics[scale=0.6]{B6}}
+\newcommand{\IndiaBseven}{\includegraphics[scale=0.6]{B7}}
+\newcommand{\IndiaBeight}{\includegraphics[scale=0.6]{B8}}
+\newcommand{\IndiaBnine}{\includegraphics[scale=0.6]{B9}}
+\newcommand{\IndiaBten}{\includegraphics[scale=0.6]{B10}}
+\newcommand{\IndiaGzero}{\includegraphics[scale=0.6]{G0}}
+\newcommand{\IndiaGone}{\includegraphics[scale=0.6]{G1}}
+\newcommand{\IndiaGtwo}{\includegraphics[scale=0.6]{G2}}
+\newcommand{\IndiaGthree}{\includegraphics[scale=0.6]{G3}}
+\newcommand{\IndiaGfour}{\includegraphics[scale=0.6]{G4}}
+\newcommand{\IndiaGfive}{\includegraphics[scale=0.6]{G5}}
+\newcommand{\IndiaGsix}{\includegraphics[scale=0.6]{G6}}
+\newcommand{\IndiaGseven}{\includegraphics[scale=0.6]{G7}}
+\newcommand{\IndiaGeight}{\includegraphics[scale=0.6]{G8}}
+\newcommand{\IndiaGnine}{\includegraphics[scale=0.6]{G9}}
+\newcommand{\IndiaGten}{\includegraphics[scale=0.6]{G10}}
