@@ -870,7 +870,7 @@ A previously unknown work of Archimedes was discovered in 1899. As an amazing ap
 \phantomsection\label{pg:archmethod}
 
 \begin{minipage}[t]{0.67\linewidth}\vspace{-3pt}
-	Here is a modernized version of half the result. Suppose the `base' is a disk with radius 1. Archimedes removes the hemisphere from the cylinder and places the cone beneath. Compare the \textcolor{red}{cross-sections} the same distance $y$ from the apex of the cone.
+	Here is a modernized version illustrating Archimedes' approach. Suppose the `base' is a disk with radius 1, remove the hemisphere from the cylinder and place the cone beneath. Compare the \textcolor{red}{cross-sections} the same distance $y$ from the apex of the cone.
 	\begin{itemize}\itemsep0pt
 	  \item The circular cross-section of the cone has radius $y$ whence its area is proportional to the square on the radius: $\pi y^2$.
 		\item The upper annular cross-section has area proportional to the difference of the squares on the radius of the cylinder and on the distance $x$. By Pythagoras' the cross-sectional area is
@@ -889,7 +889,7 @@ The cross-sections are therefore in balance with respect to a vertical lever who
 \[
 	V_\text{cone}=V_\text{cylinder}-V_\text{hemisphere}
 \]
-in line with the desired ratios.
+Combining this with the fact that $V_\text{cylinder}=3V_\text{cone}$ (e.g., Exercise \ref{exs:archparabcone}) gives the desired result.
 \bigbreak
 
 
@@ -1034,20 +1034,21 @@ We'll consider ancient astronomy, including Greek contributions, in the next cha
 	  (\emph{Hint: draw a picture and let $T$ be the intersection of the circle and $\cl{OC}$})
 	 % If you want a challenge, try proving the second lemma mentioned in the book\ldots
 	 
-	 	\item Archimedes used a geometric series approach to evaluate the area inside a parabola. Use modern algebra for this question.\par
-	 	\begin{minipage}[t]{0.6\linewidth}\vspace{-5pt}
-	 	 	\begin{enumerate}
+	 	\item Archimedes used a geometric series approach to evaluate the area inside a parabola. Use modern algebra for this question.
+	 	\begin{enumerate}%\itemsep0pt
+	 		\begin{minipage}[t]{0.64\linewidth}\vspace{-4pt}
 	  		\item Suppose $y=a+bx+cx^2$ is the equation of a \textcolor{blue}{parabola}. If $P,Q,R$ have $x$ co-ordinates in an arithmetic sequence $x-\epsilon,x,x+\epsilon$, show that the area of $\triangle PQR$ is $A=\nm c\!\epsilon^3$; \emph{independent of $x$}!
-	  		\item With reference to the picture, if $A$ is the area of the \textcolor{Green}{large triangle}, explain why the smaller triangle has area $A_1=\frac 18A$.
+	  		\item With reference to the picture, explain why the areas of the labelled triangles satisfy $A_1=\frac 18A$.
 	  		\item Use a geometric series to prove that the area inside the parabola bounded by $\cl{PR}$ is $\frac 43A$
-	 		\end{enumerate}
 	 	\end{minipage}
 	 	\hfill
-	 	\begin{minipage}[t]{0.39\linewidth}\vspace{-5pt}
+	 	\begin{minipage}[t]{0.35\linewidth}\vspace{-22pt}
 	 		\flushright
-	 		\includegraphics{archimedes-parabola}
-	 	\end{minipage}
+	 		\includegraphics[scale=0.9]{archimedes-parabola}
+	 	\end{minipage}\par
 	
+	  		\item\label{exs:archparabcone} How might this result have been applied to show that the volume of a cone equals $\frac 13$ that of a cylinder with the same base and height?
+	 		\end{enumerate}
 	\end{enumerate}
 \end{exercises}
 
