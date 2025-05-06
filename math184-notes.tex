@@ -4,6 +4,15 @@
 \input{preamble-math}
 %\input{preamble-history}
 
+\makeatletter
+\newcommand{\oset}[3][0ex]{%
+  \mathrel{\mathop{#3}\limits^{
+    \vbox to#1{\kern-2\ex@
+    \hbox{$\scriptstyle#2$}\vss}}}}
+\makeatother
+
+\def\arc#1{\oset[-1.1pt]{\textstyle\frown}{#1}}
+
 
 \includeonly{%
 %1egypt/egypt,
