@@ -4,7 +4,9 @@
 
 \subsection{Fibonacci and Notational Development}
 
-Between the fall of Rome in 476 and the early renaissance\footnote{Literally \emph{rebirth.} Dates vary by location and discipline (Italy vs.{} France, art vs.{} philosophy, etc.) but a wide net would encompass the 12\th{} to 17\th{} centuries.} (c.\,1100) came Europe's dark ages. The one-dimensional view is that this was a time of limited learning and technological progress; as ever, the reality was more complex. Learning persisted in monasteries, though new researches took second place to a conservative focus on preserving the wisdom of the ancients.\smallbreak
+Between the fall of Rome in 476 and the early renaissance\footnote{%
+	Literally \emph{rebirth.} Dates vary by location and discipline (Italy vs.{} France, art vs.{} philosophy, etc.) but a wide net would encompass the 12\th{} to 17\th{} centuries.%
+} (c.\,1100) came Europe's dark ages. The one-dimensional view is that this was a time of limited learning and technological progress; as ever, the reality was more complex. Learning persisted in monasteries, though new researches took second place to a conservative focus on preserving the wisdom of the ancients.\smallbreak
 By 1100, the small shifting kingdoms that had characterised Europe were starting to come together as more stable feudal states.\footnote{An arrangement where powerful landowners could demand service (rent, food, warriors) from their tenants.} The maps below show the major feudal societies of medieval Europe (France, England, Holy Roman Empire, Poland, Austria) consolidating. While it would have meant little to the average peasant, a large stable nation is able to produce and support a larger elite population with the time and money to pursue education, and fund libraries and universities. By the 1700s, the borders of western Europe are largely recognizable; political and social organization had expanded so that a much larger proportion of the population---though small in comparison to today---were able to take advantage of and contribute to the growth of knowledge. The European renaissance is often contrasted with a decline in Islamic power, but again the story is more complex: Islam retreats from Spain, while the Ottoman Empire becomes dominant in south-east Europe.
 
 \begin{center}
@@ -25,9 +27,13 @@ Scientific and philosophical progress was spurred by the translation of works fr
 
 \boldinline{Leonardo da Pisa (Fibonacci c.\,1175--1250)}
 
-Fibonacci\footnote{The name was given to Leonardo by French scholars of the 1800s: \emph{filius Bonacci} means \emph{son of Bonacci.}} likely first encountered the Hindu--Arabic numerals while trading with his father in North Africa. He was impressed by the ease of calculation they afforded and is the first European known to use them (contemporary Europeans used Roman numerals and Egyptian fractions). Fibonacci's 1202 text \emph{Liber Abaci} was written to instruct traders in their use. The first page below explains how to compute with decimal fractions, with the two columns at the bottom of the page showing how to repeatedly multiply 100 (and then 10) by the fraction $\frac 9{10}$. Thus:
+Fibonacci\footnote{%
+	The name was given to Leonardo by French scholars of the 1800s: \emph{filius Bonacci} means \emph{son of Bonacci.}%
+} likely first encountered the Hindu--Arabic numerals while trading with his father in North Africa. He was impressed by the ease of calculation they afforded and is the first European known to use them (contemporary Europeans used Roman numerals and Egyptian fractions). Fibonacci's 1202 text \emph{Liber Abaci} was written to instruct traders in their use. The first page below explains how to compute with decimal fractions, with the two columns at the bottom of the page showing how to repeatedly multiply 100 (and then 10) by the fraction $\frac 9{10}$. Thus:
 \[
-	100,\quad 90,\quad 81,\quad \frac 9{10}72\ (=72.9),\quad \frac 1{10}\!\frac 6{10}65\ (=65.61),\quad\frac 9{10}\!\frac 4{10}\!\frac 0{10}59\ (=59.049),\quad\text{etc.}
+	100,\quad 90,\quad 81,\quad \frac 9{10}72\ (=72.9),\quad 
+	\frac 1{10}\!\frac 6{10}65\ (=65.61),\quad
+	\frac 9{10}\!\frac 4{10}\!\frac 0{10}59\ (=59.049),\quad\text{etc.}
 \]
 \begin{center}
 	\includegraphics[height=250pt]{liberabaci3}
@@ -37,9 +43,7 @@ Fibonacci\footnote{The name was given to Leonardo by French scholars of the 1800
 Note how the fractional part is written backwards on the left, using a bar to separate numerator and denominator; the Indians wrote fractions without a bar and it is thought Islamic scholars inserted it for clarity in the 1100s. The second picture is of Fibonacci's famous sequence: read top-to-bottom 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377. Amongst other inheritances from the Hindu--Arabic tradition, Fibonacci is the first known European to work with negative numbers, provided these represented deficiencies or debts in accounting.
 
 
-
 \goodbreak
-
 
 
 \boldsubsection{Algebraic Notation and Development}
@@ -129,6 +133,7 @@ As an example of contemporary algebraic notation, we consider Girolamo Cardano's
 \begin{minipage}[t]{0.32\linewidth}\vspace{-2pt}
 	\flushright\includegraphics[width=\linewidth]{cardano-quad}
 \end{minipage}
+
 \goodbreak
 
 
@@ -148,12 +153,15 @@ As an example of contemporary algebraic notation, we consider Girolamo Cardano's
 	Let $u,v$ satisfy $u^3-v^3=c$ and $uv=\frac{b}{3}$.
 	Then $x=u-v$ is seen to solve the cubic.
 	\begin{align*}
-		x^3+bx&=(u-v)^3+b(u-v)=u^3-3u^2v+3uv^2-v^3+b(u-v)\\
-		&=(u^3-v^3)+(u-v)(b-3uv)=c
+		x^3+bx
+		&=(u-v)^3+b(u-v)
+			=u^3-3u^2v+3uv^2-v^3+b(u-v)\\
+		&=(u^3-v^3)+(u-v)(b-3uv) =c
 	\end{align*}
 	However $u$ and $v$ also satisfy
 	\[
-		(u^3+v^3)^2=(u^3-v^3)^2+4(uv)^3=c^2+4\left(\frac{b}{3}\right)^3
+		(u^3+v^3)^2=(u^3-v^3)^2+4(uv)^3
+			=c^2+4\left(\frac{b}{3}\right)^3
 	\]
 	so we obtain a system of linear equations in the unknowns $u^3,v^3$ which are easily solved:
 	\begin{gather*}
@@ -204,7 +212,7 @@ As an example of contemporary algebraic notation, we consider Girolamo Cardano's
 		\end{cases}\\
 		&\implies x=u-v=(\sqrt 2+1)-(\sqrt 2-1)=2
 	\end{align*}
-	As this shows, Cardano's formula might produce an ugly expression for a simple answer. And, of course, the cube root of $5\sqrt 2\pm 7$ is something that's on the tip of everyone's tongue!
+	As this shows, Cardano's formula might produce an ugly expression for a simple answer---of course, the cube root of $5\sqrt 2\pm 7$ is the tip of everyone's tongue!
 	
 	\item The equation $x^3+3x=10$ may be solved using Cardano's method, though in this case the answer is just ugly.
 	\begin{align*}
