@@ -1,0 +1,7 @@
+1,2: Definitions of Mass, Momentum, Inertia & (Centripetal) Force
+3: Newton's Laws of Motion
+4: The method of 1st and last ratios; essentially limits in synthetic language. Several rectangles in these pictures are intended to be infinitesimal.
+5: Proving part of the equivalence of Kepler's 1st law (elliptic orbits) with Newton's inverse square gravitational force.
+6: Synthetic calculus-type arguments (evanescent...).
+7: Newton pushing back against objections to such methods - mentions his use of indivisibles in private work.
+8,9: The product rule and the power law.
