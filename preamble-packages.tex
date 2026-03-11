@@ -1,35 +1,69 @@
-\usepackage[utf8]{inputenc}
-\usepackage[greek,english]{babel}
-\usepackage[LGR,OT1]{fontenc}
-\usepackage{textcomp}
-\usepackage{textgreek}
+%\usepackage{ifluatex}
 
-\usepackage{mathpazo}
 \usepackage{amssymb,amsthm}
 \usepackage[fleqn]{amsmath}
-%\usepackage{bigints}
 \usepackage[svgnames]{xcolor}
 \usepackage{graphicx}
-%\usepackage{animate}
-%\usepackage{media9}
-%\usepackage{manfnt}
-%\usepackage{textcomp}
 \usepackage{hyperref}
-\usepackage[breakable,theorems,skins]{tcolorbox}
+\hypersetup{
+	pdftitle={Math 184 Notes},
+	%pdfauthor={Neil Donaldson},
+} 
+\usepackage[breakable,theorems,skins,hooks]{tcolorbox}
 
-\graphicspath{{asy/}}
+\usepackage[greek,english]{babel}
+
+%lualatex
+%\ifluatex
+%\usepackage{fontspec}
+%
+\usepackage{microtype}
+
+\usepackage{unicode-math}
+%\usepackage[otfmath,theoremfont,trueslanted,largesc]{newpx}
+\setmainfont[Scale=1.005]{TeX Gyre Pagella X}
+\setsansfont[Scale=1.005]{TeX Gyre Heros}
+\fontspec[Scale=1.005]{inconsolata}
+\setmathfont{TeX Gyre Pagella Math}[Scale=1.005]
+\setmathfont{TeX Gyre Pagella Math}[range="222B-"2233,Scale=1.08]
+\setmathfont{TeX Gyre Pagella Math}[range=\sum,Scale=1.005]
+\everydisplay{\Umathoperatorsize\displaystyle=4.5ex}
+
+%pdflatex
+% \else
+% % %\usepackage[utf8]{inputenc}
+% \usepackage[T1]{fontenc}
+% \usepackage[theoremfont,trueslanted,largesc,scale=1.005]{newpx}
+% \fi
+
 
 %lengths
 \unitlength 1cm
-\textheight 22cm
-\textwidth 17cm
-\oddsidemargin -0.5cm
-\evensidemargin -0.5cm
-\topmargin -1.5cm
+\setlength{\textheight}{23cm}
+%Reset from 0pt plus 1pt
+\setlength{\parskip}{0pt plus 2pt minus 0.25pt}
+\textwidth 17.5cm
+\oddsidemargin -0.75cm
+\evensidemargin -0.75cm
+\topmargin -1.75cm
 \topskip 0cm
 \headheight 0.5cm
 \headsep 1cm
 \marginparwidth 1.2cm
+
+
+
+%\usepackage[utf8]{inputenc}
+%\usepackage[greek,english]{babel}
+%\usepackage[LGR,OT1]{fontenc}
+%\usepackage{textcomp}
+%\usepackage{textgreek}
+
+%\usepackage{mathpazo}
+
+\usepackage[breakable,theorems,skins]{tcolorbox}
+
+
 \newlength\doubleind
 \addtolength{\doubleind}{\leftmargini}
 \addtolength{\doubleind}{\leftmarginii}
@@ -42,9 +76,6 @@
 %\renewcommand{\theequation}{\@arabic\c@equation}
 \makeatother
 
-\newcommand\boldinline[1]{\paragraph{#1}}
-\newcommand\boldsubsection[1]{\subsection*{#1}}
-\newcommand\boldsubsubsection[1]{\subsubsection*{#1}}
 
 \def\exstart{\hangindent\leftmargini\textup{1.}\hspace{\labelsep}}
 

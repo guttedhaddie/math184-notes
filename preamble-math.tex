@@ -208,6 +208,26 @@
 
 \def\egsp{\hspace{0.9pt}}
 
+\newcommand{\egmil}[1]{\multido{\i=1+1}{#1}{\hspace{0.25mm}\includegraphics[alt={hieroglyph million},scale=.1]{egypt_person}\hspace{0.25mm}}}
+\newcommand{\eghuntho}[1]{\multido{\i=1+1}{#1}{\hspace{0.25mm}\includegraphics[alt={hieroglyph hundred thousand},scale=.1]{egypt_fish}\hspace{0.25mm}}}
+\newcommand{\egtentho}[1]{\multido{\i=1+1}{#1}{\hspace{0.25mm}\includegraphics[alt={hieroglyph ten thousand},scale=.1]{egypt_finger}\hspace{0.25mm}}}
+\newcommand{\egtho}[1]{\multido{\i=1+1}{#1}{\hspace{0.25mm}\includegraphics[alt={hieroglyph thousand},scale=.1]{egypt_lotus}\hspace{0.25mm}}}
+\newcommand{\eghun}[1]{\multido{\i=1+1}{#1}{\hspace{0.25mm}\includegraphics[alt={hieroglyph hundred},scale=.1]{egypt_scroll}\hspace{0.25mm}}}
+\newcommand{\egten}[1]{\multido{\i=1+1}{#1}{\hspace{0.25mm}\includegraphics[alt={hieroglyph ten},scale=.1]{egypt_heel}\hspace{0.25mm}}}
+\newcommand{\egone}[1]{\multido{\i=1+1}{#1}{\hspace{0.25mm}\includegraphics[alt={hieroglyph one},scale=.1]{egypt_stroke}\hspace{0.25mm}}}
+\newcommand{\egyptify}[7]{
+ \multido{\i=1+1}{#7}{\includegraphics[alt={hieroglyph one},scale=.1]{egypt_stroke}\hspace{0.5mm}}
+ \multido{\i=1+1}{#6}{\includegraphics[alt={hieroglyph ten},scale=.1]{egypt_heel}\hspace{0.5mm}}
+ \multido{\i=1+1}{#5}{\includegraphics[alt={hieroglyph hundred},scale=.1]{egypt_scroll}\hspace{0.5mm}}
+ \multido{\i=1+1}{#4}{\includegraphics[alt={hieroglyph thousand},scale=.1]{egypt_lotus}\hspace{0.5mm}}
+ \multido{\i=1+1}{#3}{\includegraphics[alt={hieroglyph ten thousand},scale=.1]{egypt_finger}\hspace{0.5mm}}
+ \multido{\i=1+1}{#2}{\includegraphics[alt={hieroglyph hundred thousand},scale=.1]{egypt_fish}\hspace{0.5mm}}
+ \multido{\i=1+1}{#1}{\includegraphics[alt={hieroglyph million},scale=.1]{egypt_person}\hspace{0.5mm}}
+ \hspace{.5mm}
+}
+
+
+\iffalse
 \newcommand{\egmil}[1]{%
 	\multido{\i=1+1}{#1}{%
 		\egsp\includegraphics[scale=.1,trim=1pt 10pt 1pt 0pt]{egypt_person}\egsp%
@@ -266,20 +286,20 @@
  	%\multido{\i=1+1}{#2}{\egsp\includegraphics[scale=.1,trim=1pt 8pt 1pt 0pt]{egypt_fish}\egsp}
  	%\multido{\i=1+1}{#1}{\egsp\includegraphics[scale=.1,trim=1pt 8pt 1pt 0pt]{egypt_person}\egsp}
 }
-
+\fi
 
 \newsavebox{\myb}
 \newcommand{\egfrac}[1]{%
 	\sbox{\myb}{#1}%
 	\def\ellipse{%
-				\resizebox{0.85\wd\myb}{3pt}{\includegraphics{egfrac}}%
+				\resizebox{0.85\wd\myb}{3pt}{\includegraphics[alt=[egyptian fraction]{egfrac}}%
 	}%
-	%$\overset{\centering\ellipse}{#1}$
+	$\overset{\centering\ellipse}{#1}$
 	%\mbox{
-	\begin{tabular}[b]{@{}c@{}}
-		\ellipse\\[-3pt]
-		#1
-	\end{tabular}
+% 	\begin{tabular}[b]{@{}c@{}}
+% 		\ellipse\\[-3pt]
+% 		#1
+% 	\end{tabular}
 	%}
 }
 

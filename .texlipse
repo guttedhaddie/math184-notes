@@ -1,7 +1,7 @@
 #TeXlipse project settings
-#Mon Mar 18 10:12:07 PDT 2024
+#Tue Mar 10 13:14:13 PDT 2026
 bibrefDir=
-builderNum=2
+builderNum=8
 langSpell=en
 mainTexFile=math184-notes.tex
 makeIndSty=

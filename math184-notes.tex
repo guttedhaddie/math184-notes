@@ -1,41 +1,41 @@
-\documentclass[11pt,twoside]{article}
+\DocumentMetadata{
+  lang        = en,
+  pdfstandard = ua-2,
+  tagging=on,
+}
+
+\documentclass[12pt]{article}
 
 \input{preamble-packages}
 \input{preamble-math}
-%\input{preamble-history}
 
-\makeatletter
-\newcommand{\oset}[3][0ex]{%
-  \mathrel{\mathop{#3}\limits^{
-    \vbox to#1{\kern-2\ex@
-    \hbox{$\scriptstyle#2$}\vss}}}}
-\makeatother
-
-\def\arc#1{\oset[-1.1pt]{\textstyle\frown}{#1}}
+\parindent0pt
+%Default parskip 0pt plus 1pt
+\setlength{\parskip}{0pt plus 4pt}
 
 
 \includeonly{%
-% 1egypt/egypt,
+	1egypt/egypt,
 % 2babylon/babylon,
 % 3greece/greece,
 % 4astro/astro,
 % 5china/china,
 % 6indo-islamic/indo-islamic,
 % 7ren/ren,
-8analytic/analytic,
+% 8analytic/analytic,
 }
 
 \begin{document}
 
 \pagenumbering{arabic}
 \include{1egypt/egypt}
-\include{2babylon/babylon}
-\include{3greece/greece}
-\include{4astro/astro}
-\include{5china/china}
-\include{6indo-islamic/indo-islamic}
-\include{7ren/ren}
-\include{8analytic/analytic}
+% \include{2babylon/babylon}
+% \include{3greece/greece}
+% \include{4astro/astro}
+% \include{5china/china}
+% \include{6indo-islamic/indo-islamic}
+% \include{7ren/ren}
+% \include{8analytic/analytic}
 
 
 
