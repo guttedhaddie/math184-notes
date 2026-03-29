@@ -15,19 +15,24 @@
 
 %lualatex
 %\ifluatex
-%\usepackage{fontspec}
+\usepackage{fontspec}
 %
 \usepackage{microtype}
 
 \usepackage{unicode-math}
 %\usepackage[otfmath,theoremfont,trueslanted,largesc]{newpx}
 \setmainfont[Scale=1.005]{TeX Gyre Pagella X}
+%\setmainfont{Noto Sans}[range="13000-"1342F,Scale=1.08]
 \setsansfont[Scale=1.005]{TeX Gyre Heros}
 \fontspec[Scale=1.005]{inconsolata}
 \setmathfont{TeX Gyre Pagella Math}[Scale=1.005]
 \setmathfont{TeX Gyre Pagella Math}[range="222B-"2233,Scale=1.08]
 \setmathfont{TeX Gyre Pagella Math}[range=\sum,Scale=1.005]
 \everydisplay{\Umathoperatorsize\displaystyle=4.5ex}
+
+%Hierogylphs
+\newfontfamily\Hiero{NotoSansEgyptianHieroglyphs-Regular.otf}[Scale=1.1,FakeBold=1.5]
+
 
 %pdflatex
 % \else
