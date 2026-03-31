@@ -1,19 +1,19 @@
+%lualatex
+
 \DocumentMetadata{
   lang        = en,
   pdfstandard = ua-2,
+  %pdfstandard = a-4f, %or a-4
   tagging=on,
+	tagging-setup={%math/setup={mathml-SE,mathml-AF}, %optional: comment out to produce AF only by default
+	   	table/header-rows = 1
+	  }
 }
 
 \documentclass[12pt]{article}
 
 \input{preamble-packages}
 \input{preamble-math}
-
-\parindent0pt
-%Default parskip 0pt plus 1pt
-\setlength{\parskip}{0pt plus 4pt}
-
-
 
 \includeonly{%
 1egypt/egypt,
