@@ -14,8 +14,9 @@
 } 
 \usepackage[breakable,theorems,skins,hooks]{tcolorbox}
 
-\usepackage[greek,english]{babel}
-
+\usepackage{polyglossia}
+\setmainlanguage{english}
+\setotherlanguages{greek}
 
 \usepackage{microtype}
 \usepackage{unicode-math}
@@ -31,6 +32,10 @@
 \newfontfamily\Hiero{NotoSansEgyptianHieroglyphs-Regular.otf}[Scale=1.1,FakeBold=1.5]
 \newfontfamily\Hierobig{NotoSansEgyptianHieroglyphs-Regular.otf}[Scale=1.8,FakeBold=1.5]
 
+%Greek
+\newfontfamily\Tgrk{Noto Serif Light}[Scale=1]
+\def\lowgknum{{\Tgrk ͵}}
+\def\upgknum{{\Tgrk ʹ}}
 
 %lengths
 \unitlength 1cm

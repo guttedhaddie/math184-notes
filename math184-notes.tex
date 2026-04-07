@@ -3,10 +3,10 @@
 \DocumentMetadata{
   lang        = en,
   pdfstandard = ua-2,
-  tagging=on,
 	tagging-setup={%math/setup={mathml-SE,mathml-AF}, %optional: comment out to produce AF only by default
 	   	table/header-rows = 1
-	  }
+	  },
+  tagging=on,
 }
 
 \documentclass[12pt]{article}
@@ -15,9 +15,9 @@
 \input{preamble-math}
 
 \includeonly{%
-1egypt/egypt,
+%1egypt/egypt,
 %2babylon/babylon,
-% 3greece/greece,
+3greece/greece,
 % 4astro/astro,
 % 5china/china,
 % 6indo-islamic/indo-islamic,
@@ -30,7 +30,7 @@
 \pagenumbering{arabic}
 \include{1egypt/egypt}
 \include{2babylon/babylon}
-% \include{3greece/greece}
+\include{3greece/greece}
 % \include{4astro/astro}
 % \include{5china/china}
 % \include{6indo-islamic/indo-islamic}

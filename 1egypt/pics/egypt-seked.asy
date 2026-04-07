@@ -4,8 +4,8 @@ defaultpen(fontsize(12pt));
 texpreamble("\usepackage{amsmath}
 \usepackage{amsthm,amssymb}
 \usepackage{unicode-math}
-\setmainfont[Scale=1.005]{TeX Gyre Pagella}
-\setmathfont{TeX Gyre Pagella Math}[Scale=1.005]
+\setmainfont{TeX Gyre Pagella}
+\setmathfont{TeX Gyre Pagella Math}
 \usepackage[svgnames]{xcolor}
 ");
 import graph;

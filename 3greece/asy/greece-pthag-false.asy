@@ -1,13 +1,17 @@
-settings.tex="pdflatex";
+settings.tex="lualatex";
+defaultpen(fontsize(12pt));
 
 texpreamble("\usepackage{amsmath}
 \usepackage{amsthm,amssymb}
-\usepackage{mathpazo}
+\usepackage{unicode-math}
+\setmainfont{TeX Gyre Pagella}
+\setmathfont{TeX Gyre Pagella Math}
 \usepackage[svgnames]{xcolor}
 ");
+
 import graph;
 
-size(180);
+size(160);
 
 real a=3;
 real b=4;
