@@ -965,32 +965,30 @@ The modern approach is to compare the \emph{torques} or \emph{moments} $\tau_1=M
 
 \pagebreak[3]
 
-
 \subsubsection*{The Method of Exhaustion}\label{pg:archquadcircle}
 
-Archimedes used limit-like arguments to estimate, and sometimes exactly compute (Exercise \ref{exs:archparab}), the areas of various objects. His most famous example involves estimating the area of a circle.\footnote{%
+Archimedes used limit-like arguments to estimate, and sometimes exactly compute (Exercise \ref{exs:archparab}), various quantities. One famous example comes from his \emph{Measurement of a Circle} (c.\,250\BC).\footnote{%
 	The real number $\pi$ (the ratio of the circumference to the diameter of a circle) is sometimes known as \emph{Archimedes' constant}, in part because of these astonishing efforts to, in essence, estimate it. The symbol $\pi$ didn't acquire this meaning until 1648, and the association only became widespread due to Euler's influence in the 1700s.
-}
-\begin{minipage}[t]{0.73\linewidth}\vspace{0pt}
+}\par
+\begin{minipage}[t]{0.75\linewidth}\vspace{0pt}
 	\begin{enumerate}\itemsep0pt
-	  \item Inscribe a \textcolor{Blue}{regular hexagon} in a circle of radius 1 and compute its area $A_0$ (six \textcolor{Blue}{equilateral triangles}).
-	  \item Halve the central angle to obtain a \textcolor{mGreen}{regular dodecagon}: again compute its area $A_1$.
-	  \item Repeat the process: Archimedes did this with 24-, 48- and 96-gons to obtain an increasing sequence of areas $A_n$ for the $6\cdot 2^n$-gon, bounded above by that of the circle ($\pi$).
+	  \item Find the perimeter $C_0$ of an inscribed \textcolor{Blue}{regular hexagon} in a circle of radius 1.
+	  \item Halve the central angle and repeat for a \textcolor{mGreen}{regular dodecagon}.
+	  \item Repeat the halving process: Archimedes did this with 24-, 48- and 96-gons to obtain an increasing sequence of perimeters $C_n$ for the $6\cdot 2^n$-gon, bounded above by that of the circle ($2\pi$).
 	  \item Repeat the same calculation with exscribed polygons to obtain a decreasing sequence of over-estimates.
-	  %\item Archimedes' 96-sided polygons yielded the estimates $3\frac{10}{71}<\pi<3\frac 17$.
+	  \item Archimedes' 96-gons yielded the estimates $3\frac{10}{71}<\pi<3\frac 17$.
 	\end{enumerate}
 \end{minipage}
 \hfill
-\begin{minipage}[t]{0.25\linewidth}\vspace{0pt}
+\begin{minipage}[t]{0.23\linewidth}\vspace{0pt}
 	\hfill\includegraphics[alt={approximating the area of a circle using polygons}]{archimedes-hex2}
 \end{minipage}\medbreak
 
-
-The angle-halving process relied on an induction step. This would have been done using pure geometry (see, e.g., Exercise \ref{exs:archlemma}). Rather than struggle with such language, here is a modern argument: while the notation would be alien to Archimedes, it uses nothing but Pythagoras.\par
+Archimedes' angle-halving process relied on a geometric induction step using pure geometry (see, e.g., Exercise \ref{exs:archlemma}). Rather than struggle with such language, here is a version using modern algebra: while the notation would be alien to Archimedes, it uses nothing but Pythagoras.\par
 \begin{minipage}[t]{0.64\linewidth}\vspace{-6pt}
 	A chord of length $2\mathcolor{mRed}{h_n}$ creates an isosceles triangular wedge of the circle with altitude $\mathcolor{blue}{d_n}$ (the initial hexagon $A_0$ consists of six of these with $2\mathcolor{mRed}{h_0}=1$). Halve the central angle to create two new isosceles triangles with altitude $\mathcolor{mGreen}{d_{n+1}}$ and chord $2\mathcolor{mMagenta}{h_{n+1}}$. Apply Pythagoras' three times:
 	\begin{gather*}
-		1=\mathcolor{blue}{d_n}^2 +\mathcolor{mRed}{h_n}^2\\
+		1=\mathcolor{blue}{d_n}^2 +\mathcolor{mRed}{h_n}^2\qquad\qquad
 		(2\mathcolor{mMagenta}{h_{n+1}})^2=\mathcolor{mRed}{h_n}^2+(\mathcolor{Brown}{1-d_n})^2\\ 
 		1=\mathcolor{mGreen}{d_{n+1}}^2 +\mathcolor{mMagenta}{h_{n+1}}^2
 	\end{gather*}
@@ -1003,97 +1001,90 @@ The angle-halving process relied on an induction step. This would have been done
 \hfill
 \begin{minipage}[t]{0.35\linewidth}\vspace{0pt}
 	\hfill
-	\includegraphics[alt={}]{archimedes-hex}
+	\includegraphics[alt={comparing altitudes and perimeters for polygons when doubling the number of sides}]{archimedes-hex}
 \end{minipage}
 \smallbreak
-Iterating this process starting with $\mathcolor{Blue}{d_0}=\frac{\sqrt 3}2$ and $A_0=\frac{3\sqrt 3}2$, we obtain
-%  and $\mathcolor{mRed}{h_n}=\frac 12$. The two larger triangles making one-sixth of the dodecagon have the same height but base 1. The areas of the decagon and hexagon are therefore in the ratio $A_1:A_0=1:d_0$.\smallbreak
-% Inducting on this, we obtain
-\begin{gather*}
-	d_1=\frac 12\sqrt{2+\sqrt 3},\quad h_1=\frac 12\sqrt{2-\sqrt 3},\quad A_1=\frac 1{d_0}A_0=12h_1d_1=3\\
-	d_2=\frac 12\sqrt{2+\sqrt{2+\sqrt 3}},\quad h_2=\frac 12\sqrt{2-\sqrt{2+\sqrt 3}},\quad A_2=\frac 1{d_1}A_1=24h_2d_2=6\sqrt{2-\sqrt 3}
-\end{gather*}
 
-% 
-% 
-% 
-% Since $d_0=\frac{\sqrt 3}2$ and $h_0=\frac 12$, we may compute the entirety of both sequences:
-% \begin{gather*}
-% 	d_1=\frac 12\sqrt{2+\sqrt 3},\quad d_2=\frac 12\sqrt{2+\sqrt{2+\sqrt 3}},\quad\ldots\quad d_n=\frac 12\sqrt{2+\sqrt{2+\cdots+\sqrt{2+\sqrt 3}}}\\
-% 	h_1=\frac 12\sqrt{2-\sqrt 3},\quad h_2=\frac 12\sqrt{2-\sqrt{2+\sqrt 3}},\quad\ldots\quad h_n=\frac 12\sqrt{2-\sqrt{2+\cdots+\sqrt{2+\sqrt 3}}}
-% \end{gather*}
-% where the $n\th$ terms have $n$ copies of the digit 2 under the square-root. The circumference and area of the $6\cdot 2^n$-sided polygon inscribed in the circle are therefore
-% \[
-% 	C_n=12\cdot 2^nh_n,\qquad A_n=6\cdot 2^nd_nh_n=6\cdot 2^{n-1}h_{n-1}=\frac 12C_{n-1}
-% \]
-% These sequences increase to $2\pi$ and $\pi$ respectively. 
-For a 96-sided polygon, Archimedes would have had to approximate
+Since $d_0=\frac{\sqrt 3}2$ and $h_0=\frac 12$, we may compute the entirety of both sequences, for instance:
+\begin{gather*}
+% 	d_1=\frac 12\sqrt{2+\sqrt 3},\quad 
+% 	d_2=\frac 12\sqrt{2+\sqrt{2+\sqrt 3}},\quad 
+% 	d_3=\frac 12\sqrt{2+\sqrt{2+\sqrt{2+\sqrt 3}}},\quad
+% 	\ldots\\
+	h_1=\frac 12\sqrt{2-\sqrt 3},\quad 
+	h_2=\frac 12\sqrt{2-\sqrt{2+\sqrt 3}},\quad
+	h_3=\frac 12\sqrt{2-\sqrt{2+\sqrt{2+\sqrt 3}}},\quad
+	\ldots
+\end{gather*}
+The circumference of the $6\cdot 2^n$-sided polygon is $C_n=12\cdot 2^nh_n$. The 96-gon required Archimedes to estimate
 \[
-	A_4=96h_4d_4=48h_3=24\sqrt{2-\sqrt{2+\sqrt{2+\sqrt 3}}}> 6.282\implies \pi>3.141>3\frac{10}{71}
-\]
-Accuracy????
+	C_4=196h_4=96\sqrt{2-\sqrt{2+\sqrt{2+\sqrt{2+\sqrt 3}}}}>6.282\implies \pi>\frac 12 C_4>3.141>3\frac{10}{71}
+\] 
+
+In the same manuscript, Archimedes applies the method of exhaustion to prove that the area of a circle is equal to that of a triangle whose sides are its radius and circumference: in modern language $A_{\circ}=\frac 12rc \, (=\frac 12 r\cdot 2\pi r=\pi r^2).$ 
+
 
 \pagebreak[3]
 
 
-\subsubsection*{\emph{The Method}: is Archimedes the founder of calculus?}\label{pg:archmethod}
+\subsubsection*{Is Archimedes the founder of calculus?}\label{pg:archmethod}
+%https://math.gmu.edu/~rsachs/math400/History%20Method%20of%20Archimedes%20Gould.pdf
 
-A previously unknown work of Archimedes was discovered in 1899. As an amazing application of the lever principle, Archimedes makes an argument that looks remarkably like modern calculus; he could perhaps claim to be its earliest practitioner by 1800 years! The method was outlined in a letter to Eratosthenes and includes part of an argument for proving Archimedes' favorite theorem, a picture of this result was engraved on his tomb.
+In 1906, a previously unknown work of Archimedes was discovered. In this \emph{Method of Mechanical Theorems} Archimedes explains how to compare the areas and volumes of geometric objects by balancing infinitesimal slices using a lever. These arguments looks remarkably like modern calculus; he could perhaps claim to be its earliest practitioner by 1800 years! The method was outlined in a letter to Eratosthenes (librarian in Alexandria) and includes an argument for proving Archimedes' favorite theorem, a picture of which was engraved on his tomb.
 
 \begin{thm*}{}{}
 	A cone, hemisphere and cylinder with the same base and height have volumes in the ratio $1:2:3$. Using modern formulæ, if the height is $r$, then the volumes are $\frac 13\pi r^3:\frac 23\pi r^3:\pi r^3$.
 \end{thm*}
 
-\begin{minipage}[t]{0.67\linewidth}\vspace{-3pt}
-	Here is a modernized version illustrating Archimedes' approach. Suppose the `base' is a disk with radius 1, remove the hemisphere from the cylinder and place the cone beneath. Compare the \textcolor{red}{cross-sections} the same distance $y$ from the apex of the cone.
+\begin{minipage}[t]{0.69\linewidth}\vspace{-3pt}
+	Here is a modernized version illustrating Archimedes' approach. Suppose the base has radius 1, remove the hemisphere from the cylinder and place to the right. Compare the \textcolor{mRed}{cross-sections} the same distance $x$ from the apex of the cone.
 	\begin{itemize}
-	  \item The circular cross-section of the cone has radius $y$ whence its area is proportional to the square on the radius: $\pi y^2$.
-		\item The upper annular cross-section has area proportional to the difference of the squares on the radius of the cylinder and on the distance $x$. By Pythagoras' the cross-sectional area is
+	  \item The circular cross-section of the \textcolor{mGreen}{cone} has radius $x$, and area is proportional to the square on the radius: $\pi x^2$.
+		\item The cross-section of the \textcolor{Blue}{right-hand volume} is an annulus, whose area is proportional to a difference of squares. By Pythagoras,' its cross-sectional area is
 		\[
-			\pi(1^2-x^2)=\pi(1-(1-y^2))=\pi y^2
+			\pi(1^2-y^2)=\pi\big(1-(1-x^2)\big)=\pi x^2
 		\]
 	\end{itemize}
 \end{minipage}
 \hfill
-\begin{minipage}[t]{0.32\linewidth}\vspace{-3pt}
+\begin{minipage}[t]{0.3\linewidth}\vspace{-3pt}
 	\hfill
-	\includegraphics[alt={}]{archimedes-spherecone}
+	\includegraphics[alt={balancing cross-sections of a cone and part of a cylinder using a lever}]{archimedes-spherecone}
 \end{minipage}
-\bigbreak
-The cross-sections are therefore in balance with respect to a vertical lever whose pivot lies at the center of the picture. Archimedes concludes that the cone and the upper-figure are in balance: that is
+\par
+The \textcolor{mRed}{cross-sections} therefore balance with respect to a horizontal lever with pivot at the center of the figure. Archimedes concludes that the two volumes also balance: that is
 \[
-	V_\text{cone}=V_\text{cylinder}-V_\text{hemisphere}
+	\mathcolor{mGreen}{V_\text{cone}}=\mathcolor{Blue}{V_\text{cylinder}-V_\text{hemisphere}}
 \]
-Combining this with the fact that $V_\text{cylinder}=3V_\text{cone}$ (e.g., Exercise \ref{exs:archparabcone}) gives the desired result.
-\bigbreak
+Combining this with the fact that $V_\text{cylinder}=3V_\text{cone}$ (Exercise \ref{exs:archparabcone}) gives the desired result.
+\medbreak
 
 
-Here is another argument of Archimedes' with a suggestion of calculus. A disk comprises infinitely many concentric circles, the circumference of each being proportional to its radius. `Unwind' these circles to obtain a triangle; one side is the radius of the disk, the other its circumference. The area of a circle is therefore that of a triangle with sides the radius and circumference of the circle: $A=\frac 12rc$.
-\begin{center}
-	\includegraphics[alt={}]{archimedes-circle}
-\end{center}
+% Here is another argument of Archimedes' with a suggestion of calculus. A disk comprises infinitely many concentric circles, the circumference of each being proportional to its radius. `Unwind' these circles to obtain a triangle; one side is the radius of the disk, the other its circumference. The area of a circle is therefore that of a triangle with sides the radius and circumference of the circle: $A=\frac 12rc$.
+% \begin{center}
+% 	\includegraphics[alt={}]{archimedes-circle}
+% \end{center}+linewidth(0.7)
 
-\emph{The Method} includes several of these calculus-like discussions. While efficient, Archimedes felt that his approach didn't constitute a proof and provided alternative arguments elsewhere in his writings. The essential problem is this;
+\emph{The Method} includes several of these calculus-like discussions. While efficient, Archimedes felt that infinitesimal arguments weren't rigorous and provided alternative arguments elsewhere in his writings. The essential problem is this:
 \begin{quote}
-  Can we really say that an area \emph{equals} its cross-sectional lines? Or that a volume \emph{equals} its cross-sectional areas? Lines have no width so if we add them up we have no area. If they have width, then infinitely many of them have infinite area.
+  Can we really say that a volume \emph{equals} its cross-sectional areas? If cross-sections have volume, then summing infinitely many produces an infinite volume; if they have no volume, then we can't sum them to compute a volume!
 \end{quote}
-These are really variations of Zeno's paradoxes (pg.\,\pageref{pg:zeno}) regarding infinitesimals and indivisibles!
+These are really variations of Zeno's paradoxes (pg.\,\pageref{pg:zeno}) regarding infinitesimals!\medbreak
+
+Archimedes' infinitesimal arguments would be resurrected in the early 1600s by Cavalieri and Galileo as the development of calculus gathered pace. The same duality of presentation characterised these later arguments: Newton and others found the infinitesimal approach efficient, but felt the need to present alternative arguments or pretend that they weren't really using infinitesimals, lest readers suspect that their results were unjustified trickery.
+\medbreak
+
+It is tempting to imagine an alternative history if Archimedes' \emph{Method} had been accepted and preserved as part of the Greek canon. If calculus had been developed 1800 years earlier, how would this have affected technological development? Might the space-race have happened in \AD 500\ldots?
 
 
-Archimedes' arguments would be resurrected in the early 1600s by Cavalieri and Galileo as the development of calculus gathered pace. The same duality of presentation characterised this later development: Newton and others found the infinitesimal approach efficient, but felt the need to present \emph{geometric} proofs to convince readers that their results weren't mere trickery.\smallbreak
-It is tempting to imagine what might have happened if Archimedes' \emph{method} had been accepted and preserved as part of the Greek canon; if calculus had been developed 1800 years earlier, how might this have affected technological development? Would the space-race have happened in \AD 500?!
 
 
-
-
-
-
-\subsubsection*{Other Highlights of the later Greek Period: 300\BC--\AD 500}\phantomsection\label{pg:eratosthenes}
+\subsubsection*{Other Highlights of the later Greek Period: 300\BC--\AD 500}\label{pg:eratosthenes}
 
 We'll consider ancient astronomy, including Greek contributions, in the next chapter. Here are a few of the other developments of the late Greek period and some historical context.
 
 \begin{itemize}
-  \item Eratosthenes (276--194\BC) grew up in Cyrene (c.\,500 miles west of Alexandria in modern-day Libya) and moved to Alexandria in adulthood to become its librarian. He is credited with a simple algorithm for finding primes: the \emph{Sieve of Eratosthenes.}
+  \item Eratosthenes (276--194\BC) grew up in Cyrene (c.\,500 miles west of Alexandria in modern Libya) and moved to Alexandria in adulthood where he eventually became its librarian. Amongst other things, he is credited with a simple algorithm for finding primes: the \emph{Sieve of Eratosthenes.}
   \begin{itemize}
     \item List the integers $n\ge 2$.
     \item Leave 2 and delete all its multiples.
@@ -1102,66 +1093,82 @@ We'll consider ancient astronomy, including Greek contributions, in the next cha
     \item The remaining list contains all the primes. 
   \end{itemize}
 
-  \item Apollonius (225\BC) writes an eight-volume book on conic sections building on earlier work of Menaechmusus (350\BC).
+  \item Apollonius (225\BC) produced an eight-volume book on conic sections building on earlier work of Menaechmusus (350\BC).
   
-  \item By 146\BC{} the Greek empire had fallen under Roman rule. Alexandria remained important. Educated Greeks still spoke and wrote in Greek rather than (Roman) Latin. For context, Julius Caesar ruled Rome around this time (died 44\BC).
-  %\item Hipparchus (140\BC) computed chords (essentially sine tables, although the word was not used) for Astronomical purposes.
+  \item By 146\BC{} the central part of Greek territory had fallen under Roman rule, though Alexandria remained an important place of scholarship. Educated Greeks still spoke and wrote in Greek rather than (Roman) Latin. For context, Julius Caesar ruled Rome around this time (died 44\BC).
   
-  \item Heron (\AD 75) proves the formula $\sqrt{s(s-a)(s-b)(s-c)}$ for the area of triangle, where $s=\frac 12(a+b+c)$ is the semi-perimeter. This was likely known to Archimedes; Heron's work was a compilation of earlier mathematics.
+  \item Hipparchus (140\BC) computed chords (essentially sine tables, although the word was not yet used) for astronomical purposes.
+  
+  \item Heron (\AD 75) proved the formula $\sqrt{s(s-a)(s-b)(s-c)}$ for the area of triangle, where $s=\frac 12(a+b+c)$ is the semi-perimeter. This was likely known to Archimedes; Heron's work was a compilation of earlier mathematics.
   
   \item Around \AD 100 the Neopythagorean's worked in Alexandria, studying music, philosophy, and number, with the intent of reviving the teachings of Pythagoras.
-  %\item Ptolemy (\AD 150) extended the work of Hipparchus on trigonometry and wrote the astronomical masterwork \emph{Almagest.} We shall study this in the next section.
   
-  \item Around \AD 400, Theon and Hypatia produce the most widely-read edition of Euclid's \emph{Elements} as well as improving upon several earlier mathematical topics.
+  \item Ptolemy (\AD 150) extended the work of Hipparchus on trigonometry, writing the astronomical masterwork \emph{Almagest.} We shall study this, and Hipparchus, in the next chapter.
   
-  \item In \AD 395 the Roman empire split into eastern and western parts centered on Rome and Byzantium/Constantinople. The western empire rapidly declined under the pressures of corruption and barbarian attacks, collapsing completely by \AD 500. Alexandria experienced riots and a bloody power-struggle (Hypatia was murdered by a mob in 415) and the library of Alexandria was severely damaged and possibly destroyed at this time. In 642, Alexandria was captured by the new Islamic caliphate. Much of the material in the library survived by being copied and transported to various places of learning; particularly Constantinople and Baghdad. For the next 600 years, the knowledge of Alexandria was largely a mystery to (western) Europe.
+  \item Around \AD 400, Theon and Hypatia (of Alexandria) produced a widely-read edition of Euclid's \emph{Elements} and improved the exposition of several earlier mathematical topics.
+  
+  \item In \AD 395 the Roman empire split into eastern and western parts centered, respectively, on Rome and Byzantium (Constantinople). The western empire rapidly declined under pressure from corruption and external attacks, collapsing completely by 500.\par
+  During this period, Alexandria experienced riots and a bloody power-struggle: Hypatia was murdered by a mob in 415, and the library of Alexandria was severely damaged and possibly destroyed. In 642, Alexandria was captured by the new Islamic caliphate. Much of the material in the library survived by being copied and transported to other houses of learning, particularly Constantinople and Baghdad. For the next 600 years, the knowledge of Alexandria was largely a mystery to (western) Europe.
 \end{itemize}
 
-
-
+\bigskip
+\vfil
 
 
 \begin{exercises}
-	\hangindent\leftmargini\emph{Key concepts: \ }
+	\hangindent\leftmargini
+	\emph{Key concepts: \ Levers, \ Method of Exhaustion, \ Early calculus-like methods, \ Greek knowledge transfer to Byzantium and the Islamic empires}
 	
-	\begin{enumerate}\setcounter{enumi}{1}
+	\begin{enumerate}
 	  \item %[4-2]
-		If a weight of 8\,kg is placed 10\,m from the pivot of a lever and a weight of 12\,kg is placed 8\,m from the pivot in the opposite direction, toward which weight will the lever incline? Answer using Archimedes' language.
-	  
-	  \item Use Eratosthenes' Sieve to find all the primes $<100$.
+		An 8\,kg weight is placed 10\,m from the pivot of a lever. A 12\,kg weight is place 8\,m from the pivot on the opposite side of the same lever. Towards which weight will the lever incline? Answer using Archimedes' language.
 	  
 	  
+	  \item Use Eratosthenes' Sieve (page \pageref{pg:eratosthenes}) to find all the primes $<100$.
+	  
+
 	  \item\begin{enumerate}
-	    \item Prove Heron's formula as follows.\par
-			\begin{minipage}[t]{0.68\linewidth}\vspace{-5pt}
-		 		\begin{enumerate}
-			    \item Let $h$ be the altitude and $x$ the base of the left-hand right-triangle. Apply Pythagoras' to the two right-triangles to show that
-			    \[
-			    	x=\frac{a^2+b^2-c^2}{2a}
-			    \]
-		  	\end{enumerate}
+	    \item Use Heron's formula to compute the area of a triangle with sides 4, 7 and 10.
+	    
+	    \item We prove Heron's formula using several applications of Pythagoras.'\par
+			\begin{minipage}[t]{0.68\linewidth}\vspace{-8pt}
+		 		Given a triangle with sides $a,b,c$, let $h$ be the altitude above $a$, and $x$ the segment pictured (left side of the base). By applying Pythagoras' Theorem to the two right-triangles, show that
+			  \[
+			    x=\frac{a^2+b^2-c^2}{2a}
+			  \]
 			\end{minipage}
 			\hfill
-			\begin{minipage}[t]{0.31\linewidth}\vspace{-15pt}
-			 	\hfill
-			 	\includegraphics[alt={}]{archimedes-heron}
-			\end{minipage}
-			\begin{enumerate}[resume]
-				\item Substitute in $h^2=b^2-x^2$ to find $h$ in terms of $a,b,c$ and thus deduce Heron's formula.
-	  
-	  		\item Find the area of a triangle with sides 4, 7 and 10.
-	  	\end{enumerate}
+			\begin{minipage}[t]{0.31\linewidth}\vspace{-8pt}
+				\hfill
+				\includegraphics[alt={proving heron's formula by dropping a perpendicular and applying Pythagoras}]{archimedes-heron}
+			\end{minipage}\smallbreak
+			Find $h$ in terms of $a,b,c$ and thus deduce Heron's formula.
 		\end{enumerate}
-		
-	  
-	  \item Suppose $C_n$ is the circumference of a $6\cdot 2^n$-sided inscribed polygon in a unit circle. Show that the circumference of the corresponding \emph{circumscribed} polygon is $C^{\text{ex}}_n=\frac 1{d_n}C_n$.
 	  
 	  
 	  \item Use the modern formula $A=\frac 12ab\sin C$ to prove that, for any $k\in\N$
 	  \[
 	  	\frac 12k\sin\frac{2\pi}k<\pi<k\tan\frac\pi k
 	  \]
-	  Moreover, explain why both sides converge to $\pi$.
+	  In modern language, explain why both sides converge to $\pi$.
+		
+		
+		\pagebreak[3]
+		
+	  
+	  \item Revisit Archimedes' application of the method of exhaustion to the circumference of a circle (page \pageref{pg:archquadcircle}). Suppose $C_n$ is the circumference of a $6\cdot 2^n$-sided inscribed polygon in a unit circle, $A_n$ its area, and $d_n,h_n$ lengths in that discussion.
+	  \begin{enumerate}
+	    \item Compute the sequence $d_n$ of altitudes of each isosceles triangle.
+	    
+	    \item Prove that the area of the $n\th$ polygon satisfies the following:
+	    \[
+	    	A_{n+1}=\frac 1{d_n}A_n,\qquad A_n=6\cdot 2^nd_nh_n=3\cdot 2^n h_{n-1} =\frac 12C_{n-1}
+	    \]
+	    (\emph{If $C_n\to 2\pi$, it is now immediate that $A_n\to\pi$})
+	    
+	    \item Show that the circumference of the corresponding exscribed polygon is $C^{\text{ex}}_n=\frac 1{d_n}C_n$.\par
+	    Use a calculator to evaluate $C_4^{\text{ex}}$ and therefore confirm Archimedes' observation that $\pi<3\frac 17$.
+	  \end{enumerate}
 	  
 	  
 	  \item\label{exs:archlemma}%[4-4]
@@ -1174,10 +1181,10 @@ We'll consider ancient astronomy, including Greek contributions, in the next cha
 	 % If you want a challenge, try proving the second lemma mentioned in the book\ldots
 	 
 	 
-	 	\item\label{exs:archparab} Archimedes used a geometric series approach to evaluate the area inside a parabola. Use modern algebra for this question.\par
+	 	\item\label{exs:archparab} Archimedes evaluated the area inside a parabola using the method of exhaustion in a calculation that amounts to a evaluating a geometric series. Use modern algebra for this question.\par
 	 	\begin{minipage}[t]{0.64\linewidth}\vspace{-4pt}
-	 		\begin{enumerate}%\itemsep0pt
-	  		\item Suppose $y=a+bx+cx^2$ is the equation of a \textcolor{blue}{parabola}. If $P,Q,R$ have $x$ co-ordinates in an arithmetic sequence $x-\epsilon,x,x+\epsilon$, show that the area of $\triangle PQR$ is $A=\nm c\!\epsilon^3$; \emph{independent of $x$}!
+	 		\begin{enumerate}
+	  		\item Suppose $y=a+bx+cx^2$ is the equation of a \textcolor{blue}{parabola}. If $P,Q,R$ have $x$ co-ordinates in an arithmetic sequence $x-\epsilon,x,x+\epsilon$, show that the area of $\triangle PQR$ is $A=\nm c\!\epsilon^3$: importantly, this is \emph{independent of $x$.}
 	  		\item With reference to the picture, explain why the areas of the labelled triangles satisfy $A_1=\frac 18A$.
 	  		\item Use a geometric series to prove that the area inside the parabola bounded by $\cl{PR}$ is $\frac 43A$
 	 		\end{enumerate}
@@ -1185,11 +1192,12 @@ We'll consider ancient astronomy, including Greek contributions, in the next cha
 	 	\hfill
 	 	\begin{minipage}[t]{0.35\linewidth}\vspace{-22pt}
 	 		\hfill
-	 		\includegraphics[alt={}]{archimedes-parabola}
+	 		\includegraphics[alt={finding the area inside a parabola using the method of exhaustion}]{archimedes-parabola}
 	 	\end{minipage}
-		\begin{enumerate}[resume]
-	  	\item\label{exs:archparabcone} How might this result have been applied to show that the volume of a cone equals $\frac 13$ that of a cylinder with the same base and height?
-	 	\end{enumerate}
+	 	
+	 	
+	 	\item\label{exs:archparabcone} How might Archimedes have applied the result of Exercise \ref{exs:archparab} to show that the volume of a cone equals $\frac 13$ that of a cylinder with the same base and height?\par
+	  (\emph{Hint: think about cross-sections of the cone and the cylinder})	
 	\end{enumerate}
 \end{exercises}
 

@@ -14,7 +14,7 @@ pen lGreen=rgb("00a000");
 
 import graph;
 
-size(120);
+size(110);
 
 draw(unitcircle,linewidth(0.1));
 
@@ -36,9 +36,9 @@ for(int i=1; i<=23; ++i){
 	}
 H2=H2--cycle;
 
-filldraw(H2,Yellow,linewidth(0.1));
-filldraw(H1,LightGreen,linewidth(0.1));
-filldraw(H0,LightBlue,linewidth(0.1));
+filldraw(H2,Yellow+White,linewidth(0.1));
+filldraw(H1,Lime+White,linewidth(0.1));
+filldraw(H0,SkyBlue+White,linewidth(0.1));
 
 for(int i=0; i<=23; ++i){
 	draw((0,0)--dir(15*i),linewidth(0.1));
@@ -46,3 +46,26 @@ for(int i=0; i<=23; ++i){
 
 draw((0,0)--dir(60)--dir(0)--cycle,Blue);
 draw(dir(0)--dir(30)--dir(60),Green);
+
+
+real th=60;
+
+pair O=(0,0);
+pair A=(1,0);
+pair B=dir(th);
+pair M=(A+B)/2;
+pair C=dir(th/2);
+pair P=(C+A)/2;
+pair Q=(C+B)/2;
+
+
+draw(O--A);
+draw(O--B);
+draw(O--M,Blue);
+draw(A--M,Red);
+draw(B--M);
+draw(O--P,lGreen);
+draw(B--Q--C);
+draw(A--P,Magenta);
+draw(C--P);
+draw(C--M,Brown);
