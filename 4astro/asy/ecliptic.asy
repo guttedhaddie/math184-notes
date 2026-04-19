@@ -1,4 +1,5 @@
-settings.tex="pdflatex";
+settings.tex="lualatex";
+defaultpen(fontsize(12pt));
 
 //OpenGL (default) - no opacity
 
@@ -15,15 +16,21 @@ settings.outformat="html";
 
 texpreamble("\usepackage{amsmath}
 \usepackage{amsthm,amssymb}
-\usepackage{mathpazo}
-\usepackage[svgnames]{xcolor}
+\usepackage{unicode-math}
+\setmainfont{TeX Gyre Pagella}
+\setmathfont{TeX Gyre Pagella Math}
+\usepackage[svgnames,x11names]{xcolor}
 ");
+
+import x11colors;
+pen lGreen=rgb("00a000");
+
 import graph;
 import graph3;
 import solids;
 import palette;
 
-size(450,0);
+size(420,0);
 
 currentprojection=orthographic(2,-3,1.2);
 
