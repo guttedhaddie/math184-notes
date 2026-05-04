@@ -1,21 +1,30 @@
-settings.tex="pdflatex";
+settings.tex="lualatex";
+defaultpen(fontsize(12pt));
 
 texpreamble("\usepackage{amsmath}
 \usepackage{amsthm,amssymb}
-\usepackage{mathpazo}
-\usepackage[svgnames]{xcolor}
+\usepackage{unicode-math}
+\setmainfont{TeX Gyre Pagella}
+\setmathfont{TeX Gyre Pagella Math}
+\usepackage[svgnames,x11names]{xcolor}
 ");
+
+import x11colors;
+pen lGreen=rgb("00a000");
+
 import graph;
 
-size(0,170);
+size(0,140);
 
 real th=60;
+
+draw(box((Cos(th)-0.07,0),(Cos(th),0.07)));
 
 draw((0,0)--1.4dir(th),yellow+orange);
 draw((-0.2,0)--(0.8,0));
 draw("1",(Cos(th),0)--dir(th));
-draw("$\tan\alpha=\cot\beta$",(0,0)--(Cos(th),0),heavygreen+linewidth(1));
-draw("$\sec\alpha=\csc\beta$",dir(th)--(0,0),red+linewidth(1));
+draw("$\tan\alpha=\cot\beta$",(0,0)--(Cos(th),0),Green+linewidth(1));
+draw("$\sec\alpha=\csc\beta$",dir(th)--(0,0),Red+linewidth(1));
 draw("$\beta$",arc((0,0),0.1dir(0),0.1dir(th)));
 draw("$\alpha$",arc(dir(th),dir(th)+0.1dir(180+th),dir(th)+0.1dir(270)));
 

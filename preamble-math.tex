@@ -107,7 +107,10 @@
 \def\lin#1{\overleftrightarrow{#1}}
 \def\ray#1{\overrightarrow{#1}}
 \def\rayv#1{\overrightarrow{\underline{#1}}}
-\def\arc#1{\overset{\raisebox{-3pt}[-5pt]{\smash{\rotatebox{90}{$)$}}}}{#1}}
+%\def\arcb#1{\overset{{\rotatebox{90}{$\!\big)\!$}}}{#1}}
+\newfontfamily\aarc{texgyrepagella-regular.otf}[FakeStretch=0.7,FakeBold=1.5]
+\def\arc#1{\overset{{\rotatebox{90}{{\normalfont\!\large\aarc )}}}}{#1}}
+
 
 
 %caligraphic

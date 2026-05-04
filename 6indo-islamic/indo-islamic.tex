@@ -378,12 +378,12 @@ Over the following centuries, this algebraic approach was further improved. In p
 
 \subsection{Islamic Mathematics II: Spherical Trigonometry and the \emph{Qibla}}
 
-Late 8\th{} century Indian work on trigonometry, linking back to Hipparchus, was known in Baghdad, as was the work of Ptolemy. Islamic scholars were interested in trigonometry for reasons beyond mere astronomy. A primary requirement in Islam is to face the Ka'aba in the Great Mosque at Mecca when at prayer: this is the \emph{qibla} (\emph{direction} in Arabic). A mosque is typically built so that one wall faces Mecca for convenience; if not possible, an arrow indicating the \emph{qibla} might be placed in an alcove. In Muhammad's time (when Muslims faced Jerusalem not Mecca), determining the \emph{qibla} was relatively easy, though as Islam spread the curvature of the earth made determination more difficult. The religious impetus behind this problem motivated Islamic mathematics for centuries, and the methods developed (with minor modifications) are still used today, though in modern times the mathematics is very much hidden behind GPS technology!
+Late 8\th{} century Indian work on trigonometry, linking back to Hipparchus, was known in Baghdad, as was the work of Ptolemy. While Islamic scholars were certainly interested in astronomy, their study of trigonometry had a more practical, if still religious, purposes. While at prayer, Muslims face the Ka'aba in the Great Mosque at Mecca: this is the \emph{qibla} (\emph{direction} in Arabic). In modern times, a mosque is typically built so that one wall faces Mecca for convenience; if this is not possible, an arrow indicating the \emph{qibla} might be placed in an alcove. In Muhammad's time (when Muslims faced Jerusalem not Mecca), determining the \emph{qibla} was relatively easy, though as Islam spread the curvature of the earth made determination more difficult. The religious impetus behind this problem motivated the development of spherical trigonometry: the methods developed (with minor modifications) are still used today.
 
 
-\paragraph{Terminology and Trigonometric Tables}
+\subsubsection*{Terminology and Trigonometric Tables}
 
-Scholars worked with the Indian \emph{half-chord} (sine), and with circles of various radii. Al-Battānī (c.\,858--929) introduced an early version of \emph{cosine} as the \emph{complementary half-chord} for angles less than \ang{90}, and an analogue of the modern function \emph{versine}:\footnote{%
+Scholars worked with the Indian \emph{half-chord} (sine), and with circles of various radii. Al-Battānī (c.\,858--929) introduced an early version of \emph{cosine} as the \emph{complementary half-chord} for acute angles, and an analogue of the modern function \emph{versine}:\footnote{%
 	\emph{Versed sine} refers to the measurement of a length in a re\emph{versed} direction (perpendicular) to that of sine.%
 }
 \[
@@ -391,11 +391,11 @@ Scholars worked with the Indian \emph{half-chord} (sine), and with circles of va
 \]
 Al-Bīrūnī (973--1048) defined versions of tangent, cotangent, secant and cosecant by projecting (e.g., a sundial) onto either a horizontal or a vertical plane. In the second picture below, the gnomon is the vertical stick of length 1. With this definition, al-Bīrūnī moves towards the modern consideration of trigonometry in terms of \emph{triangles} rather than circles.
 \begin{center}
-  \includegraphics{islam-versin}\qquad\qquad
-  \includegraphics{islam-csc}
+  \includegraphics[alt={versed sine, cosine and sine in a circle of radius 1}]{islam-versin}\qquad\qquad
+  \includegraphics[alt={hypotenuse and base of a right triangle of height one and their relation to the two angles}]{islam-csc}
 \end{center}\phantomsection\label{pg:sineconcave}
 
-Trigonometric tables with improved accuracy over Ptolemy were created for all these `functions.' Abū al-Wafā (940--998) and his descendants computed sine \& tangent values for every \emph{minute} of arc accurate to \emph{five sexagesimal places} (one part in 777 million!) via repeated applications of the half-angle formula and interpolating using the downwards concavity of the sine function (draw a picture!):
+Trigonometric tables with improved accuracy over Ptolemy were created for all these `functions.' Abū al-Wafā (940--998) and his descendants computed sine \& tangent values for every minute of arc accurate to \emph{five sexagesimal places} (one part in 777 million!) via repeated applications of the half-angle formula and interpolating using the downwards concavity of the sine function (draw a picture!):
 \[
 	\sin(\alpha+\beta)-\sin\alpha<\sin\alpha-\sin(\alpha-\beta)
 	\qquad\text{whenever}\qquad
@@ -404,65 +404,65 @@ Trigonometric tables with improved accuracy over Ptolemy were created for all th
 
 
 
-
-\paragraph{Calculating the \emph{Qibla}}
+\subsubsection*{Calculating the \emph{Qibla}}
 
 In what follows we observe several conventions:
-\begin{itemize}%\itemsep0pt
+\begin{itemize}\itemsep0pt
   \item A single letter $A$ refers to a \emph{point} or to the \emph{angle measure} in a triangle with vertex $A$.
-  \item $\arc{AB}$ means the \emph{great-circle arc} joining points $A,B$ or its \emph{arc-length.} A \emph{spherical triangle} $\triangle ABC$ comprises three points on a sphere joined by great-circle arcs.
-  \item $\cl{AB}$ means the \emph{straight line} joining $A,B$ with \emph{length} $\nm{AB}$.
-  \item All results are modernized and applied to a unit sphere (center $O$). The arc-length along a great-circle therefore equals the central angle subtended by that arc in radians: $\arc{AB}=\measuredangle AOB$. 3D movable versions of all pictures are online---click them! 
+  \item $\smash[t]{\arc{AB}}$ means the \emph{great-circle arc} joining points $A,B$ or its \emph{arc-length.} A \emph{spherical triangle} $\triangle ABC$ comprises three points on a sphere joined by great-circle arcs.
+  \item $\smash[t]{\cl{AB}}$ means the \emph{straight line-segment} joining points $A,B$ with \emph{length} $\nm{AB}$.
+  \item All results are modernized and applied to a unit sphere (center $O$). The arc-length along a great-circle therefore equals the central angle subtended by that arc in radians: $\smash[t]{\arc{AB}=\measuredangle AOB}$. 3D movable versions of all pictures are online---click them! 
 \end{itemize}
 
-\begin{minipage}[t]{0.75\linewidth}\vspace{-5pt}
+\begin{minipage}[t]{0.75\linewidth}\vspace{-10pt}
 	Ptolemy and the Indians had already done some relevant work, though Ptolemy's approach relies heavily on Menelaus' Theorem (c.\,\AD{100}).
 	
 	\begin{thm*}{Menelaus}{}
-		For the pictured configuration of spherical triangles on a sphere of radius 1,
+		For the pictured configuration of spherical triangles on a sphere of radius 1,\vspace{-3pt}
 		\[
-			\frac{\sin\arc{CE}}{\sin\arc{AE}}=\frac{\sin\arc{CF}}{\sin\arc{DF}}\cdot\frac{\sin\arc{BD}}{\sin\arc{AB}}
-		\]
+			\frac{\sin\arc{CE}}{\sin\arc{AE}}
+			=\frac{\sin\arc{CF}}{\sin\arc{DF}}
+			\cdot\frac{\sin\arc{BD}}{\sin\arc{AB}}
+		\]\vspace{-5pt}
 	\end{thm*}
-	
-	Applying Menelaus is difficult since one typically needs to create many new spherical triangles. Al-Wafā simplified matters with an alternative result.
 	\end{minipage}
 	\hfill
-	\begin{minipage}[t]{0.24\linewidth}\vspace{-5pt}
+	\begin{minipage}[t]{0.24\linewidth}\vspace{-20pt}
 		\hfill
-		\href{http://math.uci.edu/~ndonalds/math184/islam-menelaus.html}{\includegraphics{islam-menelaus}}
+		\href{http://math.uci.edu/~ndonalds/math184/islam-menelaus.html}{\includegraphics[alt={two spherical triangles sharing an angle}]{islam-menelaus}}
 \end{minipage}
+\medbreak
 
-
-
+Applying Menelaus is difficult since one typically needs to create many new spherical triangles. Al-Wafā simplified matters with an alternative result.
 
 
 \begin{thm*}{Al-Wafā}{}
-	If $\triangle ABC$ and $\triangle ADE$ are spherical triangles with right angles at $B,D$ and a common acute angle at $A$, then
+	If $\triangle ABC$ and $\triangle ADE$ are spherical triangles with right angles at $B,D$ and a common acute angle at $A$, then\vspace{-3pt}
 	\[
-		\frac{\sin\arc{BC}}{\sin\arc{AC}}=\frac{\sin\arc{DE}}{\sin \arc{AE}}
-	\]
+		\frac{\sin\arc{BC}}{\sin\arc{AC}}
+		=\frac{\sin\arc{DE}}{\sin \arc{AE}}
+	\]\vspace{-5pt}
 \end{thm*}
 
 In fact these ratios equal $\sin\alpha$ where $\alpha$ is the acute angle, though al-Wafā didn't say this.
 
 \begin{proof}
-	Let $O$ be the center of the sphere. Project $C$ orthogonally to the plane containing $O,A,B$ to produce $K$, then project $K$ to $\cl{OA}$ to get $L$.\par
-	\begin{minipage}[t]{0.55\linewidth}\vspace{-5pt}
-		Consider the right-angled \textcolor{mRed}{planar triangle $CKL$.} Since $\alpha$ is the angle between two planes, we have $\textcolor{red}{\alpha=\measuredangle CLK}$. Moreover
+	Project $C$ onto the plane containing $O,A,B$ to produce $K$, then project $K$ to $\cl{OA}$ to get $L$.\par
+	\begin{minipage}[t]{0.59\linewidth}\vspace{-5pt}
+		Consider the right-angled \textcolor{mRed}{planar $\triangle CKL$.} Since $\alpha$ is the angle between two planes, we have $\mathcolor{mRed}{\alpha=\measuredangle CLK}$. Moreover
 		\begin{gather*}
 			\nm{CK}=\sin\measuredangle COK =\sin\measuredangle COB=\sin\arc{BC}\\
 			\nm{CL}=\sin\measuredangle COL =\sin\measuredangle COA=\sin\arc{AC}
 		\end{gather*}
 		The usual sine formula for plane triangles says
 		\[
-			\sin\textcolor{red}{\alpha} =\frac{\nm{CK}}{\nm{CL}} =\frac{\sin\arc{BC}}{\sin \arc{AC}}
+			\sin\mathcolor{mRed}{\alpha} =\frac{\nm{CK}}{\nm{CL}} =\frac{\sin\arc{BC}}{\sin \arc{AC}}
 		\]
 	\end{minipage}
 	\hfill
 	\begin{minipage}[t]{0.4\linewidth}\vspace{-15pt}
 		\hfill
-		\href{http://math.uci.edu/~ndonalds/math184/islam-alwafa.html}{\includegraphics{islam-alwafa}}
+		\href{http://math.uci.edu/~ndonalds/math184/islam-alwafa.html}{\includegraphics[alt={computing sine for a spherical triangle},scale=0.5]{islam-alwafa}}
 	\end{minipage}
 	\par\vspace{-3pt}
 	The same ratio is obtained for $\triangle ADE$.
