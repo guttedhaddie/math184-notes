@@ -4,9 +4,9 @@
 \renewcommand{\qedsymbol}{\rule[-8pt]{0.5em}{0.5em}}
 \def\marks#1{\hfill{\scriptsize{(#1)}}\par}
 \def\dmarks#1{\tag*{\scriptsize{(#1)}}}
-\def\prelistskip{\vspace*{-6pt}}
-\def\preinitdisp{\setlength{\abovedisplayskip}{-15pt}}
-\def\postinitdisp{\setlength{\abovedisplayskip}{12pt plus 3pt minus 9pt}}
+% \def\prelistskip{\vspace*{-6pt}}
+% \def\preinitdisp{\setlength{\abovedisplayskip}{-15pt}}
+% \def\postinitdisp{\setlength{\abovedisplayskip}{12pt plus 3pt minus 9pt}}
 \def\ang#1{#1\text{°}}
 \def\st{\textsuperscript{st}}
 \def\nd{\textsuperscript{nd}}
@@ -107,6 +107,8 @@
 \def\lin#1{\overleftrightarrow{#1}}
 \def\ray#1{\overrightarrow{#1}}
 \def\rayv#1{\overrightarrow{\underline{#1}}}
+\def\arc#1{\overset{\raisebox{-3pt}[-5pt]{\smash{\rotatebox{90}{$)$}}}}{#1}}
+
 
 %caligraphic
 \def\cL{\mathcal{L}}
@@ -281,13 +283,6 @@
 	\egtentho{#3}
 	\eghuntho{#2}
 	\egmil{#1}
-	%\multido{\i=1+1}{#7}{\egsp\includegraphics[scale=.1,trim=1pt 8pt 1pt 0pt]{egypt_stroke}\egsp}
- 	%\multido{\i=1+1}{#6}{\egsp\includegraphics[scale=.1,trim=1pt 8pt 1pt 0pt]{egypt_heel}\egsp}
- 	%\multido{\i=1+1}{#5}{\egsp\includegraphics[scale=.1,trim=1pt 8pt 1pt 0pt]{egypt_scroll}\egsp}
- 	%\multido{\i=1+1}{#4}{\egsp\includegraphics[scale=.1,trim=0pt 8pt 1pt 0pt]{egypt_lotus}\egsp}
- 	%\multido{\i=1+1}{#3}{\egsp\includegraphics[scale=.1,trim=1pt 8pt 1pt 0pt]{egypt_finger}\egsp}
- 	%\multido{\i=1+1}{#2}{\egsp\includegraphics[scale=.1,trim=1pt 8pt 1pt 0pt]{egypt_fish}\egsp}
- 	%\multido{\i=1+1}{#1}{\egsp\includegraphics[scale=.1,trim=1pt 8pt 1pt 0pt]{egypt_person}\egsp}
 }
 \fi
 
@@ -295,41 +290,29 @@
 \newcommand{\egfrac}[1]{%
 	\sbox{\myb}{#1}%
 	\def\ellipse{%
-				\resizebox{0.85\wd\myb}{3pt}{\includegraphics[alt=[egyptian fraction]{egfrac}}%
+				\resizebox{0.85\wd\myb}{3pt}{\includegraphics[alt={egyptian fraction}]{egfrac}}%
 	}%
 	$\overset{\centering\ellipse}{#1}$
-	%\mbox{
-% 	\begin{tabular}[b]{@{}c@{}}
-% 		\ellipse\\[-3pt]
-% 		#1
-% 	\end{tabular}
-	%}
 }
 
-
-% \newsavebox{\myb}
-% \sbox{\myb}{$\egten{3}$}
-% \def\ellipse{\resizebox{\wd\myb}{3pt}{$\circ$}}
-% \def\bobeye{\overset{\ellipse}{\egten{3}}}
-
-\newcommand{\IndiaBone}{\includegraphics[scale=0.6]{B1}}
-\newcommand{\IndiaBtwo}{\includegraphics[scale=0.6]{B2}}
-\newcommand{\IndiaBthree}{\includegraphics[scale=0.6]{B3}}
-\newcommand{\IndiaBfour}{\includegraphics[scale=0.6]{B4}}
-\newcommand{\IndiaBfive}{\includegraphics[scale=0.6]{B5}}
-\newcommand{\IndiaBsix}{\includegraphics[scale=0.6]{B6}}
-\newcommand{\IndiaBseven}{\includegraphics[scale=0.6]{B7}}
-\newcommand{\IndiaBeight}{\includegraphics[scale=0.6]{B8}}
-\newcommand{\IndiaBnine}{\includegraphics[scale=0.6]{B9}}
-\newcommand{\IndiaBten}{\includegraphics[scale=0.6]{B10}}
-\newcommand{\IndiaGzero}{\includegraphics[scale=0.6]{G0}}
-\newcommand{\IndiaGone}{\includegraphics[scale=0.6]{G1}}
-\newcommand{\IndiaGtwo}{\includegraphics[scale=0.6]{G2}}
-\newcommand{\IndiaGthree}{\includegraphics[scale=0.6]{G3}}
-\newcommand{\IndiaGfour}{\includegraphics[scale=0.6]{G4}}
-\newcommand{\IndiaGfive}{\includegraphics[scale=0.6]{G5}}
-\newcommand{\IndiaGsix}{\includegraphics[scale=0.6]{G6}}
-\newcommand{\IndiaGseven}{\includegraphics[scale=0.6]{G7}}
-\newcommand{\IndiaGeight}{\includegraphics[scale=0.6]{G8}}
-\newcommand{\IndiaGnine}{\includegraphics[scale=0.6]{G9}}
-\newcommand{\IndiaGten}{\includegraphics[scale=0.6]{G10}}
+\newcommand{\IndiaBone}{\includegraphics[scale=0.6,alt={old indian one}]{B1}}
+\newcommand{\IndiaBtwo}{\includegraphics[scale=0.6,alt={old indian two}]{B2}}
+\newcommand{\IndiaBthree}{\includegraphics[scale=0.6,alt={old indian three}]{B3}}
+\newcommand{\IndiaBfour}{\includegraphics[scale=0.6,alt={old indian four}]{B4}}
+\newcommand{\IndiaBfive}{\includegraphics[scale=0.6,alt={old indian five}]{B5}}
+\newcommand{\IndiaBsix}{\includegraphics[scale=0.6,alt={old indian six}]{B6}}
+\newcommand{\IndiaBseven}{\includegraphics[scale=0.6,alt={old indian seven}]{B7}}
+\newcommand{\IndiaBeight}{\includegraphics[scale=0.6,alt={old indian eight}]{B8}}
+\newcommand{\IndiaBnine}{\includegraphics[scale=0.6,alt={old indian nine}]{B9}}
+\newcommand{\IndiaBten}{\includegraphics[scale=0.6,alt={old indian ten}]{B10}}
+\newcommand{\IndiaGzero}{\includegraphics[scale=0.6,alt={indian zero}]{G0}}
+\newcommand{\IndiaGone}{\includegraphics[scale=0.6,alt={indian one}]{G1}}
+\newcommand{\IndiaGtwo}{\includegraphics[scale=0.6,alt={indian two}]{G2}}
+\newcommand{\IndiaGthree}{\includegraphics[scale=0.6,alt={indian three}]{G3}}
+\newcommand{\IndiaGfour}{\includegraphics[scale=0.6,alt={indian four}]{G4}}
+\newcommand{\IndiaGfive}{\includegraphics[scale=0.6,alt={indian five}]{G5}}
+\newcommand{\IndiaGsix}{\includegraphics[scale=0.6,alt={indian six}]{G6}}
+\newcommand{\IndiaGseven}{\includegraphics[scale=0.6,alt={indian seven}]{G7}}
+\newcommand{\IndiaGeight}{\includegraphics[scale=0.6,alt={indian eight}]{G8}}
+\newcommand{\IndiaGnine}{\includegraphics[scale=0.6,alt={indian nine}]{G9}}
+\newcommand{\IndiaGten}{\includegraphics[scale=0.6,alt={indian ten}]{G10}}
