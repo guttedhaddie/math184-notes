@@ -1,4 +1,5 @@
-settings.tex="pdflatex";
+settings.tex="lualatex";
+defaultpen(fontsize(12pt));
 
 //OpenGL (default) - no opacity
 
@@ -15,9 +16,14 @@ settings.outformat="html";
 
 texpreamble("\usepackage{amsmath}
 \usepackage{amsthm,amssymb}
-\usepackage{mathpazo}
-\usepackage[svgnames]{xcolor}
+\usepackage{unicode-math}
+\setmainfont{TeX Gyre Pagella}
+\setmathfont{TeX Gyre Pagella Math}
+\usepackage[svgnames,x11names]{xcolor}
 ");
+
+import x11colors;
+pen lGreen=rgb("00a000");
 
 import graph;
 import graph3;
@@ -39,19 +45,19 @@ triple Q=dir(mcola,llong);
 
 //draw("$b-c$",arc(O,M,P),heavygreen);
 //draw("$b-c$",arc(O,L,Q),heavygreen);
-draw("$b$",arc(O,Z,M),heavygreen+linewidth(1));
+draw("$b$",arc(O,Z,M),lGreen+linewidth(1));
 //draw("$c$",arc(O,P,Z),blue);
-draw(Label("$c$",align=-Y),arc(O,Z,L),blue+linewidth(1));
+draw(Label("$c$",align=-Y),arc(O,Z,L),Blue+linewidth(1));
 //draw(arc(O,Q,M));
 //draw(arc(O,L,P)--arc(O,P,Q));
-draw("$a$",arc(O,M,L),red+linewidth(1));
+draw("$a$",arc(O,M,L),Red+linewidth(1));
 //label("$N$",Z,Z);
 //label("$M$",M,-Z);
 //label("$L$",L,-Y);
 //label("$P$",P,P);
 //label("$Q$",Q,-Z);
-draw(Label("$\beta$",align=Y),arc(L,dir(lcola+1,llong+3),dir(lcola-8,llong)),heavygreen+linewidth(1));
-draw("$\alpha$",arc(Z,dir(5,llong),dir(5,mlong)),red);
+draw(Label("$\beta$",align=Y),arc(L,dir(lcola+1,llong+3),dir(lcola-8,llong)),lGreen+linewidth(1));
+draw("$\alpha$",arc(Z,dir(5,llong),dir(5,mlong)),Red);
 
 //triple A=unit(P+L);
 //triple B=unit(Q+M);

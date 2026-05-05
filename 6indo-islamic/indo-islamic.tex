@@ -344,7 +344,7 @@ Over the following centuries, this algebraic approach was further improved. In p
 	Solve the equations $\frac 12x^2+5x=28$ and $2x^2+10x=48$ using al-Khwārizmī's methods (first multiply or divide by 2).
 	
 	  \item%[9-2*]
-	  \label{exs:alkalgebra}
+	  %\label{exs:alkalgebra}
 	  Al-Khwārizmī gives the following algorithm for solving the equation $bx+c=x^2$.\par
 	  \begin{minipage}[t]{0.64\linewidth}\vspace{0pt}
 		  \begin{itemize}
@@ -378,7 +378,7 @@ Over the following centuries, this algebraic approach was further improved. In p
 
 \subsection{Islamic Mathematics II: Spherical Trigonometry and the \emph{Qibla}}
 
-Late 8\th{} century Indian work on trigonometry, linking back to Hipparchus, was known in Baghdad, as was the work of Ptolemy. While Islamic scholars were certainly interested in astronomy, their study of trigonometry had a more practical, if still religious, purposes. While at prayer, Muslims face the Ka'aba in the Great Mosque at Mecca: this is the \emph{qibla} (\emph{direction} in Arabic). In modern times, a mosque is typically built so that one wall faces Mecca for convenience; if this is not possible, an arrow indicating the \emph{qibla} might be placed in an alcove. In Muhammad's time (when Muslims faced Jerusalem not Mecca), determining the \emph{qibla} was relatively easy, though as Islam spread the curvature of the earth made determination more difficult. The religious impetus behind this problem motivated the development of spherical trigonometry: the methods developed (with minor modifications) are still used today.
+Late 8\th{} century Indian work on trigonometry, linking back to Hipparchus, was known in Baghdad, as was the work of Ptolemy. While Islamic scholars were certainly interested in astronomy, their study of trigonometry had a more practical, if still religious, purposes. While at prayer, Muslims face the Ka'aba in the Great Mosque at Mecca: this is the \emph{qibla} (\emph{direction} in Arabic). Mosques are typically built so that one wall faces Mecca for convenience; if this is not possible, an arrow indicating the \emph{qibla} might be placed in an alcove. In Muhammad's time (when Muslims faced Jerusalem not Mecca), determining the \emph{qibla} was relatively easy, though as Islam spread the curvature of the earth made determination more difficult. The religious impetus behind this problem motivated the development of spherical trigonometry: the methods developed are still used today for the purposes of navigation.
 
 
 \subsubsection*{Terminology and Trigonometric Tables}
@@ -404,30 +404,30 @@ Trigonometric tables with improved accuracy over Ptolemy were created for all th
 
 
 
-\subsubsection*{Calculating the \emph{Qibla}}
+\subsubsection*{Calculating the \emph{Qibla} I: Al-Wafā and the Sine Rule}
 
 In what follows we observe several conventions:
-\begin{itemize}\itemsep0pt
+\begin{itemize}\itemsep1pt
   \item A single letter $A$ refers to a \emph{point} or to the \emph{angle measure} in a triangle with vertex $A$.
-  \item $\smash[t]{\arc{AB}}$ means the \emph{great-circle arc} joining points $A,B$ or its \emph{arc-length.} A \emph{spherical triangle} $\triangle ABC$ comprises three points on a sphere joined by great-circle arcs.
+  \item $\arcsm{AB}$ means the \emph{great-circle arc} joining points $A,B$ or its \emph{arc-length.} A \emph{spherical triangle} $\triangle ABC$ comprises three points on a sphere joined by great-circle arcs.
   \item $\smash[t]{\cl{AB}}$ means the \emph{straight line-segment} joining points $A,B$ with \emph{length} $\nm{AB}$.
-  \item All results are modernized and applied to a unit sphere (center $O$). The arc-length along a great-circle therefore equals the central angle subtended by that arc in radians: $\smash[t]{\arc{AB}=\measuredangle AOB}$. 3D movable versions of all pictures are online---click them! 
+  \item We use modern language and work on the unit sphere (center $O$). The arc-length along a great-circle thus equals the central angle subtended by that arc in radians: $\arcsm{AB}=\measuredangle AOB$.
 \end{itemize}
 
-\begin{minipage}[t]{0.75\linewidth}\vspace{-10pt}
+\begin{minipage}[t]{0.77\linewidth}\vspace{-10pt}
 	Ptolemy and the Indians had already done some relevant work, though Ptolemy's approach relies heavily on Menelaus' Theorem (c.\,\AD{100}).
 	
 	\begin{thm*}{Menelaus}{}
-		For the pictured configuration of spherical triangles on a sphere of radius 1,\vspace{-3pt}
+		For the pictured configuration of spherical triangles on a sphere of radius 1,\vspace{-2pt}
 		\[
 			\frac{\sin\arc{CE}}{\sin\arc{AE}}
 			=\frac{\sin\arc{CF}}{\sin\arc{DF}}
 			\cdot\frac{\sin\arc{BD}}{\sin\arc{AB}}
-		\]\vspace{-5pt}
+		\]\vspace{-4pt}
 	\end{thm*}
 	\end{minipage}
 	\hfill
-	\begin{minipage}[t]{0.24\linewidth}\vspace{-20pt}
+	\begin{minipage}[t]{0.2\linewidth}\vspace{-12pt}
 		\hfill
 		\href{http://math.uci.edu/~ndonalds/math184/islam-menelaus.html}{\includegraphics[alt={two spherical triangles sharing an angle}]{islam-menelaus}}
 \end{minipage}
@@ -437,168 +437,202 @@ Applying Menelaus is difficult since one typically needs to create many new sphe
 
 
 \begin{thm*}{Al-Wafā}{}
-	If $\triangle ABC$ and $\triangle ADE$ are spherical triangles with right angles at $B,D$ and a common acute angle at $A$, then\vspace{-3pt}
+	If $\triangle ABC$ and $\triangle ADE$ are spherical triangles with right angles at $B,D$ and a common acute angle at $A$, then\vspace{-2pt}
 	\[
 		\frac{\sin\arc{BC}}{\sin\arc{AC}}
-		=\frac{\sin\arc{DE}}{\sin \arc{AE}}
-	\]\vspace{-5pt}
+		=\frac{\sin\arc{DE}}{\sin\arc{AE}}
+	\]\vspace{-4pt}
 \end{thm*}
 
-In fact these ratios equal $\sin\alpha$ where $\alpha$ is the acute angle, though al-Wafā didn't say this.
+In fact these ratios equal $\sin\alpha$ where $\alpha$ is the angle at $A$, though al-Wafā didn't say this.
 
 \begin{proof}
-	Project $C$ onto the plane containing $O,A,B$ to produce $K$, then project $K$ to $\cl{OA}$ to get $L$.\par
-	\begin{minipage}[t]{0.59\linewidth}\vspace{-5pt}
-		Consider the right-angled \textcolor{mRed}{planar $\triangle CKL$.} Since $\alpha$ is the angle between two planes, we have $\mathcolor{mRed}{\alpha=\measuredangle CLK}$. Moreover
+	Project $C$ onto the plane containing $O,A,B$ to produce $K$, then project $K$ to $\smash[t]{\cl{OA}}$ to get $L$.\par
+	\begin{minipage}[t]{0.6\linewidth}\vspace{-6pt}
+		Consider the \textcolor{mRed}{planar right-triangle $\triangle CKL$.} Since $\alpha$ is the angle between two planes, we have $\mathcolor{mRed}{\alpha=\measuredangle CLK}$. Moreover
 		\begin{gather*}
-			\nm{CK}=\sin\measuredangle COK =\sin\measuredangle COB=\sin\arc{BC}\\
+			\nm{CK}=\sin\measuredangle COK =\sin\measuredangle COB=\sin\arcsm{BC}\\
 			\nm{CL}=\sin\measuredangle COL =\sin\measuredangle COA=\sin\arc{AC}
 		\end{gather*}
 		The usual sine formula for plane triangles says
 		\[
-			\sin\mathcolor{mRed}{\alpha} =\frac{\nm{CK}}{\nm{CL}} =\frac{\sin\arc{BC}}{\sin \arc{AC}}
+			\sin\mathcolor{mRed}{\alpha} =\frac{\nm{CK}}{\nm{CL}} =\frac{\sin\arcsm{BC}}{\sin \arc{AC}}
 		\]
+		The same ratio is obtained for $\triangle ADE$.
 	\end{minipage}
 	\hfill
-	\begin{minipage}[t]{0.4\linewidth}\vspace{-15pt}
+	\begin{minipage}[t]{0.37\linewidth}\vspace{-8pt}
 		\hfill
-		\href{http://math.uci.edu/~ndonalds/math184/islam-alwafa.html}{\includegraphics[alt={computing sine for a spherical triangle},scale=0.5]{islam-alwafa}}
+		\href{%
+			http://math.uci.edu/~ndonalds/math184/islam-alwafa.html%
+		}{%
+			\includegraphics[alt={computing sine for a spherical triangle}]{islam-alwafa}%
+		}
 	\end{minipage}
-	\par\vspace{-3pt}
-	The same ratio is obtained for $\triangle ADE$.
 \end{proof}
 
 
+\pagebreak[3]
 
-By dropping a perpendicular in a spherical triangle, Al-Wafā's result quickly yields the spherical sine rule. For the pictured triangle, drop the perpendicular to $H\in\arc{AB}$ from $C$. Al-Wafā says\par
-\begin{minipage}[t]{0.65\linewidth}\vspace{0pt}
-	\[
-		\sin B=\frac{\sin h}{\sin a}
-		\quad\text{and}\quad 
-		\sin A=\frac{\sin h}{\sin b}
-	\]
-	By equating the $\sin h$ terms and permuting symmetrically, we've proved:
 
-	\begin{cor*}{Sine rule}{}
-		If $a,b,c$ are the side-lengths of a spherical triangle with angles $A,B,C$, then
-		\[
-			\frac{\sin a}{\sin A}=\frac{\sin b}{\sin B}=\frac{\sin c}{\sin C}
-		\]
-	\end{cor*}
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.34\linewidth}\vspace{0pt}
-	\hfill
-	\href{http://math.uci.edu/~ndonalds/math184/islam-sine.html}{\includegraphics[]{islam-sine}}
-\end{minipage}
-\medbreak
-
-\begin{minipage}[t]{0.65\linewidth}\vspace{2pt}
-	Al-Wafā's proof was a little more complicated. He extended $\arc{AB}$ and $\arc{BC}$ to quarter-circles resulting in a spherical triangle with right-angles at $D$ and $E$. Since $\arc{DE}$ is an arc with central angle $B$, we have $\arc{DE}=B$. Since $\arc{BD}=\ang{90}$, Al-Wafā's theorem implies
-	\[
-		\frac{\sin h}{\sin a} =\frac{\sin B}{\sin \ang{90}}
-		\implies \sin h=\sin a\sin B
-	\]
-	Mirroring this by extending $\arc{AB}$ past $B$ and equating the $\sin h$ terms yields the result.
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.34\linewidth}\vspace{-10pt}
-	\hfill
-	\href{http://math.uci.edu/~ndonalds/math184/islam-sine2.html}{\includegraphics{islam-sine2}}
-\end{minipage}
-\medbreak
-
+The spherical sine rule quickly follows. Here is al-Wafā's argument (the modern approach is a little simpler, see Exercise \ref{exs:sinerule}). For the pictured triangle $\triangle ABC$:\par
 \begin{minipage}[t]{0.66\linewidth}\vspace{0pt}
-	Using this approach, al-Wafā could solve spherical triangles and thus compute the \emph{qibla.} As with his sine rule argument, his method required several auxiliary triangles and is difficult to follow.\bigbreak
-	Al-Bīrūnī further simplified matters by developing what is essentially the cosine rule. We apply his method to find the \emph{qibla} from a location $L$ (remember: our sphere (Earth!) has radius 1).\smallbreak
-	Let $M$ be Mecca and $N$ the north pole. The \emph{qibla} is $\textcolor{Green}{\beta}$, the initial bearing from $L$ to $M$. Our (known) initial data are the latitudes and longitudes of $L,M$, specifically:
+	\begin{itemize}\itemsep2pt
+	  \item Extend $\arcsm{AB}$ and $\arcsm{AC}$ to quarter-circles $\arcsm{AD}=\ang{90}=\arcsm{AE}$ so that $\triangle ADE$ has right-angles at $D$ and $E$.
+	  \item Since $ACEO$ and $ABDO$ define planes through the center of the sphere meeting at angle $A$, it follows that $\arcsm{DE}$ is an arc subtending the central angle $A$: that is $\arcsm{DE}=A$.
+	  \item Drop the perpendicular from $C$ to $H\in\arcsm{AD}$ and apply al-Wafā's theorem to the right-triangles $\triangle AHC$ and $\triangle ADE$:
+	  \[
+			\frac{\sin h}{\sin b} =\frac{\sin\arc{DE}}{\sin\arc{AE}} =\frac{\sin A}1 
+			\implies \sin h=\sin b\sin A
+		\]\vspace{-8pt}
+	\end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.32\linewidth}\vspace{0pt}
+	\hfill
+	\href{http://math.uci.edu/~ndonalds/math184/islam-sine2.html}{\includegraphics[alt={proving the sine rule}]{islam-sine2}}
+\end{minipage}
+\par
+Mirroring this construction on the $\cl{AC}$ side of $\triangle ABC$ yields $\sin h=\sin a\sin B$. Equating the $\sin h$ terms produces the first part of the main result.
+
+\begin{cor*}{Sine rule}{}
+	If $a,b,c$ are the side-lengths of a spherical triangle $\triangle ABC$, then
+	\[
+		\frac{\sin a}{\sin A}=\frac{\sin b}{\sin B}=\frac{\sin c}{\sin C}
+	\]
+\end{cor*}
+
+The final equality comes from dropping a second altitude, say from $B$. Armed with the sine rule, al-Wafā could solve spherical triangles and thus compute the \emph{qibla.} We omit his complete method, since it required several auxiliary triangles and is difficult to follow.
+
+
+\subsubsection*{Calculating the \emph{Qibla} II: Al-Bīrūnī and the Cosine Rule}
+
+\begin{minipage}[t]{0.71\linewidth}\vspace{-6pt}
+	Al-Bīrūnī further simplified matters by developing what is essentially the cosine rule. We apply his method to find the \emph{qibla} from a location $L$ (remember that our sphere has radius 1).\smallbreak
+	Let $M$ be Mecca and $N$ the north pole. The \emph{qibla} is $\mathcolor{mGreen}{\beta}$, the initial bearing from $L$ to $M$. Our known data are the latitudes and longitudes of $L$ and $M$, specifically:
 	\begin{itemize}\itemsep0pt
-	  \item $\alpha$ is the difference in the longitudes.
-	  \item $b,c$ are the \emph{colatitudes}\footnotemark{} of $M,L$ respectively. 
+	  \item The angle $\mathcolor{mRed}{\alpha}$ is the difference in the longitudes of $L$ and $M$.
+	  \item The arc-lengths $\mathcolor{mGreen}{b},\mathcolor{Blue}{c}$ are the \emph{colatitudes}\footnotemark{} of $M$ and $L$ respectively. 
+	\end{itemize}
+	We have SAS data for $\triangle NLM$. If this were a planar triangle, we'd use the cosine rule to compute $\mathcolor{mRed}{\arcsm{LM}}$ and then the sine rule to find $\mathcolor{mGreen}{\beta}$. Al-Bīrūnī does essentially this on the sphere\ldots
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.27\linewidth}\vspace{-15pt}
+	\hfill
+	\href{%
+		http://math.uci.edu/~ndonalds/math184/islam-qibla.html%
+	}{%
+		\includegraphics[alt={initial data for computing a bearing on a sphere}]{islam-qibla}%
+	}
+\end{minipage}
+
+\footnotetext{%
+	The \emph{colatitude} of a point, $\ang{90}$ minus its latitude, is measured southwards from the north pole. Since our model sphere has radius 1, the arc-lengths $b,c$ equal the colatitudes in radians.%
+}
+
+
+\pagebreak[3]
+
+
+The spherical cosine rule follows from Ptolemy's Theorem (pg.\,\pageref{pg:ptolemythm}) and, for us, a translation to modern notation and some trigonometric identities.\par
+\begin{minipage}[t]{0.67\linewidth}\vspace{0pt}
+	\begin{itemize}\itemsep1pt
+	  \item Let $P\in\arcsm{NM}$ have the same latitude as $L$ and extend $\mathcolor{Blue}{\arcsm{NL}}$ to $Q$ with the same latitude as $M$.
+	  \item By symmetry, $L,P,Q,M$ are \emph{coplanar.} The quadrilateral $LPQM$ lies on the intersection of a plane and a sphere: a \emph{circle}! Ptolemy's Theorem therefore applies:
+	  \[
+			\nm{LM}\nm{PQ} =\nm{LQ}\nm{PM}+\nm{LP}\nm{QM}
+		\]
+	  where distances are measured as straight lines (chords).
+		\item By symmetry ($\nm{PQ}=\nm{LM}$ and $\nm{LQ}=\nm{PM}$), this becomes
+		\[
+			\nm{LM}^2=\nm{LQ}^2+\nm{LP}\nm{QM}
+		\]
 	\end{itemize} 
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.32\linewidth}\vspace{0pt}
 	\hfill
-	\href{http://math.uci.edu/~ndonalds/math184/islam-qibla.html}{\includegraphics{islam-qibla}}
-\end{minipage}
-\medbreak
+	\href{%
+		http://math.uci.edu/~ndonalds/math184/islam-cosine.html%
+	}{%
+		\includegraphics[alt={creating four concircular points on the sphere}]{islam-cosine}%
+	}
+\end{minipage}\vspace{-15pt}
 
-\footnotetext{%
-	\emph{Colatitude} (equals $\ang{90}$ minus latitude) is measured southwards from the north pole. Since our model sphere has radius 1, the arc-lengths $b,c$ equal the colatitudes in radians.%
-}
+	\begin{itemize}\itemsep0pt
+	  \item The great-circle arc-lengths on the sphere may be found via the usual chord relations: e.g.,
+		\[
+			\nm{LM}=\crd\arc{LM} =2\sin\frac{\arc{LM}}2
+		\]
+		whence Ptolemy's theorem becomes a relation between \emph{arc-lengths}
+		\[
+			\sin^2\frac{\mathcolor{mRed}{\arc{LM}}}2
+			=\sin^2\frac{b-c}2 +\sin\frac{\arc{LP}}2\sin\frac{\arc{QM}}2
+		\]
+		\item	Bisect $\alpha$ to obtain two pairs of right-triangles and apply al-Wafā's theorem:
+		\begin{gather*}
+			\sin\frac{\mathcolor{mRed}{\alpha}}2 
+			=\frac{\sin\frac{\arc{LP}}2}{\sin\mathcolor{Blue}{c}}
+			=\frac{\sin\frac{\arc{QM}}2}{\sin\mathcolor{mGreen}{b}}
+			\implies
+			\sin^2\frac{\mathcolor{mRed}{\arc{LM}}}2
+			=\sin^2\frac{b-c}2 +\sin^2\frac{\mathcolor{mRed}{\alpha}}2 \sin\mathcolor{Blue}{c} \sin\mathcolor{mGreen}{b}\tag*{($\ast$)}
+		\end{gather*}
+		\item To complete the proof we apply the multiple-angle formulæ
+		\[
+			\sin^2\frac x2=\frac 12(1-\cos x)\qquad
+			\cos(b-c)=\cos b\cos c+\sin b\sin c
+		\]
+	\end{itemize}
 
-The cosine rule follows from Ptolemy's Theorem (pg.\,\pageref{pg:ptolemythm}). Extend $\arc{NL}$ to $Q$ with the same latitude as $M$. Similarly let $P\in \arc{NM}$ have the same latitude as $L$. By symmetry, $L,P,Q,M$ are \emph{coplanar,} whence the quadrilateral $\square LPQM$ lies on the intersection of a plane and a sphere: a circle! Measured as straight lines (chords) and using symmetry ($\nm{PQ}=\nm{LM}$ and $\nm{LQ}=\nm{PM}$), Ptolemy says
-\[
-	\nm{LM}\nm{PQ} =\nm{LQ}\nm{PM}+\nm{LP}\nm{QM} 
-	\implies \nm{LM}^2=\nm{LQ}^2+\nm{LP}\nm{QM}
-\]
-
-
-The great-circle arc-lengths on the sphere may be found from straight-line distances via the usual chord relations: e.g.,\par
-\begin{minipage}[t]{0.67\linewidth}\vspace{-12pt}
-	\def\halffrac#1{\scalebox{0.9}{$\displaystyle\frac{#1}{2}$}}
-	\[
-		\nm{LM}=\crd\arc{LM} =2\sin\halffrac{\textcolor{red}{\arc{LM}}}
-	\]
-	Ptolemy's theorem now becomes a relation between \emph{arc-lengths}
-	\[
-		\sin^2\halffrac{\textcolor{red}{\arc{LM}}}
-		=\sin^2\frac{b-c}2 +\sin\halffrac{\arc{LP}}\sin\halffrac{\arc{QM}}
-	\]
-	By bisecting $\alpha$ we obtain two pairs of right-triangles; al-Wafā's theorem tells us that
-	\begin{align*}
-		&\sin\frac{\textcolor{red}{\alpha}}2 
-		=\frac{\sin\frac{\arc{LP}}2}{\sin\textcolor{blue}{c}}
-		=\frac{\sin\frac{\arc{QM}}2}{\sin\textcolor{Green}{b}}\\[3pt]
-		\implies
-		&\sin^2\halffrac{\textcolor{red}{\arc{LM}}}
-		=\sin^2\frac{b-c}2 +\sin^2\frac{\textcolor{red}{\alpha}}2 \sin\textcolor{blue}{c} \sin\textcolor{Green}{b}\tag*{($\ast$)}
-	\end{align*}
-	To complete the proof we apply the multiple-angle formulæ
-	\[
-		\sin^2\frac x2=\frac 12(1-\cos x)\qquad
-		\cos(b-c)=\cos b\cos c+\sin b\sin c
-	\]
-
-	\begin{cor*}{Cosine rule}{}
+\begin{minipage}[t]{0.74\linewidth}\vspace{0pt}
+	\begin{cor*}{Cosine rule}
 	In a spherical triangle with sides $a,b,c$ and angle $\alpha$ opposite $a$, we have
 	\[
 		\cos a=\cos b\cos c+\sin b\sin c\cos\alpha
 	\]
 	\end{cor*}
+
+For our triangle of interest, $\mathcolor{mRed}{a=\arcsm{LM}}$. Given points $L,M$ (and thus $\mathcolor{mGreen}{b},\mathcolor{Blue}{c},\mathcolor{mRed}{\alpha}$), one uses the cosine rule to compute $a$ and then the sine rule to find the \emph{qibla} $\mathcolor{mGreen}{\beta}$ (whew!):
+\[
+	\frac{\sin \mathcolor{mGreen}{b}}{\sin\mathcolor{mGreen}{\beta}}
+	=\frac{\sin \mathcolor{mRed}{a}}{\sin\mathcolor{mRed}{\alpha}} 
+	\implies \sin\mathcolor{mGreen}{\beta}
+	=\frac{\sin\mathcolor{mRed}{\alpha}\sin\mathcolor{mGreen}{b}}{\sin \mathcolor{mRed}{a}}
+\]
 \end{minipage}
 \hfill
-\begin{minipage}[t]{0.32\linewidth}\vspace{0pt}
-	\hfill\phantomsection\label{pg:qiblacosinerule}
-	\href{http://math.uci.edu/~ndonalds/math184/islam-cosine.html}{\includegraphics[scale=0.95]{islam-cosine}}
-	\bigbreak
-	\href{http://math.uci.edu/~ndonalds/math184/islam-cosine2.html}{\includegraphics{islam-cosine2}}
+\begin{minipage}[t]{0.25\linewidth}\vspace{0pt}
+	\hfill
+	\href{%
+		http://math.uci.edu/~ndonalds/math184/islam-cosine2.html%
+	}{%
+		\includegraphics[alt={labeling a spherical triangle}]{islam-cosine2}%
+	}
 \end{minipage}
-\bigbreak
 
-For our triangle of interest $\textcolor{red}{a=\arc{LM}}$. Given points $L,M$ (and thus $b,c,\alpha$), one uses the cosine rule to compute $a$ and then the sine rule to find the \emph{qibla} $\beta$ (whew!):
-\[
-	\frac{\sin \textcolor{Green}{b}}{\sin\textcolor{Green}{\beta}}
-	=\frac{\sin \textcolor{red}{a}}{\sin\textcolor{red}{\alpha}} 
-	\implies \sin\textcolor{Green}{\beta}
-	=\frac{\sin\textcolor{red}{\alpha}\sin\textcolor{Green}{b}}{\sin \textcolor{red}{a}}
-\]
-\vspace{0pt}
-%Whew!\bigbreak
+
+\pagebreak[3]
+
 
 \begin{example*}{}{}
-	For fun, here is some real-world data. Mecca and London have, respectively, co-ordinates \ang{21}25'\,N, \ang{39}49'\,E and \ang{51}30'\,N, 8'\,W. This corresponds to
-	\[
-		\textcolor{red}{\alpha=\ang{39}57'},\qquad \textcolor{Green}{b=\ang{68}35'},\qquad \textcolor{blue}{c=\ang{38}30'}
-	\]
+	For fun, here is some real-world data. The longitude and latitude of London and Mecca are, respectively \ang{51}30'\,N, 8'\,W, and \ang{21}25'\,N, \ang{39}49'\,E. This corresponds to
+	\begin{gather*}
+		\mathcolor{mRed}{\alpha=\ang{39}49'+8'=\ang{39}57'}\\
+		\mathcolor{mGreen}{b=\ang{90}-\ang{21}25'=\ang{68}35'}\\
+		\mathcolor{Blue}{c=\ang{90}-\ang{51}30'=\ang{38}30'}
+	\end{gather*}
 	By al-Bīrūnī's cosine rule,
 	\[
-		\cos\textcolor{red}{a} =\cos \textcolor{Green}{\ang{68}35'}\cos \textcolor{blue}{\ang{38}30'}+\sin \textcolor{Green}{\ang{68}35'}\sin\textcolor{blue}{\ang{38}30'}\cos \textcolor{red}{\ang{39}57'} \implies \textcolor{red}{a=\ang{43.110}}
+		\cos\mathcolor{mRed}{a} 
+		=\cos \mathcolor{mGreen}{\ang{68}35'} \cos\mathcolor{Blue}{\ang{38}30'}
+		+\sin \mathcolor{mGreen}{\ang{68}35'} \sin\mathcolor{Blue}{\ang{38}30'} \cos\mathcolor{mRed}{\ang{39}57'} 
+		\implies \mathcolor{mRed}{a=\ang{43.110}}
 	\]
 	Since Earth's circumference is 24900 miles, the distance London $\to$ Mecca is $\frac{43.110\times 24900}{360}=2981$ miles. Al-Wafā's sine rule computes the \emph{qibla}
 	\[
-		\textcolor{Green}{\beta}=\ang{180} -\sin^{-1}\frac{\sin\textcolor{red}{\alpha}\sin\textcolor{Green}{b}}{\sin \textcolor{red}{a}}=\textcolor{Green}{\ang{118}59'}
+		\mathcolor{mGreen}{\beta}=\ang{180} 
+		-\sin^{-1}\frac{\sin\mathcolor{mRed}{\alpha}\sin\mathcolor{mGreen}{b}}{\sin\mathcolor{mRed}{a}}=\mathcolor{mGreen}{\ang{118}59'}
 	\]
 	where we subtracted from \ang{180} since the relevant angle is plainly obtuse. Check it yourself at the \href{http://www.gcmap.com/mapui?P=LON-QCA}{Great Circle Mapper} (the website uses airports for slightly different initial data).
 \end{example*}
@@ -625,21 +659,23 @@ Al-Wafā essentially proved the first; the others follow from trig identities ($
 \]
 The spherical Pythagorean Theorem is the special case $\cos c=\cos a\cos b$ \ ($C=\ang{90}$).\medbreak
 
-If the sphere has radius $r$, simply divide all lengths by $r$ before applying the results; e.g.,
+If the sphere has radius $r$, divide all arc-lengths by $r$ before applying the results, e.g.,
 \[
 	\sin A=\frac{\sin (a/r)}{\sin(c/r)}
 \]
 As $r\to\infty$, we have $\sin\frac ar\approx \frac ar$ and $\cos\frac ar\approx 1-\frac{a^2}{2r^2}$, which recover the flat (Euclidean geometry) versions of these statements.
 
 \begin{examples*}{}{}
-	\exstart On a sphere of radius 1, an equilateral triangle has side length $\frac\pi 3$. Splitting it in half creates two right-triangles with adjacent $\frac\pi 6$ and hypotenuse $\frac\pi 3$. The angles in the triangle are therefore
+	Here are two simple examples of spherical trigonometry at work.
+	\begin{enumerate}
+		\item On a sphere of radius 1, an equilateral triangle has side length $\frac\pi 3$. Splitting it in half creates two right-triangles with adjacent $\frac\pi 6$ and hypotenuse $\frac\pi 3$. The angles in the original equilateral triangle are therefore
 		\[
 			\alpha=\cos^{-1}\frac{\tan\frac\pi 6}{\tan\frac\pi 3}=\cos^{-1}\frac 13\approx \ang{70.53}
 		\]
-		The angle sum in the triangle is $3\alpha\approx\ang{211.59}$!
-		\begin{enumerate}\setcounter{enumi}{1}
-			\item An airfield is at $C$ and two planes are at $A$ and $B$. The bearings and distances to the aircraft are \ang{45}, 2000 miles, and \ang{90}, 4000 miles respectively. Find the distance between the aircraft.\smallbreak
-		This is just the cosine rule! We have a spherical triangle with sides 2000 and 4000 with angle \ang{45} between them. If $r=4000$ miles is Earth's radius, then
+		The angle sum in the triangle is $\Sigma_{\triangle}=3\alpha\approx\ang{211.59}$!
+		
+		\item An airfield is at $C$ and two planes are at $A$ and $B$. The bearings and distances to the aircraft are \ang{45}, 2000 miles, and \ang{90}, 4000 miles respectively. Find the distance between the aircraft.\smallbreak
+		This is just the cosine rule! We have a spherical triangle with sides 2000 and 4000 separated by \ang{45}. If $r\approx 4000$ miles is Earth's radius, then
 		\begin{gather*}
 			\begin{aligned}
 				\cos\frac cr &=\cos\frac{2000}r\cos\frac{4000}r+\sin\frac{2000}r\sin\frac{4000}r\cos\ang{45}\\
@@ -647,8 +683,8 @@ As $r\to\infty$, we have $\sin\frac ar\approx \frac ar$ and $\cos\frac ar\approx
 			\end{aligned}\\
 			\implies c=2833\text{ miles}
 		\end{gather*}
-		This is a little closer than the value (2947 miles) one would obtain from assuming a flat Earth!\smallbreak
-		Modern navigators typically use a slightly different, though equivalent, approach to minimize the error inherent in estimating cosine for small values: look up the \emph{haversine formula} if you're interested.
+		This is a little closer than the value (2947 miles) we'd obtain from assuming a flat Earth.\smallbreak
+		Modern calculations use a slightly different, though equivalent, approach to minimize the error inherent in estimating cosine for small values: look up the \emph{haversine formula} if you're interested.
 	\end{enumerate}
 \end{examples*}
 
@@ -656,72 +692,91 @@ As $r\to\infty$, we have $\sin\frac ar\approx \frac ar$ and $\cos\frac ar\approx
 
 
 \begin{exercises}{}{}
+	\hangindent\leftmargini\emph{Key concepts: \ Improved trigonometric tables and functions, \ Spherical trigonometry (\emph{qibla} and navigation)}
+
 
 	\begin{enumerate}
 	  \item A right-isosceles triangle on the surface of a unit sphere has equal legs of length $\frac\pi 4$. Find the length of the hypotenuse and the sum of the angles in the triangle. 
 	  
-	  \item Explain the observation on page \pageref{pg:sineconcave} that
+	  
+	  \item Explain the observation on page \pageref{pg:sineconcave}, that the downwards concavity of the sine function proves
 		\[
 			\ang 0<\alpha-\beta<\alpha+\beta<\ang{90}
 			\implies\sin(\alpha+\beta)-\sin\alpha<\sin\alpha-\sin(\alpha-\beta)
 		\]
-		is the downwards concavity of the sine function.
 		
-		\item Suppose we have a spherical triangle (sphere radius 1) as on page \pageref{pg:qiblacosinerule} with data
+		
+		\item Suppose we have a spherical triangle (sphere radius 1) with data
 		\[
 			c=\ang{30},\quad b=\ang{60},\quad \alpha=\ang{60}
-		\]
+		\]\vspace{-5pt}
 		\begin{enumerate}
 		  \item Use the cosine rule to find $a$.
 		  \item Compute the remaining angles in the triangle. What do you observe about the sum of the angles $\alpha+\beta+\gamma$?
 		\end{enumerate}
 	
+	
 	  \item%[9-34*]
 		Determine the \emph{qibla} for Rome (latitude \ang{41}53'\,N, longitude \ang{12}30'\,E).\par
 		Repeat for the UCI campus (\ang{33}39'\,N, \ang{117}51'\,W).
-	  
-		\item%[9-36*]
-		Al-Bīrūnī devised a method for determining the radius $r$ of the earth by sighting the horizon from the top of a mountain of known height $h$. He would measure $\alpha$, the angle of depression from the horizontal to which one sights the apparent horizon. Show that\par
-	  \begin{minipage}[t]{0.7\linewidth}\vspace{0pt}
-	  \[
-	  	r=\frac{h\cos\alpha}{1-\cos\alpha}
-	  \]
-	  In a particular case, al-Bīrūnī measures $\alpha=34'$ from a mountain of height $652;3,18$ cubits. Assuming that a cubit equals $18''$, convert your answer to miles and compare with the modern value. Discuss the efficacy of this method.
-	  \end{minipage}
-	  \hfill
-	  \begin{minipage}[t]{0.29\linewidth}\vspace{0pt}
-	  	\hfill
-	  	\includegraphics[]{hw-albiruni}
-	  \end{minipage}
-	  
-	  
-		\item On a sphere of radius $r$, Pythagoras' Theorem may be stated\par
-		\begin{minipage}[t]{0.7\linewidth}\vspace{0pt}
-			\[
-				\cos\frac cr=\cos\frac ar\cos\frac br \tag{$\ast$}
-			\]
-			where $c$ is the hypotenuse and $a,b$ the other side-lengths. Use the Maclaurin series $\cos x=\sum\limits_{n=0}^\infty\frac{(-1)^nx^{2n}}{(2n)!}$ to expand ($\ast$) to degree 4.\par
-			Suppose $a,b$ are constant so that $c$ is a function of $r$. Prove that $\displaystyle\lim\limits_{r\to\infty}c^2=a^2+b^2$. Why does this make sense?
-		\end{minipage}
-		\hfill
-		\begin{minipage}[t]{0.29\linewidth}\vspace{0pt}
-		  \hfill\includegraphics[]{spheretri3}
-		\end{minipage}
-  
-  
+	\end{enumerate}
+	
 
-  		\item Construct a triangle on the surface of a sphere of radius $r$ by taking two lines of longitude making an angle $\theta$ from the north pole to the equator. Prove that the area of the triangle is\par
-  		  	\begin{minipage}[t]{0.7\linewidth}\vspace{0pt}
+	\begin{minipage}[t]{0.73\linewidth}\vspace{0pt}
+		\begin{enumerate}[resume]
+			\item%[9-36*]
+			Al-Bīrūnī devised a method for determining the radius $r$ of the earth by sighting the horizon from the top of a mountain of known height $h$. He would measure $\alpha$, the angle of depression from the horizontal to which one sights the apparent horizon. Show that
+		  \[
+		  	r=\frac{h\cos\alpha}{1-\cos\alpha}
+		  \]
+		  In a particular case, al-Bīrūnī measures $\alpha=34'$ from a mountain of height $652;3,18$ cubits. Assuming that a cubit equals $18''$, convert your answer to miles and compare with the modern value. Discuss the efficacy of this method.
+		\end{enumerate}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.25\linewidth}\vspace{0pt}
+		\hfill
+	  \includegraphics[alt={measuring the height of the earth by sighting the horizon from a tall mountain}]{hw-albiruni}
+	\end{minipage}
+	
+	
+	\begin{enumerate}[resume]	    	
+  	\item\label{exs:sinerule} Recall in al-Wafā's Theorem that the ratio equals the sine of the angle at $A$. Use this observation on $\triangle ABC$ with the dropped perpendicular $\cl{CH}$ to obtain a cheaper proof of the sine rule.
+  \end{enumerate}
+
+
+  \begin{minipage}[t]{0.73\linewidth}\vspace{-5pt}
+  	\begin{enumerate}[resume]	  	  
+	  	\item\label{exs:spherepythag} On a sphere of radius $r$, Pythagoras' Theorem may be stated		
+			\[
+				\cos\frac cr=\cos\frac ar\cos\frac br
+			\]
+			where $c$ is the hypotenuse and $a,b$ the other side-lengths.
+			\begin{enumerate}
+			  \item Use the Maclaurin series $\cos x=\sum\limits_{n=0}^\infty\frac{(-1)^nx^{2n}}{(2n)!}$ to expand this result to degree 4.
+			  \item Suppose $a,b$ are constant so that $c$ is a function of $r$. Prove that $\displaystyle\lim\limits_{r\to\infty}c^2=a^2+b^2$. Why does this make sense?
+			\end{enumerate}
+  	\end{enumerate}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.25\linewidth}\vspace{-5pt}
+		\hfill\includegraphics[alt={a spherical triangle}]{spheretri3}
+	\end{minipage}
+	\bigbreak
+
+
+  \begin{minipage}[t]{0.73\linewidth}\vspace{0pt}
+  	\begin{enumerate}[resume]	   
+  		\item Construct a triangle on the surface of a sphere of radius $r$ by taking two lines of longitude making an angle $\theta$ from the north pole to the equator. Prove that the area of the triangle is
   		\[
   			A=r^2\theta
   		\]
-  		What does Pythagoras ($\ast$) say for this triangle?\par
+  		What does Pythagoras' (Exercise \ref{exs:spherepythag}) say for this triangle?\par
   		(\emph{Hint: What fraction of the sphere is covered by the triangle?})
-  	\end{minipage}
-  	\hfill
-  	\begin{minipage}[t]{0.29\linewidth}\vspace{0pt}
-  		\hfill\includegraphics[]{spheretri}
-  	\end{minipage}
-	  
-	\end{enumerate}
+ 		\end{enumerate}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.25\linewidth}\vspace{0pt}
+  	\hfill\includegraphics[alt={finding the area of a spherical triangle}]{spheretri}
+  \end{minipage}
 \end{exercises}
+
