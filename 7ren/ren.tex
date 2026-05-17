@@ -478,91 +478,107 @@ The remaining key results regarding solutions of polynomials also appeared aroun
 
 %\clearpage
 
-\iffalse
 
-\subsection{Astronomy and Trigonometry in the Renaissance}
 
-Distinctly European progress in trigonometry came courtesy of Johannes Müller (a.k.a.{} Regiomontanus,\footnote{His grand-sounding name is a latinization of his birthplace Königsberg (\emph{King's Mountain}), Bavaria, Germany.} 1436--1476). \emph{De Triangulis Omnimodius} (\emph{Of all kinds of triangles,} 1463) provided an axiomatic update of Ptolemy's \emph{Almagest} and its Islamic improvements. Though the title refers to triangles, his approach remains circle-based (chords and half-chords). Regiomontanus was a renowned astronomer; his tracking of a comet from late 1471 to spring 1472 provided controversial evidence that objects could move between the, supposedly fixed, heavenly spheres of ancient Greek theory.\smallbreak
+\subsection{Astronomy, Trigonometry \& Kinematics in the Renaissance}
 
-Domenico Novara (1454--1504), Regiomontanus' student, inherited much of his unpublished work. He became a student of Pacioli in Florence and an astronomer at the University of Bologna, though he is now perhaps best known as adviser to a young Pole, Nicolaus Copernicus (1473--1543), who studied in Bologna from 1496 with the ostensible intent of joining the priesthood\ldots\par
+\subsubsection*{Early European Trigonometry to Copernicus}
 
-\begin{minipage}[t]{0.69\linewidth}\vspace{-3pt}
-	Copernicus concluded that Ptolemy's geocentric model could not be reconciled with astronomical observation. \emph{De revolutionibus orbium celestium} (\emph{On the revolutions of the heavenly spheres}), published a year after his death, describes how to compute within a \emph{heliocentric} (\emph{sun-centered}) model. This, Copernicus believed, was the obvious solution to the problem of \emph{retrograde motion} that had plagued the ancient Greeks.\footnotemark{}\smallbreak
-	The animation demonstrates Copernicus' solution: with the sun at the center, the retrograde motion of \textcolor{red}{Mars} and \textcolor{Green}{Jupiter} are easily explained. The \textcolor{orange}{outer circle} represents the `fixed stars' against which the motion of the planets are observed.
+Early trigonometry came to Europe via translations of Ptolemy's \emph{Almagest} and its Islamic improvements. In 1463, Johannes Müller (a.k.a.{} Regiomontanus,\footnote{%
+	His grand-sounding name is a latinization of his birthplace: Königsberg (\emph{King's Mountain}), Bavaria, Germany.%
+} 1436--76) provided an axiomatic update to this canon in \emph{De Triangulis Omnimodius} (\emph{Of all kinds of triangles}). Though the title mentions triangles, his approach was that of the ancients: circle-based, using chords and half-chords. Regiomontanus was a renowned astronomer; his tracking of a comet from late 1471 to spring 1472 provided evidence, at the time controversial, that objects could move between the ``fixed'' heavenly spheres of ancient Greek theory.
+\smallbreak
+
+Domenico Novara (1454--1504), Regiomontanus' student, inherited much of his unpublished work. He also studied with Luca Pacioli in Florence and became an astronomer at the University of Bologna. He is best known, however, for advising a young Pole, Nicolaus Copernicus (1473--1543), who studied in Bologna from 1496.\smallbreak
+
+Copernicus' ostensible purpose was to join the priesthood, but his interests drew him to mathematics and astronomy. His investigations forced him to conclude that Ptolemy's geocentric model could not be reconciled with astronomical observation. His magnum opus, \emph{De revolutionibus orbium celestium} (\emph{On the revolutions of the heavenly spheres}), was published a year after his death. Within, Copernicus describes how one would calculate (chords and angles) within a \emph{heliocentric} (\emph{sun-centered}) model. This approach, Copernicus believed, was the obvious solution to the problem of \emph{retrograde motion} that had plagued the ancient Greeks.\footnotemark{}\par
+
+\begin{minipage}[t]{0.69\linewidth}\vspace{-6pt}
+%  Each step = 3 days\\
+%  Outer circle = fixed stars\\
+%  
+%  \begin{tabular}{l|l|l|l}
+%  Planet&Color&Period&Semi-major axis\\\hline
+%  Earth&Blue&1 year&1 Astronomical Unit\\
+%  Mars&Red&1.88 years&1.52 AU\\
+%  Jupiter&Green&11.86 years&5.2 AU
+%  \end{tabular}
+ 	The animation demonstrates the heliocentric model, essentially as upgraded later by Kepler (Copernicus proposed circular rather than elliptic motion). Viewed from \textcolor{Blue}{Earth}, the retrograde motion of \textcolor{mRed}{Mars} and \textcolor{mGreen}{Jupiter} are easily explained. The \textcolor{Brown}{outer circle} represents the `fixed stars' against which the motion of the planets are observed.	Each step corresponds to three days of motion. Retrograde motion is observed when Earth, being closer to the sun, catches and overtakes Mars or Jupiter. This is most obvious with Mars since the orbits are so similar in size.
 \end{minipage}
 \hfill
-\begin{minipage}[t]{0.3\linewidth}\vspace{-8pt}
-	\flushright\href{%
+\begin{minipage}[t]{0.3\linewidth}\vspace{-18pt}
+	\hfill
+	\href{%
 		http://math.uci.edu/~ndonalds/math184/retrograde.html%
-	}{\includegraphics[scale=0.7]{retrograde-movie}}
-\end{minipage}\medbreak
+	}{%
+		\includegraphics[alt={linked animation of retrograde motion}]{retrograde-movie}%
+	}
+\end{minipage}
+\medbreak
 
-\footnotetext{Copernicus wasn't the first to suggest such a model. Several ancient Greek scholars embraced heliocentrism, with Aristarchus of Samos (c.\,310--230\BC) credited with its first presentation. However, Aristarchus' views were rejected by the mainstream Greeks, and it is likely Copernicus never encountered his work.}
+\footnotetext{%
+	Copernicus wasn't the first to suggest a heliocentric model. Several ancient Greek scholars embraced the idea; Aristarchus of Samos (c.\,310--230\BC) is credited with its first serious presentation. Aristarchus' views, however, were rejected by mainstream Greek scholars, and it is likely Copernicus never encountered his work.%
+}
 
-% Each step = 3 days\\
-% Outer circle = fixed stars\\
-% 
-% \begin{tabular}{l|l|l|l}
-% Planet&Color&Period&Semi-major axis\\\hline
-% Earth&Blue&1 year&1 AU\\
-% Mars&Red&1.88 years&1.52 AU\\
-% Jupiter&Green&11.86 years&5.2 AU
-% \end{tabular}
+Copernicus' work on heliocentrism is often described as a revolution, though it was not perceived so at the time. \emph{De revolutionibus} was dedicated to the Pope, welcomed by the Church, and used by Vatican astronomers to aid in calculation. It was a difficult text which resulted in a narrow readership; his work was therefore unthreatening to contemporary dogma. Moreover, Copernicus did not present heliocentrism as reality nor did he advocate for overturning long-held beliefs; in his presentation, heliocentrism is merely a simple model that seems to produce good predictions. The fact, however, that he did not publish during his lifetime suggests that he knew that he feared a revolution was coming. Within a century, the Copernican theory had found its bulldog in Galileo, and conflict between Science and the Church became unavoidable.
 
 
-Copernicus' work is now described as a revolution, though it was not perceived so at the time. \emph{De revolutionibus} was dedicated to the Pope, welcomed by the Church, and used by Vatican astronomers to aid in calculation. The difficulty and narrow readership of his work made it unthreatening to contemporary dogma. Copernicus did not present heliocentrism as reality nor did he advocate for overturning long-held beliefs. Within a century, however, the Copernican theory had found its bulldog in Galileo, and conflict between science and the Church became unavoidable.
+\pagebreak[3]
 
 
-
-
-\begin{minipage}[t]{0.67\linewidth}\vspace{0pt}
-	\boldsubsubsection{Trigonometry is finally about triangles!}
+\subsubsection*{Trigonometry is finally about triangles!}
 	
-	Georg Rheticus (1514--1574) defined trigonometric functions purely in terms of triangles, referring to the \emph{perpendiculum} (sine) and \emph{basis} (cosine) of a right-triangle with fixed hypotenuse. Rheticus was a student of Copernicus and helped posthumously to publish his work.\smallbreak
-	In 1595, Bartholomew Pitiscus finally introduced the modern term with his book \emph{Trigonometriæ}, in which he purposefully sets out to solve problems related to triangles. The picture is the title page from the second edition (1600---MDC in Roman numerals). Both Rheticus and Pitiscus had problems which look very familiar to modern readers, such as solving for unknown sides of triangles.
+\begin{minipage}[t]{0.63\linewidth}\vspace{-10pt}
+	Georg Rheticus (1514--1574) was a student of Copernicus, who helped posthumously to publish the latter's work. In the late 1500s, Rheticus started defining trigonometric functions purely in terms of triangles, referring to the \emph{perpendiculum} (sine) and \emph{basis} (cosine) of a right-triangle with fixed hypotenuse.
+	\medbreak
+	The modern term finally arrives in 1595. In \emph{Trigonometriæ}, Bartholomew Pitiscus purposefully sets out to solve problems related to triangles. Pictured is the title page from part of the second edition (1600---MDC in Roman numerals): note also the subtitle, which translates as ``The dimensions of triangles.'' Both Rheticus and Pitiscus had problems which look very familiar to modern readers, such as solving for unknown sides of triangles.
 \end{minipage}
 \hfill
-\begin{minipage}[t]{0.32\linewidth}\vspace{-3pt}
-	\flushright\includegraphics[scale=0.38]{trigonometria}
-\end{minipage}\par
-\goodbreak
+\begin{minipage}[t]{0.35\linewidth}\vspace{-30pt}
+	\hfill\includegraphics[alt={title page from trigonometry},scale=0.45]{trigonometria}
+\end{minipage}
 
 
-
+\paragraph{Example (Pitiscus)}\label{ex:pitiscus}
+	
+A field has five straight edges of lengths 7, 9, 10, 4 and 17 in order. The distance between the first and third vertices is 13, and between the third and fifth 11. What is the area of the field?\par
 \begin{minipage}[t]{0.58\linewidth}\vspace{0pt}
-	\boldinline{Example (Pitiscus)}\phantomsection\label{ex:pitiscus}
-	
-	A field has five straight edges of lengths 7, 9, 10, 4 and 17 in order. The distance from the first to third vertex is 13 and from the third to fifth is 11. What is the area of the field?\smallbreak
-	
-	The problem can be solved easily using Heron's formula, but Pitiscus opts for trigonometry. We give a modernized version that depends on applying the law of cosines to the three large triangles.
+	The problem can easily be solved using Heron's formula, but Pitiscus opts for trigonometry. Here is a modernized version that depends on applying the law of cosines to the three large triangles.
 \end{minipage}
 \hfill
-\begin{minipage}[t]{0.4\linewidth}\vspace{0pt}
-	\flushright\includegraphics[scale=0.9]{ren-pitiscus}
-\end{minipage}\smallbreak
+\begin{minipage}[t]{0.4\linewidth}\vspace{-20pt}
+	\hfill\includegraphics[alt={finding the area of a complicated field}]{ren-pitiscus}\vspace{-20pt}
+\end{minipage}
 
 \begin{gather*}
-	\cos\alpha=\frac{7^2+13^2-9^2}{2\cdot 7\cdot 13} =\frac{137}{182}\qquad
-	\cos\beta=\frac{17^2+13^2-11^2}{2\cdot 17\cdot 13} =\frac{337}{442}\\
+	\cos\alpha=\frac{7^2+13^2-9^2}{2\cdot 7\cdot 13} =\frac{137}{182}\\[5pt]
+	\cos\beta=\frac{17^2+13^2-11^2}{2\cdot 17\cdot 13} =\frac{337}{442}
+	\qquad
 	\cos\gamma=\frac{4^2+11^2-10^2}{2\cdot 4\cdot 11} =\frac{37}{88}
 \end{gather*}
-The values of $\alpha,\beta,\gamma$ and therefore the altitudes $a,b,c$ of the three major triangles could be read off a table, or found exactly using Pythagoras':
+The values of $\alpha,\beta,\gamma$ and therefore the altitudes $a,b,c$ of the three major triangles could be read off a table, or computed exactly using Pythagoras':
 \begin{gather*}
-	a=7\sin\alpha=7\sqrt{1-\cos^2\!\alpha}=\frac 7{182}\sqrt{182^2-137^2} =\frac 3{26}\sqrt{1595},\\
-	b=13\sin\beta=\frac{1}{34}\sqrt{81795},\qquad c=4\sin\gamma =\frac 5{22}\sqrt{255}
+	a=7\sin\alpha=7\sqrt{1-\cos^2\alpha}=\frac 7{182}\sqrt{182^2-137^2} =\frac 3{26}\sqrt{1595}\\
+	b=13\sin\beta=\frac{1}{34}\sqrt{81795}\qquad c=4\sin\gamma =\frac 5{22}\sqrt{255}
 \end{gather*}
-The total area is easily computed:
+The total area is therefore
 \[
 	A=\frac 12(13a+17b+11c)=\frac 14\left(3\sqrt{1595} + \sqrt{81795} + 5\sqrt{255}\right) \approx 121.4
 \]
 
-\boldsubsubsection{Kepler's Laws}\phantomsection\label{pg:keplerslaws}
 
-Johannes Kepler (1571--1630) was a student of Tycho Brahe\footnote{Tycho Brahe (1546--1601) was a Danish astronomer who worked for Austro-Hungarian Emperor Rudolph II in Prague for 25 years, producing a wealth of accurate astronomical measurements. While these helped burnish the Copernican theory, he is also known for his 1572 observation of a \emph{nova} (a \emph{new} star that later disappeared, now understood to be the death of a distant star), and then a comet in 1577; both provided yet more evidence for the changeability of the heavens.} for the last two years of Brahe's life. He inherited Brahe's position, decades-worth of astronomical data, and his philosophy on the importance of observation-based theory. Kepler also embraced the mystical Pythagorean view that nature reflects harmony, a belief that partly drove his scientific pursuits. To Kepler, any observation of a natural, simple ratio was something of great import. For example, in observing that the daily movement of Saturn at its furthest point from the sun was roughly $4/5$ of that at its nearest point, his temptation was to assume that `roughly' must be `exactly.'\par
+\pagebreak[3]
+
+
+\subsubsection*{Kepler's Laws of Planetary Motion}\label{pg:keplerslaws}
+
+Johannes Kepler (1571--1630) was a student of Tycho Brahe\footnote{%
+	Tycho Brahe (1546--1601) was a Danish astronomer who worked for Austro-Hungarian Emperor Rudolph II in Prague for 25 years, producing a wealth of accurate astronomical measurements. While these helped burnish the Copernican theory, he is also known for his 1572 observation of a \emph{nova} (a \emph{new} star that later disappeared, now understood to be the death of a distant star), and then a comet in 1577; both provided yet more evidence for the changeability of the heavens.%
+} for the last two years of Brahe's life. He inherited Brahe's position, decades-worth of astronomical data, and his philosophy on the importance of observation-based theory. Kepler also embraced the mystical Pythagorean view that nature reflects harmony, a belief that partly drove his scientific pursuits. To Kepler, any observation of a natural, simple ratio was something of great import. For example, in observing that the daily movement of Saturn at its furthest point from the sun was roughly $4/5$ of that at its nearest point, his temptation was to assume that `roughly' must be `exactly.'\par
 
 \begin{minipage}[t]{0.66\linewidth}\vspace{-3pt}
 	Thanks to Brahe, Kepler had data on roughly thirteen orbits of Mars and two of Jupiter. From these data, he posited three laws.
-	\begin{enumerate}\itemsep0pt
+	\begin{enumerate}
 	  \item Planets move in ellipses with the sun at one focus.
 		\item The orbital radius sweeps out equal areas in equal times. In the picture, the sectors all have the same area and the planet moves more slowly the further it is from the sun.
 		\item The square of the orbital period is proportional to the cube of the semi-major axis of the ellipse: $T^2\propto a^3$.
@@ -570,22 +586,22 @@ Johannes Kepler (1571--1630) was a student of Tycho Brahe\footnote{Tycho Brahe (
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.32\linewidth}\vspace{-10pt}
-	\flushright\includegraphics[scale=0.85]{ren-kepler}
+	\hfill\includegraphics[alt={},scale=0.85]{ren-kepler}
 \end{minipage}
-\goodbreak
+
 
 
 Kepler's laws are empirical observations rather than the result of mathematical proof. However, the process of their discovery demonstrates Kepler's tremendous mathematical abilities.
 
 \begin{description}
   \item[Starting point] Kepler began by assuming the essential correctness of the Copernican model in that all planets exhibit uniform circular motion round the sun.\par
-	\begin{minipage}[t]{0.65\linewidth}\vspace{-5pt}
+	%\begin{minipage}[t]{0.65\linewidth}\vspace{-5pt}
   	\item[Orbital Estimation] Kepler's data told him the \emph{direction} to each planet, but not the \emph{distance,} though his Copernican assumption allowed him to estimate the \emph{relative distance}.\footnotemark{} For example, using the direction from \textcolor{Green}{Earth} to \textcolor{red}{Mars} at equally spaced times and by drawing circles of different radii for possible orbits of Mars, he was able estimate an orbit where Mars' motion would also be uniform. This required an enormous number of trigonometric calculations: each measurement of planetary longitude/latitude \emph{relative to Prague} had to be converted to measurements relative to the sun. Everything was subject to errors of estimation.
-	\end{minipage}
-	\hfill
-	\begin{minipage}[t]{0.33\linewidth}\vspace{-6pt}
-		\flushright\includegraphics[scale=0.75]{ren-kepler3}
-	\end{minipage}\par
+% 	\end{minipage}
+% 	\hfill
+% 	\begin{minipage}[t]{0.33\linewidth}\vspace{-6pt}
+		\hfill\includegraphics[alt={},scale=0.75]{ren-kepler3}
+	%\end{minipage}\par
 
   \item[Modifying the model] Kepler altered his model to reflect Earth's slightly non-circular orbit. He first tried an equant model (in the style of the ancient Greeks), offsetting the center of the orbit slightly from the sun. Despite this, he failed to fit his data for Mars to pure circular motion.
   
@@ -600,50 +616,70 @@ Kepler's laws are empirical observations rather than the result of mathematical 
 
 Kepler's discoveries were revealed over many years in several texts, and his magnum opus \emph{Epitome astronomiæ Copernicanæ} was published in 1621. Within a century Issac Newton had provided a mathematical justification of Kepler's laws based on the theory of calculus and his own axioms: an inverse square law for gravitational acceleration and his own three laws of motion.
 
-\goodbreak
 
 
-\boldsubsubsection{A Religious Interlude: Protestantism, the Counter-Reformation and Calendar Reform}
 
-In 1563, Pope Gregory began the Catholic Church's push-back against the spread of Protestantism,\footnote{Martin Luther's \emph{Ninety-five Theses} (1517) is generally considered the start of the Protestant Reformation. Europe saw several gruesome religious wars over the next 150 years as various countries broke from Catholicism and Rome.} the \emph{counter-reformation.} Of particular interest to science and mathematics was the newly created \emph{Index Librorum Prohibitorum,} a list of books contradicting Church doctrine. This was also a response to the new technology of mass-printing, which made disseminating controversial new ideas easier. Heliocentrism came quickly under attack: Kepler's book was banned immediately upon publication in 1621. However, his location far from Rome meant that Kepler and his ideas were relatively safe. The ultimate result of Gregory's crackdown was the slow ceding of scientific power to northern (Protestant) Europe where papal diktat had no effect. \smallbreak
+\subsubsection*{A Religious Interlude: Protestantism, the Counter-Reformation \& Calendar Reform}
 
-In contrast to the anti-scientific book-banning fervor of the counter-reformation, Pope Gregory is also famous for shepherding an astounding scientific achievement: calendar reform. By 1500, astronomers knew the solar year to be roughly $11\frac 14$ minutes shorter than the $365\frac 14$ days of the Julian calendar.\footnote{Named for Julius Caesar, the Julian year has 365 days with a leap-day added every four years.} For 1200 years, Easter had been decreed to be the Sunday after the first full moon after the vernal equinox (March 20\th/21\st), but by 1500 the equinox was happening 10--11 days earlier. The impetus to correct the date of Easter meant that calendar reform and astronomical modelling were now an important Church project.\smallbreak
+By the mid 1500s, a new brand of Christianity was on the rise: Protestantism.\footnote{%
+	Martin Luther's \emph{Ninety-five Theses} (1517) is generally considered the start of the Protestant Reformation. Over the next 150 years, Europe saw multiple gruesome religious wars as various countries broke from Catholicism and Rome. Over the following centuries, Protestantism, with its emphasis on a personal relationship with God unmediated by central authority, helped make European and North-American culture more individualistic and less communal.%
+}
+In 1563, in an attempt to push back against the spread of this new religion, Pope Gregory unleashed the \emph{counter-reformation.} Of particular interest to science and mathematics was the newly created \emph{Index Librorum Prohibitorum,} a list of books contradicting Church doctrine. This was also a response to the new technology of mass-printing, which had made dissemination of controversial new ideas easier. Heliocentrism came quickly under attack: Kepler's book was banned immediately upon publication in 1621, though his location far from Rome ensured his relative safety. Indeed, the ultimate result of Gregory's crackdown was the slow ceding of scientific power to northern (Protestant) Europe where papal diktat had less effect.
+\medbreak
 
-A century of effort\footnote{Pope Sixtus IV tried to recruit Regiomontanus to the cause in 1475, though the mathematician died first. Copernicus was among those invited to consider proposals in the early 1500s, though he distanced himself, perhaps because he knew that his developing heliocentric ideas would not be accepted.} resulted in the \emph{Gregorian calendar} (designed by Aloysius Lilius and Christopher Clavius). Gregory imposed the new calendar in all Catholic countries in 1582. The 10 day deficit was corrected by eliminating October 5\th--14\th{} 1582. To prevent the error re-occurring, the computation of leap-years was also changed: centuries are now leap-years only if divisible by 400, thus 1600 was a leap year, but 1900 was not. The Gregorian calendar is astonishingly accurate, losing only one day every 3000 years. Since it emanated from Rome, many Protestant parts of Europe took decades if not centuries to adopt the new calendar. The Eastern Orthodox Church still computes Easter using the Julian calendar, which is now 13 days behind the Gregorian.
+In contrast to the anti-scientific book-banning fervor of the counter-reformation, Pope Gregory is also famous for shepherding an astounding scientific achievement: calendar reform. By 1500, astronomers knew the solar year to be roughly $11\frac 14$ minutes shorter than the $365\frac 14$ days in the Julian calendar.\footnote{%
+	Named for Julius Caesar, the Julian year has 365 days with a leap-day added every four years.%
+}
+For 1200 years, Easter had been defined as the Sunday after the first full moon after the vernal equinox, with this last expected around March 20\th/21\st. By 1500, however, the equinox was happening around March 10\th. The Church was concerned that Easter was being celebrated on the wrong day, and that other religious festivals were also mis-dated. The impetus to correct the date of Easter meant that calendar reform and astronomical modeling became an important Church project.\smallbreak
+
+A century of effort\footnote{%
+	Pope Sixtus IV tried to recruit Regiomontanus to the cause in 1475, though the mathematician died before being able to contribute. Copernicus was among those invited to consider proposals in the early 1500s, though he distanced himself, perhaps because he knew that his developing heliocentric ideas would not be accepted. The final design was largely worked out by Aloysius Lilius and Christopher Clavius.%
+}
+resulted in the modern \emph{Gregorian calendar}. Gregory imposed the new calendar in all Catholic countries in 1582. The ten-day deficit was corrected by eliminating October 5\th--14\th, 1582. To prevent the error from re-occurring, the computation of leap-years was also changed: centuries are now leap-years only when divisible by 400 (thus 1600 was a leap year, but 1900 was not). The Gregorian calendar is astonishingly accurate, losing only one day every 3000 years. Since it emanated from Rome, many Protestant parts of Europe took decades or centuries to adopt the new system. The Eastern Orthodox Church still computes Easter using the Julian calendar, which is now 13 days behind the Gregorian.\footnote{%
+	Because the computation of Easter is downstream from the calendar equinox (March 21\st), Orthodox Easter is between one and five weeks after Gregorian Easter.%
+}
+
+\pagebreak[3]
 
 
-\boldsubsubsection{Galileo Galilei (1564--1642)}
+\subsubsection*{Galileo Galilei (1564--1642)}\label{pg:galileo}
 
-Based in northern Italy, Galileo was close to the center of Church power; unlike Copernicus and Kepler, he openly challenged its orthodoxy. While undoubtedly a great mathematician, he is more importantly considered the father of the scientific revolution for his reliance on experiment and observation. He famously observed Jupiter's moons with a telescope of his own invention, noting that objects orbiting an alien body was counter to Ptolemaic theory. Skeptics, when shown this image, preferred to assert that it must be somewhere \emph{inside} the telescope!\smallbreak
+Based in northern Italy, Galileo was close to the center of Church power. Unlike Copernicus and Kepler, he openly challenged its orthodoxy. While undoubtedly a great mathematician, he is more importantly considered the father of the scientific revolution due to his reliance on experiment and observation. He famously observed Jupiter's moons with a telescope of his own invention, noting that objects orbiting an alien body ran counter to Ptolemaic theory. Skeptics, when shown these images, preferred to assert that it must be somewhere \emph{inside} the telescope!\smallbreak
 
-In 1632 Galileo published \emph{Dialogue Concerning the Two Chief World Systems,} a Socratic discussion between three characters: Salviati argued for Copernicus, Simplicio was for Ptolemy, and Sagredo was an independent questioner. The character of Simplicio was provocatively modeled on conservative philosophers who refused to consider experiments and bore a notable resemblance to the Pope. Salviati almost always came out on top and Simplicio was made to appear foolish. The text resulted in Galileo's conviction for heresy; all his publications, past and future, were banned, and he spent the remainder of his life under house arrest.\smallbreak
+In 1632 Galileo published \emph{Dialogue Concerning the Two Chief World Systems,} a Socratic discussion between three characters: Salviati argued for Copernicus, Simplicio was for Ptolemy, and Sagredo was an independent questioner. The character of Simplicio was provocatively modeled on conservative philosophers who refused to consider experiments; even worse, he bore a notable resemblance to the Pope. Salviati almost always came out on top and Simplicio was made to appear foolish. The text contributed to Galileo's conviction for heresy; all his publications, past and future, were banned, and he spent the remainder of his life under house arrest.\smallbreak
 
-Despite Church efforts, Galileo's works continued to be distributed by his supporters and he continued working. His most important scientific text, \emph{Discourses Concerning Two New Sciences} (materials science and kinematics) was smuggled out of Italy to be published in Holland in 1638. In this book he resurrects his characters from \emph{Two Chief World Systems} and famously refutes Aristotle's claim that heavier objects fall more rapidly than lighter ones.\footnote{Supposedly by dropping weights off the leaning tower of Pisa, though take this story with a pinch of salt\ldots} Here are two results from this text.
+Despite the Church's efforts, Galileo's continued working and his discoveries continued to be distributed by his supporters. His most important scientific text, \emph{Discourses Concerning Two New Sciences} (materials science and kinematics) was smuggled out of Italy to be published in Holland in 1638. In this book, he resurrects his characters from \emph{Two Chief World Systems} and famously refutes Aristotle's claim that heavier objects fall more rapidly than lighter ones.\footnote{%
+	Supposedly by dropping weights off the leaning tower of Pisa, though take this story with a pinch of salt\ldots%
+}
+Here are two results from this text.
 
 \begin{thm*}{}{}
 	If acceleration is uniform, then the average speed is the average of the initial and terminal speeds.
 \end{thm*}
-\phantomsection\label{pg:galileo}
 
 \begin{proof}
-	Galileo argues pictorially.\par
+	Galileo argues pictorially, as shown on the right.\par
 	\begin{minipage}[t]{0.8\linewidth}\vspace{-5pt}
 		In essence, $\cl{CD}$ is the time-axis, increasing downward. Velocity is measured horizontally from the time-axis to the uniformly sloped line $\cl{AE}$, of which $I$ is the midpoint.\smallbreak
-		The distance travelled is the area between $\cl{AE}$ and the time-axis, which plainly equals the area of the rectangle between $\cl{GF}$ and the time-axis. The velocity corresponding to $\cl{GF}$ is the average of those corresponding to $A$ and $E$.\smallbreak
-		Here is the calculation using modern algebra. Suppose the object has velocity $v_A$ as it passes $A$ and $v_B$ as it passes $v_B$, and that $t=\nm{AB}$. Then the distance travelled is
-		\[
-			v_{\text{av}}t =v_At+\operatorname{area}(\triangle ABE) =v_At+\frac 12(v_B-v_A)t=\frac 12(v_A+v_B)t
-		\]
+		Galileo argues that the distance travelled is the area between $\cl{AE}$ and the time-axis. Since $\triangle ABE$ and $\square ABFG$ have the same area, the distance travelled plainly equals the area of the rectangle between $\cl{GF}$ and the time-axis. Since $\nm{AG}=\frac 12{BE}$, the velocity corresponding to $\cl{GF}$ is the average of those corresponding to $A$ and $E$.\smallbreak
+		Here is the calculation using modern algebra. Suppose the object has velocities $v_A$ and $v_B$ as it passes $A$ and $B$ respectively. Also let $t=\nm{AB}$. Then the distance travelled is
+		\begin{align*}
+			v_{\text{av}}t 
+			&=v_At+\operatorname{area}(\triangle ABE) 
+			=v_At+\operatorname{area}(\square ABFG)\\
+			&=v_At+\frac 12(v_B-v_A)t
+			=\frac 12(v_A+v_B)t
+		\end{align*}
 		whence $v_{\text{av}}$ is the average of the initial and final speeds.
 	\end{minipage}
 	\hfill
 	\begin{minipage}[t]{0.18\linewidth}\vspace{-20pt}
-		\flushright\includegraphics[scale=0.45]{galileo-accel}
+		\hfill\includegraphics[alt={finding the average speed of a uniformly accelerated body},scale=0.5]{galileo-accel}
 	\end{minipage}
 \end{proof}
 
 \begin{cor*}{}{}
-	A falling object dropped from rest will traverse distance in proportion to time-squared,
+	A falling object dropped from rest traverses distance in proportion to time-squared,
 	\[
 		d_1:d_2=t_1^2:t_2^2
 	\]
@@ -656,52 +692,62 @@ This is Galileo's version of the well-known kinematics formula $d=\frac 12gt^2$.
 	\[
 		v_1:v_2=t_1:t_2
 	\]
-	By the Theorem,
+	By Galileo's Theorem,
 	\[
 		d_1=\frac{0+v_1}2t_1=\frac 12v_1t_1,
 		\quad\text{and}\quad
 		d_2=\frac 12v_2t_2
 	\]
-	whence
+	Putting everything together, we obtain
 	\[
-		d_1:d_2=v_1t_1:v_2t_2=t_1^2:t_2^2\tag*{\qedhere}
+		d_1:d_2=v_1t_1:v_2t_2=t_1^2:t_2^2%\tag*{\qedhere}
 	\]
+	as required.
 \end{proof}
 
-Galileo follows this by decomposing the motion of a projectile into horizontal (uniform speed) and vertical (uniform acceleration) components, thereby proving that projectiles follow parabolic paths.\smallbreak
+Galileo follows this result by decomposing the motion of a projectile into horizontal (uniform speed) and vertical (uniform acceleration) components, thereby proving that projectiles follow parabolic paths.
+\medbreak
 
-Galileo covered several other important mathematical topics, some of which we'll mention when we discuss calculus. While his mathematical ideas were cutting-edge for the time, it is his insistence on testing theory against data that makes him a true revolutionary. By 1600 very few of Aristotle's easy-to-refute claims had been rejected due to experimental testing; the hostility Galileo provoked by doing so perhaps explains why. This is the core of the scientific revolution: primacy is given to experiment and observation over ancient `wisdom,' whatever the source.\smallbreak
+Galileo covered several other important mathematical topics, including, as we'll see later, early ideas from calculus: indeed his ``area'' argument for computing distance from velocity and time is a version of integration. While his mathematical ideas were cutting-edge for the time, it is his insistence on testing theory against data that makes him a true scientific revolutionary. By 1600, very few of Aristotle's easy-to-refute claims had been rejected due to experimental testing---the hostility Galileo provoked by challenging Aristotle perhaps explains why. This is the core of the scientific revolution: primacy is given to experiment and observation over `ancient wisdom,' whatever its source.
+\medbreak
 
 Galileo was finally cleared of heresy by the Catholic Church in 1992.
 
 
 
 \begin{exercises}{}{}
-	\exstart \emph{Compute} today's date in the Julian calendar and explain your calculation.
+	\hangindent\leftmargini{\emph{Key concepts: \ Copernicus \& Heilocentrism, \ Trigonometry about measuring triangles, \ Kepler's Laws, \ Galileo (experimentation, observation and kinematics)}}
 	
-	\begin{enumerate}\setcounter{enumi}{1}
-		\begin{minipage}[t]{0.7\linewidth}\vspace{3pt}
-	 		\item%[13-14]
-	 		(A problem of Copernicus)\lstsp Given the three sides of an isosceles triangle, to find the angles.\smallbreak
-	  	Suppose $\cl{AB}$ and $\cl{AC}$ are the equal legs of the triangle. Circumscribe a \textcolor{blue}{circle} around the triangle and draw \textcolor{red}{another} with center $A$ and radius $\cl{AD}=\frac 12\cl{AB}$.
+	\begin{enumerate}
+	  \item \emph{Compute} today's date in the Julian calendar and explain your calculation.
+	  
+	  
+	 	\item%[13-14]
+	 	(A problem of Copernicus)\lstsp Given the three sides of an isosceles triangle, to find the angles.\par
+		\begin{minipage}[t]{0.72\linewidth}\vspace{-6pt}
+	  	Suppose $\cl{AB}$ and $\cl{AC}$ are the equal legs of the triangle. Circumscribe a \textcolor{Blue}{circle} around the triangle and draw \textcolor{mRed}{another} with center $A$ and radius $\cl{AD}=\frac 12\cl{AB}$.
 			\begin{enumerate}
-		  	\item Why is Copernicus introducing the second circle?
+		  	\item Why does Copernicus introduce the second circle?
 		  	\item Explain why the ratio of each of the equal sides to the base of $\triangle ABC$ equals that of the radius $\cl{AD}$ to the chord $\cl{DE}$.
 		  	\item If $\nm{AB}=\nm{AC}=10$ and $\nm{BC}=6$, use modern trigonometry to find the three angles of the original triangle.
 			\end{enumerate}
 		\end{minipage}
 		\hfill
-		\begin{minipage}[t]{0.28\linewidth}\vspace{3pt}
-			\flushright\includegraphics{hw5-copisotri}
+		\begin{minipage}[t]{0.26\linewidth}\vspace{-6pt}
+			\hfill\includegraphics[alt={two intersecting circles and a pair of similar triangles}]{hw5-copisotri}
 		\end{minipage}
 	
-	  \item Verify that Heron's formula gives the same solution to Pitiscus' problem (pg.\,\pageref{ex:pitiscus}).
+	
+	  \item Verify that Heron's formula gives the same solution to Pitiscus' problem on page \pageref{ex:pitiscus}.
+	  
 	  
 	  \item%[13-17]
 	  Given that Earth's orbital period is 1 year and that the mean distance of Mars from the sun is 1.524 times that of Earth, use Kepler's third law to determine the orbital period of Mars.
 	  
+	  
 	  \item%[13-18]
 	  According to Kepler's second law, at what point in a planet's orbit will it be moving fastest?
+	  
 	  
 	  \item%[13-24]*
 	  Galileo states the following.
@@ -712,4 +758,3 @@ Galileo was finally cleared of heresy by the Catholic Church in 1992.
 	\end{enumerate}
 \end{exercises}
 
-\fi

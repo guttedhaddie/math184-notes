@@ -1,17 +1,18 @@
-if(!settings.multipleView) settings.batchView=false;
-settings.tex="pdflatex";
-if(settings.render < 0) settings.render=4;
-settings.outformat="";
-settings.inlineimage=true;
-settings.embed=true;
-settings.toolbar=false;
+settings.tex="lualatex";
+defaultpen(fontsize(12pt));
 
 texpreamble("\usepackage{amsmath}
 \usepackage{amsthm,amssymb}
-\usepackage{mathpazo}
-\usepackage[svgnames]{xcolor}
-%\input{../../preamble}
+\usepackage{unicode-math}
+\setmainfont{TeX Gyre Pagella}
+\setmathfont{TeX Gyre Pagella Math}
+\usepackage[svgnames,x11names]{xcolor}
 ");
+
+import x11colors;
+pen lGreen=rgb("00a000");
+
+
 import graph;
 import animate;
 
@@ -21,10 +22,10 @@ picture pic;
 
 path c=unitcircle;
 
-draw(pic,scale(10)*c);
-draw(pic,c,blue);
-draw(pic,scale(1.45)*c,red);
-draw(pic,scale(5.2)*c,heavygreen);
+draw(pic,scale(10)*c,Brown);
+draw(pic,c,Blue);
+draw(pic,scale(1.45)*c,Red);
+draw(pic,scale(5.2)*c,lGreen);
 draw(pic,scale(0.08)*c);
 for(int i=0; i<8; ++i){draw(pic,0.15*dir(360i/8)---0.1*dir(360i/8));}
 //label(pic,"$S$",(0,0));
@@ -52,8 +53,8 @@ draw(e(s*i)--qm);
 //draw(e(s*i)--m(s*i));
 draw(e(s*i)--qj);
 //draw(e(s*i)--j(s*i));
-dot("M",qm,unit(qm),red);
-dot("J",qj,unit(qj),heavygreen);
+dot("M",qm,unit(qm),Red);
+dot("J",qj,unit(qj),lGreen);
 A.add();
 restore();
 }
