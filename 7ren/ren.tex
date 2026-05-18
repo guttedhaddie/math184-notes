@@ -574,45 +574,74 @@ The total area is therefore
 
 Johannes Kepler (1571--1630) was a student of Tycho Brahe\footnote{%
 	Tycho Brahe (1546--1601) was a Danish astronomer who worked for Austro-Hungarian Emperor Rudolph II in Prague for 25 years, producing a wealth of accurate astronomical measurements. While these helped burnish the Copernican theory, he is also known for his 1572 observation of a \emph{nova} (a \emph{new} star that later disappeared, now understood to be the death of a distant star), and then a comet in 1577; both provided yet more evidence for the changeability of the heavens.%
-} for the last two years of Brahe's life. He inherited Brahe's position, decades-worth of astronomical data, and his philosophy on the importance of observation-based theory. Kepler also embraced the mystical Pythagorean view that nature reflects harmony, a belief that partly drove his scientific pursuits. To Kepler, any observation of a natural, simple ratio was something of great import. For example, in observing that the daily movement of Saturn at its furthest point from the sun was roughly $4/5$ of that at its nearest point, his temptation was to assume that `roughly' must be `exactly.'\par
+}
+for the last two years of Brahe's life. He inherited Brahe's position, decades-worth of astronomical data, and his philosophy on the importance of observation-based theory.
+\smallbreak
 
-\begin{minipage}[t]{0.66\linewidth}\vspace{-3pt}
-	Thanks to Brahe, Kepler had data on roughly thirteen orbits of Mars and two of Jupiter. From these data, he posited three laws.
+Kepler also embraced the mystical Pythagorean view that nature reflects harmony, a belief that partly drove his scientific pursuits. To Kepler, any observation of a natural, simple ratio was something of great import. For example, in observing that the daily movement of Saturn at its furthest point from the sun was roughly $4/5$ of that at its nearest point, his temptation was to assume that `roughly' must be `exactly.'\par
+\begin{minipage}[t]{0.65\linewidth}\vspace{0pt}
+	Thanks to Brahe, Kepler had good data for roughly thirteen orbits of Mars and two of Jupiter. From these data, he posited three laws:
 	\begin{enumerate}
 	  \item Planets move in ellipses with the sun at one focus.
-		\item The orbital radius sweeps out equal areas in equal times. In the picture, the sectors all have the same area and the planet moves more slowly the further it is from the sun.
+		\item The orbital radius sweeps out equal areas in equal times. The pictured sectors all have the same area; the planet moves more slowly the further it is from the sun.
 		\item The square of the orbital period is proportional to the cube of the semi-major axis of the ellipse: $T^2\propto a^3$.
 	\end{enumerate}
 \end{minipage}
 \hfill
-\begin{minipage}[t]{0.32\linewidth}\vspace{-10pt}
-	\hfill\includegraphics[alt={},scale=0.85]{ren-kepler}
+\begin{minipage}[t]{0.34\linewidth}\vspace{-10pt}
+	\hfill\includegraphics[alt={a planet orbits in an ellipse with the sun at one focus}]{ren-kepler}
 \end{minipage}
-
-
+\smallbreak
 
 Kepler's laws are empirical observations rather than the result of mathematical proof. However, the process of their discovery demonstrates Kepler's tremendous mathematical abilities.
 
+\paragraph{How Kepler Estimated Orbits}
+
+Kepler started by assuming essential correctness of the Copernican model in that all planets exhibit uniform circular motion round the sun. He had most data for Mars, so that is where he concentrated his efforts. Kepler wanted to compute both the \emph{orbital radius} $R_M$ of Mars and its \emph{orbital period} $T_M$ (Earth years). The essential calculation relies on two astronomical phenomena (illustrated).
 \begin{description}
-  \item[Starting point] Kepler began by assuming the essential correctness of the Copernican model in that all planets exhibit uniform circular motion round the sun.\par
-	%\begin{minipage}[t]{0.65\linewidth}\vspace{-5pt}
-  	\item[Orbital Estimation] Kepler's data told him the \emph{direction} to each planet, but not the \emph{distance,} though his Copernican assumption allowed him to estimate the \emph{relative distance}.\footnotemark{} For example, using the direction from \textcolor{Green}{Earth} to \textcolor{red}{Mars} at equally spaced times and by drawing circles of different radii for possible orbits of Mars, he was able estimate an orbit where Mars' motion would also be uniform. This required an enormous number of trigonometric calculations: each measurement of planetary longitude/latitude \emph{relative to Prague} had to be converted to measurements relative to the sun. Everything was subject to errors of estimation.
+	\item[\normalfont\emph{Opposition}] This is where Earth is directly between the sun and Mars. Equivalently, Mars is directly overhead at midnight.
+	\item[\normalfont\emph{Quadrature}] This is where the Earth-Mars-Sun triangle is right-angled at Earth. Roughly, Mars is visible directly overhead at dusk, or on the horizon at midnight.
+\end{description}
+From Brahe's data, Kepler knew that the time between successive oppositions of Mars is roughly $S=2.14$ years (780 days). Over this time period, Earth completes $S=2.14$ orbits whereas Mars completes $\frac{S}{T_M}$ orbits than Mars. But since Earth orbits faster than Mars, it must have completed \emph{exactly one more orbit} over this time-period! That is,
+\[
+	S=\frac S{T_M}+1\implies T_M=\frac S{S-1}=\frac{2.14}{1.14}=1.88\text{ years}
+\]
+Now Kepler considers quadrature. Again, observational data says that it takes approximately 100 days ($\alpha\approx \frac{100\times 360}{365}=\ang{98.6}$) between opposition and quadrature. Since Kepler knows the ratio of the orbital periods, in the same 100 days Mars will travel through an angle
+\[
+	\beta=\frac\alpha{T_M}=\ang{52.5}
+\]
+From the picture, the orbital radius of Mars is therefore
+\[
+	R_M=\sec(\alpha-\beta)\approx 1.44\text{ AU}
+\]
+Here, 1AU (astronomical unit) is the Earth-Sun distance. Kepler did not know this, so was only able to compute the distance to Mars \emph{relative} to that for Earth.\footnote{Following Ptolemy, Brahe thought the Earth-Sun distance to be around $1/10$ of its true value. Kepler thought this an underestimate by at least a factor of three. In 1659, Christiaan Huygens found the distance to an accuracy of 3 percent.}
+
+This representative calculation massively understates the detail of the required work and trigonometric calculations: each measurement of planetary longitude/latitude \emph{relative to Prague} had to be converted to measurements relative to the sun, with everything being subject to errors of estimation.\medbreak
+
+These initial calculations were based on the assumptions of purely circular orbits, but there was enough variance in the data for Kepler to realize that purely circular orbits are not quite right. Initially he altered his model to reflect Earth's slightly non-circular orbit. He first tried an equant model (in the style of the ancient Greeks), offsetting the center of the orbit slightly from the sun. Despite this, he failed to fit his data for Mars to pure circular motion.
+
+\paragraph{The First Law} 
+
+Abandoning circles, Kepler now permitted planets to move in ovals. He decided to approximate Mars' orbit with an ellipse and set out to calculate its parameters, stumbling on an almost perfect match when the sun was placed at a focus. The \emph{geometric} significance of the focus was exactly the natural beauty sought by Kepler. Having now established the first law for Mars, he repeated the exercise for the other known planets (Mercury, Venus, Jupiter, Saturn) as well as he could given his inferior data.
+  
+\paragraph{The Second Law}\label{pg:kepler2} 
+
+Kepler's second law followed an infinitesimal argument based on inspired guesswork. To fit his elliptical orbits, planetary velocity was non-constant, appearing inversely proportional to the distance from the sun ($v=\frac kr$). Kepler used this to approximate the area of a sector swept out by the radius vector: over a small time-interval $\Delta t$, a planet travels a distance $v\Delta t$ and thus sweeps out an approximate triangle of area $\frac 12rv\Delta t=\frac 12k\Delta t$. In modern language, this is the conservation of angular momentum. Kepler had no justification beyond the fact that it seemed to fit the data. In particular, he did not know why a planet should move more slowly when further from the sun.
+  
+\paragraph{The Third Law}
+
+This was stated with very limited analysis. Given the relative sizes of each orbit and its period, some inspired guesswork allowed him to observe that $\frac{T^2}{a^3}$ is approximately the same value for each.
+
+
+%   	For example, using the direction from \textcolor{Green}{Earth} to \textcolor{red}{Mars} at equally spaced times and by drawing circles of different radii for possible orbits of Mars, he was able estimate an orbit where Mars' motion would also be uniform. This required an enormous number of trigonometric calculations: each measurement of planetary longitude/latitude \emph{relative to Prague} had to be converted to measurements relative to the sun. Everything was subject to errors of estimation.
 % 	\end{minipage}
 % 	\hfill
 % 	\begin{minipage}[t]{0.33\linewidth}\vspace{-6pt}
 		\hfill\includegraphics[alt={},scale=0.75]{ren-kepler3}
 	%\end{minipage}\par
 
-  \item[Modifying the model] Kepler altered his model to reflect Earth's slightly non-circular orbit. He first tried an equant model (in the style of the ancient Greeks), offsetting the center of the orbit slightly from the sun. Despite this, he failed to fit his data for Mars to pure circular motion.
-  
-  \item[The First Law] Abandoning circles, Kepler now permitted planets to move in ovals. He decided to approximate Mars' orbit with an ellipse and set out to calculate its parameters, stumbling on an almost perfect match when the sun was placed at a focus. The \emph{geometric} significance of the focus was exactly the natural beauty sought by Kepler. Having now established the first law for Mars, he repeated the exercise for the other known planets (Mercury, Venus, Earth, Jupiter, Saturn) as well as he could given his inferior data.
-  
-  \item[The Second Law]\phantomsection\label{pg:kepler2} Kepler's second law followed an infinitesimal argument based on inspired guesswork. To fit his elliptical orbits, planetary velocity was non-constant, appearing inversely proportional to the distance from the sun ($v=\frac kr$). Kepler used this to approximate the area of a sector swept out by the radius vector: over a small time-interval $\Delta t$, a planet travels a distance $v\Delta t$ and thus sweeps out an approximate triangle of area $\frac 12rv\Delta t=\frac 12k\Delta t$. In modern language, this is the conservation of angular momentum. Kepler had no justification beyond the fact that it seemed to fit the data. In particular, he did not know why a planet should move more slowly when further from the sun.
-  
-  \item[The Third Law] This was stated with very limited analysis. Given the relative sizes of each orbit and its period, some inspired guesswork allowed him to observe that $\frac{T^2}{a^3}$ is approximately the same value for each.
-\end{description}
 
-\footnotetext{Following Ptolemy, Brahe thought the Earth-Sun distance was around $1/10$ of its true value. Kepler thought this an underestimate by at least a factor of three. In 1659, Christiaan Huygens found the distance to an accuracy of 3\%.}
+
 
 Kepler's discoveries were revealed over many years in several texts, and his magnum opus \emph{Epitome astronomiæ Copernicanæ} was published in 1621. Within a century Issac Newton had provided a mathematical justification of Kepler's laws based on the theory of calculus and his own axioms: an inverse square law for gravitational acceleration and his own three laws of motion.
 
