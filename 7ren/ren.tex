@@ -493,7 +493,7 @@ Domenico Novara (1454--1504), Regiomontanus' student, inherited much of his unpu
 
 Copernicus' ostensible purpose was to join the priesthood, but his interests drew him to mathematics and astronomy. His investigations forced him to conclude that Ptolemy's geocentric model could not be reconciled with astronomical observation. His magnum opus, \emph{De revolutionibus orbium celestium} (\emph{On the revolutions of the heavenly spheres}), was published a year after his death. Within, Copernicus describes how one would calculate (chords and angles) within a \emph{heliocentric} (\emph{sun-centered}) model. This approach, Copernicus believed, was the obvious solution to the problem of \emph{retrograde motion} that had plagued the ancient Greeks.\footnotemark{}\par
 
-\begin{minipage}[t]{0.69\linewidth}\vspace{-6pt}
+\begin{minipage}[t]{0.69\linewidth}\vspace{-\parsep}
 %  Each step = 3 days\\
 %  Outer circle = fixed stars\\
 %  
@@ -503,7 +503,7 @@ Copernicus' ostensible purpose was to join the priesthood, but his interests dre
 %  Mars&Red&1.88 years&1.52 AU\\
 %  Jupiter&Green&11.86 years&5.2 AU
 %  \end{tabular}
- 	The animation demonstrates the heliocentric model, essentially as upgraded later by Kepler (Copernicus proposed circular rather than elliptic motion). Viewed from \textcolor{Blue}{Earth}, the retrograde motion of \textcolor{mRed}{Mars} and \textcolor{mGreen}{Jupiter} are easily explained. The \textcolor{Brown}{outer circle} represents the `fixed stars' against which the motion of the planets are observed.	Each step corresponds to three days of motion. Retrograde motion is observed when Earth, being closer to the sun, catches and overtakes Mars or Jupiter. This is most obvious with Mars since the orbits are so similar in size.
+ 	The animation demonstrates the heliocentric model as upgraded later by Kepler (Copernicus proposed circular rather than elliptic motion). Viewed from \textcolor{Blue}{Earth}, the retrograde motion of \textcolor{mRed}{Mars} and \textcolor{mGreen}{Jupiter} are easily explained. The \textcolor{Brown}{outer circle} represents the `fixed stars' against which the motion of the planets are observed.	Each step corresponds to three days of motion. Retrograde motion is observed when Earth, being closer to the sun, catches and overtakes Mars or Jupiter. This is most obvious with Mars since the orbits are so similar in size.
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.3\linewidth}\vspace{-18pt}
@@ -528,7 +528,7 @@ Copernicus' work on heliocentrism is often described as a revolution, though it 
 
 \subsubsection*{Trigonometry is finally about triangles!}
 	
-\begin{minipage}[t]{0.63\linewidth}\vspace{-10pt}
+\begin{minipage}[t]{0.63\linewidth}\vspace{-2\parsep}
 	Georg Rheticus (1514--1574) was a student of Copernicus, who helped posthumously to publish the latter's work. In the late 1500s, Rheticus started defining trigonometric functions purely in terms of triangles, referring to the \emph{perpendiculum} (sine) and \emph{basis} (cosine) of a right-triangle with fixed hypotenuse.
 	\medbreak
 	The modern term finally arrives in 1595. In \emph{Trigonometriæ}, Bartholomew Pitiscus purposefully sets out to solve problems related to triangles. Pictured is the title page from part of the second edition (1600---MDC in Roman numerals): note also the subtitle, which translates as ``The dimensions of triangles.'' Both Rheticus and Pitiscus had problems which look very familiar to modern readers, such as solving for unknown sides of triangles.
@@ -573,99 +573,142 @@ The total area is therefore
 \subsubsection*{Kepler's Laws of Planetary Motion}\label{pg:keplerslaws}
 
 Johannes Kepler (1571--1630) was a student of Tycho Brahe\footnote{%
-	Tycho Brahe (1546--1601) was a Danish astronomer who worked for Austro-Hungarian Emperor Rudolph II in Prague for 25 years, producing a wealth of accurate astronomical measurements. While these helped burnish the Copernican theory, he is also known for his 1572 observation of a \emph{nova} (a \emph{new} star that later disappeared, now understood to be the death of a distant star), and then a comet in 1577; both provided yet more evidence for the changeability of the heavens.%
+	Tycho Brahe (1546--1601) was a Danish astronomer who worked for Austro-Hungarian Emperor Rudolph II in Prague for 25 years, producing a wealth of accurate astronomical measurements. While these helped burnish the Copernican theory, he is also known for his 1572 observation of a \emph{nova} (a \emph{new} star that later disappeared, now understood to be the death of a distant star), and then a comet in 1577; both provided more evidence for the changeability of the heavens.%
 }
 for the last two years of Brahe's life. He inherited Brahe's position, decades-worth of astronomical data, and his philosophy on the importance of observation-based theory.
 \smallbreak
 
-Kepler also embraced the mystical Pythagorean view that nature reflects harmony, a belief that partly drove his scientific pursuits. To Kepler, any observation of a natural, simple ratio was something of great import. For example, in observing that the daily movement of Saturn at its furthest point from the sun was roughly $4/5$ of that at its nearest point, his temptation was to assume that `roughly' must be `exactly.'\par
-\begin{minipage}[t]{0.65\linewidth}\vspace{0pt}
-	Thanks to Brahe, Kepler had good data for roughly thirteen orbits of Mars and two of Jupiter. From these data, he posited three laws:
-	\begin{enumerate}
-	  \item Planets move in ellipses with the sun at one focus.
-		\item The orbital radius sweeps out equal areas in equal times. The pictured sectors all have the same area; the planet moves more slowly the further it is from the sun.
-		\item The square of the orbital period is proportional to the cube of the semi-major axis of the ellipse: $T^2\propto a^3$.
-	\end{enumerate}
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.34\linewidth}\vspace{-10pt}
-	\hfill\includegraphics[alt={a planet orbits in an ellipse with the sun at one focus}]{ren-kepler}
-\end{minipage}
+Kepler also embraced the mystical Pythagorean view that nature reflects harmony, a belief that partly drove his scientific pursuits. To Kepler, any observation of a natural, simple ratio was something of great import. For example, in observing that the daily movement of Saturn at its furthest point from the sun was roughly $4/5$ of that at its nearest point, his temptation was to assume that `roughly' must be `exactly.'
 \smallbreak
 
-Kepler's laws are empirical observations rather than the result of mathematical proof. However, the process of their discovery demonstrates Kepler's tremendous mathematical abilities.
+Thanks to Brahe, Kepler had good data for roughly thirteen orbits of Mars and two of Jupiter. From these data, he posited three laws. These laws are empirical observations rather than the result of mathematical proof. However, the process of their discovery demonstrates Kepler's tremendous mathematical abilities.
 
-\paragraph{How Kepler Estimated Orbits}
+\paragraph{The First Law} \emph{Planets move in ellipses with the sun at one focus.}
 
-Kepler started by assuming essential correctness of the Copernican model in that all planets exhibit uniform circular motion round the sun. He had most data for Mars, so that is where he concentrated his efforts. Kepler wanted to compute both the \emph{orbital radius} $R_M$ of Mars and its \emph{orbital period} $T_M$ (Earth years). The essential calculation relies on two astronomical phenomena (illustrated).
-\begin{description}
-	\item[\normalfont\emph{Opposition}] This is where Earth is directly between the sun and Mars. Equivalently, Mars is directly overhead at midnight.
-	\item[\normalfont\emph{Quadrature}] This is where the Earth-Mars-Sun triangle is right-angled at Earth. Roughly, Mars is visible directly overhead at dusk, or on the horizon at midnight.
-\end{description}
-From Brahe's data, Kepler knew that the time between successive oppositions of Mars is roughly $S=2.14$ years (780 days). Over this time period, Earth completes $S=2.14$ orbits whereas Mars completes $\frac{S}{T_M}$ orbits than Mars. But since Earth orbits faster than Mars, it must have completed \emph{exactly one more orbit} over this time-period! That is,
+\smallskip
+
+Kepler started by assuming essential correctness of the Copernican model in that all planets exhibit uniform circular motion round the sun. Due to the relative wealth of data, he devoted most effort to Mars. Kepler wanted to compute both its \emph{orbital radius} $R_{\mars}$ and \emph{orbital period} $T_{\mars}$ (Earth years). The essential calculation relies on two astronomical phenomena.\par
+\begin{minipage}[t]{0.69\linewidth}\vspace{0pt}
+	\begin{description}
+		\item[\normalfont\emph{Opposition}] \textcolor{mGreen}{Earth} lies directly between the sun and \textcolor{mRed}{Mars}. Equivalently, Mars is directly overhead at midnight.\par
+		From observations, Kepler knew the time between successive oppositions to be approximately $S=2.14$ years (780 days).
+		\item[\normalfont\emph{Quadrature}] The Earth-Mars-Sun triangle is right-angled at Earth. Mars is roughly on the horizon at midnight.\par
+		The time between opposition and quadrature is approximately 100 days.
+	\end{description}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.29\linewidth}\vspace{0pt}
+	\hfill\includegraphics[alt={mars and earth at opposition and quadrature}]{ren-kepler2}
+\end{minipage}
+\medbreak
+
+Since Earth orbits faster than Mars, it must have completed \emph{exactly one more orbit} over the $S=2.14$ years between oppositions, during which time Mars completes $\smash{\frac{S}{T_{\mars}}}$ orbits. Kepler concludes,
 \[
-	S=\frac S{T_M}+1\implies T_M=\frac S{S-1}=\frac{2.14}{1.14}=1.88\text{ years}
+	S=\frac S{T_{\mars}}+1\implies T_{\mars}=\frac S{S-1}=\frac{2.14}{1.14}=1.88\text{ years}
 \]
-Now Kepler considers quadrature. Again, observational data says that it takes approximately 100 days ($\alpha\approx \frac{100\times 360}{365}=\ang{98.6}$) between opposition and quadrature. Since Kepler knows the ratio of the orbital periods, in the same 100 days Mars will travel through an angle
+In the 100 days between quadrature and opposition, Earth and Mars travel through angles
 \[
-	\beta=\frac\alpha{T_M}=\ang{52.5}
+	\alpha\approx \frac{100\times 360}{365}=\ang{98.6},\qquad
+	\beta=\frac\alpha{T_{\mars}}\approx\ang{52.5}
 \]
-From the picture, the orbital radius of Mars is therefore
+The orbital radius of Mars is therefore
 \[
-	R_M=\sec(\alpha-\beta)\approx 1.44\text{ AU}
+	R_{\mars}=\sec(\alpha-\beta)R_{\earth}\approx 1.44R_{\earth}
 \]
-Here, 1AU (astronomical unit) is the Earth-Sun distance. Kepler did not know this, so was only able to compute the distance to Mars \emph{relative} to that for Earth.\footnote{Following Ptolemy, Brahe thought the Earth-Sun distance to be around $1/10$ of its true value. Kepler thought this an underestimate by at least a factor of three. In 1659, Christiaan Huygens found the distance to an accuracy of 3 percent.}
+Earth's orbital radius $R_{\earth}$ (one \emph{astronomical unit} [AU]), was not known accurately in Kepler's time, so he only knew the \emph{relative} distance to Mars.\footnote{%
+	Following Ptolemy, Brahe thought $R_{\earth}$ to be around a tenth of its true value, though Kepler thought it to be at least three times larger. In 1659, Christiaan Huygens found $R_{\earth}$ to within 3 percent.%
+}
+\medbreak
 
-This representative calculation massively understates the detail of the required work and trigonometric calculations: each measurement of planetary longitude/latitude \emph{relative to Prague} had to be converted to measurements relative to the sun, with everything being subject to errors of estimation.\medbreak
+There was enough variation in the data for Kepler to realize that purely circular orbits were not quite right: times between oppositions, and between opposition and quadrature are not constant; other observations didn't quite fit with the predicted location of Mars. Initially he altered his model to reflect Earth's slightly non-circular orbit. Mimicking the ancient Greeks, he first tried an equant model, offsetting the center of the orbit slightly from the sun. Despite this, he failed to fit his data for Mars to pure circular motion.
+\smallbreak
 
-These initial calculations were based on the assumptions of purely circular orbits, but there was enough variance in the data for Kepler to realize that purely circular orbits are not quite right. Initially he altered his model to reflect Earth's slightly non-circular orbit. He first tried an equant model (in the style of the ancient Greeks), offsetting the center of the orbit slightly from the sun. Despite this, he failed to fit his data for Mars to pure circular motion.
+Abandoning circles, Kepler now permitted planets to move in ovals. He decided to approximate Mars' orbit with an ellipse and set out to calculate its parameters, stumbling on an almost perfect match when the sun was placed at a focus. The geometric significance of the focus was exactly the natural beauty sought by Kepler. Having now established the first law for Mars, he repeated the exercise for the other known planets (Mercury, Venus, Jupiter, Saturn) as well as he could given his inferior data.
 
-\paragraph{The First Law} 
-
-Abandoning circles, Kepler now permitted planets to move in ovals. He decided to approximate Mars' orbit with an ellipse and set out to calculate its parameters, stumbling on an almost perfect match when the sun was placed at a focus. The \emph{geometric} significance of the focus was exactly the natural beauty sought by Kepler. Having now established the first law for Mars, he repeated the exercise for the other known planets (Mercury, Venus, Jupiter, Saturn) as well as he could given his inferior data.
-  
 \paragraph{The Second Law}\label{pg:kepler2} 
 
-Kepler's second law followed an infinitesimal argument based on inspired guesswork. To fit his elliptical orbits, planetary velocity was non-constant, appearing inversely proportional to the distance from the sun ($v=\frac kr$). Kepler used this to approximate the area of a sector swept out by the radius vector: over a small time-interval $\Delta t$, a planet travels a distance $v\Delta t$ and thus sweeps out an approximate triangle of area $\frac 12rv\Delta t=\frac 12k\Delta t$. In modern language, this is the conservation of angular momentum. Kepler had no justification beyond the fact that it seemed to fit the data. In particular, he did not know why a planet should move more slowly when further from the sun.
-  
+\emph{The orbital radius sweeps out equal areas in equal times.}
+
+\begin{minipage}[t]{0.69\linewidth}\vspace{-\parsep}
+	The pictured sectors are swept out in equal times and have the same area. In modern language, this is the conservation of angular momentum.\par
+	\smallskip
+	To fit his elliptical orbits, Kepler noticed that planetary velocity seemed inversely proportional to the distance from the sun ($\smash{v=\frac kr}$). He used this to approximate the area of a sector swept out by the radius vector: over an infinitesimal time-interval $\Delta t$, a planet travels a distance $v\Delta t$, sweeping out an infinitesimal triangle of area $\frac 12rv\Delta t=\frac 12k\Delta t$.
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.29\linewidth}\vspace{-\parsep}
+	\hfill\includegraphics[alt={a planet orbits in an ellipse with the sun at one focus}]{ren-kepler}
+\end{minipage}
+
+\smallskip
+Kepler had no justification beyond the fact that it seemed to fit the data. In particular, he did not know why a planet should move more slowly when further from the sun.
+
+
+\begin{samepage}
 \paragraph{The Third Law}
 
-This was stated with very limited analysis. Given the relative sizes of each orbit and its period, some inspired guesswork allowed him to observe that $\frac{T^2}{a^3}$ is approximately the same value for each.
+\emph{The square of the period is proportional to the cube of the semi-major axis: $T^2\propto a^3$.}
+
+\smallskip
+
+This was stated with very limited analysis. Given the relative sizes of each orbit and its period, this follows from little more than inspired guesswork.
+\end{samepage}
+
+\bigskip
+
+Kepler's discoveries were revealed over many years in several texts, and his magnum opus \emph{Epitome astronomiæ Copernicanæ} was published in 1621. Within a century, Issac Newton provided a mathematical justification of Kepler's laws based on calculus and his own axioms: an inverse square law for gravitational acceleration and his own three laws of motion.
 
 
 %   	For example, using the direction from \textcolor{Green}{Earth} to \textcolor{red}{Mars} at equally spaced times and by drawing circles of different radii for possible orbits of Mars, he was able estimate an orbit where Mars' motion would also be uniform. This required an enormous number of trigonometric calculations: each measurement of planetary longitude/latitude \emph{relative to Prague} had to be converted to measurements relative to the sun. Everything was subject to errors of estimation.
 % 	\end{minipage}
 % 	\hfill
 % 	\begin{minipage}[t]{0.33\linewidth}\vspace{-6pt}
-		\hfill\includegraphics[alt={},scale=0.75]{ren-kepler3}
+% 		\hfill\includegraphics[alt={},scale=0.75]{ren-kepler3}
 	%\end{minipage}\par
 
 
 
 
-Kepler's discoveries were revealed over many years in several texts, and his magnum opus \emph{Epitome astronomiæ Copernicanæ} was published in 1621. Within a century Issac Newton had provided a mathematical justification of Kepler's laws based on the theory of calculus and his own axioms: an inverse square law for gravitational acceleration and his own three laws of motion.
+
 
 
 
 
 \subsubsection*{A Religious Interlude: Protestantism, the Counter-Reformation \& Calendar Reform}
 
-By the mid 1500s, a new brand of Christianity was on the rise: Protestantism.\footnote{%
-	Martin Luther's \emph{Ninety-five Theses} (1517) is generally considered the start of the Protestant Reformation. Over the next 150 years, Europe saw multiple gruesome religious wars as various countries broke from Catholicism and Rome. Over the following centuries, Protestantism, with its emphasis on a personal relationship with God unmediated by central authority, helped make European and North-American culture more individualistic and less communal.%
+By the mid 1500s, a new brand of Christianity was on the rise, Protestantism, its spread aided by the new technology of mass-printing (1440s onward). The Catholic Church's response is known as the \emph{counter-reformation.}\footnote{%
+	Martin Luther's \emph{Ninety-five Theses} (1517) is generally considered the start of the Protestant Reformation. Over the next 150 years, Europe saw gruesome religious wars and millions of deaths as various countries broke from Rome. With its emphasis on a personal relationship with God unmediated by central authority, Protestantism has been instrumental in making European and North-American culture more individualistic.%
 }
-In 1563, in an attempt to push back against the spread of this new religion, Pope Gregory unleashed the \emph{counter-reformation.} Of particular interest to science and mathematics was the newly created \emph{Index Librorum Prohibitorum,} a list of books contradicting Church doctrine. This was also a response to the new technology of mass-printing, which had made dissemination of controversial new ideas easier. Heliocentrism came quickly under attack: Kepler's book was banned immediately upon publication in 1621, though his location far from Rome ensured his relative safety. Indeed, the ultimate result of Gregory's crackdown was the slow ceding of scientific power to northern (Protestant) Europe where papal diktat had less effect.
-\medbreak
 
-In contrast to the anti-scientific book-banning fervor of the counter-reformation, Pope Gregory is also famous for shepherding an astounding scientific achievement: calendar reform. By 1500, astronomers knew the solar year to be roughly $11\frac 14$ minutes shorter than the $365\frac 14$ days in the Julian calendar.\footnote{%
-	Named for Julius Caesar, the Julian year has 365 days with a leap-day added every four years.%
-}
-For 1200 years, Easter had been defined as the Sunday after the first full moon after the vernal equinox, with this last expected around March 20\th/21\st. By 1500, however, the equinox was happening around March 10\th. The Church was concerned that Easter was being celebrated on the wrong day, and that other religious festivals were also mis-dated. The impetus to correct the date of Easter meant that calendar reform and astronomical modeling became an important Church project.\smallbreak
+\begin{minipage}[t]{0.63\linewidth}\vspace{-\parsep}
+ Of particular interest to science was the \emph{Index Librorum Prohibitorum} (from c.\,1560), a list of books contradicting Church doctrine. Texts advocating heliocentrism were banned, since it challenged both longstanding doctrine and specific Biblical passages (``The sun stopped in the middle of the sky\ldots'', Joshua 10:13). Kepler's \emph{Empitome} was prohibited upon publication, though his location far from Rome ensured his relative safety. Indeed, the ultimate effect of this crackdown was the ceding of scientific power to northern (Protestant) Europe where papal diktat had less effect.
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.35\linewidth}\vspace{-18pt}
+	\begin{tabular}{@{}c@{}}
+		\includegraphics[scale=0.3,alt={front page of the index of banned books 1764}]{index-librorum-prohibitorum.jpg}
+		\\
+		Front page of the \emph{Index}, 1764
+	\end{tabular}
+\end{minipage} 
 
-A century of effort\footnote{%
+\paragraph{The Gregorian Calendar}
+
+In contrast to the anti-scientific book-banning fervor of the counter-reformation, Pope Gregory XIII (reign 1572-85) is famous for shepherding an astounding scientific achievement: calendar reform.
+\smallbreak
+
+By 1500, astronomers knew the solar year to be roughly 11¼ minutes shorter than the 365¼ days of the Julian calendar: named for Julius Caesar, the Julian year has 365 days with a leap-day added every four years. Since the First Council of Nicea (325), Easter had been defined as the Sunday after the first full moon after the vernal equinox (March 21\st). By 1500, however, the equinox was observed to be happening around March 10\th, raising concern that Easter was being celebrated on the wrong day. Calendar reform and improved astronomical modeling thus became an important Church project.
+\smallbreak
+
+A century of effort and debate\footnote{%
 	Pope Sixtus IV tried to recruit Regiomontanus to the cause in 1475, though the mathematician died before being able to contribute. Copernicus was among those invited to consider proposals in the early 1500s, though he distanced himself, perhaps because he knew that his developing heliocentric ideas would not be accepted. The final design was largely worked out by Aloysius Lilius and Christopher Clavius.%
 }
-resulted in the modern \emph{Gregorian calendar}. Gregory imposed the new calendar in all Catholic countries in 1582. The ten-day deficit was corrected by eliminating October 5\th--14\th, 1582. To prevent the error from re-occurring, the computation of leap-years was also changed: centuries are now leap-years only when divisible by 400 (thus 1600 was a leap year, but 1900 was not). The Gregorian calendar is astonishingly accurate, losing only one day every 3000 years. Since it emanated from Rome, many Protestant parts of Europe took decades or centuries to adopt the new system. The Eastern Orthodox Church still computes Easter using the Julian calendar, which is now 13 days behind the Gregorian.\footnote{%
-	Because the computation of Easter is downstream from the calendar equinox (March 21\st), Orthodox Easter is between one and five weeks after Gregorian Easter.%
+resulted in the modern \emph{Gregorian calendar}, which Gregory imposed in all Catholic countries in 1582. This made two major changes to the Julian calendar:
+\begin{itemize}
+  \item Centuries are leap-years only when divisible by 400 (e.g., 1900 was not a leap year).
+  \item To correct the ten-day deficit, Gregory eliminated October 5\th--14\th, 1582.
+\end{itemize}
+The Gregorian calendar is astonishingly accurate, losing only one day every 3000 years. Since it emanated from Rome, Protestant parts of Europe took decades or centuries to adopt the new system. The Eastern Orthodox Church still computes Easter using the Julian calendar, which is now 13 days behind the Gregorian.\footnote{%
+	Because the computation of Easter is downstream from the calendrical equinox (March 21\st), Orthodox Easter occurs between one and five weeks after Gregorian Easter.%
 }
 
 \pagebreak[3]
@@ -673,11 +716,13 @@ resulted in the modern \emph{Gregorian calendar}. Gregory imposed the new calend
 
 \subsubsection*{Galileo Galilei (1564--1642)}\label{pg:galileo}
 
-Based in northern Italy, Galileo was close to the center of Church power. Unlike Copernicus and Kepler, he openly challenged its orthodoxy. While undoubtedly a great mathematician, he is more importantly considered the father of the scientific revolution due to his reliance on experiment and observation. He famously observed Jupiter's moons with a telescope of his own invention, noting that objects orbiting an alien body ran counter to Ptolemaic theory. Skeptics, when shown these images, preferred to assert that it must be somewhere \emph{inside} the telescope!\smallbreak
+Based in northern Italy, Galileo was close to the center of Church power. Unlike Copernicus and Kepler, he openly challenged its orthodoxy. While undoubtedly a great mathematician, he is more importantly considered the father of the scientific revolution due to his reliance on experiment and observation. He famously observed Jupiter's moons with a telescope of his own invention, noting that objects orbiting an alien body ran counter to Ptolemaic theory. Skeptics, when shown these images, preferred to assert that it must be somewhere \emph{inside} the telescope!
+\smallbreak
 
-In 1632 Galileo published \emph{Dialogue Concerning the Two Chief World Systems,} a Socratic discussion between three characters: Salviati argued for Copernicus, Simplicio was for Ptolemy, and Sagredo was an independent questioner. The character of Simplicio was provocatively modeled on conservative philosophers who refused to consider experiments; even worse, he bore a notable resemblance to the Pope. Salviati almost always came out on top and Simplicio was made to appear foolish. The text contributed to Galileo's conviction for heresy; all his publications, past and future, were banned, and he spent the remainder of his life under house arrest.\smallbreak
+In 1632 Galileo published \emph{Dialogue Concerning the Two Chief World Systems,} a Socratic discussion between three characters: Salviati argued for Copernicus, Simplicio was for Ptolemy, and Sagredo was an independent questioner. The character of Simplicio was provocatively modeled on conservative philosophers who refused to consider experiments; even worse, he bore a notable resemblance to the Pope. Salviati almost always came out on top and Simplicio was made to appear foolish. The text contributed to Galileo's conviction for heresy; all his publications, past and future, were banned, and he spent the remainder of his life under house arrest.
+\smallbreak
 
-Despite the Church's efforts, Galileo's continued working and his discoveries continued to be distributed by his supporters. His most important scientific text, \emph{Discourses Concerning Two New Sciences} (materials science and kinematics) was smuggled out of Italy to be published in Holland in 1638. In this book, he resurrects his characters from \emph{Two Chief World Systems} and famously refutes Aristotle's claim that heavier objects fall more rapidly than lighter ones.\footnote{%
+Despite these restrictions, Galileo's discoveries continued to be distributed by his supporters. His most important scientific text, \emph{Discourses Concerning Two New Sciences} (materials science and kinematics) was smuggled out of Italy to be published in Holland in 1638. In this book, he resurrects his characters from \emph{Two Chief World Systems} and famously refutes Aristotle's claim that heavier objects fall more rapidly than lighter ones.\footnote{%
 	Supposedly by dropping weights off the leaning tower of Pisa, though take this story with a pinch of salt\ldots%
 }
 Here are two results from this text.
@@ -687,10 +732,15 @@ Here are two results from this text.
 \end{thm*}
 
 \begin{proof}
-	Galileo argues pictorially, as shown on the right.\par
-	\begin{minipage}[t]{0.8\linewidth}\vspace{-5pt}
-		In essence, $\cl{CD}$ is the time-axis, increasing downward. Velocity is measured horizontally from the time-axis to the uniformly sloped line $\cl{AE}$, of which $I$ is the midpoint.\smallbreak
-		Galileo argues that the distance travelled is the area between $\cl{AE}$ and the time-axis. Since $\triangle ABE$ and $\square ABFG$ have the same area, the distance travelled plainly equals the area of the rectangle between $\cl{GF}$ and the time-axis. Since $\nm{AG}=\frac 12{BE}$, the velocity corresponding to $\cl{GF}$ is the average of those corresponding to $A$ and $E$.\smallbreak
+	Galileo argues pictorially, as shown on the right.
+	
+	\begin{minipage}[t]{0.8\linewidth}\vspace{-\parsep}
+		In essence, $\smash{\cl{CD}}$ is the time-axis, increasing downward. Velocity is measured horizontally from $\smash{\cl{CD}}$ to $\smash{\cl{AE}}$, of which $I$ is the midpoint.
+		\smallbreak
+		
+		Galileo argues that the distance travelled is the area between $\cl{AE}$ and the time-axis. Since $\triangle ABE$ and $\square ABFG$ have the same area, the distance travelled plainly equals the area of the rectangle between $\cl{GF}$ and the time-axis. Since $\nm{AG}=\frac 12{BE}$, the velocity corresponding to $\cl{GF}$ is the average of those corresponding to $A$ and $E$.
+		\smallbreak
+		
 		Here is the calculation using modern algebra. Suppose the object has velocities $v_A$ and $v_B$ as it passes $A$ and $B$ respectively. Also let $t=\nm{AB}$. Then the distance travelled is
 		\begin{align*}
 			v_{\text{av}}t 
@@ -703,7 +753,8 @@ Here are two results from this text.
 	\end{minipage}
 	\hfill
 	\begin{minipage}[t]{0.18\linewidth}\vspace{-20pt}
-		\hfill\includegraphics[alt={finding the average speed of a uniformly accelerated body},scale=0.5]{galileo-accel}
+		\hfill
+		\includegraphics[alt={finding the average speed of a uniformly accelerated body},scale=0.5]{galileo-accel}
 	\end{minipage}
 \end{proof}
 
@@ -737,11 +788,12 @@ This is Galileo's version of the well-known kinematics formula $d=\frac 12gt^2$.
 Galileo follows this result by decomposing the motion of a projectile into horizontal (uniform speed) and vertical (uniform acceleration) components, thereby proving that projectiles follow parabolic paths.
 \medbreak
 
-Galileo covered several other important mathematical topics, including, as we'll see later, early ideas from calculus: indeed his ``area'' argument for computing distance from velocity and time is a version of integration. While his mathematical ideas were cutting-edge for the time, it is his insistence on testing theory against data that makes him a true scientific revolutionary. By 1600, very few of Aristotle's easy-to-refute claims had been rejected due to experimental testing---the hostility Galileo provoked by challenging Aristotle perhaps explains why. This is the core of the scientific revolution: primacy is given to experiment and observation over `ancient wisdom,' whatever its source.
-\medbreak
+Galileo covered several other important mathematical topics, including, as we'll see later, early ideas from calculus which also drew the condemnation of the Church. While his mathematical ideas were cutting-edge for the time, it is his insistence on testing theory against data that makes him a true scientific revolutionary. By 1600, very few of Aristotle's easy-to-refute claims had been rejected due to experimental testing---the hostility provoked by Galileo helps explain why. This is the core of the scientific revolution: primacy is given to experiment and observation over `ancient wisdom,' regardless of its source.
+\bigbreak
 
-Galileo was finally cleared of heresy by the Catholic Church in 1992.
+The Catholic Church's stance with regard to heliocentrism has slowly modernized. Edited versions of Galileo's works were permitted from 1718, and general texts advocating heliocentrism from 1758. The works of Kepler and Copernicus were removed from \emph{Index} in 1835, with the entire project being discontinued in 1966. Galileo was finally cleared of heresy in 1992.
 
+\clearpage
 
 
 \begin{exercises}{}{}
@@ -771,7 +823,8 @@ Galileo was finally cleared of heresy by the Catholic Church in 1992.
 	  
 	  
 	  \item%[13-17]
-	  Given that Earth's orbital period is 1 year and that the mean distance of Mars from the sun is 1.524 times that of Earth, use Kepler's third law to determine the orbital period of Mars.
+	  Given that Earth's orbital period is 1 year and that the mean distance of Mars from the sun is 1.524 times that of Earth, use Kepler's third law to determine the orbital period of Mars.\par
+	  (\emph{As we've seen, Kepler determined $T_{\mars}$ before discovering his third law})
 	  
 	  
 	  \item%[13-18]
@@ -783,7 +836,7 @@ Galileo was finally cleared of heresy by the Catholic Church in 1992.
 	  \begin{quote}
 	  	A projectile fired at an angle $\alpha=\ang{45}$ above the horizontal at a given initial speed reaches a distance of 20,000. Then, with the \emph{same} initial speed it will reach a distance of 17,318 when $\alpha=\ang{60}$, or $\alpha=\ang{30}$.
 	  \end{quote}
-	  Check this statement: if you want a challenge, try to do without the standard Physics formulæ and instead use ratios!
+	  Verify this statement. If you want a challenge, try to do without the standard Physics formulæ and instead use ratios!
 	\end{enumerate}
 \end{exercises}
 
