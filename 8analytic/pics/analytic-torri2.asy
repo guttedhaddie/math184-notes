@@ -1,4 +1,13 @@
-settings.tex="pdflatex";
+settings.tex="lualatex";
+defaultpen(fontsize(12pt));
+
+texpreamble("\usepackage{amsmath}
+\usepackage{amsthm,amssymb}
+\usepackage{unicode-math}
+\setmainfont{TeX Gyre Pagella}
+\setmathfont{TeX Gyre Pagella Math}
+\usepackage[svgnames,x11names]{xcolor}
+");
 
 //OpenGL (default) - no opacity
 
@@ -10,14 +19,13 @@ settings.tex="pdflatex";
 settings.outformat="html";
 
 //PDF
-if(!settings.multipleView) settings.batchView=false;
-settings.render=4;settings.outformat="pdf";
+//if(!settings.multipleView) settings.batchView=false;
+//settings.render=4;settings.outformat="pdf";
 
-texpreamble("\usepackage{amsmath}
-\usepackage{amsthm,amssymb}
-\usepackage{mathpazo}
-\usepackage[svgnames]{xcolor}
-");
+
+import x11colors;
+pen lGreen=rgb("00a000");
+
 import graph;
 import three;
 import solids;
@@ -27,9 +35,9 @@ size(190,0);
 currentprojection=orthographic(1,-6,0.5,up=Z);
 
 render render=render(merge=true);
-material matc=material(green+opacity(0.5),shininess=1.0);
+material matc=material(heavygreen+opacity(0.5),shininess=1.0);
 material mats=material(lightblue+opacity(0.2),shininess=1.0);
-material matb=material(orange+opacity(0.2),shininess=1.0);
+material matb=material(Orange+opacity(0.2),shininess=1.0);
 
 void wash(real x, real y, real z, real r)
 {

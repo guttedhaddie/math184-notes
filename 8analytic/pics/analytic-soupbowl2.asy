@@ -1,4 +1,13 @@
-settings.tex="pdflatex";
+settings.tex="lualatex";
+defaultpen(fontsize(12pt));
+
+texpreamble("\usepackage{amsmath}
+\usepackage{amsthm,amssymb}
+\usepackage{unicode-math}
+\setmainfont{TeX Gyre Pagella}
+\setmathfont{TeX Gyre Pagella Math}
+\usepackage[svgnames,x11names]{xcolor}
+");
 
 //OpenGL (default) - no opacity
 
@@ -13,11 +22,10 @@ settings.outformat="html";
 if(!settings.multipleView) settings.batchView=false;
 settings.render=4;settings.outformat="pdf";
 
-texpreamble("\usepackage{amsmath}
-\usepackage{amsthm,amssymb}
-\usepackage{mathpazo}
-\usepackage[svgnames]{xcolor}
-");
+
+import x11colors;
+pen lGreen=rgb("00a000");
+
 import graph;
 import three;
 import solids;

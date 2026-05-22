@@ -1,4 +1,13 @@
-settings.tex="pdflatex";
+settings.tex="lualatex";
+defaultpen(fontsize(12pt));
+
+texpreamble("\usepackage{amsmath}
+\usepackage{amsthm,amssymb}
+\usepackage{unicode-math}
+\setmainfont{TeX Gyre Pagella}
+\setmathfont{TeX Gyre Pagella Math}
+\usepackage[svgnames,x11names]{xcolor}
+");
 
 //OpenGL (default) - no opacity
 
@@ -13,11 +22,9 @@ settings.outformat="html";
 //if(!settings.multipleView) settings.batchView=false;
 //settings.render=4;settings.outformat="pdf";
 
-texpreamble("\usepackage{amsmath}
-\usepackage{amsthm,amssymb}
-\usepackage{mathpazo}
-\usepackage[svgnames]{xcolor}
-");
+
+import x11colors;
+pen lGreen=rgb("00a000");
 
 import graph;
 import three;
@@ -27,7 +34,7 @@ size(140,0);
 currentprojection=orthographic(6,-4,3,up=Z);
 
 render render=render(merge=true);
-material matc=material(heavygreen+opacity(0.5),shininess=1.0);
+material matc=material(lGreen+opacity(0.5),shininess=1.0);
 material mats=material(lightblue+opacity(0.2),shininess=1.0);
 
 void bx(real x){

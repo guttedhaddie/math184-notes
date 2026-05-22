@@ -1,10 +1,15 @@
-settings.tex="pdflatex";
+settings.tex="lualatex";
+defaultpen(fontsize(12pt));
 
 texpreamble("\usepackage{amsmath}
 \usepackage{amsthm,amssymb}
-\usepackage{mathpazo}
-\usepackage[svgnames]{xcolor}
+\usepackage{unicode-math}
+\setmainfont{TeX Gyre Pagella}
+\setmathfont{TeX Gyre Pagella Math}
+\usepackage[svgnames,x11names]{xcolor}
 ");
+
+
 import graph;
 
 size(160,130,IgnoreAspect);
@@ -23,7 +28,7 @@ fill(ab,lightblue);
 fill(rab,lightblue);
 draw(graph(y,1,1.2*b*r),blue+linewidth(1));
 
-xaxis("$x$",0,1.2*b*r,red,RightTicks(new real[]{0,1}));
+xaxis(0,1.2*b*r,red,RightTicks(new real[]{0,1}));
 yaxis("$y$",0,1.12,red,LeftTicks(new real[]{0,1}));
 
 draw(box((a,0),(b,y(a))));
@@ -40,3 +45,5 @@ xtick(Label("$br$",align=S),b*r,S,red);
 
 label("$A$",((a+b)/2,0.55*y(b)));
 label("$B$",(r*(a+b)/2,0.55*y(b*r)));
+
+labelx("$x$",1.17*b*r,S,red);

@@ -448,7 +448,7 @@ The previous methods permit \emph{differentiation,} albeit inefficiently. Fermat
 \smallbreak
 
 This is non-rigorous by modern standards and again implicitly invokes limits\footnote{%
-	For Fermat, $r=\frac nm$ would have been rational, and he'd have set $m=n$ at the end as in his adequation method
+	For Fermat, $r=\frac nm$ would have been rational, and he'd have set $m=n$ at the end as in his adequation method.
 }
 by setting $r=1$. By similar calculations, Fermat is able to establish the power law $\int_0^a x^n\,\dx=\frac 1{n+1}a^{n+1}$ for any positive integer $n$.
 
@@ -458,100 +458,135 @@ by setting $r=1$. By similar calculations, Fermat is able to establish the power
 
 \subsubsection*{Italian Calculus in the 17\th{} Century: Area and Volume Problems}
 
-In contrast to the work of Fermat and Descartes, contemporary Italian scholars were more focused on integration problems. Here is Galileo's classic `soup bowl' problem, where he compares the volume between a hemisphere and a cylinder to that of a cone.
+Contemporary Italian scholars were more focused on integration problems. Here is Galileo's classic `soup bowl' problem, where he compares the volume between a hemisphere and a cylinder to that of a cone.
 \begin{center}
-	\includegraphics{analytic-soupbowl}
+	\includegraphics[alt={the soup bowl - remove a hemisphere from a cylinder. Cross-sections are annuli}]{analytic-soupbowl}
 	\qquad\qquad
-	\includegraphics{analytic-soupbowl2}
+	\includegraphics[alt={cross-sections of a cone are circular disks}]{analytic-soupbowl2}
 \end{center}
 
 Galileo observed\footnote{%
 	As did Archimedes 1900 years earlier (pg.\,\pageref{pg:archmethod}), though Galileo was unaware of it.
 }
-that the \textcolor{Green}{cross-sectional areas} on both sides are equal (to $\pi y^2$). Since all cross-sections are equal, so must be the volumes. Unfortunately for Galileo, he couldn't sufficiently address two philosophical objections:
-\begin{description}\itemsep0pt
-  \item[\normalfont\emph{The zero-measure problem}] If cross-sections are `equal,' then the top cross-sections state that a circle `equals' a point.
+that the \textcolor{mGreen}{cross-sectional areas} on both sides are equal (to $\pi y^2$). Since all cross-sections are equal, so must be the volumes. Unfortunately for Galileo, he couldn't sufficiently address two philosophical objections:
+\begin{description}
+  \item[\normalfont\emph{The zero-measure problem}] If cross-sections are `equal,' then those at the top of each solid assert that a circle `equals' a point.
   \item[\normalfont\emph{Infinitesimals sum to the whole?}] Can we claim that equal cross-sections imply equal volumes?
 \end{description}
-It was Galileo's advocacy on these points that first gained him notoriety with the Church. His later evangelism for the Copernican theory merely rekindled old animosities.
+It was Galileo's discussion and advocacy on these matters that first gained him notoriety with the Church. His later evangelism for the Copernican heliocentrism merely rekindled old animosities.
 
 
-\paragraph{Bonaventura Cavalieri (1598--1647)}
+\paragraph{Bonaventura Cavalieri (1598--1647) \& Indivisibles}
 
-Cavalieri, a student of Galileo and a Jesuat scholar, gave a more thorough discussion of indivisibles in 1635. He is particularly remembered for \emph{Cavalieri's principle}:\vspace{-5pt}
+Cavalieri, a student of Galileo and a Jesuat scholar, gave a more thorough discussion in his 1635 text \emph{Geometria Indivisibilis}.
+\smallbreak
+
+To Cavalieri, a solid (say Galileo's cone) consists of infinitely many, infinitely small, but \emph{indivisible} pieces. Loosely speaking, indivisibles and infinitesimals are the same, though the former nods more towards the debated Greek idea of atomism: an indivisible cannot be further divided\ldots
+\smallbreak
+
+\emph{Cavalieri's principle} remains a foundational idea in the application of calculus:
 
 \begin{quote}
 	If geometric figures have proportional cross-sectional measure at every point relative to a line, then the figures have measure in the same proportion.
 \end{quote}
 
-\begin{minipage}[t]{0.62\linewidth}\vspace{-10pt}
+\begin{minipage}[t]{0.62\linewidth}\vspace{-\parsep}
 	Galileo's soup bowl is an example of this reasoning, where the `line' is any vertical.\smallbreak
 	Another classic example involves sliding a stack of coins or a deck of cards; the volume of the slanted coin stack equals that of the cylinder.
 \end{minipage}
 \hfill
-\begin{minipage}[t]{0.37\linewidth}\vspace{-10pt}
-	\hfill\includegraphics{analytic-cylinder}
+\begin{minipage}[t]{0.37\linewidth}\vspace{-\parsep}
+	\hfill\includegraphics[alt={a stack of coins has the same volume even when slid sideways}]{analytic-cylinder}
 \end{minipage}\medbreak
-%In pure geometry, we could imagine a square having the same area as a parallelogram with the same height.\\
 
-Extending his principle, Cavalieri inferred the power law $\int_0^ax^n\dx=\frac 1{n+1}a^{n+1}$, giving reasonable arguments for $n=1$ and 2. Here is a sketch of his approach for $n=2$.\par
-\begin{minipage}[t]{0.68\linewidth}\vspace{0pt}
-	Draw a cube of side $x$ inside a cube of side $a$. This consists of three congruent pyramids with base $a^2$ and eight $a$.\smallbreak
-	Consider the pyramid apex $O$ and whose base is the square face nearest the viewer. The \textcolor{Green}{cross-section} of this pyramid at position $x$ has area $x^2$. In Cavalieri's language, the pyramid is `all the squares;' in modern language
+
+\pagebreak[3]
+
+Extending his principle, Cavalieri inferred the power law $\int_0^ax^n\dx=\frac 1{n+1}a^{n+1}$, giving reasonable arguments for $n=1$ and 2. Here is a sketch of his approach for $n=2$.
+
+\begin{minipage}[t]{0.68\linewidth}\vspace{-\parsep}
+	Draw a cube of side $x$ inside a cube of side $a$. This consists of three congruent pyramids with base $a^2$ and eight $a$.
+	\smallbreak
+	
+	Consider the pyramid apex $O$ and whose base is the square face nearest the viewer. The \textcolor{mGreen}{cross-section} of this pyramid at position $x$ has area $x^2$. In Cavalieri's language, the pyramid is `all the squares;' in modern language
 	\[
 		\int_0^ax^2\,\dx=\frac 13a^3
 	\]
 \end{minipage}
 \hfill
-\begin{minipage}[t]{0.3\linewidth}\vspace{-10pt}
+\begin{minipage}[t]{0.3\linewidth}\vspace{-\parsep}
 	\hfill
-\href{http://www.math.uci.edu/~ndonalds/math184/analytic-cavalieri.html}{\includegraphics[scale=0.9]{analytic-cavalieri}}
-\end{minipage}\medbreak
+	\href{%
+		http://www.math.uci.edu/~ndonalds/math184/analytic-cavalieri.html%
+	}{%
+		\includegraphics[alt={measuring a cubic pyramid using square cross-sections}]{analytic-cavalieri}%
+	}
+\end{minipage}
+\bigbreak
 
 \phantomsection\label{pg:cavspiral}
-Cavalieri also used his method (Book IV, Prop 19 of \emph{Geometria Indivisibilis}) to calculate the area enclosed in an \textcolor{mRed}{Archimedean spiral.} Suppose $B$ moves at constant speed along a line $\cl{OA}$ rotating at constant speed about $O$. In polar co-ordinates $B$ traces a curve $r=k\theta$ for $0\le\theta\le 2\pi$ (we take $k=1$).\par
-\begin{minipage}[t]{0.73\textwidth}\vspace{-5pt}
+Cavalieri also used his method (Book IV, Prop 19 of \emph{Geometria Indivisibilis}) to calculate the area enclosed in an \textcolor{mRed}{Archimedean spiral.}\par
+Suppose the line $\cl{OA}$ rotates at a constant speed about $O$, and that the point $B$ moves at a constant speed (from $O$) along this line. In polar co-ordinates, $B$ traces a curve with equation 
+\[
+	r=k\theta,\qquad 0\le\theta\le 2\pi
+\]
+
+\begin{minipage}[t]{0.7\textwidth}\vspace{-\parsep}
+	We take $k=1$ for simplicity.\smallbreak
 	If $\nm{OB}=r$, then the \textcolor{Blue}{arc} \emph{inside} the spiral has length
 	\[
 		\ell(r)=2\pi r\cdot\frac{2\pi-\theta}{2\pi}=r(2\pi-r)
 	\]
-	Imagine the \textcolor{blue}{arc} as a noodle which, when cut at $B$ and allowed to fall, forms the \textcolor{Green}{line} $\cl{CD}$. The area in the spiral therefore equals that within the parabola which (thanks to Archimedes and Cavalieri himself) is  $\frac 43$ that of the largest triangle that can fit inside, namely
+	Imagine this \textcolor{Blue}{arc} as a noodle which, when cut at $B$ and allowed to fall, forms the \textcolor{mGreen}{line} $\cl{CD}$. The area within the spiral therefore equals that inside the \textcolor{mGreen}{parabola}. Thanks to Archimedes (and Cavalieri himself), this is $\frac 43$ the area of the largest triangle that can fit inside. Otherwise said, the area inside the spiral is
 	\[
 		\frac 43\cdot \frac 12(2\pi)\ell(\pi)=\frac 43\pi^3
 	\]
 \end{minipage}
 \hfill
-\begin{minipage}[t]{0.25\textwidth}\vspace{-5pt}
-	\hfill\includegraphics[]{cavalieri1}
-\end{minipage}\medbreak
+\begin{minipage}[t]{0.26\textwidth}\vspace{-\parsep}
+	\hfill\includegraphics[alt={comparing the area inside a spiral with that of a parabola}]{cavalieri1}
+\end{minipage}
+\medbreak
 
-Cavalieri did this slightly differently, his parabola being drawn in a rectangle and the difference subtracted from a triangle, but the above is easier to visualize.\medbreak %(see \emph{Infinitessimal, pg 100})
+Cavalieri's calculation was slightly different, with his parabola being drawn in a rectangle and the difference subtracted from a triangle. The above is a little easier to visualize.
+\bigbreak %(see \emph{Infinitessimal, pg 100})
 
-Cavalieri did not court controversy like Galileo, being well-aware of the contentious nature of indivisibles and taking great pains to distinguish `all the lines/squares' of a figure from the figure itself. \emph{Geometria Indivisibilis} was dense and difficult, so it wasn't easy to challenge. Cavalieri therefore remained relatively safe, even as his political rivals (the Jesuit order) worked hard to stamp out the `dangerous' study of indivisibles.
+Unlike Galileo, Cavalieri did not court controversy. He was well-aware of the contentious nature of indivisibles and took great pains to distinguish `all the lines/squares' of a figure from the figure itself. This sleight-of-hand and the dense, difficult, nature of \emph{Geometria Indivisibilis} helped keep Cavalieri out of trouble. But challenges certainly arose: his political rivals (the Jesuit order) worked hard to stamp out the `dangerous' study of indivisibles. Cavalieri's later work tried to refute some of these challenges, not least the criticism that he lacked a rigorous definition of \emph{indivisible}.
 
 
+\pagebreak[3] 
 
-\paragraph{Evangelista Torricelli (1608--1647)} A contemporary of Galileo and Cavalieri, Torricelli made several applications of Cavalieri's principle and advocated for its careful use.
 
-\begin{minipage}[t]{0.7\linewidth}\vspace{0pt}
-	If the sides of a rectangle are in the ratio 2\,:\,1, so also are indicated red and blue segments. In Cavalieri's language, `all the lines' of the red triangle are twice `all the lines' of the blue triangle! Torricelli observes that the red triangle cannot have twice the area of the blue, since they are congruent and points out that Cavalieri's principle has been misapplied: the cross-sections were not measured with reference to a common line.
+\paragraph{Evangelista Torricelli (1608--1647)} A contemporary of Galileo and Cavalieri, Torricelli made great use of Cavalieri's principle and advocated for its careful application. Here is an example.
+
+\begin{minipage}[t]{0.7\linewidth}\vspace{-\parsep}
+	Suppose a rectangle has sides in the ratio 2\,:\,1, and split it diagonally into two congruent triangles (of necessarily equal area).\smallbreak
+	The \textcolor{mRed}{indicated} \textcolor{Blue}{segments} are also in the ratio 2\,:\,1. In Cavalieri's language, `the lines' of the upper triangle are twice `the lines' of the lower. So is the area of the upper triangle twice that of the lower?!
 \end{minipage}
 \hfill
-\begin{minipage}[t]{0.29\linewidth}\vspace{0pt}
-	\hfill\includegraphics{analytic-torri1}
-\end{minipage}\medbreak
+\begin{minipage}[t]{0.29\linewidth}\vspace{-\parsep}
+	\hfill\includegraphics[alt={if all the lines are in the ratio 2 to 1, are the areas also}]{analytic-torri1}
+\end{minipage}
+\smallbreak
 
-In modern language, $\int_0^2\frac 12x\,\dx=\int_0^12y\,\dy$ are equal via the substitution $x=2y$. The point is that the infinitesimals are also in the \emph{same ratio} $\dx:\dy=2:1$.\bigbreak
+Obviously not, since the triangles are congruent. Torricelli observes Cavalieri's principle has been misapplied: the cross-sectional lines were not measured with reference to a common line.
+
+In modern language, we could view the diagonal as the line $x=2y$ and observe that this substitution result in and equality of integrals
+\[
+	\int_0^2\frac 12x\,\dx=\int_0^12y\,\dy
+\]
+The issue is that the infinitesimals are also in the \emph{same ratio} $\mathcolor{Blue}{\dx}:\mathcolor{mRed}{\dy}=2:1$.
+\bigbreak
 
 
-Another of Torricelli's examples offers a seeming paradox.
 
-\begin{minipage}[t]{0.58\linewidth}\vspace{-5pt}
-	The hyperbola with equation $z=\frac 1x$ is rotated around the $z$-axis. A \textcolor{Green}{cylinder} centered on the $z$-axis with radius $x$ lying under the surface has surface area
+\begin{minipage}[t]{0.6\linewidth}\vspace{-\parsep}
+	Another of Torricelli's examples offers a seeming paradox.\smallbreak
+	The hyperbola with equation $z=\frac 1x$ is rotated around the $z$-axis. A \textcolor{mGreen}{cylinder} centered on the $z$-axis with radius $x$ lying under the surface has surface area
 	\[
 		A=\text{circumference}\cdot\text{height}=2\pi xz=2\pi
 	\]
-	Underneath the graph at $x$, Torricelli draws a \textcolor{Green}{circular disk} with area $2\pi$. Since the area of this disk is independent of $x$, he argues that the volume under the original \textcolor{blue}{surface} out to radius $a$ equals the volume of the solid \textcolor{orange}{cylinder}:
+	Underneath the graph at $x$, Torricelli draws a \textcolor{mGreen}{circular disk} with area $2\pi$. Since the area of this disk is independent of $x$, he argues that the volume under the original \textcolor{Blue}{surface} out to radius $a$ equals the volume of the solid \textcolor{Brown}{cylinder}:
 	\[
 		V=2\pi a
 	\]
@@ -560,81 +595,96 @@ Another of Torricelli's examples offers a seeming paradox.
 	\[
 		V=\int_0^a 2\pi x\cdot\frac 1x\,\dx=2\pi a
 	\]
-	The conundrum is that the surface is \emph{infinitely tall}! How can we justify the idea that it lies above a \emph{finite} volume?
 \end{minipage}
 \hfill
-\begin{minipage}[t]{0.41\linewidth}\vspace{-10pt}
+\begin{minipage}[t]{0.38\linewidth}\vspace{-\parsep}
 	\hfill
-	\href{http://www.math.uci.edu/~ndonalds/math184/analytic-torri2.html}{
-		\includegraphics{analytic-torri2}
+	\href{%
+		http://www.math.uci.edu/~ndonalds/math184/analytic-torri2.html%
+	}{%
+		\includegraphics[alt={a finite volume underneath an infinitely tall surface of rotation}]{analytic-torri2}%
 	}
 \end{minipage}
-\bigbreak
+\smallbreak
+The conundrum is that the surface is \emph{infinitely tall}! How is it possible for such to lie above a \emph{finite} volume? Examples like this abound in calculus, such as $\int_0^1\frac 1{\sqrt x}\,\dx=2$: a finite area underneath an unbounded curve. This isn't trickery, but it does illustrate how easy it is to work with the infinite and the infinitesimal \emph{without} stopping to ask if their \emph{meaning} are well understood\ldots
 
-Galileo, Cavalieri and Torricelli mark the end of 400 years of Italian dominance of in science and mathematics dating back to Fibonacci. Their ideas were too controversial to thrive so close to the center of Church power. The center of European science and philosophy therefore moved northward. The English and French (protestant) reformations of the 1500s together with developing ideas of reformed government\footnote{%
-	For instance Hobbes' \emph{Leviathan} written during the English Civil War (1642--1651) was a plea for the constraint of absolute monarchical power. The War itself indeed proved decapitatingly effective at reining in a King\ldots%
+
+\subsubsection*{Scientific Power Moves Northwards}
+
+Galileo, Cavalieri and Torricelli mark the end of 400 years of Italian dominance in science and mathematics, dating back to Fibonacci. Their ideas were too controversial to be allowed to thrive so close to Rome at a time of great threat to the Church's power.
+\smallbreak
+
+The various protestant reformations and wars of the 15-1600s brought great changes to northern Europe. While deeply destructive at the time, they also proved to be a catalyst for new ideas, leading directly to the Enlightenment period of the 16-1700s. Ideas of reformed government and individual liberty\footnote{%
+	For instance, Hobbes' \emph{Leviathan}, written during the English Civil War (1642--51), is partly a plea to constrain absolute monarchical power. The War itself indeed proved decapitatingly effective at reining in a King\ldots%
 }
-meant that Northern Europe provided more fertile ground for new ideas.
+helped to unleash greater productivity and scientific output. The net result was that northern Europe became a more fertile place for philosophical and scientific development.
 
-
+\vfil
 
 \begin{exercises}{}{}
-	\hangindent\leftmargini\emph{Key concepts: \ }
+	\hangindent\leftmargini\emph{Key concepts: \ The Area and Velocity Problems as the Origin of Calculus, \ Analytic geometry provides a key computational tool, \ Differentiation à la Descartes \& Fermat, \ Cross-sections \& Cavalieri's Principle}
+	
 	
 	\begin{enumerate}
 	  \item Find the maximum of $p(x)=5+x-2x^2$ using Fermat's first method.
 	  
-	  
 		\item%[15-4]* 
-		Use Fermat's second method (``$+e$'') to find the maximum of $bx-x^3$. How might Fermat decide which of the two solutions to choose as his maximum?
+		Use Fermat's second ``adequation'' ($+e$) method to find the local maximum of the function $bx-x^3$, where $b>0$. How might Fermat decide that the positive solution to this problem really does provide a maximum?
 	  
 		\item%[15-5]*
-		Justify Fermat's first method of determining maxima and minima by showing that if $M$ is a maximum of $p(x)$, then the polynomial $p(x)-M$ always has a factor $(x-a)^2$, where $a$ is the value of $x$ giving the maximum.
+		Consider Fermat's first method of determining maxima and minima. Justify the method by showing that if $p(a)=M$ is a local maximum for $p(x)$, then the polynomial $p(x)-M$ is divisible by $(x-a)^2$.
 		
+		\item Use Descartes' method of normals to compute the slope of the curve $y=x^2$ at the point $(a,a^2)$.
 		
-		\item Use Descartes' method of normals to compute the slope of the curve $y=x^2$ at $(a,a^2)$.
-	
-		\item Suppose the surface of a sphere of radius $r$ is subdivided into infinitesimal regions of equal area. Following Kepler, use the formula for the volume of a cone ($\frac 13$base$\cdot$height)	to find the relationship between the volume $V$ of the sphere and its surface area $A$.
+		\item Suppose that the surface of a sphere of radius $r$ is subdivided into infinitesimal regions of equal (infinitesimal) area.\par
+		Following Kepler, use the formula for the volume of a cone ($\frac 13$base$\cdot$height)	to find the relationship between the volume $V$ of the sphere and its surface area $A$.
 			
 	 	\item%[15-2]* 
-	 	(A problem of Kepler)\lstsp Show that the largest circular cylinder that can be inscribed in a sphere is one in which the ratio of diameter to altitude is $\sqrt 2:1$.\par
+	 	(A problem of Kepler)\lstsp Show that the largest circular cylinder that can be inscribed in a sphere is one in which the ratio of diameter to altitude is $\smash{\sqrt 2:1}$.\par
 	 	(\emph{Hint: Relate the problem to finding the maximum of the function $f(x)=x-\frac 14x^3$, for which you can use modern calculus})
+	 	
+	 	
+		\item%[15-22]*
+	 	Mimicking Fermat, establish the power law $\int_0^ax^k\,\dx=\frac 1{n+1}a^{n+1}$ for any positive integer $n$.
+% 	 	 Determine the area under the curve $y=px^k$ from $x=0$ to $x=x_0$ by dividing the interval $[0,x_0]$ into an infinite set of subintervals, beginning from the right with the points $a_0=x_0,\ a_1=\frac nmx_0,\ a_2=\left(\frac nm\right)^2x_0,\ldots$ where $n<m$, and proceeding as in Fermat's derivation of the area under the hyperbola.
+	 	
+			
+		\pagebreak[3]
 		
-		
-	% 	\item%[15-22]*
-	% 	Determine the area under the curve $y=px^k$ from $x=0$ to $x=x_0$ by dividing the interval $[0,x_0]$ into an infinite set of subintervals, beginning from the right with the points $a_0=x_0,\ a_1=\frac nmx_0,\ a_2=\left(\frac nm\right)^2x_0,\ldots$ where $n<m$, and proceeding as in Fermat's derivation of the area under the hyperbola.
-	
-	
-		\item We consider a version of Gregory St.\,Vincent's 1647 approach to the area under the hyperbola $xy=1$.
-		\begin{enumerate}
-		  \item If $1<a<b$ and $r>0$ as in the picture, explain why the areas $A$ and $B$ under the curve satisfy the same inequalities\par
-		  \begin{minipage}[t]{0.6\linewidth}\vspace{-3pt}
-		  \[
-		  	\frac{b-a}b<A,B<\frac{b-a}a
-		  \]
-		  (\emph{Since $[a,b]$ may be subdivided into arbitrarily many subintervals, the areas $A$ and $B$ are therefore equal}) 
-		  \end{minipage}
-		  \hfill
-		  \begin{minipage}[t]{0.39\linewidth}\vspace{-15pt}
-		  	\hfill\includegraphics{analytic-stv-area}
-		  \end{minipage}
-		  
-		  \item If $A(x)$ is the area under the hyperbola between 1 and $x$, explain why $A$ satisfies the \emph{logarithmic} identity
-		  \[
-		  	A(x_1x_2)=A(x_1)+A(x_2)
-		  \]
-		  Why are you not surprised by this?\par
-		  (\emph{For simplicity, assume $1<x_1<x_1x_2$})
+			
+		\item We consider a version of Gregory St.\,Vincent's 1647 approach to the area under the hyperbola $xy=1$.\par
+		\begin{minipage}[t]{0.63\linewidth}\vspace{-\parsep}
+			\begin{enumerate}
+		  	\item If $1<a<b$ and $r>0$, as pictured, explain why the areas $A$ and $B$ under the curve satisfy the same inequalities
+			  \[
+			  	\frac{b-a}b<A,B<\frac{b-a}a
+			  \]
+			  (\emph{Since $[a,b]$ may be subdivided into arbitrarily many subintervals, the areas $A$ and $B$ are therefore equal})
+			\end{enumerate}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[t]{0.35\linewidth}\vspace{-6\parsep}
+			\hfill\includegraphics[alt={finding the area under a hyperbola}]{analytic-stv-area}
+		\end{minipage}
+		 
+		\begin{enumerate}[resume]
+			\item If $A(x)$ is the area under the hyperbola between 1 and $x$, explain why $A$ satisfies the \emph{logarithmic} identity
+			\[
+			  A(x_1x_2)=A(x_1)+A(x_2)
+			\]
+			Why are you not surprised by this?\par
+			(\emph{For simplicity, assume $1<x_1<x_1x_2$})
 		\end{enumerate}
-		
-		%\begin{minipage}[t]{0.6\linewidth}\vspace{0pt}
-			\item Consider two copies of triangle with sides $a,b$ arranged into a rectangle. Argue that `all the lines' of the rectangle are twice `all the lines' of the triangle.\par
+		  
+
+		\item Consider two copies of a triangle with sides $a,b$ arranged into a rectangle. Argue that `all the lines' of the rectangle are twice `all the lines' of the triangle.\par
+		\begin{minipage}[t]{0.6\linewidth}\vspace{-\parsep}
 			(\emph{In modern language, $\int_0^ab\,\dy=2\int_0^a\frac bay\,\dy$}) 
-		%\end{minipage}
-		%\hfill
-		%\begin{minipage}[t]{0.39\linewidth}\vspace{0pt}
-			\hfill\includegraphics{analytic-torri3}
-		%\end{minipage}\par
+		\end{minipage}
+		\hfill
+		\begin{minipage}[t]{0.39\linewidth}\vspace{-2\parsep}
+			\hfill\includegraphics[alt={a rectangle has twice the cross-sections of a triangle}]{analytic-torri3}
+		\end{minipage}
 		
 		\item Repeat Cavalieri's analysis of the spiral (pg.\,\pageref{pg:cavspiral}) to find the area inside one revolution of the curve $r=k\theta$ for any $k>0$.
 		
