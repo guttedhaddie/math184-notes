@@ -1,17 +1,26 @@
-settings.tex="pdflatex";
+settings.tex="lualatex";
+defaultpen(fontsize(12pt));
 
 texpreamble("\usepackage{amsmath}
 \usepackage{amsthm,amssymb}
-\usepackage{mathpazo}
-\usepackage[svgnames]{xcolor}
+\usepackage{unicode-math}
+\setmainfont{TeX Gyre Pagella}
+\setmathfont{TeX Gyre Pagella Math}
+\usepackage[svgnames,x11names]{xcolor}
 ");
+
+import x11colors;
+pen lGreen=rgb("00a000");
+
 import graph;
 
 
-size(180,160,IgnoreAspect);
+size(180,150,IgnoreAspect);
 
-xaxis("$x$",0,1,red,RightTicks(new real[]{0,1}));
-yaxis("$y$",0,35,red,LeftTicks(new real[]{0,10,20,30}));
+xaxis("$t$",0,1.1,red,RightTicks(new real[]{0,1},new real[]{0.25,0.5,0.75}));
+yaxis("$v$",0,35,red,LeftTicks(new real[]{0,10,20,30}));
+
+xtick(Label("$\frac 12$",align=S),0.5,S,red);
 
 
 for(int i=0; i<=11; ++i){

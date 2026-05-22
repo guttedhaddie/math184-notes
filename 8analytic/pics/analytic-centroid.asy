@@ -27,7 +27,7 @@ pair G=2*AB/3;
 
 draw(1.2B--O--1.3A,Arrows);
 
-draw(O--A--B--cycle,blue);
+draw(O--A--B--cycle,blue+linewidth(1));
 draw(O--AB,dashed);
 draw(B--OA,dashed);
 draw(A--OB,dashed);

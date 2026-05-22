@@ -156,13 +156,13 @@ As demonstrated by the centroid proof, Descartes' ability to \emph{choose axes t
 Descartes found that his method could solve many problems in a more efficient manner than using synthetically; in particular, finding complicated intersections of curves. As we'll see in the next section, such arguments were necessary for the development of calculus, ans would often rely on his Factor Theorem (pg.\,\pageref{pg:factorthm}).
 \smallbreak
 
-Given the novelty of his approach, Descartes typically gave geometric proofs to back up his algebraic work. However he also saw the future: once several examples were done, he claimed that it was no longer necessary to draw physical lines and provide a geometric argument; \emph{the algebra was the proof.}
+Given the novelty of his approach, Descartes typically gave geometric proofs to back up his algebraic work. However, he also saw the future: once several examples were done, he claimed that it was no longer necessary to draw physical lines and provide a geometric argument; \emph{the algebra was the proof.}
 
 
 \vfil
 
 \begin{exercises}{}{}
-	\hangindent\leftmargini\emph{Key concepts: \ Basic algebra encodes geometric facts, \ Analytic geometry helped algebra \& number eclipse geometry, \ Fermat \& Descartes' single-axis approach}
+	\hangindent\leftmargini\emph{Key concepts: \ Basic algebra encodes geometric facts, \ Analytic geometry helps algebra \& number eclipse geometry, \ Fermat \& Descartes' single-axis approach}
 	
 	\begin{enumerate}
 	  \item %[14]
@@ -236,150 +236,162 @@ Given the novelty of his approach, Descartes typically gave geometric proofs to 
 
 \clearpage
 
-\iffalse
 
 
 \subsection{The Beginnings of Calculus}\label{sec:calc1}
 
 At the heart of calculus is the relationship between \emph{velocity, displacement, rate of change} and \emph{area.}
 \begin{itemize}
-  \item The \emph{instantaneous velocity} of a particle is the \emph{rate of change} of its \emph{displacement.}
+  \item The \emph{instantaneous velocity} of a particle is the \emph{rate of change} of its \emph{displacement.} Otherwise said, the \emph{slope} of the displacement-time graph. 
   \item The \emph{displacement} of a particle is the \emph{net area} under its \emph{velocity-time} graph.
 \end{itemize}
-To state these principles requires graphs. Analytic geometry makes computation much easier (\emph{rate of change} means \emph{slope}). Once it appeared in the early 1600s, the rapid development of calculus was arguably inevitable. However, many of the basic ideas long predate Descartes and Fermat.\smallbreak
-In the context of the above principles, the \emph{Fundamental Theorem of Calculus} is intuitive: complete knowledge of displacement (from some starting point) is equivalent to complete knowledge of velocity. The modern statement is more daunting, though familiar:
+These relationships are essentially geometric. As we've seen, the advent of analytic geometry in the 1620-30s facilitated easier geometric computations. With this powerful tool available, the rapid development of calculus was arguably inevitable.
+\smallbreak
+In the context of the above, the \emph{Fundamental Theorem of Calculus} is intuitive: complete knowledge of displacement (from some initial point) is equivalent to complete knowledge of velocity. A modern statement is more daunting.
 
-\begin{thm*}{}{}
-	\exstart If $f$ is continuous on $[a,b]$, then $F(x):=\int_a^xf(u)\,\du$ is continuous on $[a,b]$, differentiable on $(a,b)$, and $F'(x)=f(x)$.
-	\begin{enumerate}\setcounter{enumi}{1}
+\begin{thm*}{Fundamental Theorem of Calculus}{}
+	\begin{enumerate}
+	  \item If $f$ is integrable on $[a,b]$, then $F(x):=\int_a^xf(u)\,\du$ is continuous on $[a,b]$. Moreover, if $f$ is continuous at $c\in(a,b)$, then $F'(c)=f(c)$.
 	  \item If $F$ is continuous on $[a,b]$ with integrable derivative on $(a,b)$, then $\int_a^bF'(x)\,\dx=F(b)-F(a)$.
 	\end{enumerate}
 \end{thm*}
 
-The triumph of the modern version is its abstraction and wide applicability: we've gone way beyond considerations of velocity ($f$) and displacement ($F$). The challenge of \emph{teaching}\footnote{Calculus students can easily be taught the mechanics of calculus (the power law, chain rule, etc.) without having any idea of its meaning; witness the power and curse of analytic geometry and algebra!} and \emph{proving} the Fundamental Theorem lies in developing and understanding what is meant by \emph{continuous, differentiable} and \emph{integrable.} The quest for good definitions of these concepts is the story of analysis in the 17-1800s. We begin with some older considerations of the velocity and area problems.
+The modern version is abstract and very widely applicable: we've gone way beyond considerations of velocity ($f$) and displacement ($F$). The challenge of \emph{teaching}\footnote{%
+	Calculus students can easily be taught the \emph{mechanics} of calculus (the power law, chain rule, etc.) without having any idea of its \emph{meaning}; witness the power and curse of analytic geometry and algebra!%
+}
+and \emph{proving} the Fundamental Theorem lies in developing and understanding what is meant by \emph{continuous, differentiable} and \emph{integrable.} The quest for good definitions of these concepts is the story of analysis in the 17-1800s.
+\medbreak
+
+We begin, however, with some older considerations of the velocity and area problems.
 
 
 \subsubsection*{The Velocity Problem pre-1600}
 
-The modern ideas of \emph{uniform/average} velocity are straightforward:
+The modern ideas of \emph{uniform} or \emph{average} velocity are straightforward:
 \begin{quote}
-	Measure how far an object travels in a given time interval and divide one by the other.
+	Measure displacement over a given time interval and divide one by the other.
 \end{quote}
-While several ancient Greek mathematicians %(e.g.\ Autolycus)
-considered this (and uniform acceleration), the challenge of considering a ratio of two unlike quantities (distance\,:\,time) proved difficult to surmount. Around 1200, Gerard of Brussels resurrected this approach as a definition of velocity, though it was not  considered a numerical quantity in its own right.\smallbreak
+Several ancient Greek mathematicians %(e.g.\ Autolycus)
+considered versions of this, and of uniform acceleration, the challenge of considering a ratio of two unlike quantities (displacement\,:\,time) proved difficult to surmount. Around 1200, Gerard of Brussels resurrected the ratio approach as a definition of velocity, though it was not considered a numerical quantity in its own right.
+\smallbreak
 
-Gerard was credited in the 1330s by the Oxford/Merton Thinkers %\footnote{Or Merton Thinkers, based at Merton College, Oxford. They included Thomas Bardwardine, William Heytesbury, etc.}
-as influencing their investigations of \emph{instantaneous velocity,} a much more difficult issue. They offered the following definition and made the first statement of the `mean speed theorem,' though both are vague and logically dubious.
+Gerard was credited by the Oxford/Merton Thinkers %\footnote{Or Merton Thinkers, based at Merton College, Oxford. They included Thomas Bardwardine, William Heytesbury, etc.}
+(1330s) as influencing their investigations of \emph{instantaneous velocity,} a much more difficult issue. They offered the following definition.
 
 \begin{defn*}{}{}
 	The \emph{velocity} of a particle at an instant will be measured as the uniform velocity along the path that would have been taken by the particle if it continued with that velocity.
 \end{defn*}
 
-This is really a convoluted idea of inertial motion.
+This is vague, though it teases at the idea of inertial motion that Newton would later formalize in his first law of motion. The Merton Thinkers also made the first known statement of the 'mean speed theorem.'
 
 \begin{thm*}{}{}
 	If a particle is uniformly accelerated from rest to some velocity, it will travel half the distance it would have traveled over the same interval with the final velocity.
 \end{thm*}
 
-For centuries it was thought that Galileo was the first to state such ideas (compare his falling body discussion, pg.\,\pageref{pg:galileo}), but the Oxford group beat him by 250 years. They had no algebra with which to prove their assertions and essentially only asserted examples. %Indeed the best they could manage was to assert the proportion of powers rule: if time intervals are in the proportion $2:1$ and if particles subject to the same uniform acceleration are accelerated from rest over these intervals, then the resulting distances traveled will be in the proportion $4:1$. In modern notation:
-%\[v_1=at,\quad v_2=2at\implies d_1=\frac 12v_1t=\frac 12at^2,\quad d_2=\frac 12v_2\cdot 2t=2at^2=4d_2\]
-\smallbreak
-In the 1350's, Nicolas Oresme (Paris) considered velocity geometrically by (essentially) drawing velocity-time graphs. As we saw previously, this is essentially the approach taken by Galileo; it is also an early version of \emph{axes.} A major difference is that Galileo married mathematics to \emph{observation}; uniform acceleration for Galileo was precisely the motion of a falling body.
+For centuries, Galileo was thought to have been the first to state such ideas (compare his falling body discussion, pg.\,\pageref{pg:galileo}), but the Oxford group beat him by 250 years. They had no algebra with which to prove their claims,  and essentially only asserted examples. For instance, if time intervals are in the proportion $2:1$ and if particles subject to the same uniform acceleration are accelerated from rest over these intervals, then the resulting distances traveled will be in the proportion $4:1$. In modern notation:
+\[
+	v_1=at,\quad v_2=2at\implies d_1=\frac 12v_1t=\frac 12at^2,\quad d_2=\frac 12v_2\cdot 2t=2at^2=4d_1
+\]
+\medskip
+
+In the 1350s, Nicolas Oresme (Paris) considered velocity geometrically by drawing what are essentially velocity-time graphs. This is roughly the approach taken later by Galileo, and another early version of \emph{axes.} A major difference is that Galileo married mathematics to \emph{observation}; uniform acceleration for Galileo was precisely the motion of a falling body.
 \smallbreak
 
 
-A proper definition of \emph{instantaneous velocity} is difficult because it requires \emph{limits,} measuring average velocity over smaller and smaller intervals. You are in good company if you find this challenging: Zeno's arrow paradox is essentially an objection to the very idea of instantaneous velocity! Even if one accepts the concept, its direct measurement, even in modern times, is essentially impossible.\footnote{%
-	For instance, radar Doppler-shift (as used to catch speeding motorists) requires measuring the wavelength of a radar beam, which essentially compute the average velocity over a very small time interval. %Indeed quantum mechanics suggests that instantaneous velocity and precise location are possibly meaningless concepts. Thankfully mathematicians can choose to deal with idealized models of the universe rather than the real thing!
-}
+A rigorous definition of \emph{instantaneous velocity} is difficult because it requires \emph{limits}: one measures average velocity over smaller and smaller intervals. You are in good company if you find this challenging: Zeno's arrow paradox is an objection to the very idea of instantaneous velocity! Even if one accepts the concept, its \emph{direct} measurement, even in modern times, is nigh-impossible:	for instance, radar Doppler-shift (as used to catch speeding motorists) requires measuring the wavelength of a radar beam, which amounts to computing the average velocity over a very small time interval. %Indeed quantum mechanics suggests that instantaneous velocity and precise location are possibly meaningless concepts. Thankfully mathematicians can choose to deal with idealized models of the universe rather than the real thing!
+
 
 
 \subsubsection*{The Area Problem pre-1600}
 
-We've previously seen two situations in which calculus-like methods were used to describe areas.
+We've previously seen two situations in which calculus-like methods described areas.
 \begin{itemize}
-  \item Archimedes (sec.\,\ref{sec:archimedes}) computed/approximated the area of a circle and inside a parabola using infinitely many triangles. His `cross-section' approach to finding area and volume also seems modern, though this work remained unknown until 1899.
-  \item Kepler (pg.\,\pageref{pg:kepler2}) argued for his second law (equal areas in equal times) using infinitesimally small triangles to approximate segments of an ellipse. He also applied this method to several other problems, crediting Archimedes with the approach.
+  \item Archimedes (sec.\,\ref{sec:archimedes}) computed the area inside a parabola using infinitely many triangles in what amounts to the evaluation of an infinite series. His `cross-section' approach to finding areas and volumes also feels modern, though this work was unknown until 1899.
+  \item Kepler (pg.\,\pageref{pg:kepler2}) argued for his second law (equal areas in equal times) using infinitesimally small triangles to approximate segments of an ellipse: this is more akin to integration. He also applied this method to other problems, crediting Archimedes with the approach.
 \end{itemize}
 
-The modern notion of Riemann sums is just a special case of approximating an area using small rectangles: the philosophical challenge is again the notion of \emph{limits} and infinitesimals.\par
-\begin{minipage}[t]{0.58\linewidth}\vspace{-3pt}
-	In an early antecedent, Oresme describes how to compute the distance travelled by a particle whose speed is constant on a sequence of intervals. For example:\smallbreak
+The modern integral (via Riemann sums) is a special case of approximating area using small rectangles: the philosophical challenge is again the notion of \emph{limits} and infinitesimals.\par
+\begin{minipage}[t]{0.6\linewidth}\vspace{-\parsep}
+	In an early antecedent, Oresme describes how to compute the distance traveled by a particle whose speed is constant on a sequence of intervals. For example:\smallbreak
 	Over the time interval $\left[\tfrac 1{2^{n+1}},\tfrac 1{2^n}\right)$ a particle travels at speed $1+3n$. How far does it travel in 1 second?\smallbreak
-	Oresme drew boxes to compute areas and obtain
+	Oresme drew boxes to compute areas. In modern language, the distance traveled is an infinite series
 	\[
 		d=\sum_{n=0}^\infty(1+3n)\left(\frac 1{2^n}-\frac 1{2^{n+1}}\right) =\sum_{n=0}^\infty \frac{1+3n}{2^{n+1}}=4
 	\]
-	Similar to Archimedes, the infinite sum was evaluated by spotting two patterns:
 \end{minipage}
-\hfill
-\begin{minipage}[t]{0.4\linewidth}\vspace{-3pt}
-	\hfill\includegraphics{analytic-oresme}
-\end{minipage}\par
+\hfill 
+\begin{minipage}[t]{0.38\linewidth}\vspace{-\parsep}
+	\hfill\includegraphics[alt={computing the distance traveled by a particle with piecewise constant speed}]{analytic-oresme}
+\end{minipage}
+\par
+
+Similarly to Archimedes, the infinite sum was evaluated by spotting two patterns:
 \begin{gather*}
 	\frac 12+\frac 1{2^2}+\frac 1{2^3}\cdots+\frac 1{2^{n+1}}=1-\frac 1{2^{n+1}}
 	\qquad\qquad
 	\frac 02+\frac 1{2^2}+\frac 2{2^3}+\frac 3{2^4}+\cdots+\frac n{2^{n+1}}=1-\frac{n+2}{2^{n+1}}
 \end{gather*}
-Oresme had neither our notation nor our (limit-dependent) concept of an infinite series! He also worked with similar problems for uniform accelerations over intervals. These are not true Riemann sums, nor are they physical, for a particle cannot suddenly change speed!
-\goodbreak
+Oresme had neither our notation nor our (limit-dependent) concept of an infinite series. He also worked with similar problems for uniform acceleration over intervals. These are not true Riemann sums, nor are they physical, for a particle cannot suddenly change speed.
 
 
 \subsubsection*{Calculus à la Fermat \& Descartes}
 
-The advent of analytic geometry allowed Fermat and Descartes to turn the computation of instantaneous velocity and related differentiation problems into algebraic processes. The velocity of an object is now identified with the slope of the displacement-time graph, which can be computed using variations on the modern method of \emph{secant lines.} We discuss their competing methods.
+The advent of analytic geometry allowed Fermat and Descartes to turn the computation of instantaneous velocity and related differentiation problems into algebraic processes. The velocity of an object is identified with the slope of the displacement-time graph, which may be computed using variations of the modern method of \emph{secant lines.} We discuss their competing methods.
 
 \paragraph{Fermat's method of adequation}
 	
-Consider the function $p(x)=x^3-12x+19$; the goal is to find the minimum, which we know to be located at the $x$-value $m=2$.\par
-\begin{minipage}[t]{0.63\linewidth}\vspace{0pt}
-	Fermat argues that if $x_1,x_2$ are located near $m$ such that $p(x_1)=p(x_2)$, then the polynomial $p(x_2)-p(x_1)$ (which equals zero!) is divisible by $x_2-x_1$. Indeed
+We illustrate with an example. Our goal is to find the local minimum (located at $m=2$) of the cubic function $p(x)=x^3-12x+19$.\par
+
+\begin{minipage}[t]{0.65\linewidth}\vspace{-\parsep}
+	Fermat argues that if $x_1$ and $x_2$ are located near $m$ such that $p(x_1)=p(x_2)$, then the polynomial $p(x_2)-p(x_1)$ (which equals zero!) is divisible by $x_2-x_1$. Indeed
 	\begin{align*}
-		0&=\frac{p(x_2)-p(x_1)}{x_2-x_1}\\
-		&=\frac{x_2^3-12x_2+19-x_1^3+12x_1-19}{x_2-x_1}\\
+		0&=\frac{p(x_2)-p(x_1)}{x_2-x_1}
+		=\frac{x_2^3-12x_2+19-x_1^3+12x_1-19}{x_2-x_1}\\
 		&=\frac{(x_2-x_1)(x_2^2+x_1x_2+x_1^2-12)}{x_2-x_1}\\
 		&=x_2^2+x_1x_2+x_1^2-12
 	\end{align*}
 \end{minipage}
 \hfill
-\begin{minipage}[t]{0.35\linewidth}\vspace{0pt}
-	\hfill\includegraphics{analytic-adequation}
+\begin{minipage}[t]{0.33\linewidth}\vspace{-\parsep}
+	\hfill\includegraphics[alt={finding the local minimum by approximation}]{analytic-adequation}
 \end{minipage}
-\medbreak
+\smallbreak
 
-Since this holds for any $x_1,x_2$ with $p(x_1)=p(x_2)$, Fermat claims it also holds when $x_1=x_2=m$ (note the assumption of continuity!), and he concludes
+Since this algebraic identity holds for any $x_1$, $x_2$ with $p(x_1)=p(x_2)$, Fermat claims that it holds also when $x_1=x_2=m$: note the assumption of continuity and limit-taking! He concludes
 \[
 	3m^2-12=0\implies m=2
 \]
-By considering values of $x$ near $m$, it is clear that Fermat really has found a local minimum. We recognize the idea that the slope of the tangent line is zero at local extrema.
-\smallbreak
+By considering values of $x$ near $m$, it is clear to Fermat that he really has found a local minimum. We recognize the idea that the slope of the tangent line is zero at local extrema.
+\medbreak
 
-This approach dates from the 1620s and is similar to earlier work of Viète. Fermat later alters his method by considering values $p(x)$ and $p(x+e)$ for small $e$ ($x$ is `adequated by $e$'). The difference $p(x+e)-p(x)$ is more easily divided by $e$ without factorizing. Compared with the above, we obtain
+Fermat's approach dates from the 1620s and is similar to earlier work of Viète. He later alters his method by considering values $p(x)$ and $p(x+e)$ for small $e$ ($x$ is `adequated by $e$'), with the difference more easily divided by $e$ without factorizing. Compare with the previous calculation:
 \begin{align*}
 	0&=\frac{p(x+e)-p(x)}{e} =\frac{x^3+3x^2e+3xe^2+e^3-12x-12e+19-x^3+12x-19}{e}\\
 	&=\frac{3x^2e+3xe^2+e^3-12e}{e} =3x^2-12 +3xe+e^2
 \end{align*}
-Fermat finished by setting $e$ to zero and solving for $x$ as before. Observe the derivative $p'(x)=3x^2-12$ and how $e$ plays the role of $h$ in the modern expression
+Finish by setting $e=0$ and solving for $x$ as before. Observe the derivative $p'(x)=3x^2-12$ and how $e$ plays the role of $h$ in the modern definition
 \[
 	p'(x)=\lim_{h\to 0}\frac{p(x+h)-p(x)}h
 \]
-Fermat's method works for any polynomial, where the limit definition of derivative requires no more than simple evaluation at $h=0$. Fermat also extended his method to cover implicit curves and their tangents.
+Fermat's method works for any polynomial: in such cases, the limit definition of derivative requires no more than simple evaluation at $h=0$. He moreover extended his method to cover implicit curves and their tangents.
 
 
 \paragraph{Descartes' method of normals}\label{pg:descartesnormal}
 
 Descartes and Fermat are known to have corresponded regarding their methods. Descartes indeed seems to have felt somewhat challenged by Fermat, and engaged in some criticism of his approach. Descartes' method (in \emph{La Géométrie}) relies on circles and repeated roots of polynomials in order to compute tangents.\smallbreak
 
-In this example, we compute the slope of the curve \textcolor{blue}{$y=\frac 14(10x-x^2)$} at the point $P=(4,6)$.
+
+In this example, we compute the slope of the parabola \textcolor{Blue}{$y=\frac 14(10x-x^2)$} at the point $P=(4,6)$.
 \begin{center}
-	\includegraphics[]{analytic-desnormal}
+	\includegraphics[alt={approximating the tangent line using chords of circles}]{analytic-desnormal}
 \end{center}
-Let $N=(4+\nu,0)$ be where the \textcolor{Green}{normal} to the curve intersects the $x$-axis.\footnote{%
+Let $N=(4+\nu,0)$ be where the \textcolor{mGreen}{normal} to the curve intersects the $x$-axis.\footnote{%
 	At the time, $\nu$ was known as the \emph{subnormal} and $t$ the \emph{tangent.}
 }
-Draw a \textcolor{red}{circular arc} radius $r$ centered at $N$.
-If $r$ is close to $n$, the circle intersects the curve in two points $Q,R$ near to $P$. The line $\lin{QR}$ plainly approximates the tangent at $P$.
+Draw a \textcolor{mRed}{circular arc} with radius $r$ centered at $N$. If $r$ is close to $n$, this circle intersects the curve in two points $Q,R$ near to $P$. The line $\lin{QR}$ plainly approximates the tangent at $P$.
 \smallbreak
-The co-ordinates of $Q,R$ may be found by solving algebraic equations: substituting $y=\frac 14(10x-x^2)$ into the equation for the circle results in an equation with two known roots, namely the $x$-values of $Q$ and $R$. By the factor theorem,
+
+The co-ordinates of $Q,R$ may be found using algebra: substituting $y=\frac 14(10x-x^2)$ into the equation for the circle results in an equation with two known roots, namely the $x$-values of $Q$ and $R$. By the factor theorem,
 \[
 	\begin{cases}
 		\bigl(x-(4+\nu)\bigr)^2+y^2=r^2\\
@@ -387,7 +399,7 @@ The co-ordinates of $Q,R$ may be found by solving algebraic equations: substitut
 	\end{cases}
 	\implies (x-Q_x)(x-R_x)f(x)=0
 \]
-where $f(x)$ is some polynomial (in this case quadratic). Rather than doing this explicitly, Descartes observes that if the radius $r$ is adjusted until it \emph{equals} $n$, then $Q$ and $R$ coincide with $P$ and the above equation has a \emph{double-root}:
+where $f(x)$ is some polynomial (in this case quadratic). Rather than doing this explicitly, Descartes observes that if the radius $r$ is adjusted until it \emph{equals} $n$, then $Q=R=P$ and the above equation has a \emph{double-root}:
 \[
 	\begin{cases}
 		\bigl(x-(4+\nu)\bigr)^2+y^2=n^2\\
@@ -413,9 +425,10 @@ By similar triangles, the slope of the curve at $P$ is therefore
 
 \paragraph{Fermat and Area}
 
-The previous methods permit \emph{differentiation,} albeit inefficiently. Fermat also approached the area problem, in a manner similar to Oresme. Here is an example where we find the area under the curve $y=x^3$ between $x=0$ and $x=a$.
+The previous methods permit \emph{differentiation,} albeit inefficiently. Fermat also approached the area problem in a manner similar to Oresme. Here is an example of this approach, where we find the area under the curve $y=x^3$ between $x=0$ and $x=a$.
+\par
 
-\begin{minipage}[t]{0.59\linewidth}\vspace{0pt}
+\begin{minipage}[t]{0.59\linewidth}\vspace{-\parsep}
 	Let $0<r<1$ be constant. The rectangle on the interval $[ar^{n+1},ar^n]$ touching the curve at its upper right-corner has area
 	\[
 		A_n=(ar^n-ar^{n+1})\cdot (ar^n)^3=a^4(1-r)r^{4n}
@@ -428,15 +441,19 @@ The previous methods permit \emph{differentiation,} albeit inefficiently. Fermat
 	Setting $r=1$ recovers the area under the curve: $\frac 14a^4$.
 \end{minipage}
 \hfill
-\begin{minipage}[t]{0.4\linewidth}\vspace{0pt}
-	\hfill\includegraphics{analytic-fermat-area}
+\begin{minipage}[t]{0.4\linewidth}\vspace{-\parsep}
+	\hfill
+	\includegraphics[alt={finding area using an infinite series then taking limits}]{analytic-fermat-area}
 \end{minipage}
-\medbreak
+\smallbreak
 
 This is non-rigorous by modern standards and again implicitly invokes limits\footnote{%
 	For Fermat, $r=\frac nm$ would have been rational, and he'd have set $m=n$ at the end as in his adequation method
 }
-by setting $r=1$. Regardless, Fermat is able to establish the power law $\int_0^a x^n\,\dx=\frac 1{n+1}a^{n+1}$ for any positive integer $n$.
+by setting $r=1$. By similar calculations, Fermat is able to establish the power law $\int_0^a x^n\,\dx=\frac 1{n+1}a^{n+1}$ for any positive integer $n$.
+
+
+\pagebreak[3]
 
 
 \subsubsection*{Italian Calculus in the 17\th{} Century: Area and Volume Problems}
@@ -629,6 +646,7 @@ meant that Northern Europe provided more fertile ground for new ideas.
 
 
 
+\iffalse
 
 \subsection{Calculus in the late 1600s}\label{sec:calc2}
 
