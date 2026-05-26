@@ -696,17 +696,22 @@ helped to unleash greater productivity and scientific output. The net result was
 
 
 
-\iffalse
-
 \subsection{Calculus in the late 1600s}\label{sec:calc2}
 
-By the second half of the 17\th{} century, the mathematical center of Europe had moved northwards, to France, Germany, Holland and Britain. In this section we present some of this work, culminating in the efforts of Newton and Leibniz.\par
+By the second half of the 17\th{} century, the mathematical center of Europe had moved northwards, to France, Germany, Holland and Britain. In this section we present some of the northern European work on calculus, culminating in the efforts of Newton and Leibniz.
 
-\paragraph{Hendrick van Heuraet (1634--1660)} Working in Holland, van Heuraet studied Descartes' and argued that the arc-length of a curve described by a function $y$ equals the area under the curve $z=\frac ny$ where $n$ is the `normal' curve. His method appeared in Frans van Schooten's 1659 version of Descartes' \emph{La Geometrie.} To see why this should make sense, recall Descartes' method of normals and observe that the ratio $n:y$ equals that of $\ds:\dx$ in a differential triangle.\smallbreak
-\begin{minipage}[t]{0.64\linewidth}\vspace{0pt}
-	His most famous example involved calculating the arc-length of the curve $y^2=x^3$. By Descartes' method,
+
+\subsubsection*{Hendrick van Heuraet (1634--1660)}\label{pg:vanH}
+
+Working in Holland, van Heuraet studied Descartes' analytic geometry and method of normals.
+\par
+\begin{minipage}[t]{0.65\linewidth}\vspace{-\parsep}
+	 He argued that the \textcolor{Blue}{arc-length of a curve} described by a function $y$ equals the  \textcolor{mMagenta}{area under the curve} $z=\frac ny$ where $n$ is the `normal curve' of Descartes. His method appeared in Frans van Schooten's 1659 version of Descartes' \emph{La Geometrie.}
+	 \smallbreak
+	 To see why this claim makes sense, recall Descartes' method of normals (page \pageref{pg:descartesnormal}) and observe that the ratio $n:y$ equals that of $\ds:\dx$ in a (modern) differential triangle.
+	\smallbreak
+	This is easiest to see in an example: here we calculate the arc-length of the curve $y^2=x^3$ in van Heureat's style. By Descartes' method of normals, we substitute the \textcolor{Blue}{curve} into the equation for the circle with radius $n$ tangent to the curve:
 	\begin{gather*}
-		\qquad
 		\begin{cases}
 			(x-a-\nu)^2+y^2=n^2\\
 			y^2=x^3
@@ -714,60 +719,133 @@ By the second half of the 17\th{} century, the mathematical center of Europe had
 		\begin{aligned}
 			\implies 0&= x^3+x^2-2(x+\nu)x+(a+\nu)^2-n^2\\
 			&=(x-a)^2(x+2a+1)+(3a^2-2\nu)x\\
-			&\qquad\qquad +\nu^2+2a\nu-2a^3-n^2
+			&\qquad\qquad\qquad +\nu^2+2a\nu-2a^3-n^2
 		\end{aligned}
 	\end{gather*}
 \end{minipage}
 \hfill
-\begin{minipage}[t]{0.35\linewidth}\vspace{-4pt}
-	\hfill\includegraphics{calc-gregory}
-\end{minipage}\medbreak
+\begin{minipage}[t]{0.33\linewidth}\vspace{-\parsep}
+	\hfill\includegraphics[alt={comparing the arc length of a curve to the area under another}]{calc-gregory}
+\end{minipage}
+\smallbreak
 
-Since the remainder must be zero, we conclude that $\nu=\frac 32a^2$, from which
+Since this last must have a double-root at $x=a$, the remainder is zero and we conclude that
+\[
+	3a^2-2\nu=0\implies \nu=\frac 32a^2
+\]
+But then
 \[
 	n=\sqrt{\nu^2+y^2}=\sqrt{\frac 94a^4+a^3}\implies z=\frac ny=\sqrt{\frac 94a+1}
 \]
-The \textcolor{blue}{arc-length} from $x=0$ to $a$ is therefore the \textcolor{orange}{area under the parabola} $z^2=\frac 94x+1$ between the same limits. By the usual Archimedean $\frac 43$-triangle approach, we see that
+The \textcolor{Blue}{arc-length} from $x=0$ to $a$ is therefore the \textcolor{mMagenta}{area under the parabola} $z^2=\frac 94x+1$ between the same limits. Recalling Archimedes, van Heuraet knew that the area under a parabola is $\frac 43$ that of the corresponding triangle, whence
 \[
-	\text{\textcolor{blue}{Arc-length}}=\frac 43\left[\frac 12\cdot\left(\frac 49+a\right)z(a)-\frac 12\cdot \frac 49\cdot 1\right] =\left[a+\frac 49\right]^{3/2}-\frac 8{27}
+	\text{\textcolor{blue}{Arc-length}}
+	=\frac 43\left[\mathcolor{Brown}{\frac 12\left(\frac 49+a\right)z(a)}
+	-\mathcolor{Teal}{\frac 12\cdot \frac 49z(0)}\right]
+	=\left[\frac 49+a\right]^{3/2}-\frac 8{27}
 \]
 
-\paragraph{James Gregory (1638--1675)} Hailing from Aberdeen, Scotland, Gregory studied in Italy with Stefano Angeli, a pupil of Torricelli, before returning to Scotland where he became chair of mathematics at St.\,Andrews, and then Edinburgh.\smallbreak
-Gregory repeats van Heuraet's work relating the length of a curve to the area under another, before considering whether the process can be reversed: given a curve $z(x)$, can we find a curve $y(x)$ such that the arc-length of $y$ is given by the area under $z$? In modern language, given $z$, find $y$ such that
+
+\pagebreak[3]
+
+
+\subsubsection*{James Gregory (1638--1675)}
+
+Hailing from Aberdeen, Scotland, Gregory studied in Italy with Stefano Angeli, a pupil of Torricelli, before returning to Scotland where he became chair of mathematics at St.\,Andrews University, and then Edinburgh.
+\smallbreak
+Gregory repeats van Heuraet's work relating the length of a curve to the area under another, before considering whether the process can be reversed: given a curve $z(x)$, can we find a curve $y(x)$ such that the arc-length of $y$ is given by the area under $z$? In modern language, we need to find $y$ satisfying the \emph{integral equation}
 \[
 	\int_0^a\sqrt{1+y'^2}\,\dx=\int_0^az\,\dx
 \]
-which we'd view as solving the ODE $\diff[y]{x}=\sqrt{z^2-1}$. Gregory's solution was to \emph{define} $y$ to be the area under the curve $\sqrt{z^2-1}$ from $x=0$ to $a$. This is essentially part 1 of the fundamental theorem: if you want something whose slope (derivative) is given, define it to be the area under the curve!
-
-
-
-\paragraph{Isaac Barrow (1630--1677)} Like Gregory, Barrow also studied mathematics in Italy (and France), before returning to England to become the inaugural Lucasian Professor of Mathematics\footnote{%
-	One of the most prestigious world-wide academic positions in \emph{theoretical Physics,} in large part due to the fame of its second incumbent: Issac Newton. Later chairs include Paul Dirac and Stephen Hawking.%
+which is tantamount to solving the ODE $\diff[y]{x}=\sqrt{z^2-1}$. Gregory's solution was to \emph{define} $y$ to be the area under the curve $\smash{\sqrt{z^2-1}}$ from $x=0$ to $a$. This is part 1 of the Fundamental Theorem: if you want something whose slope (derivative) is given, define it to be the area under the curve!
+\smallbreak
+Obtaining \emph{power series} expressions was a large part of the early development of calculus. Gregory's contributions here include his (re)discovery\footnote{%
+	A version of this series was known to the 14\th{} Century Indian mathematician Mādhava, as were the Maclaurin series for sine and cosine, though this material was unknown in Europe. Gregory independently rediscovered it in 1671, shortly before Leibniz did the same thing.
 }
-at Trinity College Cambridge. Barrow's work remained predominantly geometric; he stated proving geometric versions of both parts of the fundamental theorem, though credited Gregory with part of the argument. In a precursor of Newton's work, he also modified Fermat's algorithm for differentiation. For example, here is how Barrow would have found the slope of the curve $x^2+2xy^2=c$ at a point $(x,y)$:
+of the arctangent series
+\[
+	\arctan x=x-\frac 13x^2+\frac 15x^5-\frac 17x^7+\cdots 
+\]
+% \begin{minipage}[t]{0.38\linewidth}\vspace{-\parsep}
+	Gregory was also a prolific astronomer. The picture shows part of a \href{https://www.atlasobscura.com/places/gregorys-meridian-line}{meridian line} (zero-line of longitude) he had drawn through his office in St.\,Andrews to assist with his astronomical work.
+% \end{minipage}
+% \hfill
+% \begin{minipage}[t]{0.6\linewidth}\vspace{-\parsep}
+% 	\hfill\includegraphics[scale=0.4,alt={gregory's meridian line}]{gregory-meridian1}
+% 	\includegraphics[scale=0.4,alt={gregory's meridian line}]{gregory-plaque1}
+% \end{minipage}
+
+\begin{center}
+	\includegraphics[scale=0.55,alt={meridian line on the sidewalk}]{gregory-meridian1}
+	\qquad\qquad
+	\includegraphics[scale=0.55,alt={plaque describing gregory's meridian line and his work on calculus}]{gregory-plaque1}
+\end{center}
+
+
+\pagebreak[3]
+
+
+\subsubsection*{Isaac Barrow (1630--1677)} BARROW AND THE FUND THM???
+
+Like Gregory, Barrow also studied mathematics in Italy (and France), before returning to England where he become the inaugural Lucasian Professor of Mathematics\footnote{%
+	The Lucasian Chair is one of the world's most prestigious academic positions. While named as a position in \emph{Mathematics}, it has become more associated with theoretical \emph{Physics}, in part due to the fame of its second incumbent, Issac Newton, and later chairs including George Stokes, Paul Dirac and Stephen Hawking.%
+}
+at Trinity College, Cambridge.
+\smallbreak
+Barrow's work on calculus was predominantly geometric: he stated geometric versions of both parts of the Fundamental Theorem, crediting Gregory with part of the argument.
+
+??????? The idea is essentially the modern one. Suppose $y=f(x)$ is an increasing function and draw the differential triangle. The new area under the curve is then approximately $\Delta A\approx f(x)\dx$. That is $\diff[A]{x}=f(x)$ and the essential link between area and slope is established.
+\bigbreak
+
+
+
+In a precursor to Newton's work, he also modified Fermat's algorithm for differentiation. Indeed Barrow is arguably the originator of the term \emph{differential}: he referred to the \emph{differential triangle} (page \pageref{pg:vanH}) since its sides were found by taking the \emph{difference} between the $x$- and $y$- co-ordinates of infinitesimally separated points on a curve. %Here, for example, is how Barrow would have found the slope of the curve $x^2+2xy^2=c$ at a point $(x,y)$:
+% \begin{itemize}\itemsep0pt
+%   \item Replace $x$ and $y$ with $x+e$ and $y+a$ respectively, and expand to obtain
+%   \[
+%   	x^2+2ex+e^2+2xy^2+4axy+2a^2x+2ey^2+4eay+2ea^2=c
+%   \]
+%   \item Delete everything from the original equation $x^2+2xy^2=c$ and every expression containing two or more of the terms $e,a$, obtaining
+%   \[
+%   	2ex+4axy+2ey^2=0 \implies e(x+y^2)+2ay=0
+%   \]
+%   \item The slope is therefore the ratio $a:e=-(x+y^2):2xy$.
+% \end{itemize}
+For instance, here is how Barrow found the slope of the so-called \emph{\textcolor{Blue}{kappa curve}} $x^2(x^2+y^2)=r^2y^2$ at a point $(x,y)$:
 \begin{itemize}\itemsep0pt
-  \item Replace $x$ and $y$ with $x+e$ and $y+a$ respectively and expand:
+  \item Replace $x$ and $y$ with $x+e$ and $y+a$ respectively, and expand to obtain
   \[
-  	x^2+2ex+e^2+2xy^2+4axy+2a^2x+2ey^2+4eay+2ea^2=c
+  	(x^2+2xe+e^2)(x^2+2xe+e^2+y^2+2ya+a^2)=r^2(y^2+2ya+a^2)
   \]
-  \item Delete everything from the original equation $x^2+2xy^2=c$ and every expression containing two or more of the terms $e,a$:
+  \item Delete everything from the original equation $x^2(x^2+y^2)=r^2y^2$ and every expression containing two or more of the terms $e,a$, obtaining
   \[
-  	2ex+4axy+2ey^2=0
+  	x^2(2xe+2ya)+2xe(x^2+y^2)=2r^2ya \implies x(2x^2+y^2)e=(r^2-x^2)ya
   \]
-  \item Rearrange: the slope is the ratio $a:e=-x-y^2:2xy$
+  \item The \textcolor{mGreen}{slope} is therefore the ratio $a:e=x(2x^2+y^2):y(r^2-x^2)$.
 \end{itemize}
-This is implicit differentiation, where $\dx=e$ and $\dy=a$. Note again the essential difficulty with these \emph{algorithmic} approaches to calculus: the infinitesimal quantities $e,a$ are necessary for the calculation, but most of them are discarded when no longer useful! Can we really calculate with objects that must simultaneously exist and be zero?\footnote{This is at the heart of Bishop George Berkeley's (after whom the Californian city and university are named) famous 1734 objection to calculus; that infinitesimals are merely the ``ghosts of departed quantities.''}
+\begin{minipage}[t]{0.73\linewidth}\vspace{-\parsep}
+	If we re-write the infinitesimals $e=\dx$ and $a=\dy$, and use modern fractional notation, this is precisely what we'd get using implicit differentiation:
+	\[
+		\diff[y]{x}=\frac{x(2x^2+y^2)}{y(r^2-x^2)}
+	\]
+	Note again the essential difficulty with these algorithmic approaches to calculus: the infinitesimal quantities $e,a$ are necessary for the calculation, but most are discarded when no longer useful! Is it really legitimate to calculate with such objects?\footnotemark{}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.25\linewidth}\vspace{-\parsep}
+	\hfill\includegraphics[alt={the kappa curve}]{barrow-kappa}
+\end{minipage}
+
+\footnotetext{%
+	This is the objection at the heart of Bishop George Berkeley's (after whom the Californian city and university are named) famous 1734 critique of calculus, that infinitesimals are merely the ``ghosts of departed quantities.''%
+}
 
 
-% 
-% The idea is essentially the modern one. Suppose $y=f(x)$ is an increasing function and draw the differential triangle. The new area under the curve is then approximately $\Delta A\approx f(x)\dx$. That is $\diff[A]{x}=f(x)$ and the essential link between area and slope is established.\\
-
-
+\pagebreak[3]
 
 
 \subsubsection*{Isaac Newton (1642--1727)} 
 
-The caricature of Newton is of an obsessive genius---difficult to get along with, but with a phenomenal ability to concentrate on problems. One possibly apocryphal story describes how he continued lecturing to an empty room even after no-one had turned up!\par
+The caricature of Newton is of an obsessive genius---difficult to get along with, but with a phenomenal ability to concentrate on problems.  One possibly apocryphal story describes how he continued lecturing to an empty room even after no-one had turned up!\par
 
 \begin{minipage}[t]{0.53\linewidth}\vspace{-4pt}
 	We are mostly interested in Newton's mathematics, though his wider fame comes from its wide application, particularly to gravitation. In \emph{Philosophiæ Naturalis Principia Mathematica} (1686), Newton applied his three laws of motion\footnotemark{} and the machinery of calculus to prove the relationship between Kepler's laws of planetary motion (pg.\,\pageref{pg:keplerslaws}) and an inverse-square gravitational force. The \emph{Principia} is Newton's first published work involving calculus, though many of its results and his method appear to have been worked out 20 years previously, just after completing his undergraduate studies and while Cambridge was closed due to the 1665--6 plague epidemic.
@@ -782,6 +860,9 @@ The caricature of Newton is of an obsessive genius---difficult to get along with
 \end{minipage}\smallbreak
 
 \footnotetext{I.\,Inertial motion; \ II.\,$F=ma$; \ III.\,Equal-and-opposite forces. Consider these as the \emph{axioms} of Newtonian mechanics.}
+
+
+NOTE HOW PQ is supposed to be infinitesimal!
 
  
 Newton's geometric presentation was typical for the time. He comments on how calculations are more efficient using indivisible methods, but that the `hypothesis of indivisibles seems somewhat harsh' (he likely wants to counter the impression that his method is philosophically shaky). Newton's approach makes it hard for modern readers to extract calculus algorithms; indeed the \emph{Principia} is not a calculus textbook and it is not really possible to learn calculus directly from it. Nevertheless, it contains notions of many standard concepts, for instance:
@@ -906,6 +987,7 @@ Newton's ability to expand expressions as infinite series was essential to his a
 
 Using similar approaches, Newton produced one of the first tables of integrals, listing much of what you'd find inside the covers of an undergraduate calculus textbook! He also obtained power series for trigonometric and logarithmic functions, partly following the work of Gregory and others. By combining his approach with the power law, he was able to efficiently integrate and differentiate an enormous variety of functions.
 
+Rediscovered Mādhava's other series in 1669.
 
 
 
@@ -997,6 +1079,11 @@ While not precisely the same as modern calculus---in particular, the differentia
 	\hangindent\leftmargini\emph{Key concepts: \ }
 
 	\begin{enumerate}
+	  \item Suppose $y>0$ and that the point $P=(\frac r2,y)$ lies on Barrow's \emph{kappa curve}. Find $y$. Compute the slope of the \textcolor{mGreen}{tangent line} at $P$, and show that it is independent of $r$.
+	  %$y'=\frac7{3\sqrt 3}$
+	  
+	  
+	  
 		\item %[15-26]
 	Show that to find the length of the arc of the parabola $y=x^2$ one needs to determine the area under the hyperbola $y^2-4x^2=1$.
 	
@@ -1084,5 +1171,3 @@ While not precisely the same as modern calculus---in particular, the differentia
 
 %Etymology: Calculus (single pebble) is the origin of `calculation.' Prior to N/L used for any mathematical algorithmic technique (algebraic calculus). Heirs to N/L referred to their methods as `infinitesimal calculus,' from which the first term was eventually dropped. 
 
-
-\fi

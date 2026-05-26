@@ -1,10 +1,17 @@
-settings.tex="pdflatex";
+settings.tex="lualatex";
+defaultpen(fontsize(12pt));
 
 texpreamble("\usepackage{amsmath}
 \usepackage{amsthm,amssymb}
-\usepackage{mathpazo}
-\usepackage[svgnames]{xcolor}
+\usepackage{unicode-math}
+\setmainfont{TeX Gyre Pagella}
+\setmathfont{TeX Gyre Pagella Math}
+\usepackage[svgnames,x11names]{xcolor}
 ");
+
+import x11colors;
+pen lGreen=rgb("00a000");
+
 import graph;
 
 size(160,0);
@@ -23,32 +30,33 @@ real nu(real x){return 1.5*x^2;}
 pair P=(a,y(a));
 
 xaxis("$x$",0,max(a+nu(a),M),red);
-xtick(Label("$a$",align=S),a,S,red);
-xtick(Label("$0$",align=S),0,S,red);
-ytick(Label("$0$",align=W),0,W,red);
+xtick(Label("$a$",align=S),a,S,Red);
+xtick(Label("$0$",align=S),0,S,Red);
+ytick(Label("$0$",align=W),0,W,Red);
 yaxis("$y$",0,y(M),red);
 
-draw(graph(y,0,M,operator..),blue);
-draw(graph(y,0,a,operator..),blue+linewidth(1));
+draw(graph(y,0,M,operator..),Blue);
+draw(graph(y,0,a,operator..),Blue+linewidth(1));
 draw("$y$",P--(a,0),dashed);
-draw("$\nu$",(a,0)--(nu(a)+a,0),S,purple+dashed);
-draw("$n$",P--(nu(a)+a,0),dashed+heavygreen);
+draw("$\nu$",(a,0)--(nu(a)+a,0),S,BlueViolet+dashed);
+draw("$n$",P--(nu(a)+a,0),dashed+lGreen);
 draw("$\mathrm{d}x$",P--P+d*(y(a),0),S,dashed);
-draw("$\mathrm{d}y$",P+d*(y(a),0)--P+d*(y(a),nu(a)),E,purple+dashed);
-draw("$\mathrm{d}s$",P+d*(y(a),nu(a))--P,dashed+heavygreen);
+draw("$\mathrm{d}y$",P+d*(y(a),0)--P+d*(y(a),nu(a)),E,BlueViolet+dashed);
+draw("$\mathrm{d}s$",P+d*(y(a),nu(a))--P,dashed+lGreen);
 
 path para=(-4/9,0){N}..graph(z,-0.4,M,operator..);
 
-draw(parab,(-4/9,0){N}..graph(z,-0.4,M,operator..),orange);
-fill(parab,graph(z,0,a,operator..)--(a,0)--(0,0)--cycle,orange+opacity(0.5));
-xaxis(parab,"$x$",0,max(nu(a),M),red);
-xtick(parab,Label("$a$",align=S),a,S,red);
-xtick(parab,Label("$0$",align=S),0,S,red);
-ytick(parab,Label("$0$",align=W),0,W,red);
-ytick(parab,Label("$1$",align=W),1,W,red);
-yaxis(parab,"$z$",0,z(M),red);
+draw(parab,(-4/9,0){N}..graph(z,-0.4,M,operator..),Magenta);
+fill(parab,graph(z,0,a,operator..)--(a,0)--(0,0)--cycle,Magenta+opacity(0.3));
+xaxis(parab,"$x$",-4/9,max(nu(a),M),Red);
+xtick(parab,Label("$a$",align=S),a,S,Red);
+xtick(parab,Label("$0$",align=S),0,S,Red);
+//ytick(parab,Label("$0$",align=W),0,W,Red);
+ytick(parab,Label("$1$",align=W),1,W,Red);
+yaxis(parab,"$z$",0,z(M),Red);
 
-label(parab,"\parbox{3cm}{\centering\textcolor{blue}{Arc-length}\\[3pt] equals\\[3pt] \textcolor{orange}{Area}}",(a+0.5nu(a),1));
-draw(parab,(0,0)--(0,1)--(-4/9,0)--(a,z(a))--(a,0)--(-4/9,0),dashed);
+label(parab,"\parbox{3cm}{\centering\textcolor{Blue}{Arc-length}\\[3pt] equals\\[3pt] \textcolor{Magenta}{Area}}",(a+0.55nu(a),1));
+draw(parab,(0,0)--(0,1)--(-4/9,0),dashed+Teal);
+draw(parab,(-4/9,0)--(a,z(a))--(a,0),dashed+Brown);
 
 add(shift((0,-2.5))*parab);
