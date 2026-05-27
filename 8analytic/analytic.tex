@@ -766,15 +766,7 @@ of the arctangent series
 \[
 	\arctan x=x-\frac 13x^2+\frac 15x^5-\frac 17x^7+\cdots 
 \]
-% \begin{minipage}[t]{0.38\linewidth}\vspace{-\parsep}
-	Gregory was also a prolific astronomer. The picture shows part of a \href{https://www.atlasobscura.com/places/gregorys-meridian-line}{meridian line} (zero-line of longitude) he had drawn through his office in St.\,Andrews to assist with his astronomical work.
-% \end{minipage}
-% \hfill
-% \begin{minipage}[t]{0.6\linewidth}\vspace{-\parsep}
-% 	\hfill\includegraphics[scale=0.4,alt={gregory's meridian line}]{gregory-meridian1}
-% 	\includegraphics[scale=0.4,alt={gregory's meridian line}]{gregory-plaque1}
-% \end{minipage}
-
+Gregory was also a prolific astronomer. The picture shows part of a \href{https://www.atlasobscura.com/places/gregorys-meridian-line}{meridian line} (zero-line of longitude) he had drawn through his office in St.\,Andrews to assist with his astronomical work
 \begin{center}
 	\includegraphics[scale=0.55,alt={meridian line on the sidewalk}]{gregory-meridian1}
 	\qquad\qquad
@@ -785,21 +777,30 @@ of the arctangent series
 \pagebreak[3]
 
 
-\subsubsection*{Isaac Barrow (1630--1677)} BARROW AND THE FUND THM???
+\subsubsection*{Isaac Barrow (1630--1677)}
 
 Like Gregory, Barrow also studied mathematics in Italy (and France), before returning to England where he become the inaugural Lucasian Professor of Mathematics\footnote{%
 	The Lucasian Chair is one of the world's most prestigious academic positions. While named as a position in \emph{Mathematics}, it has become more associated with theoretical \emph{Physics}, in part due to the fame of its second incumbent, Issac Newton, and later chairs including George Stokes, Paul Dirac and Stephen Hawking.%
 }
 at Trinity College, Cambridge.
 \smallbreak
-Barrow's work on calculus was predominantly geometric: he stated geometric versions of both parts of the Fundamental Theorem, crediting Gregory with part of the argument.
 
-??????? The idea is essentially the modern one. Suppose $y=f(x)$ is an increasing function and draw the differential triangle. The new area under the curve is then approximately $\Delta A\approx f(x)\dx$. That is $\diff[A]{x}=f(x)$ and the essential link between area and slope is established.
-\bigbreak
+% Too much - in book\ldots The idea is essentially the modern one. Suppose $y=f(x)$ is an increasing function and draw the differential triangle. The new area under the curve is then approximately $\Delta A\approx f(x)\dx$. That is $\diff[A]{x}=f(x)$ and the essential link between area and slope is established.
 
 
-
-In a precursor to Newton's work, he also modified Fermat's algorithm for differentiation. Indeed Barrow is arguably the originator of the term \emph{differential}: he referred to the \emph{differential triangle} (page \pageref{pg:vanH}) since its sides were found by taking the \emph{difference} between the $x$- and $y$- co-ordinates of infinitesimally separated points on a curve. %Here, for example, is how Barrow would have found the slope of the curve $x^2+2xy^2=c$ at a point $(x,y)$:
+\begin{minipage}[t]{0.69\linewidth}\vspace{-\parsep}
+	Barrow's work on calculus was predominantly geometric: he stated geometric versions of both parts of the Fundamental Theorem, crediting Gregory with part of the argument.
+	\smallbreak
+	Newton encouraged Barrow to develop more algebraic methods for computing tangents and subtangents. One result was a modification of Fermat's algorithm for differentiation.
+	\smallbreak
+	Unlike Fermat, Barrow is explicit in referring to ``infinitely small'' arcs and segments. Indeed Barrow is arguably the originator of the term \emph{differential}: he referred to the \emph{differential triangle} $\triangle MNR$ (see also page \pageref{pg:vanH}), since its sides are the \emph{differences} between the co-ordinates of the infinitesimally separated points $M$, $N$.
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.29\linewidth}\vspace{-\parsep}
+	\hfill\includegraphics[alt={the differential triangle}]{analytic-barrow-diff-tri}
+\end{minipage}
+\smallbreak
+ %Here, for example, is how Barrow would have found the slope of the curve $x^2+2xy^2=c$ at a point $(x,y)$:
 % \begin{itemize}\itemsep0pt
 %   \item Replace $x$ and $y$ with $x+e$ and $y+a$ respectively, and expand to obtain
 %   \[
@@ -845,13 +846,25 @@ For instance, here is how Barrow found the slope of the so-called \emph{\textcol
 
 \subsubsection*{Isaac Newton (1642--1727)} 
 
-The caricature of Newton is of an obsessive genius---difficult to get along with, but with a phenomenal ability to concentrate on problems.  One possibly apocryphal story describes how he continued lecturing to an empty room even after no-one had turned up!\par
+Newton  enrolled as an undergraduate at Trinity College, Cambridge in 1661, at a time when mathematics was not generally taught to undergraduates. Newton, however, had been introduced to the subject in grade-school and, taking advantage of the freedom Cambridge afforded him to study essentially whatever he liked, threw himself into mathematics, particularly Euclid, Viète, Oughtred, Wallis and Descartes. He discussed mathematics with Barrow and, on the former's retirement in 1669, assumed the Lucasian Professorship, a position he held until 1702.
+\smallbreak
+The caricature of Newton is of an obsessive genius---difficult to get along with, but with a phenomenal ability to concentrate on problems. One possibly apocryphal story describes him lecturing to an empty room even after no-one had turned up!
+\smallbreak
 
-\begin{minipage}[t]{0.53\linewidth}\vspace{-4pt}
-	We are mostly interested in Newton's mathematics, though his wider fame comes from its wide application, particularly to gravitation. In \emph{Philosophiæ Naturalis Principia Mathematica} (1686), Newton applied his three laws of motion\footnotemark{} and the machinery of calculus to prove the relationship between Kepler's laws of planetary motion (pg.\,\pageref{pg:keplerslaws}) and an inverse-square gravitational force. The \emph{Principia} is Newton's first published work involving calculus, though many of its results and his method appear to have been worked out 20 years previously, just after completing his undergraduate studies and while Cambridge was closed due to the 1665--6 plague epidemic.
+We are mostly interested in Newton's mathematics, though his fame comes more from its wide application, not least to gravitation. His magnum opus, one of the central works of the Scientific Revolution, was published in 1686: \emph{Philosophiæ Naturalis Principia Mathematica}. The text begins with Newton's familiar laws of motion:
+\begin{enumerate}\renewcommand{\theenumi}{\Roman{enumi}}
+	\item Inertial motion. A body unaffected by an external force continues moving in a straight line at uniform speed.
+	\item $F=ma$. A force acting on a body causes a proportional acceleration.
+	\item Equal-and-opposite forces. If one body exerts a force on a second, then the second exerts on the first a force of the same magnitude and opposite direction. 
+\end{enumerate}
+In Euclidean fashion, these are the \emph{axioms} of Newtonian mechanics.
+\par
+\begin{minipage}[t]{0.53\linewidth}\vspace{-\parsep}
+	Newton proceeds to apply the machinery of calculus to prove the relationship between Kepler's laws of planetary motion (pg.\,\pageref{pg:keplerslaws}) and an inverse-square gravitational force.
+
 \end{minipage}
 \hfill
-\begin{minipage}[t]{0.44\linewidth}\vspace{-5pt}
+\begin{minipage}[t]{0.44\linewidth}\vspace{-\parsep}
 	\hfill
 	\begin{tabular}{@{}c@{}}
 		\includegraphics[width=\textwidth]{newton5.jpg}\\
@@ -859,10 +872,11 @@ The caricature of Newton is of an obsessive genius---difficult to get along with
 	\end{tabular}
 \end{minipage}\smallbreak
 
-\footnotetext{I.\,Inertial motion; \ II.\,$F=ma$; \ III.\,Equal-and-opposite forces. Consider these as the \emph{axioms} of Newtonian mechanics.}
 
 
-NOTE HOW PQ is supposed to be infinitesimal!
+NOTE HOW PQ is supposed to be infinitesimal!	
+	
+	 The \emph{Principia} is Newton's first published work involving calculus, though many of its results and his method appear to have been worked out 20 years previously, just after completing his undergraduate studies and while Cambridge was closed due to the 1665--6 plague epidemic.
 
  
 Newton's geometric presentation was typical for the time. He comments on how calculations are more efficient using indivisible methods, but that the `hypothesis of indivisibles seems somewhat harsh' (he likely wants to counter the impression that his method is philosophically shaky). Newton's approach makes it hard for modern readers to extract calculus algorithms; indeed the \emph{Principia} is not a calculus textbook and it is not really possible to learn calculus directly from it. Nevertheless, it contains notions of many standard concepts, for instance:
