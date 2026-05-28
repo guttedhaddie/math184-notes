@@ -14,7 +14,7 @@ pen lGreen=rgb("00a000");
 
 import graph;
 
-size(160,0);
+size(140,0);
 
 picture parab;
 
@@ -46,7 +46,7 @@ draw("$\mathrm{d}s$",P+d*(y(a),nu(a))--P,dashed+lGreen);
 
 path para=(-4/9,0){N}..graph(z,-0.4,M,operator..);
 
-draw(parab,(-4/9,0){N}..graph(z,-0.4,M,operator..),Magenta);
+draw(parab,(-4/9,0){N}..graph(z,-0.4,M,operator..),Magenta+linewidth(1));
 fill(parab,graph(z,0,a,operator..)--(a,0)--(0,0)--cycle,Magenta+opacity(0.3));
 xaxis(parab,"$x$",-4/9,max(nu(a),M),Red);
 xtick(parab,Label("$a$",align=S),a,S,Red);
@@ -55,7 +55,7 @@ xtick(parab,Label("$0$",align=S),0,S,Red);
 ytick(parab,Label("$1$",align=W),1,W,Red);
 yaxis(parab,"$z$",0,z(M),Red);
 
-label(parab,"\parbox{3cm}{\centering\textcolor{Blue}{Arc-length}\\[3pt] equals\\[3pt] \textcolor{Magenta}{Area}}",(a+0.55nu(a),1));
+label(parab,"\parbox{2.1cm}{\centering\textcolor{Blue}{Arc-length}\\[3pt] equals\\[3pt] \textcolor{Magenta}{Area}}",(a+0.55nu(a),1));
 draw(parab,(0,0)--(0,1)--(-4/9,0),dashed+Teal);
 draw(parab,(-4/9,0)--(a,z(a))--(a,0),dashed+Brown);
 

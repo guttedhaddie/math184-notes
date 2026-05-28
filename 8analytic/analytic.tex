@@ -20,7 +20,7 @@ Modern mathematics is dominated by \emph{algebra}. We trust equations and the ru
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.22\linewidth}\vspace{-\parsep}
-	\hfill\includegraphics[alt={a large square broking into two sub-squares and two rectangles}]{analytic-euclid}
+	\hfill\includegraphics[alt={a large square brokn into two sub-squares and two rectangles}]{analytic-euclid}
 \end{minipage}
 \smallbreak
 
@@ -240,7 +240,7 @@ Given the novelty of his approach, Descartes typically gave geometric proofs to 
 
 \subsection{The Beginnings of Calculus}\label{sec:calc1}
 
-At the heart of calculus is the relationship between \emph{velocity, displacement, rate of change} and \emph{area.}
+The the word \emph{calculus} (\emph{small stone} in Latin) relates to the use of pebbles and tokens for counting (calculating) in ancient times (consider, for instance, the abacus). In the 1600s, the modern theory became known as the \emph{infinitesimal calculus}: the method of calculating using infinitesimals. At its heart is the relationship between \emph{velocity, displacement, rate of change} and \emph{area.}
 \begin{itemize}
   \item The \emph{instantaneous velocity} of a particle is the \emph{rate of change} of its \emph{displacement.} Otherwise said, the \emph{slope} of the displacement-time graph. 
   \item The \emph{displacement} of a particle is the \emph{net area} under its \emph{velocity-time} graph.
@@ -282,23 +282,21 @@ Gerard was credited by the Oxford/Merton Thinkers %\footnote{Or Merton Thinkers,
 	The \emph{velocity} of a particle at an instant will be measured as the uniform velocity along the path that would have been taken by the particle if it continued with that velocity.
 \end{defn*}
 
-This is vague, though it teases at the idea of inertial motion that Newton would later formalize in his first law of motion. The Merton Thinkers also made the first known statement of the 'mean speed theorem.'
+While vague, this teases at the idea of inertial motion that Newton would later formalize in his first law of motion. The Merton Thinkers also made the first known statement of the 'mean speed theorem.'
 
 \begin{thm*}{}{}
 	If a particle is uniformly accelerated from rest to some velocity, it will travel half the distance it would have traveled over the same interval with the final velocity.
 \end{thm*}
 
-For centuries, Galileo was thought to have been the first to state such ideas (compare his falling body discussion, pg.\,\pageref{pg:galileo}), but the Oxford group beat him by 250 years. They had no algebra with which to prove their claims,  and essentially only asserted examples. For instance, if time intervals are in the proportion $2:1$ and if particles subject to the same uniform acceleration are accelerated from rest over these intervals, then the resulting distances traveled will be in the proportion $4:1$. In modern notation:
+For centuries, Galileo was thought to have been the first to state such ideas (compare his falling body discussion, pg.\,\pageref{pg:galileo}). The Oxford group had no algebra to back up their claims and essentially only asserted examples. For instance, if bodies subject to the same uniform acceleration are accelerated from rest over time intervals in the ratio $2:1$, then the distances traveled will be in the ratio $4:1$. In modern notation:
 \[
 	v_1=at,\quad v_2=2at\implies d_1=\frac 12v_1t=\frac 12at^2,\quad d_2=\frac 12v_2\cdot 2t=2at^2=4d_1
 \]
-\medskip
-
 In the 1350s, Nicolas Oresme (Paris) considered velocity geometrically by drawing what are essentially velocity-time graphs. This is roughly the approach taken later by Galileo, and another early version of \emph{axes.} A major difference is that Galileo married mathematics to \emph{observation}; uniform acceleration for Galileo was precisely the motion of a falling body.
 \smallbreak
 
 
-A rigorous definition of \emph{instantaneous velocity} is difficult because it requires \emph{limits}: one measures average velocity over smaller and smaller intervals. You are in good company if you find this challenging: Zeno's arrow paradox is an objection to the very idea of instantaneous velocity! Even if one accepts the concept, its \emph{direct} measurement, even in modern times, is nigh-impossible:	for instance, radar Doppler-shift (as used to catch speeding motorists) requires measuring the wavelength of a radar beam, which amounts to computing the average velocity over a very small time interval. %Indeed quantum mechanics suggests that instantaneous velocity and precise location are possibly meaningless concepts. Thankfully mathematicians can choose to deal with idealized models of the universe rather than the real thing!
+A rigorous definition of \emph{instantaneous velocity} is difficult because it requires \emph{limits}: one measures average velocity over smaller and smaller intervals. You are in good company if you find this challenging: Zeno's arrow paradox is an objection to the idea of instantaneous velocity! Even if one accepts the concept, its \emph{direct} measurement is nigh-impossible:	for instance, radar Doppler-shift (as used to catch speeding motorists) requires measuring the wavelength of a radar beam, which amounts to computing an average velocity over a very small time interval. %Indeed quantum mechanics suggests that instantaneous velocity and precise location are possibly meaningless concepts. Thankfully mathematicians can choose to deal with idealized models of the universe rather than the real thing!
 
 
 
@@ -363,6 +361,8 @@ Since this algebraic identity holds for any $x_1$, $x_2$ with $p(x_1)=p(x_2)$, F
 \]
 By considering values of $x$ near $m$, it is clear to Fermat that he really has found a local minimum. We recognize the idea that the slope of the tangent line is zero at local extrema.
 \medbreak
+
+\pagebreak[3]
 
 Fermat's approach dates from the 1620s and is similar to earlier work of Viète. He later alters his method by considering values $p(x)$ and $p(x+e)$ for small $e$ ($x$ is `adequated by $e$'), with the difference more easily divided by $e$ without factorizing. Compare with the previous calculation:
 \begin{align*}
@@ -429,13 +429,13 @@ The previous methods permit \emph{differentiation,} albeit inefficiently. Fermat
 \par
 
 \begin{minipage}[t]{0.59\linewidth}\vspace{-\parsep}
-	Let $0<r<1$ be constant. The rectangle on the interval $[ar^{n+1},ar^n]$ touching the curve at its upper right-corner has area
+	Let $0<r<1$ be constant. The rectangle on the interval $[ar^{k+1},ar^k]$ touching the curve at its upper right-corner has area
 	\[
-		A_n=(ar^n-ar^{n+1})\cdot (ar^n)^3=a^4(1-r)r^{4n}
+		A_k=(ar^k-ar^{k+1})\cdot (ar^k)^3=a^4(1-r)r^{4k}
 	\]
 	The sum of the areas is therefore
 	\begin{align*}
-		\sum_{n=0}^\infty A_n&=a^4(1-r)\sum_{n=0}^\infty r^{4n}=\frac{a^4(1-r)}{1-r^4}\\
+		\sum_{n=0}^\infty A_k&=a^4(1-r)\sum_{n=0}^\infty r^{4k}=\frac{a^4(1-r)}{1-r^4}\\
 		&=\frac{a^4}{1+r+r^2+r^3}
 	\end{align*}
 	Setting $r=1$ recovers the area under the curve: $\frac 14a^4$.
@@ -622,7 +622,7 @@ helped to unleash greater productivity and scientific output. The net result was
 \vfil
 
 \begin{exercises}{}{}
-	\hangindent\leftmargini\emph{Key concepts: \ The Area and Velocity Problems as the Origin of Calculus, \ Analytic geometry provides a key computational tool, \ Differentiation à la Descartes \& Fermat, \ Cross-sections \& Cavalieri's Principle}
+	\hangindent\leftmargini\emph{Key concepts: \ The Area and Velocity problems as motivators of calculus, \ Analytic geometry provides a key computational tool, \ Differentiation à la Descartes \& Fermat, \ Cross-sections \& Cavalieri's Principle}
 	
 	
 	\begin{enumerate}
@@ -698,14 +698,13 @@ helped to unleash greater productivity and scientific output. The net result was
 
 \subsection{Calculus in the late 1600s}\label{sec:calc2}
 
-By the second half of the 17\th{} century, the mathematical center of Europe had moved northwards, to France, Germany, Holland and Britain. In this section we present some of the northern European work on calculus, culminating in the efforts of Newton and Leibniz.
-
+By the second half of the 17\th{} century, the mathematical center of Europe had moved northwards, to France, Germany, Holland and Britain. In this section we present some of the northern European work on calculus, culminating in the efforts of Newton and Leibniz. The overarching story is of how algebraic notation helped turn calculus from a clunky \emph{geometric} activity into an efficient problem-solving tool.
 
 \subsubsection*{Hendrick van Heuraet (1634--1660)}\label{pg:vanH}
 
 Working in Holland, van Heuraet studied Descartes' analytic geometry and method of normals.
 \par
-\begin{minipage}[t]{0.65\linewidth}\vspace{-\parsep}
+\begin{minipage}[t]{0.68\linewidth}\vspace{-\parsep}
 	 He argued that the \textcolor{Blue}{arc-length of a curve} described by a function $y$ equals the  \textcolor{mMagenta}{area under the curve} $z=\frac ny$ where $n$ is the `normal curve' of Descartes. His method appeared in Frans van Schooten's 1659 version of Descartes' \emph{La Geometrie.}
 	 \smallbreak
 	 To see why this claim makes sense, recall Descartes' method of normals (page \pageref{pg:descartesnormal}) and observe that the ratio $n:y$ equals that of $\ds:\dx$ in a (modern) differential triangle.
@@ -718,13 +717,13 @@ Working in Holland, van Heuraet studied Descartes' analytic geometry and method 
 		\end{cases}\\
 		\begin{aligned}
 			\implies 0&= x^3+x^2-2(x+\nu)x+(a+\nu)^2-n^2\\
-			&=(x-a)^2(x+2a+1)+(3a^2-2\nu)x\\
-			&\qquad\qquad\qquad +\nu^2+2a\nu-2a^3-n^2
+			&=(x-a)^2(x+2a+1)+(3a^2-2\nu)x
+			+\nu^2+2a\nu-2a^3-n^2\hspace{-50pt}
 		\end{aligned}
 	\end{gather*}
 \end{minipage}
 \hfill
-\begin{minipage}[t]{0.33\linewidth}\vspace{-\parsep}
+\begin{minipage}[t]{0.3\linewidth}\vspace{-\parsep}
 	\hfill\includegraphics[alt={comparing the arc length of a curve to the area under another}]{calc-gregory}
 \end{minipage}
 \smallbreak
@@ -737,7 +736,7 @@ But then
 \[
 	n=\sqrt{\nu^2+y^2}=\sqrt{\frac 94a^4+a^3}\implies z=\frac ny=\sqrt{\frac 94a+1}
 \]
-The \textcolor{Blue}{arc-length} from $x=0$ to $a$ is therefore the \textcolor{mMagenta}{area under the parabola} $z^2=\frac 94x+1$ between the same limits. Recalling Archimedes, van Heuraet knew that the area under a parabola is $\frac 43$ that of the corresponding triangle, whence
+The \textcolor{Blue}{arc-length} from $x=0$ to $a$ is therefore the \textcolor{mMagenta}{area under the parabola} $\smash{z^2=\frac 94x+1}$ between the same limits. Recalling Archimedes, van Heuraet knew that the area under a parabola is $\smash{\frac 43}$ that of the corresponding triangle, whence
 \[
 	\text{\textcolor{blue}{Arc-length}}
 	=\frac 43\left[\mathcolor{Brown}{\frac 12\left(\frac 49+a\right)z(a)}
@@ -783,7 +782,7 @@ Like Gregory, Barrow also studied mathematics in Italy (and France), before retu
 	The Lucasian Chair is one of the world's most prestigious academic positions. While named as a position in \emph{Mathematics}, it has become more associated with theoretical \emph{Physics}, in part due to the fame of its second incumbent, Issac Newton, and later chairs including George Stokes, Paul Dirac and Stephen Hawking.%
 }
 at Trinity College, Cambridge.
-\smallbreak
+\par
 
 % Too much - in book\ldots The idea is essentially the modern one. Suppose $y=f(x)$ is an increasing function and draw the differential triangle. The new area under the curve is then approximately $\Delta A\approx f(x)\dx$. That is $\diff[A]{x}=f(x)$ and the essential link between area and slope is established.
 
@@ -851,141 +850,171 @@ Newton  enrolled as an undergraduate at Trinity College, Cambridge in 1661, at a
 The caricature of Newton is of an obsessive genius---difficult to get along with, but with a phenomenal ability to concentrate on problems. One possibly apocryphal story describes him lecturing to an empty room even after no-one had turned up!
 \smallbreak
 
-We are mostly interested in Newton's mathematics, though his fame comes more from its wide application, not least to gravitation. His magnum opus, one of the central works of the Scientific Revolution, was published in 1686: \emph{Philosophiæ Naturalis Principia Mathematica}. The text begins with Newton's familiar laws of motion:
+We are mostly interested in Newton's mathematics, though his fame comes more from its wide application, not least to gravitation. His magnum opus, one of the central works of the Scientific Revolution, was published in 1686: \emph{Philosophiæ Naturalis Principia Mathematica}. The text begins with Newton's familiar laws of motion:\par
 \begin{enumerate}\renewcommand{\theenumi}{\Roman{enumi}}
 	\item Inertial motion. A body unaffected by an external force continues moving in a straight line at uniform speed.
 	\item $F=ma$. A force acting on a body causes a proportional acceleration.
 	\item Equal-and-opposite forces. If one body exerts a force on a second, then the second exerts on the first a force of the same magnitude and opposite direction. 
 \end{enumerate}
 In Euclidean fashion, these are the \emph{axioms} of Newtonian mechanics.
-\par
-\begin{minipage}[t]{0.53\linewidth}\vspace{-\parsep}
-	Newton proceeds to apply the machinery of calculus to prove the relationship between Kepler's laws of planetary motion (pg.\,\pageref{pg:keplerslaws}) and an inverse-square gravitational force.
 
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.44\linewidth}\vspace{-\parsep}
-	\hfill
-	\begin{tabular}{@{}c@{}}
-		\includegraphics[width=\textwidth]{newton5.jpg}\\
-		Kepler's 1st law $\implies$ inverse-square force
+\begin{center}
+	\begin{tabular}{c@{\qquad\qquad}c}
+		\includegraphics[height=185pt,alt={Newton's Laws of Motion}]{newton-2.png}
+		&
+		\includegraphics[height=185pt,alt={Deducing an inverse-square force from elliptical motion}]{newton-4.png}
+		\\
+		Newton's Laws of Motion
+		&
+		Kepler's 1st law $\Longrightarrow$ inverse-square force		
 	\end{tabular}
-\end{minipage}\smallbreak
+\end{center}
 
+Newton proceeds to apply calculus to prove the relationship between Kepler's laws of planetary motion (pg.\,\pageref{pg:keplerslaws}) and an inverse-square gravitational force. At first glance it is hard to see where calculus appears in the pictured discussion. Observe the small parallelogram $QxPR$ and how Newton notes at the bottom of the page, ``when the points $P$ and $Q$ coincide,\ldots'' The elliptical arc $\arcsm{PQ}$ is \emph{infinitesimal}.
 
+\pagebreak[3]
 
-NOTE HOW PQ is supposed to be infinitesimal!	
-	
-	 The \emph{Principia} is Newton's first published work involving calculus, though many of its results and his method appear to have been worked out 20 years previously, just after completing his undergraduate studies and while Cambridge was closed due to the 1665--6 plague epidemic.
+The \emph{Principia} is Newton's first published work involving calculus, though many of its results and methods were worked out 20 years previously, just after completing his undergraduate studies and while Cambridge was closed due to the 1665--6 plague epidemic.
+\smallbreak
 
- 
-Newton's geometric presentation was typical for the time. He comments on how calculations are more efficient using indivisible methods, but that the `hypothesis of indivisibles seems somewhat harsh' (he likely wants to counter the impression that his method is philosophically shaky). Newton's approach makes it hard for modern readers to extract calculus algorithms; indeed the \emph{Principia} is not a calculus textbook and it is not really possible to learn calculus directly from it. Nevertheless, it contains notions of many standard concepts, for instance:
+Newton's geometric presentation was typical for the time. He comments on how calculations are more efficient using indivisible/infinitesimal methods, but that the `hypothesis of indivisibles seems somewhat harsh' (he likely wants to counter the impression that his method is philosophically shaky). Newton's approach makes it hard for modern readers to extract calculus algorithms; indeed the \emph{Principia} is not a calculus textbook and it is not really possible to learn calculus directly from it. Nevertheless, it contains versions of many familiar concepts, for instance:
 \begin{description}
 	\item[Limits/continuity] Book I, Lemma I:\lstsp ``Quantities, \ldots which in any finite time converge continually to equality, and before the end of that time approach nearer to each other than by any given difference, become ultimately equal.''\par
-One can see modern ideas appearing (e.g., $\forall \epsilon>0, \nm{a-b}<\epsilon\implies a=b$) though there is a long way to go! What, for instance does \emph{approach} mean?
-	\item[Product Rule] In the following pages, Newton argues for the product rule by augmenting the sides of a rectangle.
-	\begin{center}
+One can see modern ideas appearing (e.g., $\forall \epsilon>0, \nm{a-b}<\epsilon\Longrightarrow a=b$) though there is a long way to go! What, for instance does \emph{approach} mean?
+	\item[Product Rule] In the pages below, Newton argues for the product rule by augmenting the sides of a rectangle.
+	\begin{center}\vspace{-\parsep}
 		\begin{tabular}{ccc}
-			\includegraphics{newton-prodrule}
+			\includegraphics[height=153pt]{newton-7.png}
 			&
-			\includegraphics[height=140pt]{newton8.jpg}
+			\includegraphics[height=153pt]{newton-8.png}
 			&
-			\includegraphics[height=140pt]{newton9.jpg}
-		\end{tabular}
+			\includegraphics[alt={proving the product rule}]{newton-prodrule}
+		\end{tabular}\vspace{-\parsep}
 	\end{center}
-	If $a,b$ are infinitesimal changes in the sides of a rectangle with sides $A,B$, then the \emph{moment of mutation} (infinitesimal change) of the generated rectangle $AB$ is the quantity $aB+bA$. In more familiar language,
+	If $a$ and $b$ are infinitesimal changes in the sides of a rectangle with sides $A,B$, then the \emph{moment of mutation} (infinitesimal change) of the generated rectangle $AB$ is the quantity $aB+bA$. In more familiar language,
 	\[
 		(A+a)(B+b)-AB\approx aB+bA
 	\]
-	where Newton ignores the double-infinitesimal quantity $ab$, exactly as did Barrow and others before him.
+	ignoring the double-infinitesimal quantity $ab$, as did Barrow and others before him.
 	\item[Power Law] In the same pages, Newton asserts the general power law for rational exponents 
 	\begin{quote}
 		\ldots the moment of any power $\displaystyle A^{\frac nm}$ will be $\displaystyle\frac nmaA^{\frac{n-m}m}$.
 	\end{quote}
-	in what seems like a non-rigorous appeal to induction based on the product rule. In reality, Newton established this using infinitesimal arguments; we'll see one of his methods for this shortly. 
+	in a non-rigorous appeal to induction based on the product rule. In reality, Newton established this using infinitesimal arguments; we'll see one of his methods for this shortly. 
 \end{description}
 
-In contrast to the mostly synthetic presentation in the \emph{Principia,} Newton made great use of algebra in his private calculations and correspondence with friends. Some of these private works were published many years later. We discuss some of his methods in what follows.
+In contrast to the mostly synthetic presentation in the \emph{Principia,} Newton made great use of algebra in his private calculations and correspondence with friends. Some of these private works were published years later. We discuss some of his methods in what follows.
 
 
+\pagebreak[3]
 
-\paragraph{Fluxions and Fluents} Newton's main language for calculus (he had several!) referred to time-dependent quantities $x,y$ as \emph{fluents} and their derivatives as \emph{fluxions,} denoted using dots $\dot x,\dot y$; the modern notation $y'$ comes from this.\footnote{%
-	A fluent is a `flowing' quantity: to us, a \emph{smooth function,} though this was not formally defined. To be in \emph{flux} is to be changing, hence `rate of change.' Newton's dot-notation (`pricked letters') persists in the modern field of \emph{dynamics}: for instance $\ddot{\vr}=-\frac{GM}{r^3}\vr$ is the differential equation arising from Newton's second law together with the inverse-square law for gravitation (note the double dot for the second derivative).
+
+\paragraph{Fluxions and Fluents}
+
+Newton's main language for calculus (he had several) referred to time-dependent quantities $x,y$ as \emph{fluents}. A fluent is a `flowing quantity,' to us a \emph{smooth function}, though such a concept was not defined in any modern sense.
+\smallbreak
+
+Derivatives of fluents were \emph{fluxions}, denoted by placing a dot above the corresponding fluent: $\dot x,\dot y$. The modern short-hand $f'$ comes from this notation.\footnote{%
+	 Newton's dot-notation (`pricked letters') persists separately in modern \emph{dynamics} to denote derivatives with respect to time. For instance, $\ddot{\vr}=-\frac{GM}{r^3}\vr$ is the standard differential equation for gravitation arising from Newton's second law and his inverse-square force law (note the double dot for the second derivative).
 }
-Anti-derivatives were denoted by placing an accent directly over a quantity: $\acute{x}$ is a \emph{fluent of which $x$ is the fluxion.} Newton had several algorithms for computing fluxions, often variants of those of previous mathematicians: for instance, here he finds the relationship between the fluxions of fluents $x,y$ satisfying $x^2+3xy^3+y=5$.
-\begin{itemize}\itemsep0pt
-  \item Rearrange as a polynomial in $x$: thus $x^2+(3y^3)x+(y-5)=0$.
-  \item Multiply terms by a decreasing arithmetic sequence (e.g.{} $2,1,0$) and the entire expression by $\frac{\dot x}x$:
+To be in \emph{flux} is to be changing, hence `rate of change.'
+\smallbreak
+
+Anti-derivatives were denoted with an accent. Thus $\acute{x}$ is a \emph{fluent of which $x$ is the fluxion.}
+\bigbreak
+
+Newton had several algorithms for computing fluxions, often variants of those of earlier mathematicians such as Barrow. For instance, here he finds the relationship between the fluxions of fluents $x,y$ satisfying $x^2+3xy^3+y=5$.
+\begin{enumerate}
+  \item Rearrange the expression as a polynomial in $x$:
   \[
-  	(2x+3y^3)\dot x
-  \] 
-  \item Repeat for $y$, using the \emph{same arithmetic sequence}; in this example, 2 corresponds to $x^2$, so we start with 3 for $y^3$:
-  \[
-  	(3x)y^3+0y^2+y+(x^2-5)=0\rightsquigarrow (9xy^2+y)\dot y
+  	x^2+(3y^3)x+(y-5)
   \]
+  \item Multiply terms by a decreasing arithmetic sequence with constant differences $-1$ (for instance, $(2,1,0)$), and the entire expression by $\frac{\dot x}x$ to obtain
+  \[
+  	2x^2+1\cdot 3y^3x+0(y-5) \longrightsquigarrow (2x+3y^3)\dot x
+  \] 
+  \item Repeat for $y$, multiplying through using the \emph{same arithmetic sequence} and then by $\frac{\dot y}y$. In this example, 2 corresponds to $x^2$, so we start with 3 for $y^3$:
+  \begin{align*}
+  	(3x)y^3+0y^2+y+(x^2-5)
+  	&\longrightsquigarrow 3(3x)y^3+2\cdot 0y^2+1\cdot y+0\cdot(x^2-5)\\
+  	&\longrightsquigarrow (9xy^2+1)\dot y
+  \end{align*}
   \item Sum these expressions, set equal to zero and rearrange for the required ratio:
   \[
-  	(2x+3y^2)\dot x+(9xy^2+y)\dot y=0 \implies \frac{\dot y}{\dot x} = -\frac{2x+3y^2}{9xy^2+y}
+  	(2x+3y^2)\dot x+(9xy^2+y)\dot y=0 \implies \frac{\dot y}{\dot x} = -\frac{2x+3y^3}{9xy^2+1}
   \]
-\end{itemize}
-The arithmetic sequence encodes the power law for derivatives, and the result is exactly what you'd expect from modern implicit differentiation.
+\end{enumerate}
+The arithmetic sequence and subsequent multiplication by $\frac{\dot x}{x}$ simply encodes the power law for derivatives. The result is exactly what you'd obtain using modern implicit differentiation. Perhaps surprisingly, it doesn't matter what arithmetic sequence is used in Newton's algorithm, the result is the same\ldots
 
 
-\paragraph{The Binomial Series}
+\pagebreak[3]
 
-Also discovered during the plague years, but first appearing in a private letter of 1676, is Newton's discovery of the binomial series
+
+\paragraph{Power Series \& the Binomial Series}
+
+Newton made tremendous use of power series expressions. A simplistic and overly dismissive reading of his calculus would suggest that he merely applied the power law to integrate and differentiate series term-by-term.
+\medbreak
+
+The binomial series was discovered during the plague years, though it first appeared in a private letter of 1676:
 \[
 	(1+x)^\alpha=1+\sum_{k=1}^\infty\frac{\alpha(\alpha-1)(\alpha-2)\cdots(\alpha-k+1)}{k!}x^k
 \]
-which allowed Newton to expand expressions such as
+This permitted expansion of expressions such as
 \[
 	(1+x)^{1/2} = 1+\frac 12x-\frac{1}{8}x^2 +\frac{1}{16}x^3 -\frac{5}{128}x^4 +\cdots
 \]
-Newton's version was only for fractional exponents and is more difficult to read:
+Newton's version was only for fractional exponents, and is more difficult to read:
 \[
 	P+PQ\ \frac mn=P\frac mn+\frac mnAQ+\frac{m-n}{2n}BQ+\frac{m-2n}{3n}CQ+\frac{m-3n}{4n}DQ+\cdots \tag{$\ast$}
 \]
-Newton wrote exponents using juxtaposition, and $A,B,C,D,\ldots$, meant `the previous term': thus $P\frac mn=P^{m/n}$, $A=P^{m/n}$ and $B=\frac mnAQ=\frac mnP^{m/n}Q$. In more modern language, ($\ast$) reads
+Exponents were written using juxtaposition, and $A,B,C,D,\ldots$, meant `the previous term': thus $P\frac mn=P^{m/n}$, $A=P^{m/n}$ and $B=\frac mnAQ=\frac mnP^{m/n}Q$. In modern language, ($\ast$) reads
 \[
 	(P+PQ)^{m/n}=P^{m/n}+\frac mn P^{m/n}Q +\frac{m(m-n)}{2n^2}P^{m/n}Q^2 +\frac{m(m-n)(m-2n)}{6n^3}P^{m/n}Q^3+\cdots
 \]
+Newton's `proof' wouldn't pass modern muster, with his discoveries largely the result of inspired pattern-spotting and an incredible willingness to grind out calculations. Several examples were explicitly verified by multiplying out or using long-division. For instance, the series for $\smash{\sqrt{1+x}}$ may be obtained by comparing coefficients:
+\begin{gather*}
+	1+x=(1+ax+bx^2+cx^3+\cdots)^2=1+2ax+(a^2+2b)x^2+(2c+2ab)x^3+\cdots\\
+	\implies a=\frac 12,\quad b=-\frac 12a^2=-\frac 18,\quad c=-ab=\frac 1{16},\quad\text{etc.}\\
+	\implies \sqrt{1+x}=1+\frac 12x-\frac 18x^2+\frac 1{16}x^3+\cdots
+\end{gather*}
+
+Of particular note are Newton's (re-)discoveries of the sine and cosine series of Mādhava in 1669 (similarly to when Gregory established the arctangent series\footnote{\label{fn:newtonsine}%
+	Indeed Newton found the sine series by inverting that for arcsine, which can itself be found from the binomial series: see Exercise \ref{exs:sineseries}.
+}%
+). Such were differentiated as if they were polynomials: for instance
+\[
+	\sin x=x-\frac 1{3!}x^3+\frac 1{5!}x^5-\frac 1{7!}x^7+\cdots 
+	\implies \cos x=1-\frac 1{2!}x^2+\frac 1{4!}x^4-\frac 1{6!}x^6+\cdots
+\]
+Newton did not establish the full theory of power series as you would encounter in a modern analysis course, skirting over issues of convergence. The major question is whether term-by-term integration and differentiation of series is legitimate. The answer is (mostly) yes, though it was 150 years before Cauchy, Weierstraß and others rigorously confirmed this.
 
 
-
-Newton's `proof' wouldn't pass modern muster. His discoveries were largely the result of some inspired pattern-spotting! Several examples were explicitly verified by multiplying out or using long-division. For instance the series for $\sqrt{1+x}$ may be obtained
-\begin{align*}
-	&1+x=(1+ax+bx^2+cx^3+\cdots)^2=1+2ax+(a^2+2b)x^2+(2c+2ab)x^3+\cdots\\
-	\implies &a=\frac 12,\quad b=-\frac 12a^2=-\frac 18,\quad c=-ab=\frac 1{16},\quad\text{etc.}\\
-	\implies &\sqrt{1+x}=1+\frac 12x-\frac 18x^2+\frac 1{16}x^3+\cdots
-\end{align*}
-Newton did not work through the full theory of infinite series as you would encounter in a typical undergraduate analysis course. For instance:
-\begin{itemize}
-  \item $\sqrt{1+x}$ is well-defined for $x\ge -1$, yet the resulting series only converges when $-1\le x\le 1$. What happens in general: must a series converge to the original/generating function?
-  \item Is it legitimate to differentiate and integrate power series term-by-term as if they are polynomials? Answer: (mostly) yes, though it was 150 years before Cauchy, Weierstraß and others could rigorously confirm this.
-\end{itemize}
-
+\pagebreak[3]
 
 
 \paragraph{The Power Law \& the Fundamental Theorem}\label{pg:newtonpowerlaw}
 
-Newton's ability to expand expressions as infinite series was essential to his arguments. Here is one of his arguments to prove the power law.\par
-\begin{minipage}[t]{0.68\linewidth}\vspace{-5pt}
+Here is one of Newton's arguments establishing the power law from fractional exponents. Observe the importance of the binomial series.\par
+\begin{minipage}[t]{0.68\linewidth}\vspace{-\parsep}
 	\begin{enumerate}
-	  \item Assume that the area under a curve $y$ is given by a function
+	  \item Suppose the area under a curve $y$ is given by a function
 	  \[
 	  	z=\frac{x^{\frac mn+1}}{\frac mn+1}=\frac n{m+n}x^{\frac{m+n}n}
 	  \]
-	  \item If $x$ is increased by an infinitesimal amount $o$, then the new area under the curve is found using the binomial series
-  \begin{align*}
-  	\textcolor{Green}{z}+\textcolor{violet}{oy}&=\frac n{m+n}(x+o)^{\frac{m+n}n} =\frac n{m+n}x^{\frac{m+n}n}\left(1+\frac ox\right)^{\frac{m+n}n}\\
-  	&=\frac n{m+n}x^{\frac{m+n}n} \Bigl(1+\frac{m+n}n\cdot\frac ox+\frac{(m+n)m}{2n^2}\cdot\frac{o^2}{x^2}+ \makebox[0pt][l]{$\cdots\Bigr)$}
-  \end{align*}
+  	\item If $x$ is increased infinitesimally by $o$, then the new area under the curve is found using the binomial series
+  	\begin{align*}
+	  	\mathcolor{mGreen}{z}	+\mathcolor{BlueViolet}{oy}
+	  	&=\frac n{m+n}(x+o)^{\frac{m+n}n} 
+	  	=\frac n{m+n}x^{\frac{m+n}n}\left(1+\frac ox\right)^{\frac{m+n}n}\\
+	  	&=\frac n{m+n}x^{\frac{m+n}n} \Big(1+\frac{m+n}n\cdot\frac ox+\frac{(m+n)m}{2n^2}\cdot\frac{o^2}{x^2}+ \cdots\Big)
+\hspace{-50pt}
+	  \end{align*}
 	\end{enumerate}
-	\end{minipage}
-	\hfill
-	\begin{minipage}[t]{0.31\linewidth}\vspace{-5pt}
-		\hfill\includegraphics[scale=1]{ftcold}\vspace{-25pt}
-	\end{minipage}\par
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\linewidth}\vspace{-\parsep}
+	\hfill\includegraphics[alt={the rate of change of area is proportional to the height of a function}]{ftcold}
+\end{minipage}\vspace{-4\parsep}
   
 
 \begin{enumerate}[resume]
@@ -999,100 +1028,180 @@ Newton's ability to expand expressions as infinite series was essential to his a
   \]
 \end{enumerate}
 
-Using similar approaches, Newton produced one of the first tables of integrals, listing much of what you'd find inside the covers of an undergraduate calculus textbook! He also obtained power series for trigonometric and logarithmic functions, partly following the work of Gregory and others. By combining his approach with the power law, he was able to efficiently integrate and differentiate an enormous variety of functions.
+Using similar approaches, Newton produced one of the first tables of integrals, listing much of what you'd find inside the covers of a modern calculus textbook. By combining power series and the power law, he was able to efficiently integrate and differentiate an enormous variety of functions. His methods are a vast improvement over the predominantly \emph{geometric} emphasis of earlier expositions.
 
-Rediscovered Mādhava's other series in 1669.
+
+\paragraph{Later Life \& Legacy}
+
+As mentioned previously, Newton's fame really came from his applications of mathematics to science. To some extent, Newton is where the subjects of mathematics and physics split: physicists \& engineers took the easy-to-use tools of calculus and applied them to model the real world, while mathematicians tried to create new computational tools and fretted over whether already-existing methods were logically rigorous.
+\smallbreak
+
+Newton slowly retired from science and mathematics in the early 1700s. Developing health problems, lapses of memory and depression probably contributed, though he continued to work on mathematical problems and to supervise new editions of his works. For much of his later years a battle raged---largely between surrogates---for supremacy with Leibniz over the invention of the calculus. Until his death in 1727, he lived off his income as Warden and Master of the Royal Mint. This required relatively little work on Newton's part, though he is said to have taken his responsibilities seriously.
+
+
+
+\pagebreak[3]
 
 
 
 \subsubsection*{Gottfried Wilhelm Leibniz (1646--1716)}
 
-Leibniz hailed from Leipzig, southwest of Berlin, in what was then part of the Holy Roman Empire. His initial studies were in philosophy, following his professor father. Though he eventually became a diplomat and then counsellor to the Duke of Hanover, his taste for advanced mathematics was fueled during his 1672--76 sojourn in Paris, where he was introduced to van Shooten's expansion of Descartes' geometric ideas, in particular the concept of the \emph{differential triangle} (page \pageref{sec:calc2}) which was already in use by others such as Pascal and Barrow.\smallbreak
+Leibniz hailed from Leipzig, southwest of Berlin, in what was then part of the Holy Roman Empire. He eventually became a diplomat and then counsellor to the Duke of Hanover.
+\smallbreak
 
-The familiar notations for derivatives $\diff[y]{x}$ and integrals $\int y\,\dx$ come from Leibniz. Very loosely, here is its origin and how it relates to the fundamental theorem. Suppose that
+His initial academic studies were in philosophy, following his professor father. His taste for advanced mathematics was fueled during a 1672--6 sojourn in Paris during which he learned of van Shooten's expansion of Descartes' analytic geometry and of the \emph{differential triangle} (page \pageref{sec:calc2}), which was already in use by others such as Pascal and Barrow.
+
+
+\paragraph{Notation \& the Fundamental Theorem}
+
+The familiar modern notations for derivatives $\diff[y]{x}$ and integrals $\int y\,\dx$ come from Leibniz. Very loosely, here are their origins, and how they relate to the fundamental theorem. Suppose
 \[
 	(x_0,z_0),(x_1,z_1),\ldots,(x_n,z_n),\qquad x_0<x_1<\cdots<x_n
 \]
-describe a sequence of points along a curve $z(x)$ defined on an interval $[x_0,x_n]$. One may then form the sequences of \emph{differences} and \emph{sums} of the ordinates $z_i$:
+describe a sequence of points along a curve $z(x)$ defined on an interval $[x_0,x_n]$. Form the sequences of \emph{differences} and \emph{sums} of the ordinates $z_i$:
 \begin{gather*}
-	\bigl(\delta z_i\bigr)=\bigl(z_1-z_0,\ z_2-z_1,\ \ldots,\ z_n-z_{n-1}\bigr),\qquad
-	\bigl(\sum z_i\bigr) =\bigl(z_0,\ z_0+z_1,\ \ldots,\ z_0+\cdots+z_n\bigr)
+	\big(\delta z_i\big) =\big(z_1-z_0,\ z_2-z_1,\ \ldots,\ z_n-z_{n-1}\big),\qquad
+	\big(\sum z_i\big) =\big(z_0,\ z_0+z_1,\ \ldots,\ z_0+\cdots+z_n\big)
 \end{gather*}
-Two relationships between sums and differences are immediate:
+Two relationships between differences and sums are immediate:
 \begin{enumerate}
 	\item The difference sequence of the sums returns the original sequence:
 	\[
-		\bigl(\delta\sum z_i\bigr)=\bigl(z_0,z_1,\ldots,z_n\bigr)
+		\left(\delta\sum z_i\right)=\big(z_0,z_1,\ldots,z_n\big)
 	\]
 	\item The sum of the difference sequence is the net change in the ordinate:
 	\[
-		\sum\bigl(\delta z_i\bigr)=(z_1-z_0)+(z_2-z_1)+\cdots +(z_n-z_{n-1}) =z_n-z_0
+		\sum\left(\delta z_i\right)=(z_1-z_0)+(z_2-z_1)+\cdots +(z_n-z_{n-1}) =z_n-z_0
 	\]
 \end{enumerate}
-Leibniz's notation arises from viewing a curve as an \emph{infinite sequence} of points: he writes $\dz$ for the infinitesimal \emph{differences} and $\int$ for the \emph{sum} of infinitely many infinitesimal objects. Observation 2 becomes $\int \dz=z(x_n)-z(x_0)$: the sum of the infinitesimal changes in $z$ is its net change. Indeed, if we assume that $z(x)$ describes the \emph{area}\footnote{Notation is chosen to match Newton's discussion of the power law (page \pageref{pg:newtonpowerlaw}).} under a curve $y(x)$, the fact that $\dz=y\,\dx$ recovers part 2 of the fundamental theorem of calculus:
-\begin{quote}
-	2.\lstsp $\int y\,\dx=z$: the area under the curve is the sum of its infinitesimal increments.
-\end{quote}
-Observation 1 makes sense once we apply it to a `sequence' of infinitesimals $z_i\rightsquigarrow y\,\dx$, whence it becomes part 1 of the fundamental theorem:
-\begin{quote}
-	1.\lstsp $\D\bigl(\int y\,\dx\bigr)=y\,\dx$, or alternatively, $\diff{x}\bigl(\int y\,\dx\bigr)=y$: the rate of change of the area function is the ordinate.
-\end{quote}
+
+Leibniz's notation arises by viewing a curve as an \emph{infinite sequence} of points. He writes $\dz$ for the infinitesimal \emph{differences} and $\int$ for the \emph{sum} of infinitely many infinitesimal objects: the integral symbol is simply an elongated letter ``S''!
+\smallbreak
+Observation 2 now asserts that the sum of the infinitesimal changes in $z$ is its net change
+\[
+	\int \dz=z(x_n)-z(x_0)
+\]
+If $z(x)$ describes the \emph{area}\footnote{%
+	Notation is chosen to match Newton's discussion of the power law (page \pageref{pg:newtonpowerlaw}).%
+}
+under a curve $y(x)$, the fact that $\dz=y\,\dx$ recovers part 2 of the fundamental theorem: the area equals the sum of its infinitesimal increments
+\[
+	\int y\,\dx=z
+\]
+Observation 1 becomes part 1 of the fundamental theorem once applied to a `sequence' of infinitesimals ($z_i\rightsquigarrow y\,\dx$): the rate of change of the area function is the ordinate,
+\[
+	\D\left(\int y\,\dx\right)=y\,\dx,
+	\qquad\text{or alternatively,}\qquad
+	\diff{x}\left(\int y\,\dx\right)=y
+\]
+While modern mathematicians are happy to refer to infinitesimals and infinite sums, Leibniz was more cagey in his publications, likely out of fear of criticism. He referred to each $\dx$ as an arbitrary, minuscule, but \emph{finite} line segment. Like every other contemporary practitioner, he therefore fails to fully grapple with the essential paradoxes of calculus.
+\smallbreak
+This very issue lies behind a common practice when teaching modern calculus. Instructors often insist that introductory students write differentials only in \emph{combination}: $\smash{\diff[z]{x}=y}$ is preferred to $\dz=y\,\dx$, where the former is the limit
+\[
+	\diff[z]{x}=\lim_{\Delta x\to 0}\frac{\Delta z}{\Delta x}
+\]
+visualized as a rate of change (slope). The helps instructors dodge a discussion of infinitesimals by punting the conceptual difficulty to that of limit, something that is typically easier to motivate, even though a formal definition is beyond the grasp of beginning students.
 
 
-While we are happy to refer to infinitesimals and infinite sums, Leibniz was more cagey in his publications out of fear of criticism. He referred to each $\dx$ as an arbitrary (if small) \emph{finite} line segment, and therefore---like every other contemporary practitioner of calculus---fails to get to grips with the essential paradoxes involved. Regardless, he and his followers became adept at manipulating differential expressions. For instance, if $y=z^3+2z$, Leibniz might compute
+
+\paragraph{Example}
+
+Regardless of his logical sleights-of-hand, Leibniz and his followers became adept at manipulating differential expressions. For instance, if $y=z^3+2z$, Leibniz might compute
 \begin{align*}
-	\dy&=(z+\dz)^3+2(z+\dz) -z^3-2z = 3z^2\,\dz+3z(\dz)^2 +(\dz)^3+2\,\dz\\
+	\dy&=(z+\dz)^3+2(z+\dz) -z^3-2z\\
+	&=3z^2\,\dz+3z(\dz)^2 +(\dz)^3+2\,\dz\\
 	&=(3z^2+2z)\,\dz
 \end{align*}
-where the $(\dz)^2$ and $(\dz)^3$ terms are discarded due to their (relatively) infinitesimal size. Using such approaches Leibniz justified general formulas such as the linearity of derivatives, the product, quotient and power rules. Even the chain rule is easy in Leibniz's notation: given $y(x)=\sqrt{1+x^3}$, Leibniz might perform a substitution $u=1+x^3$ and observe that
+where the $(\dz)^2$ and $(\dz)^3$ terms are discarded due to their (relatively) infinitesimal size.
+
+
+\paragraph{General Calculus Laws}
+
+Such approaches enabled Leibniz to justify general formulas such as the linearity of derivatives, the product, quotient and power rules
+\[
+	\D(f+g)=\df+\dg,\qquad
+	\D(fg)=g\,\df+f\,\dg,\qquad
+	\D\left(\frac fg\right)=\frac{g\,\df-f\,\dg}{g^2}
+\]
+Even the chain rule is straightforwardly familiar in Leibniz's notation. For instance, to differentiate $\smash{y(x)=\sqrt{1+x^3}}$, Leibniz would perform the substitution $u=1+x^3$ and observe that
 \[
 	\dy=\D\sqrt u =\sqrt{u+\du}-\sqrt u =\frac{u+\du-u}{\sqrt{u+\du}+\sqrt u}
 	=\frac{\du}{2\sqrt u} =\frac{3x^2\,\dx}{2\sqrt{1+x^3}}
 \]
+Leibniz's notations and approaches are likely much more familiar to the modern reader than those of Newton.
 
-Like Newton, Leibniz worked extensively with power series. As a final example here is his computation of that for sine. In contrast to Newton's approach,\footnote{Newton first found a series for arcsine before computing its inverse.} Leibniz derived the well-known second-order ODE satisfied by sine.\par
-\begin{minipage}[t]{0.7\linewidth}\vspace{-4pt}
-	In a circle of radius 1, let $s$ be the polar angle and $y=\sin s$ the ordinate. By considering the differential triangle, we see that
+
+\pagebreak[3]
+
+
+\paragraph{The Sine Series}
+
+Like Newton, Leibniz worked extensively with power series. As a final example, here is his computation of the Maclaurin series for the sine function. In contrast to Newton's approach (footnote \ref{fn:newtonsine}), Leibniz derived the well-known second-order ODE for the sine function.
+
+\begin{minipage}[t]{0.7\linewidth}\vspace{-\parsep}
+	In a circle of radius 1, let $\mathcolor{Blue}{s}$ be the polar angle and $\mathcolor{mRed}{y=\sin s}$ the ordinate. Observing that the differential triangle is similar to the large triangle with hypotenuse 1, we conclude
 	\[
-		\frac{\dy}{\ds} =\sqrt{1-y^2} 
+		\frac{\mathcolor{mMagenta}{\dy}}{\mathcolor{mGreen}{\ds}} =\sqrt{1-y^2} 
 		\implies (1-y^2)(\ds)^2=(\dy)^2 \tag{$\ast$}
 	\]
-	Leibniz supposes that infinitesimals $\ds$ describing the arc are constant and applies $\D$ again (with the product rule):\footnotemark
-	\[
-		-2y\,(\dy)(\ds)^2=2(\dy)\D(\dy) 
-		\implies \frac{\D(\dy)}{(\ds)^2}=-y \quad 
-		\left(=\diff[^2y]{s^2}\right)
-	\]
+	Leibniz now supposes that the infinitesimals $\ds$ describing the arc are constant and applies $\D$ again: by the product rule, we obtain
+\[
+	-2y\,(\dy)(\ds)^2=2(\dy)\D(\dy) 
+	\implies \frac{\D(\dy)}{(\ds)^2}=-y \quad 
+	\left(=\diff[^2y]{s^2}\right)
+\]
 \end{minipage}
 \hfill
-\begin{minipage}[t]{0.29\linewidth}\vspace{-8pt}
-	\hfill\includegraphics{leibniz-sine}
-\end{minipage}\medbreak
+\begin{minipage}[t]{0.29\linewidth}\vspace{-\parsep}
+	\hfill\includegraphics[alt={deriving the differential equation for sine from a circle}]{leibniz-sine}
+\end{minipage}
+\smallbreak
 
+We bracketed everything to make clear that Leibniz is applying $\D$ (to compute differences). When the brackets are removed, we obtain the modern notation for second derivatives!
 
-\footnotetext{%
-	We've bracketed everything. When these are removed, we obtain the standard Leibniz notation for second derivatives!%
-}
-
-He then writes $y(s)=\sin s=c_0+c_1s+c_2s^2+c_3s^3\cdots$ as a power series. Since at $s=0$, $y=\sin s=0$ and $\ds=\dy$ (by $\ast$), Leibniz sees that $c_0=0$ and $c_1=1$. He now differentiates twice and equates coefficients:
+Leibniz now writes
+\[
+	y(s)=\sin s=c_0+c_1s+c_2s^2+c_3s^3\cdots
+\]
+as a power series, whose coefficients are, as yet, unknown. Since at $s=0$, $y=\sin s=0$ and $\ds=\dy$ (by $\ast$), Leibniz concludes that $c_0=0$ and $c_1=1$. He now differentiates the series twice and compares coefficients:
 \begin{gather*}
-	\frac{\D(\dy)}{(\ds)^2} =2c_2+6c_3s+12c_4s^2+20c_5s^3+30c_6s^4+\cdots 
-	=-y=-s-c_2s^2-c_3s^3-c_4^4-\cdots\\
+	\begin{aligned}
+	\frac{\D(\dy)}{(\ds)^2} &=2c_2+6c_3s+12c_4s^2+20c_5s^3+30c_6s^4+\cdots \\
+	-y&=-s-c_2s^2-c_3s^3-c_4^4-\cdots\\
+	\end{aligned}\\
 	\implies 0=c_2=c_4=c_6=\cdots,\quad 
 	c_3=-\frac 16,\quad c_5=-\frac 1{20}c_3=\frac 1{120},\ \ldots 
 \end{gather*}
-to obtain the familiar series
+The result is the familiar series
 \[
 	y=\sin s=s-\frac 16s^3+\frac 1{120}s^5+\cdots =s-\frac 1{3!}s^3+\frac 1{5!}s^5-\frac 1{7!}s^7+ \cdots
 \]
-While not precisely the same as modern calculus---in particular, the differentials $\dx,\dy,\ds$ are separate quantities---this should all seem very familiar! The computational efficiency of such notation super-charged mathematics and its applicability to real-world problems.
 
+
+\paragraph{Legacy}
+
+Leibniz's notation and approach are not precisely the same as modern calculus, though they are very familiar, more so than Newton's. While the battle between their supporters for primacy of discovery was fought to a grudging draw, Leibniz's notation very much won the day. The development of calculus (analysis) over the next 150 years was largely a continental European affair with the British, stubbornly wedded to Newton's approach, falling behind. Regardless, the computational efficiency afforded by both men's efforts ended up super-charging mathematics and its applicability to real-world problems.
 
 
 \begin{exercises}{}{}
 	\hangindent\leftmargini\emph{Key concepts: \ }
 
 	\begin{enumerate}
+	  \item\label{exs:sineseries} MOVE POSITION!!!
+	  \begin{enumerate}
+	    \item Use the binomial series to obtain
+		  \[
+		  	(1-y^2)^{-1/2}=90829802098213
+		  \]
+		  \item Find a power series expression for $\arcsin y=\int_0^x\frac 1{\sqrt{1-y^2}}\,\dy$.
+		  \item Compute the first three non-zero terms of the Maclaurin series for $\sin x$ by evaluating
+		  \[
+		  	x=\arcsin\big(\sin x\big)
+		  \]
+		\end{enumerate}
+	  
+	  
+	  
 	  \item Suppose $y>0$ and that the point $P=(\frac r2,y)$ lies on Barrow's \emph{kappa curve}. Find $y$. Compute the slope of the \textcolor{mGreen}{tangent line} at $P$, and show that it is independent of $r$.
 	  %$y'=\frac7{3\sqrt 3}$
 	  
@@ -1130,7 +1239,7 @@ While not precisely the same as modern calculus---in particular, the differentia
 		\end{minipage}
 		\hfill
 		\begin{minipage}[t]{0.27\linewidth}\vspace{-5pt}
-			\hfill\includegraphics{newtonsmethod}
+			\hfill\includegraphics[alt={repeatedly intersecting the tangent line with the x axis}]{newtonsmethod}
 		\end{minipage}\par
 		\begin{enumerate}
 		  \item If $f(x)=x^2-c$, show that Newton's method is the Babylonian method of the mean.
@@ -1172,16 +1281,44 @@ While not precisely the same as modern calculus---in particular, the differentia
 		
 	
 		\item%[16-24] modified
-		Given a curve $y(x)$ with $y(0)=0$, Leibniz's \emph{transmutation theorem} relates the area under $y$ and the curve $z(x)=y-x\diff[y]{x}$ obtained by considering the $y$-intercepts of the tangent lines to the original:
+		Suppose $y(x)$ describes a non-negative curve with $y(0)=0$. Leibniz's \emph{transmutation theorem} relates the area under this curve and the curve
+		\[
+			z(x)=y-x\diff[y]{x}
+		\]
+		obtained by considering the $y$-intercepts of the tangent lines to the original:
 		\[
 			\int_0^a y\,\dx=\frac 12\left[ay(a)+\int_0^a z\,\dx\right]
 		\]
-		If $x^p=y^q$, find $z$ and use the transmutation theorem to find the area $\int_0^a y\,\dx$.\par
-		How does the transmutation theorem relate to \emph{integration by parts}?
+		\begin{enumerate}
+		  \item Justify the claim that $z(x)$ is the $y$-intercept of the tangent line to $y(x)$.
+		  \item Use integration by parts to prove the transmutation theorem.
+		  \item If $x^p=y^q$, find $z$ and use the transmutation theorem to compute the area $\int_0^a y\,\dx$.
+		\end{enumerate}
 		
 	\end{enumerate}
 \end{exercises}
 
+% 
+% \subsection*{A Very Brief Timeline of Mathematics from the Early 1700s}
+% 
+% \begin{itemize}
+%   \item Around 1700: Bernoulli Brothers.
+% 	  \begin{itemize}
+% 	    \item Jacob: early advocate of L's calculus. `Discovers' $e$ as a limit.
+% 	    \item Johann hired by L'hopital to write first calculus textbook (1696). Trains Leonhard Euler (1707--83)
+% 	  \end{itemize}
+% 	  
+% 	  \item Euler: 866 publications! Complex numbers, exponentials, series, PDE mechanics, etc., etc. Solved most of Fermat's outstanding problems.
+% 	  
+% 	  \item Early 1800s: Cauchy, Weierstrass, etc.: limits, sequences, analysis.
+% 	  
+% 	  \item Galois (1811-32): early group/field theory building on Viete's formulas.
+% 	  
+% 	  \item Karl-Friedrich Gauss (1777-1855): everything! Number theory, Fund thm algebra, early differential/non-euclidean geometry/curvature, normal distribution/least-squares.
+% 	  
+% 	  \item Bernhard Riemann (1826--66): student of Gauss, integration, diff geom, number theory.
+% 	  
+% 	  \item David Hilbert (1862--1943): logic, geometry, algebra, axiomatics, foundations for 20th C math (Hilbert problems 1900)
+% \end{itemize}
 
-%Etymology: Calculus (single pebble) is the origin of `calculation.' Prior to N/L used for any mathematical algorithmic technique (algebraic calculus). Heirs to N/L referred to their methods as `infinitesimal calculus,' from which the first term was eventually dropped. 
 
