@@ -1134,7 +1134,7 @@ Leibniz's notations and approaches are likely much more familiar to the modern r
 \pagebreak[3]
 
 
-\paragraph{The Sine Series}
+\paragraph{The Sine Series}\label{pg:leibniz}
 
 Like Newton, Leibniz worked extensively with power series. As a final example, here is his computation of the Maclaurin series for the sine function. In contrast to Newton's approach (footnote \ref{fn:newtonsine}), Leibniz derived the well-known second-order ODE for the sine function.
 
@@ -1184,35 +1184,19 @@ Leibniz's notation and approach are not precisely the same as modern calculus, t
 
 
 \begin{exercises}{}{}
-	\hangindent\leftmargini\emph{Key concepts: \ }
+	\hangindent\leftmargini\emph{Key concepts: \ Differential triangle, \ Calculus becomes algebraic/algorithmic, \ Power series, \ Notations of Newton \& Leibniz}
 
-	\begin{enumerate}
-	  \item\label{exs:sineseries} MOVE POSITION!!!
-	  \begin{enumerate}
-	    \item Use the binomial series to obtain
-		  \[
-		  	(1-y^2)^{-1/2}=90829802098213
-		  \]
-		  \item Find a power series expression for $\arcsin y=\int_0^x\frac 1{\sqrt{1-y^2}}\,\dy$.
-		  \item Compute the first three non-zero terms of the Maclaurin series for $\sin x$ by evaluating
-		  \[
-		  	x=\arcsin\big(\sin x\big)
-		  \]
-		\end{enumerate}
-	  
-	  
-	  
-	  \item Suppose $y>0$ and that the point $P=(\frac r2,y)$ lies on Barrow's \emph{kappa curve}. Find $y$. Compute the slope of the \textcolor{mGreen}{tangent line} at $P$, and show that it is independent of $r$.
-	  %$y'=\frac7{3\sqrt 3}$
-	  
-	  
-	  
+	\begin{enumerate}	  
 		\item %[15-26]
 	Show that to find the length of the arc of the parabola $y=x^2$ one needs to determine the area under the hyperbola $y^2-4x^2=1$.
 	
 	
 		\item%[15-28]
-		Use Barrow's $a,e$ method to determine the slope of the tangent line to the curve $x^3+y^3=c^3$.
+		Use Barrow's $a,e$ method to determine the slope of the tangent line to the curve $x^3+y^3=c^3$ at a given point $P=(x,y)$.
+		
+
+	  \item Suppose $y>0$ and that the point $P=(\frac r2,y)$ lies on Barrow's \emph{kappa curve}. Find $y$. Compute the slope of the \textcolor{mGreen}{tangent line} at $P$, and show that it is independent of $r$.
+	  %$y'=\frac7{3\sqrt 3}$
 		
 		
 		\item%[16-2]
@@ -1220,10 +1204,27 @@ Leibniz's notation and approach are not precisely the same as modern calculus, t
 		
 		
 		\item Use the binomial series to obtain a power series expression for $\ln(1+x)$, which Newton knew to describe the area under the curve $\frac 1{1+x}$. 
+		
+
+	\item\label{exs:sineseries}
+	  \begin{enumerate}
+	    \item Use the binomial series to show that
+		  \[
+		  	(1-y^2)^{-1/2}=1+\frac 12y^2+\frac 38y^4+\frac 5{16}y^6+\cdots
+		  \]
+		  \item Use part (a) to find a power series expression for $\arcsin x$ up to an $x^5$ term.
+		  \item By writing $\sin z=c_0+c_1z+c_2z^2+c_3z^3+\cdots$ as a power series, evaluate enough of
+		  \[
+		  	x=\sin\left(\arcsin x\right)
+		  \]
+		  to obtain the coefficients $c_0,\ldots,c_5$.
+		\end{enumerate}
+% 	  
+	  
 	
 		
 		\item Using his calculus, Newton was able to extend older methods of approximation.\par
-		\begin{minipage}[t]{0.72\linewidth}\vspace{-5pt}
+		\begin{minipage}[t]{0.73\linewidth}\vspace{-\parsep}
 			\begin{itemize}\itemsep0pt
 			  \item Suppose $f(c)=0$ and that $a_0$ is an initial approximation to $c$.
 			  \item The tangent line at $\bigl(a_0,f(a_0)\bigr)$ has equation
@@ -1233,14 +1234,15 @@ Leibniz's notation and approach are not precisely the same as modern calculus, t
 			  which intersects the $x$-axis at $a_1:=a_0-\frac{f(a_0)}{f'(a_0)}$.
 			  \item Iterate to obtain a sequence $(a_n)$ that (typically) converges to $c$:
 			  \[
-			  	a_{n+1}=a_n-\frac{f(a_n)}{f'(a_n)}\quad \lim_{n\to\infty}a_n=c
+			  	a_{n+1}=a_n-\frac{f(a_n)}{f'(a_n)}\qquad \lim_{n\to\infty}a_n=c
 			  \]
 			\end{itemize}
 		\end{minipage}
 		\hfill
-		\begin{minipage}[t]{0.27\linewidth}\vspace{-5pt}
+		\begin{minipage}[t]{0.26\linewidth}\vspace{-\parsep}
 			\hfill\includegraphics[alt={repeatedly intersecting the tangent line with the x axis}]{newtonsmethod}
-		\end{minipage}\par
+		\end{minipage}
+		\vspace{-2\parsep}
 		\begin{enumerate}
 		  \item If $f(x)=x^2-c$, show that Newton's method is the Babylonian method of the mean.
 
@@ -1250,6 +1252,7 @@ Leibniz's notation and approach are not precisely the same as modern calculus, t
 		\end{enumerate}
 	
 		
+		\pagebreak[3]
 	
 		
 	% 	\item[16-6] Let $\frac 15y^5-\frac 14y^4+\frac 13y^3-\frac 12y^2+y-z=0$ and try $y=z$ as a first approximation. Then
@@ -1273,7 +1276,7 @@ Leibniz's notation and approach are not precisely the same as modern calculus, t
 		Calculate the relationship of the fluxions in the equation $x^3-ax^2+axy-y^3=0$ using multiplication by the progression 4, 3, 2, 1. Compare to what happens if you use the progression 3, 2, 1, 0. What do you notice?
 		
 		
-		\item Use Leibniz's differential triangle to argue that
+		\item Use Leibniz's differential triangle (page \pageref{pg:leibniz}) to argue that
 		\[
 			x=\cos s\quad\text{and}\quad \dx=-y\,\ds
 		\]
@@ -1288,7 +1291,7 @@ Leibniz's notation and approach are not precisely the same as modern calculus, t
 		obtained by considering the $y$-intercepts of the tangent lines to the original:
 		\[
 			\int_0^a y\,\dx=\frac 12\left[ay(a)+\int_0^a z\,\dx\right]
-		\]
+		\]\vspace{-\parsep}
 		\begin{enumerate}
 		  \item Justify the claim that $z(x)$ is the $y$-intercept of the tangent line to $y(x)$.
 		  \item Use integration by parts to prove the transmutation theorem.
