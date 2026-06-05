@@ -1141,7 +1141,7 @@ Like Newton, Leibniz worked extensively with power series. As a final example, h
 \begin{minipage}[t]{0.7\linewidth}\vspace{-\parsep}
 	In a circle of radius 1, let $\mathcolor{Blue}{s}$ be the polar angle and $\mathcolor{mRed}{y=\sin s}$ the ordinate. Observing that the differential triangle is similar to the large triangle with hypotenuse 1, we conclude
 	\[
-		\frac{\mathcolor{mMagenta}{\dy}}{\mathcolor{mGreen}{\ds}} =\sqrt{1-y^2} 
+		\frac{\mathcolor{mMagenta}{\dy}}{\mathcolor{mGreen}{\ds}} =\frac{\mathcolor{mMagenta}{\sqrt{1-y^2}}}{\mathcolor{mGreen}{1}}
 		\implies (1-y^2)(\ds)^2=(\dy)^2 \tag{$\ast$}
 	\]
 	Leibniz now supposes that the infinitesimals $\ds$ describing the arc are constant and applies $\D$ again: by the product rule, we obtain
@@ -1167,7 +1167,7 @@ as a power series, whose coefficients are, as yet, unknown. Since at $s=0$, $y=\
 \begin{gather*}
 	\begin{aligned}
 	\frac{\D(\dy)}{(\ds)^2} &=2c_2+6c_3s+12c_4s^2+20c_5s^3+30c_6s^4+\cdots \\
-	-y&=-s-c_2s^2-c_3s^3-c_4^4-\cdots\\
+	-y&=-s-c_2s^2-c_3s^3-c_4s^4-\cdots\\
 	\end{aligned}\\
 	\implies 0=c_2=c_4=c_6=\cdots,\quad 
 	c_3=-\frac 16,\quad c_5=-\frac 1{20}c_3=\frac 1{120},\ \ldots 
